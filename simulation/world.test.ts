@@ -50,7 +50,8 @@ describe.each(SEEDS)("generated world, seed %i", (seed) => {
   });
 
   it("engine impacts agree with the answer key where an engine computes them", () => {
-    for (const e of w.answerKey.entries.filter((e) => e.kind === "price_variance_vs_contract" || e.kind === "duty_overcharge")) {
+    const engineKinds = ["price_variance_vs_contract", "duty_overcharge", "noncompliant_substitution", "missing_document"];
+    for (const e of w.answerKey.entries.filter((e) => engineKinds.includes(e.kind))) {
       const f = findings.find((f) => f.kind === e.kind && f.objectId === e.objectId)!;
       expect(f.impactUSDCents, e.id).toBe(e.impactUSDCents);
     }

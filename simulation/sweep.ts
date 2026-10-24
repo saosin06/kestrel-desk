@@ -127,10 +127,11 @@ export function sweep(world: World): Finding[] {
           manufacturerPartNo: line.manufacturerPartNo,
         },
       });
+      const atRisk = usd(line.amountMinor);
       if (r.status === "fail") {
-        add({ ...at, partId: line.partId, kind: "noncompliant_substitution", objectId: inv.id, source: "compliance", detail: r.reasons.join("; ") });
+        add({ ...at, partId: line.partId, kind: "noncompliant_substitution", objectId: inv.id, impactUSDCents: atRisk, source: "compliance", detail: r.reasons.join("; ") });
       } else if (r.status === "unknown") {
-        add({ ...at, partId: line.partId, kind: "missing_document", objectId: inv.id, source: "compliance", detail: r.reasons.join("; ") });
+        add({ ...at, partId: line.partId, kind: "missing_document", objectId: inv.id, impactUSDCents: atRisk, source: "compliance", detail: r.reasons.join("; ") });
       } else if (r.substitution) {
         add({ ...at, partId: line.partId, kind: "source_disagreement", objectId: inv.id, source: "compliance", detail: `unapproved substitution: ${r.reasons.join("; ")}` });
       }
