@@ -108,6 +108,7 @@ export function statusLabel(s: string): string {
 
 /** Where a record id lives in the app (ids share yymm-supplier tags). */
 export function recordHref(id: string): string | null {
+  if (/INTAKE-\d+/.test(id)) return `/intake#${id.match(/INTAKE-\d+/)![0]}`;
   const tag = id.match(/^(?:VI|PO|R|PS|CE|COO)-(\d{4}-[A-Z]+)/)?.[1];
   if (id.startsWith("VI-")) return `/payables/${id.split(" ")[0]}`;
   if (tag) return `/payables/VI-${tag}`;

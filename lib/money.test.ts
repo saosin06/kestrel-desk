@@ -4,6 +4,7 @@ import {
   divRound,
   formatBp,
   formatMoney,
+  formatPrice,
   formatUnitPrice,
   lineAmount,
   MoneyError,
@@ -92,5 +93,14 @@ describe("formatting", () => {
     expect(formatMoney(12_340, "JPY")).toBe("JPY 12,340");
     expect(formatUnitPrice(350)).toBe("0.0350");
     expect(formatBp(340)).toBe("3.40%");
+  });
+});
+
+describe("formatPrice", () => {
+  it("shows at least two decimals and up to four", () => {
+    expect(formatPrice(1_400_000)).toBe("140.00");
+    expect(formatPrice(350)).toBe("0.035");
+    expect(formatPrice(1_185_550)).toBe("118.555");
+    expect(formatPrice(5_199_874)).toBe("519.9874");
   });
 });

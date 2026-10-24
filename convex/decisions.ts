@@ -60,3 +60,14 @@ export const setRuleStatus = mutation({
     await appendAudit(ctx, { at, actor: by, action: `rule:${status}`, refs: [ruleId], detail: reason });
   },
 });
+
+/** A seat's answer to "Ask why", posted into the case thread. */
+export const answer = mutation({
+  args: { reqId: v.string(), from: v.string(), to: v.string(), text: v.string() },
+  handler: async (ctx, { reqId, from, to, text }) => {
+    const r = await ctx.db.query("requests").withIndex("by_reqId", (q) => q.eq("reqId", reqId)).unique();
+    const at = await simDate(ctx);
+    await ctx.db.insert("messages", { at, from, to, text, refs: [reqId, ...(r?.caseId ? [r.caseId] : [])] });
+    await appendAudit(ctx, { at, actor: from, action: "answer_why", refs: [reqId, ...(r?.caseId ? [r.caseId] : [])], detail: text.slice(0, 200) });
+  },
+});

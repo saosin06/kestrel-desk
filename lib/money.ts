@@ -154,6 +154,11 @@ export function formatUnitPrice(unitPriceE4: number): string {
   return formatScaled(unitPriceE4, UNIT_PRICE_SCALE);
 }
 
+/** Unit price for people: at least 2 decimals, up to 4 ("140.00", "0.035"). */
+export function formatPrice(unitPriceE4: number): string {
+  return formatScaled(unitPriceE4, UNIT_PRICE_SCALE).replace(/(\.\d\d\d?)0+$/, "$1").replace(/(\.\d\d)0$/, "$1");
+}
+
 /** 340 → "3.40%". */
 export function formatBp(rateBp: number): string {
   return `${formatScaled(rateBp, 2)}%`;

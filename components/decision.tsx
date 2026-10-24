@@ -12,7 +12,6 @@ type Req = { reqId: string; requestedBy: string; requiredApprovers: string[]; ap
 export function DecisionControls({ r }: { r: Req }) {
   const { role } = useActingAs();
   const decide = useMutation(api.decisions.decide);
-  const askWhy = useMutation(api.decisions.askWhy);
   const [mode, setMode] = useState<null | "approve" | "reject" | "why">(null);
   const [text, setText] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -24,7 +23,10 @@ export function DecisionControls({ r }: { r: Req }) {
     setBusy(true);
     setError(null);
     try {
-      if (mode === "why") await askWhy({ reqId: r.reqId, by: role, question: text });
+      if (mode === "why") {
+        const res = await fetch("/api/ask-why", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ reqId: r.reqId, by: role, question: text }) });
+        if (!res.ok) throw new Error((await res.json()).error ?? `HTTP ${res.status}`);
+      }
       else await decide({ reqId: r.reqId, by: role, decision: mode!, reason: text });
       setMode(null);
       setText("");

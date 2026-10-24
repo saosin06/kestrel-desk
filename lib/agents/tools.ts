@@ -179,7 +179,16 @@ export function buildTools(world: DeskWorld, rules: () => InternalRule[]): Recor
       name: "open_case",
       description:
         "Open a case on one or more engine findings (pass their finding_keys). For a problem you found by reading an email (direct-deposit or remittance change), pass kind and object_ids instead. Impact is taken from the engine, not from you.",
-      input_schema: obj({ finding_keys: SA, kind: S, object_ids: SA, summary: S, system_of_record: S }, ["summary", "system_of_record"]),
+      input_schema: obj(
+        {
+          finding_keys: { ...SA, description: "engine finding keys from check_invoice / check_payroll_run" },
+          kind: { type: "string", enum: [...AGENT_DETECTED], description: "only when there are no finding_keys: the kind of email-detected problem" },
+          object_ids: { ...SA, description: "only with kind: the email id plus the supplier id (S-…) or employee id (E-…) it concerns" },
+          summary: S,
+          system_of_record: S,
+        },
+        ["summary", "system_of_record"],
+      ),
       run: (i, ctx) => {
         const keys = strs(i, "finding_keys");
         let kind: CaseKind;
@@ -203,11 +212,13 @@ export function buildTools(world: DeskWorld, rules: () => InternalRule[]): Recor
           evidence = fs.map((f) => f.evidence ?? { path: [f.objectId] });
         } else {
           kind = str(i, "kind") as CaseKind;
-          if (!AGENT_DETECTED.has(kind)) throw new ToolInputError(`kind ${kind} must be opened from engine findings`);
+          if (!AGENT_DETECTED.has(kind)) throw new ToolInputError(`kind must be one of ${[...AGENT_DETECTED].join(", ")} (or pass finding_keys from an engine check)`);
           objectIds = strs(i, "object_ids");
+          // Exposure, from the records: the employee's next net pay, or the supplier's latest invoice.
           const emp = world.payroll.employees.find((e) => objectIds.includes(e.id));
           const next = emp && world.payroll.runs.find((r) => r.payDate >= ctx.today && r.lines.some((l) => l.employeeId === emp.id));
-          impact = next ? next.lines.find((l) => l.employeeId === emp!.id)!.netCents : 0;
+          const supplierInvoice = world.invoices.filter((v) => objectIds.includes(v.supplierId) && v.date <= ctx.today).sort((a, b) => b.date.localeCompare(a.date))[0];
+          impact = next ? next.lines.find((l) => l.employeeId === emp!.id)!.netCents : supplierInvoice ? convert(fx, supplierInvoice.totalMinor, supplierInvoice.currency, "USD", supplierInvoice.date).amountMinor : 0;
           evidence = [{ path: objectIds, systemOfRecord: "HRIS / vendor master (bank details on file)", ruleRef: "MEMO-2025-11 bank-detail change policy" }];
         }
         // Never open the same issue twice: same kind on any of the same records.

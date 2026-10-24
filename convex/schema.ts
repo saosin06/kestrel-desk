@@ -69,4 +69,18 @@ export default defineSchema({
     decisionReason: v.optional(v.string()),
   }).index("by_ruleId", ["ruleId"]),
   meta: defineTable({ key: v.string(), value: v.string() }).index("by_key", ["key"]),
+  intakes: defineTable({
+    intakeId: v.string(),
+    kind: v.union(v.literal("invoice"), v.literal("email")),
+    at: v.string(),
+    title: v.string(),
+    doc: v.any(),
+    findings: v.any(),
+    status: v.union(v.literal("agent_running"), v.literal("done"), v.literal("error")),
+    seat: v.string(),
+    agentSummary: v.optional(v.string()),
+    error: v.optional(v.string()),
+    caseIds: v.array(v.string()),
+    toolCalls: v.optional(v.number()),
+  }).index("by_intakeId", ["intakeId"]),
 });

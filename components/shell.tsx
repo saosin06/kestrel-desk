@@ -3,13 +3,13 @@
 import { useQuery } from "convex/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { type ReactNode, Suspense } from "react";
+import { type ReactNode, Suspense, useState } from "react";
 import { APPROVER_ROLES, useActingAs } from "@/app/providers";
 import { api } from "@/convex/_generated/api";
 import { date, roleLabel } from "@/lib/ui/format";
 
 const NAV: { group: string; items: { href: string; label: string; badge?: "approvals" | "cases" }[] }[] = [
-  { group: "Desk", items: [{ href: "/", label: "Overview" }, { href: "/approvals", label: "Approvals", badge: "approvals" }, { href: "/cases", label: "Cases", badge: "cases" }] },
+  { group: "Desk", items: [{ href: "/", label: "Overview" }, { href: "/approvals", label: "Approvals", badge: "approvals" }, { href: "/cases", label: "Cases", badge: "cases" }, { href: "/intake", label: "Live intake" }] },
   { group: "Operations", items: [{ href: "/payables", label: "Payables" }, { href: "/payroll", label: "Payroll" }] },
   { group: "Accounting", items: [{ href: "/ledger", label: "General ledger" }] },
   { group: "Controls", items: [{ href: "/rules", label: "Internal rules" }, { href: "/audit", label: "Audit log" }] },
@@ -41,6 +41,28 @@ function NavList({ path, counts }: { path: string | null; counts: Counts }) {
         </div>
       ))}
     </>
+  );
+}
+
+function ResetButton() {
+  const [busy, setBusy] = useState(false);
+  return (
+    <button
+      className="btn"
+      disabled={busy}
+      title="Reload the saved agent run (the state the demo starts from)"
+      onClick={async () => {
+        if (!window.confirm("Reset the desk to the saved agent run? Live intakes and decisions made since will be cleared.")) return;
+        setBusy(true);
+        try {
+          await fetch("/api/reset", { method: "POST" });
+        } finally {
+          setBusy(false);
+        }
+      }}
+    >
+      {busy ? "Resetting…" : "Reset demo"}
+    </button>
   );
 }
 
@@ -80,6 +102,8 @@ export function Shell({ children }: { children: ReactNode }) {
             <span className="text-ink-2">Period {period ? date(period) : "—"} · Open</span>
             <span className="text-ink-2">As of {date(overview?.simDate)}</span>
           </div>
+          <div className="flex items-center gap-3">
+          <ResetButton />
           <label className="flex items-center gap-2 text-[12px] text-ink-2">
             Acting as
             <select className="select" value={role} onChange={(e) => setRole(e.target.value as (typeof APPROVER_ROLES)[number])}>
@@ -90,6 +114,7 @@ export function Shell({ children }: { children: ReactNode }) {
               ))}
             </select>
           </label>
+          </div>
         </header>
         <main className="mx-auto w-full max-w-[1320px] flex-1 px-5 py-4">{children}</main>
       </div>
