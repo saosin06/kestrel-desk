@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
+import { convert } from "@/lib/costing/fx";
 import { loadEcbRates } from "@/lib/costing/reference";
 import { loadBom, loadParts, loadProducts, loadSuppliers } from "@/lib/erp/master";
 import { createCompany, validateCompany } from "@/lib/erp/store";
@@ -99,5 +100,29 @@ describe("committed data files", () => {
     for (const [path, content] of Object.entries(serializeWorld(generate(DEFAULT_SEED)))) {
       expect(readFileSync(join(ROOT, path), "utf8"), path).toBe(content);
     }
+  });
+});
+
+describe("company scale (judges: > $100M revenue)", () => {
+  const w = generate(DEFAULT_SEED);
+  const months = w.sales.length;
+  const revenue = w.sales.reduce((a, s) => a + s.hardwareRevenueCents + s.servicesRevenueCents, 0);
+  const annualized = (revenue / months) * 12;
+
+  it("annualized revenue is above $100M", () => {
+    expect(annualized).toBeGreaterThan(100_000_000_00);
+  });
+  it("customer-mix split sums exactly to hardware revenue each month", () => {
+    for (const s of w.sales) expect(Object.values(s.byCustomerType).reduce((a, b) => a + b, 0)).toBe(s.hardwareRevenueCents);
+  });
+  it("direct materials are a plausible share of hardware revenue (35–50%)", () => {
+    const usd = (inv: (typeof w.invoices)[number]) => convert(loadEcbRates(), inv.totalMinor, inv.currency, "USD", inv.date).amountMinor;
+    const materials = w.invoices.filter((i) => i.poId && !i.id.endsWith("-2")).reduce((a, i) => a + usd(i), 0);
+    const hardware = w.sales.reduce((a, s) => a + s.hardwareRevenueCents, 0);
+    expect(materials / hardware).toBeGreaterThan(0.35);
+    expect(materials / hardware).toBeLessThan(0.5);
+  });
+  it("bank opening balance equals cash on the opening balance sheet", () => {
+    expect(w.bank.openingBalanceCents).toBe(1_840_000_000);
   });
 });

@@ -2,13 +2,14 @@
 // the invoice date. Deterministic; returns line-level diffs, each naming the
 // rule applied and the system of record for the fact in question.
 
+import controls from "@/data/controls.json";
 import { convert, type RateTable } from "@/lib/costing/fx";
 import { type Currency, exponentOf, lineAmount } from "@/lib/money";
 import type { Contract, ContractPrice, Invoice, ISODate, PackingSlip, PO, Receipt } from "./types";
 
 /** Price tolerance: the larger of 1% of the expected price or $0.05/unit. */
-export const PRICE_TOLERANCE_PCT = 1;
-export const PRICE_TOLERANCE_USD_CENTS = 5;
+export const PRICE_TOLERANCE_PCT = controls.matchTolerance.pricePct;
+export const PRICE_TOLERANCE_USD_CENTS = controls.matchTolerance.priceAbsUSDCents;
 export const TOLERANCE_RULE = "Three-way match tolerance: larger of ±1% or $0.05/unit (CLAUDE.md §9)";
 
 export type DiffKind =

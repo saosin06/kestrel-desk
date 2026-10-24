@@ -1,0 +1,13 @@
+{
+  "note": "Control thresholds for a ~$137M company (CLAUDE.md §9). Money in USD cents; rates in basis points.",
+  "matchTolerance": { "pricePct": 1, "priceAbsUSDCents": 5, "qty": "exact" },
+  "materialityUSDCents": 100000,
+  "recurringCountForMateriality": 3,
+  "controllerApproval": {
+    "paymentsAboveUSDCents": 2500000,
+    "posAboveUSDCents": 5000000,
+    "journalEntries": "all"
+  },
+  "lowConfidence": 0.8,
+  "neverLearnable": ["compliance", "bank_remittance", "segregation_of_duties", "locked_periods", "duplicate_payments"]
+}

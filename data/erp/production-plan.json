@@ -6,37 +6,37 @@
     {
       "period": "2026-03",
       "productId": "K2",
-      "units": 180
+      "units": 280
     },
     {
       "period": "2026-04",
       "productId": "K2",
-      "units": 200
+      "units": 300
     },
     {
       "period": "2026-05",
       "productId": "K2",
-      "units": 210
+      "units": 310
     },
     {
       "period": "2026-06",
       "productId": "K2",
-      "units": 200
+      "units": 300
     },
     {
       "period": "2026-07",
       "productId": "K2",
-      "units": 220
+      "units": 320
     },
     {
       "period": "2026-08",
       "productId": "K2",
-      "units": 200
+      "units": 300
     },
     {
       "period": "2026-09",
       "productId": "K2",
-      "units": 190
+      "units": 290
     }
   ]
 }

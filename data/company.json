@@ -1,0 +1,22 @@
+{
+  "simulated": true,
+  "name": "Kestrel Aerial, Inc.",
+  "description": "US maker of mapping and firefighting-support drones (fictional).",
+  "fiscalYearEnd": "12-31",
+  "employees": 420,
+  "fy2025ActualRevenue": "128400000.00",
+  "fy2026PlanRevenue": "137000000.00",
+  "functionalCurrency": "USD",
+  "products": [
+    { "id": "K2", "name": "Kestrel K2", "aspUSD": "32000.00", "planUnitsPerMonth": 300 }
+  ],
+  "servicesRevenuePerMonthUSD": "1830000.00",
+  "servicesDescription": "Fleet-management software subscriptions, training, and support contracts",
+  "customerMix": { "federal": 0.40, "state_local": 0.35, "commercial": 0.25 },
+  "financeTeam": [
+    { "role": "controller", "name": "Dana", "title": "Controller" },
+    { "role": "procurement_mgr", "name": "Raj", "title": "Procurement Manager" },
+    { "role": "engineering", "name": "Mei", "title": "Engineering Lead" },
+    { "role": "receiving", "name": "Luis", "title": "Receiving Dock Lead" }
+  ]
+}

@@ -1,20 +1,20 @@
 {
   "note": "Simulated company master data. HTS classifications are our modeling choice; duty rates come from data/hts.json (USITC). Money is decimal strings (USD).",
   "parts": [
-    { "id": "P01", "name": "Carbon-fiber airframe (center body + arms)", "hts": "8807.30.00", "componentClass": "airframe", "standardCost": "185.00", "approvedSuppliers": ["S-CAS"], "criticality": "critical" },
-    { "id": "P02", "name": "Propeller set (pair, 15 in)", "hts": "8807.10.00", "componentClass": "propulsion", "standardCost": "9.50", "approvedSuppliers": ["S-CAS"], "criticality": "standard" },
-    { "id": "P03", "name": "Landing gear assembly", "hts": "8807.20.00", "componentClass": "airframe", "standardCost": "24.00", "approvedSuppliers": ["S-CAS"], "criticality": "standard" },
-    { "id": "P04", "name": "Flight controller", "hts": "8537.10.91", "componentClass": "flight_controller", "standardCost": "185.00", "approvedSuppliers": ["S-VIR"], "criticality": "critical" },
-    { "id": "P05", "name": "ESC board, 4-in-1", "hts": "8504.40.40", "htsBasis": "Electronic speed controller: a static converter that drives the motors' speed → 8504.40.40 Speed drive controllers for electric motors", "componentClass": "esc", "standardCost": "42.00", "approvedSuppliers": ["S-VIR"], "criticality": "critical" },
-    { "id": "P06", "name": "Li-ion battery pack", "hts": "8507.60.00", "componentClass": "battery", "standardCost": "210.00", "approvedSuppliers": ["S-RDG"], "criticality": "critical" },
-    { "id": "P07", "name": "Brushless motor, 400 W (NdFeB magnets)", "hts": "8501.31.40", "htsBasis": "DC motor, 400 W output: exceeding 74.6 W but not exceeding 735 W → 8501.31.40", "componentClass": "motor", "standardCost": "11.00", "approvedSuppliers": ["S-ATL", "S-CAS"], "criticality": "critical" },
-    { "id": "P08", "name": "GNSS/RTK module", "hts": "8526.91.00", "componentClass": "gnss", "standardCost": "95.00", "approvedSuppliers": ["S-RDG"], "criticality": "critical" },
-    { "id": "P09", "name": "Data-link radio", "hts": "8517.62.00", "componentClass": "radio_datalink", "standardCost": "160.00", "approvedSuppliers": ["S-RDG"], "criticality": "critical" },
-    { "id": "P10", "name": "Mapping camera", "hts": "8525.89.50", "componentClass": "camera", "standardCost": "640.00", "approvedSuppliers": ["S-HOS"], "criticality": "critical" },
-    { "id": "P11", "name": "Camera gimbal", "hts": "8807.30.00", "componentClass": "gimbal", "standardCost": "120.00", "approvedSuppliers": ["S-HOS"], "criticality": "standard" },
-    { "id": "P12", "name": "Wiring harness", "hts": "8544.42.90", "componentClass": "harness", "standardCost": "11.00", "approvedSuppliers": ["S-NW"], "criticality": "standard" },
-    { "id": "P13", "name": "Connector", "hts": "8536.69.40", "componentClass": "connector", "standardCost": "3.20", "approvedSuppliers": ["S-NW"], "criticality": "standard" },
+    { "id": "P01", "name": "Carbon-fiber airframe (center body + arms)", "hts": "8807.30.00", "componentClass": "airframe", "standardCost": "1450.00", "approvedSuppliers": ["S-CAS"], "criticality": "critical" },
+    { "id": "P02", "name": "Propeller set (pair, 15 in)", "hts": "8807.10.00", "componentClass": "propulsion", "standardCost": "85.00", "approvedSuppliers": ["S-CAS"], "criticality": "standard" },
+    { "id": "P03", "name": "Landing gear assembly", "hts": "8807.20.00", "componentClass": "airframe", "standardCost": "240.00", "approvedSuppliers": ["S-CAS"], "criticality": "standard" },
+    { "id": "P04", "name": "Flight controller", "hts": "8537.10.91", "componentClass": "flight_controller", "standardCost": "1850.00", "approvedSuppliers": ["S-VIR"], "criticality": "critical" },
+    { "id": "P05", "name": "ESC board, 4-in-1", "hts": "8504.40.40", "htsBasis": "Electronic speed controller: a static converter that drives the motors' speed → 8504.40.40 Speed drive controllers for electric motors", "componentClass": "esc", "standardCost": "380.00", "approvedSuppliers": ["S-VIR"], "criticality": "critical" },
+    { "id": "P06", "name": "Li-ion battery pack", "hts": "8507.60.00", "componentClass": "battery", "standardCost": "1150.00", "approvedSuppliers": ["S-RDG"], "criticality": "critical" },
+    { "id": "P07", "name": "Brushless motor, 400 W (NdFeB magnets)", "hts": "8501.31.40", "htsBasis": "DC motor, 400 W output: exceeding 74.6 W but not exceeding 735 W → 8501.31.40", "componentClass": "motor", "standardCost": "118.00", "approvedSuppliers": ["S-ATL", "S-CAS"], "criticality": "critical" },
+    { "id": "P08", "name": "GNSS/RTK module", "hts": "8526.91.00", "componentClass": "gnss", "standardCost": "780.00", "approvedSuppliers": ["S-RDG"], "criticality": "critical" },
+    { "id": "P09", "name": "Data-link radio", "hts": "8517.62.00", "componentClass": "radio_datalink", "standardCost": "1200.00", "approvedSuppliers": ["S-RDG"], "criticality": "critical" },
+    { "id": "P10", "name": "Mapping camera", "hts": "8525.89.50", "componentClass": "camera", "standardCost": "3400.00", "approvedSuppliers": ["S-HOS"], "criticality": "critical" },
+    { "id": "P11", "name": "Camera gimbal", "hts": "8807.30.00", "componentClass": "gimbal", "standardCost": "650.00", "approvedSuppliers": ["S-HOS"], "criticality": "standard" },
+    { "id": "P12", "name": "Wiring harness", "hts": "8544.42.90", "componentClass": "harness", "standardCost": "140.00", "approvedSuppliers": ["S-NW"], "criticality": "standard" },
+    { "id": "P13", "name": "Connector", "hts": "8536.69.40", "componentClass": "connector", "standardCost": "11.00", "approvedSuppliers": ["S-NW"], "criticality": "standard" },
     { "id": "P14", "name": "Machine screw, M3 × 8 mm", "hts": "7318.15.60", "htsBasis": "M3 thread (3 mm diameter) < 6 mm → 7318.15.60; not 7318.15.40 (diameter < 3.2 mm)", "componentClass": "fastener", "standardCost": "0.035", "approvedSuppliers": ["S-ATL"], "criticality": "standard" },
-    { "id": "P15", "name": "Canopy / housing set", "hts": "3926.90.99", "componentClass": "housing", "standardCost": "18.00", "approvedSuppliers": ["S-NW"], "criticality": "standard" }
+    { "id": "P15", "name": "Canopy / housing set", "hts": "3926.90.99", "componentClass": "housing", "standardCost": "160.00", "approvedSuppliers": ["S-NW"], "criticality": "standard" }
   ]
 }

@@ -10,7 +10,7 @@
       "currency": "USD",
       "prices": [
         {
-          "unitPriceE4": 1850000,
+          "unitPriceE4": 14500000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-01 §4.2"
@@ -26,7 +26,7 @@
       "currency": "USD",
       "prices": [
         {
-          "unitPriceE4": 95000,
+          "unitPriceE4": 850000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-02 §4.2"
@@ -42,7 +42,7 @@
       "currency": "USD",
       "prices": [
         {
-          "unitPriceE4": 240000,
+          "unitPriceE4": 2400000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-03 §4.2"
@@ -58,7 +58,7 @@
       "currency": "USD",
       "prices": [
         {
-          "unitPriceE4": 1850000,
+          "unitPriceE4": 18500000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-04 §4.2"
@@ -74,7 +74,7 @@
       "currency": "USD",
       "prices": [
         {
-          "unitPriceE4": 420000,
+          "unitPriceE4": 3800000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-05 §4.2"
@@ -90,7 +90,7 @@
       "currency": "USD",
       "prices": [
         {
-          "unitPriceE4": 2100000,
+          "unitPriceE4": 11500000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-06 §4.2"
@@ -106,7 +106,7 @@
       "currency": "USD",
       "prices": [
         {
-          "unitPriceE4": 118000,
+          "unitPriceE4": 1260000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-07 §4.2"
@@ -122,7 +122,7 @@
       "currency": "USD",
       "prices": [
         {
-          "unitPriceE4": 950000,
+          "unitPriceE4": 7800000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-08 §4.2"
@@ -138,7 +138,7 @@
       "currency": "USD",
       "prices": [
         {
-          "unitPriceE4": 1600000,
+          "unitPriceE4": 12000000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-09 §4.2"
@@ -154,7 +154,7 @@
       "currency": "JPY",
       "prices": [
         {
-          "unitPriceE4": 960000000,
+          "unitPriceE4": 5200000000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-10 §4.2"
@@ -170,7 +170,7 @@
       "currency": "JPY",
       "prices": [
         {
-          "unitPriceE4": 185000000,
+          "unitPriceE4": 980000000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-11 §4.2"
@@ -186,7 +186,7 @@
       "currency": "USD",
       "prices": [
         {
-          "unitPriceE4": 110000,
+          "unitPriceE4": 1180000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-12 §4.2"
@@ -202,7 +202,7 @@
       "currency": "USD",
       "prices": [
         {
-          "unitPriceE4": 110000,
+          "unitPriceE4": 1400000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-13 §4.2"
@@ -218,7 +218,7 @@
       "currency": "USD",
       "prices": [
         {
-          "unitPriceE4": 32000,
+          "unitPriceE4": 110000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-14 §4.2"
@@ -250,7 +250,7 @@
       "currency": "USD",
       "prices": [
         {
-          "unitPriceE4": 180000,
+          "unitPriceE4": 1600000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-16 §4.2"

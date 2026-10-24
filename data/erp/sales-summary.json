@@ -1,0 +1,84 @@
+{
+  "generatedBy": "scripts/generate.ts",
+  "seed": 42,
+  "simulated": true,
+  "items": [
+    {
+      "period": "2026-03",
+      "units": 280,
+      "hardwareRevenueCents": 896000000,
+      "servicesRevenueCents": 183000000,
+      "byCustomerType": {
+        "federal": 358400000,
+        "state_local": 313600000,
+        "commercial": 224000000
+      }
+    },
+    {
+      "period": "2026-04",
+      "units": 300,
+      "hardwareRevenueCents": 960000000,
+      "servicesRevenueCents": 183000000,
+      "byCustomerType": {
+        "federal": 384000000,
+        "state_local": 336000000,
+        "commercial": 240000000
+      }
+    },
+    {
+      "period": "2026-05",
+      "units": 310,
+      "hardwareRevenueCents": 992000000,
+      "servicesRevenueCents": 183000000,
+      "byCustomerType": {
+        "federal": 396800000,
+        "state_local": 347200000,
+        "commercial": 248000000
+      }
+    },
+    {
+      "period": "2026-06",
+      "units": 300,
+      "hardwareRevenueCents": 960000000,
+      "servicesRevenueCents": 183000000,
+      "byCustomerType": {
+        "federal": 384000000,
+        "state_local": 336000000,
+        "commercial": 240000000
+      }
+    },
+    {
+      "period": "2026-07",
+      "units": 320,
+      "hardwareRevenueCents": 1024000000,
+      "servicesRevenueCents": 183000000,
+      "byCustomerType": {
+        "federal": 409600000,
+        "state_local": 358400000,
+        "commercial": 256000000
+      }
+    },
+    {
+      "period": "2026-08",
+      "units": 300,
+      "hardwareRevenueCents": 960000000,
+      "servicesRevenueCents": 183000000,
+      "byCustomerType": {
+        "federal": 384000000,
+        "state_local": 336000000,
+        "commercial": 240000000
+      }
+    },
+    {
+      "period": "2026-09",
+      "units": 290,
+      "hardwareRevenueCents": 928000000,
+      "servicesRevenueCents": 183000000,
+      "byCustomerType": {
+        "federal": 371200000,
+        "state_local": 324800000,
+        "commercial": 232000000
+      }
+    }
+  ]
+}

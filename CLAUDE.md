@@ -200,7 +200,7 @@ Kestrel has 14 months of history before the sim (Jan 2025–Feb 2026) in `data/h
 - **Mei (Engineering):** must approve any part substitution; rejects the noncompliant substitute; flags a defective lot in May.
 - **Luis (Receiving):** enters 660 instead of 600 on one receipt → AP finds the disagreement with the packing slip and invoice, asks Luis to recount before paying.
 - **Previous AP clerk (handoff):** inbox note: "paid Northwind and Atlas, still need the other 4, one invoice looked off" → AP resumes without double-paying.
-- **Fraud email:** "Atlas Motors" asks to change remit-to bank the day before a large (~$380k) payment → AP holds, never edits vendor master, escalates to Dana.
+- **Fraud email:** "Atlas Motors" asks to change remit-to bank the day before a large payment (~$355k: the corrected April invoice) → AP holds, never edits vendor master, escalates to Dana.
 
 A **"Play the controller"** toggle lets a judge make Dana's decisions live.
 
@@ -287,7 +287,7 @@ Rules:
 **Planted problems → `data/answer_key.json` (site/part/supplier, period, kind, expected impact, expected handling):**
 1. **Noncompliant substitution** — Supplier Vireo ships a cheaper flight controller (P04) whose certificate of origin shows a restricted origin; invoice description differs from BOM part number. *(Headline moment.)*
 2. **Price vs. contract** — Atlas invoices $132.00/motor vs. $118.00 contract (C-12 §4.2), 3,000 units → $42,000.
-3. **Remittance-change fraud email** before a ~$380k Atlas payment.
+3. **Remittance-change fraud email** before the ~$355k Atlas payment (the corrected April invoice).
 4. **Qty mismatch** — Luis enters 660 propeller sets, packing slip and invoice say 600.
 5. **Duplicate invoice** — same supplier, same amount, new invoice number suffix.
 6. **Duty overcharge** — broker's system misclassifies Atlas's P14 M3 screws as 7318.15.80 (≥ 6 mm, 8.5%) instead of 7318.15.60 (6.2%) on every entry from June. Each is below materiality; the 3rd occurrence trips "recurring 3+ times" → case covering all entries.

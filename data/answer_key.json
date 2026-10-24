@@ -22,7 +22,7 @@
       "period": "2026-04",
       "supplierId": "S-VIR",
       "partId": "P04",
-      "impactUSDCents": 3240000,
+      "impactUSDCents": 42600000,
       "expectedHandling": "Payment hold on the line; noncompliant_substitution case; required approvers engineering (Mei) + controller (Dana); government-contract eligibility flagged. Not a price saving.",
       "note": "Three-way match passes (price is below contract: info only); only the compliance check catches it. Invoice line says TW, certificate says CN — certificate is the system of record for origin. Expected duty on the customs entry is column 1 only until the CN × 8537.10.91 Chapter 99 entry is verified."
     },
@@ -41,7 +41,7 @@
       "period": "2026-04",
       "supplierId": "S-ATL",
       "partId": "P07",
-      "impactUSDCents": 900000,
+      "impactUSDCents": 4200000,
       "expectedHandling": "Hold the invoice; defend with C-12 §4.2; request a corrected invoice or a debit memo for the difference."
     },
     {
@@ -59,8 +59,8 @@
       "period": "2026-04",
       "supplierId": "S-CAS",
       "partId": "P02",
-      "impactUSDCents": 76000,
-      "expectedHandling": "Hold; packing slip and invoice agree (400), so the dock receipt is the outlier — ask receiving (Luis) to recount before paying. Impact = inventory overstated by 80 units."
+      "impactUSDCents": 510000,
+      "expectedHandling": "Hold; packing slip and invoice agree (600), so the dock receipt (660) is the outlier — ask receiving (Luis) to recount before paying. Impact = inventory overstated by 60 units."
     },
     {
       "id": "AK-05",
@@ -74,7 +74,7 @@
       ],
       "period": "2026-06",
       "supplierId": "S-RDG",
-      "impactUSDCents": 13500000,
+      "impactUSDCents": 128400000,
       "expectedHandling": "Block payment of the re-send; cite the original invoice; no new payment request.",
       "secondaryKinds": [
         "qty_mismatch"
@@ -96,8 +96,8 @@
       "period": "2026-06",
       "supplierId": "S-ATL",
       "partId": "P14",
-      "impactUSDCents": 1932,
-      "expectedHandling": "Below $250 materiality: log as info, no case yet."
+      "impactUSDCents": 2898,
+      "expectedHandling": "Below materiality ($1,000, data/controls.json): log as info, no case yet."
     },
     {
       "id": "AK-06-2",
@@ -114,8 +114,8 @@
       "period": "2026-07",
       "supplierId": "S-ATL",
       "partId": "P14",
-      "impactUSDCents": 2125,
-      "expectedHandling": "Below $250 materiality: log as info, no case yet."
+      "impactUSDCents": 3091,
+      "expectedHandling": "Below materiality ($1,000, data/controls.json): log as info, no case yet."
     },
     {
       "id": "AK-06-3",
@@ -132,7 +132,7 @@
       "period": "2026-08",
       "supplierId": "S-ATL",
       "partId": "P14",
-      "impactUSDCents": 1932,
+      "impactUSDCents": 2898,
       "expectedHandling": "Recurring 3+ times: open a duty_overcharge case covering every affected entry; ask the broker for post-summary corrections."
     },
     {
@@ -150,7 +150,7 @@
       "period": "2026-09",
       "supplierId": "S-ATL",
       "partId": "P14",
-      "impactUSDCents": 1835,
+      "impactUSDCents": 2801,
       "expectedHandling": "Recurring 3+ times: open a duty_overcharge case covering every affected entry; ask the broker for post-summary corrections."
     },
     {
@@ -179,7 +179,7 @@
       "period": "2026-07",
       "supplierId": "S-HOS",
       "partId": "P10",
-      "impactUSDCents": 13005870,
+      "impactUSDCents": 102470489,
       "expectedHandling": "Compliance status unknown: hold the P10 line and request the certificate from the supplier; escalate rather than assume compliant."
     }
   ],

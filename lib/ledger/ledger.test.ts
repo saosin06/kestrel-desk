@@ -213,3 +213,14 @@ describe("L7 GRNI accrual and reversal across a close", () => {
     expect(trialBalance(l, "2026-04").balanced).toBe(true);
   });
 });
+
+describe("opening balances", () => {
+  it("post as one balanced entry in 2026-02 and match the balance sheet", async () => {
+    const { postOpeningBalances } = await import("./opening");
+    const l = postOpeningBalances(createLedger(loadChartOfAccounts()));
+    const tb = trialBalance(l, "2026-02");
+    expect(tb.balanced).toBe(true);
+    expect(tb.totalDebitCents).toBe(6_375_000_000);
+    expect(accountBalance(l, A.cash)).toBe(1_840_000_000);
+  });
+});

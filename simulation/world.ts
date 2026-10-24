@@ -28,49 +28,51 @@ import type {
   VendorRecord,
 } from "@/lib/erp/types";
 import { UNREGISTERED_SUPPLIER } from "@/lib/erp/types";
-import { type Currency, lineAmount, parseUnitPrice, pctOf } from "@/lib/money";
+import companyData from "@/data/company.json";
+import openingData from "@/data/opening-balances.json";
+import { allocate, type Currency, lineAmount, parseMoney, parseUnitPrice, pctOf } from "@/lib/money";
 
 export const DEFAULT_SEED = 42;
 export const SIM_WINDOW = { from: "2026-03-01", to: "2026-09-30" } as const;
 export const MONTHS: PeriodId[] = ["2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09"];
 
 const PLAN_UNITS: Record<PeriodId, number> = {
-  "2026-03": 180,
-  "2026-04": 200,
-  "2026-05": 210,
-  "2026-06": 200,
-  "2026-07": 220,
-  "2026-08": 200,
-  "2026-09": 190,
+  "2026-03": 280,
+  "2026-04": 300,
+  "2026-05": 310,
+  "2026-06": 300,
+  "2026-07": 320,
+  "2026-08": 300,
+  "2026-09": 290,
 };
 
 /**
- * P07 motors are bought in bulk: safety stock in March, the 3,000-unit buy in
- * April (planted problem #2), nothing in May/June. Leaves ~8 weeks of cover
- * when the June export restriction (#11, Tier 2) lands.
+ * P07 motors (4 per K2): safety stock in March, the 3,000-unit bulk buy in
+ * April (planted problem #2), nothing in May. Cover when the June export
+ * restriction (#11, Tier 2) lands is tuned in Tier 2.
  */
-const P07_QTY: Record<PeriodId, number> = { "2026-03": 1_200, "2026-04": 3_000, "2026-05": 0, "2026-06": 0 };
+const P07_QTY: Record<PeriodId, number> = { "2026-03": 1_600, "2026-04": 3_000, "2026-05": 0 };
 
 const BROKER_FEE_USD_CENTS = 15_000;
 
 type ContractSpec = { id: string; partId: string; supplierId: string; price: string; currency: Currency };
 const CONTRACTS: ContractSpec[] = [
-  { id: "C-01", partId: "P01", supplierId: "S-CAS", price: "185.00", currency: "USD" },
-  { id: "C-02", partId: "P02", supplierId: "S-CAS", price: "9.50", currency: "USD" },
-  { id: "C-03", partId: "P03", supplierId: "S-CAS", price: "24.00", currency: "USD" },
-  { id: "C-04", partId: "P04", supplierId: "S-VIR", price: "185.00", currency: "USD" },
-  { id: "C-05", partId: "P05", supplierId: "S-VIR", price: "42.00", currency: "USD" },
-  { id: "C-06", partId: "P06", supplierId: "S-RDG", price: "210.00", currency: "USD" },
-  { id: "C-07", partId: "P07", supplierId: "S-CAS", price: "11.80", currency: "USD" }, // backup source
-  { id: "C-08", partId: "P08", supplierId: "S-RDG", price: "95.00", currency: "USD" },
-  { id: "C-09", partId: "P09", supplierId: "S-RDG", price: "160.00", currency: "USD" },
-  { id: "C-10", partId: "P10", supplierId: "S-HOS", price: "96000", currency: "JPY" },
-  { id: "C-11", partId: "P11", supplierId: "S-HOS", price: "18500", currency: "JPY" },
-  { id: "C-12", partId: "P07", supplierId: "S-ATL", price: "11.00", currency: "USD" },
-  { id: "C-13", partId: "P12", supplierId: "S-NW", price: "11.00", currency: "USD" },
-  { id: "C-14", partId: "P13", supplierId: "S-NW", price: "3.20", currency: "USD" },
+  { id: "C-01", partId: "P01", supplierId: "S-CAS", price: "1450.00", currency: "USD" },
+  { id: "C-02", partId: "P02", supplierId: "S-CAS", price: "85.00", currency: "USD" },
+  { id: "C-03", partId: "P03", supplierId: "S-CAS", price: "240.00", currency: "USD" },
+  { id: "C-04", partId: "P04", supplierId: "S-VIR", price: "1850.00", currency: "USD" },
+  { id: "C-05", partId: "P05", supplierId: "S-VIR", price: "380.00", currency: "USD" },
+  { id: "C-06", partId: "P06", supplierId: "S-RDG", price: "1150.00", currency: "USD" },
+  { id: "C-07", partId: "P07", supplierId: "S-CAS", price: "126.00", currency: "USD" }, // backup source
+  { id: "C-08", partId: "P08", supplierId: "S-RDG", price: "780.00", currency: "USD" },
+  { id: "C-09", partId: "P09", supplierId: "S-RDG", price: "1200.00", currency: "USD" },
+  { id: "C-10", partId: "P10", supplierId: "S-HOS", price: "520000", currency: "JPY" },
+  { id: "C-11", partId: "P11", supplierId: "S-HOS", price: "98000", currency: "JPY" },
+  { id: "C-12", partId: "P07", supplierId: "S-ATL", price: "118.00", currency: "USD" },
+  { id: "C-13", partId: "P12", supplierId: "S-NW", price: "140.00", currency: "USD" },
+  { id: "C-14", partId: "P13", supplierId: "S-NW", price: "11.00", currency: "USD" },
   { id: "C-15", partId: "P14", supplierId: "S-ATL", price: "0.035", currency: "USD" },
-  { id: "C-16", partId: "P15", supplierId: "S-NW", price: "18.00", currency: "USD" },
+  { id: "C-16", partId: "P15", supplierId: "S-NW", price: "160.00", currency: "USD" },
 ];
 
 const INVOICE_NO_START: Record<string, [prefix: string, start: number]> = {
@@ -121,6 +123,37 @@ export type AnswerKey = {
   deferredProblems: number[];
 };
 
+export type SalesSummary = {
+  period: PeriodId;
+  units: number;
+  hardwareRevenueCents: number;
+  servicesRevenueCents: number;
+  /** hardware revenue by customer type, from the company's customer mix */
+  byCustomerType: Record<string, number>;
+};
+
+function openingCash(): string {
+  const cash = openingData.lines.find((l) => l.account === "1000");
+  if (!cash || !("debit" in cash)) throw new Error("opening balances have no cash debit");
+  return cash.debit as string;
+}
+
+/** Sell what is built: units × ASP plus a flat services run-rate, split by customer mix. */
+function salesFor(period: PeriodId, units: number): SalesSummary {
+  const asp = parseMoney(companyData.products[0].aspUSD, "USD");
+  const hardwareRevenueCents = units * asp;
+  const mix = Object.entries(companyData.customerMix);
+  const shares = mix.map(([, share]) => Math.round(share * 10_000));
+  const split = allocate(hardwareRevenueCents, shares);
+  return {
+    period,
+    units,
+    hardwareRevenueCents,
+    servicesRevenueCents: parseMoney(companyData.servicesRevenuePerMonthUSD, "USD"),
+    byCustomerType: Object.fromEntries(mix.map(([type], i) => [type, split[i]])),
+  };
+}
+
 export type World = {
   seed: number;
   window: typeof SIM_WINDOW;
@@ -134,6 +167,7 @@ export type World = {
   certificates: CertificateOfOrigin[];
   customsEntries: CustomsEntry[];
   bank: { account: string; openingBalanceCents: number; asOf: ISODate; transactions: never[] };
+  sales: SalesSummary[];
   inbox: InboxMessage[];
   answerKey: AnswerKey;
 };
@@ -248,6 +282,7 @@ export function generate(seed: number = DEFAULT_SEED): World {
   const nextInvoiceNo = (supplierId: string) => `${INVOICE_NO_START[supplierId][0]}${invoiceSeq[supplierId]++}`;
 
   const productionPlan: ProductionPlanLine[] = MONTHS.map((period) => ({ period, productId: "K2", units: PLAN_UNITS[period] }));
+  const sales = MONTHS.map((period) => salesFor(period, PLAN_UNITS[period]));
 
   // Baseline: one PO per supplier per month for that month's build, from the primary source.
   const months: MonthDocs[] = [];
@@ -337,7 +372,7 @@ export function generate(seed: number = DEFAULT_SEED): World {
     const m = find("2026-04", "S-VIR");
     const idx = m.invoice.lines.findIndex((l) => l.partId === "P04");
     const line = m.invoice.lines[idx];
-    line.unitPriceE4 = parseUnitPrice("162.00");
+    line.unitPriceE4 = parseUnitPrice("1420.00");
     line.manufacturerPartNo = "VFC-2-LC";
     line.description = "Flight controller FC-2 Lite (functional equivalent of VFC-2)";
     reprice(m.invoice);
@@ -365,12 +400,12 @@ export function generate(seed: number = DEFAULT_SEED): World {
     });
   }
 
-  // #2 Price vs contract: Atlas invoices $14.00 vs C-12 §4.2 $11.00 on 3,000 motors.
+  // #2 Price vs contract: Atlas invoices $132.00 vs C-12 §4.2 $118.00 on 3,000 motors.
   {
     const m = find("2026-04", "S-ATL");
     const line = m.invoice.lines.find((l) => l.partId === "P07")!;
     const contractPrice = line.unitPriceE4;
-    line.unitPriceE4 = parseUnitPrice("14.00");
+    line.unitPriceE4 = parseUnitPrice("132.00");
     reprice(m.invoice);
     entries.push({
       id: "AK-02",
@@ -387,12 +422,12 @@ export function generate(seed: number = DEFAULT_SEED): World {
     });
   }
 
-  // #4 Quantity mismatch: Luis enters 480 propeller sets; slip and invoice say 400.
+  // #4 Quantity mismatch: Luis enters 660 propeller sets; slip and invoice say 600.
   {
     const m = find("2026-04", "S-CAS");
     const rl = m.receipt.lines.find((l) => l.partId === "P02")!;
     const slipQty = m.slip.lines.find((l) => l.partId === "P02")!.qty;
-    rl.qty = 480;
+    rl.qty = rl.qty + 60;
     entries.push({
       id: "AK-04",
       problem: 4,
@@ -404,7 +439,7 @@ export function generate(seed: number = DEFAULT_SEED): World {
       supplierId: "S-CAS",
       partId: "P02",
       impactUSDCents: lineAmount(rl.qty - slipQty, contractFor(ctx, "S-CAS", "P02").prices[0].unitPriceE4, "USD"),
-      expectedHandling: "Hold; packing slip and invoice agree (400), so the dock receipt is the outlier — ask receiving (Luis) to recount before paying. Impact = inventory overstated by 80 units.",
+      expectedHandling: `Hold; packing slip and invoice agree (${slipQty}), so the dock receipt (${rl.qty}) is the outlier — ask receiving (Luis) to recount before paying. Impact = inventory overstated by ${rl.qty - slipQty} units.`,
     });
   }
 
@@ -461,7 +496,7 @@ export function generate(seed: number = DEFAULT_SEED): World {
           impactUSDCents: el.dutyUSDCents - expected,
           expectedHandling:
             occurrence < 3
-              ? "Below $250 materiality: log as info, no case yet."
+              ? "Below materiality ($1,000, data/controls.json): log as info, no case yet."
               : "Recurring 3+ times: open a duty_overcharge case covering every affected entry; ask the broker for post-summary corrections.",
         });
       });
@@ -550,7 +585,8 @@ export function generate(seed: number = DEFAULT_SEED): World {
     invoices,
     certificates,
     customsEntries: byDateThenId(customsEntries),
-    bank: { account: "1000", openingBalanceCents: 250_000_000, asOf: "2026-02-28", transactions: [] },
+    bank: { account: "1000", openingBalanceCents: parseMoney(openingCash(), "USD"), asOf: "2026-02-28", transactions: [] },
+    sales,
     inbox: [],
     answerKey: {
       seed,
@@ -577,6 +613,7 @@ export function serializeWorld(w: World): Record<string, string> {
     "data/customs/entries.json": doc(w.customsEntries),
     "data/vendors.json": doc(w.vendors),
     "data/bank/bank.json": doc(w.bank),
+    "data/erp/sales-summary.json": doc(w.sales),
     "data/inbox/messages.json": doc(w.inbox),
     "data/answer_key.json": JSON.stringify(w.answerKey, null, 2) + "\n",
   };

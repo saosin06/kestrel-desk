@@ -1,0 +1,17 @@
+{
+  "simulated": true,
+  "asOf": "2026-02-28",
+  "period": "2026-02",
+  "note": "Kestrel's balance sheet at the start of the sim (summarized). Debits positive for assets, credits for liabilities and equity.",
+  "lines": [
+    { "account": "1000", "debit": "18400000.00" },
+    { "account": "1100", "debit": "21300000.00" },
+    { "account": "1200", "debit": "9850000.00" },
+    { "account": "1500", "debit": "14200000.00" },
+    { "account": "2000", "credit": "6150000.00" },
+    { "account": "2200", "credit": "3400000.00" },
+    { "account": "2500", "credit": "10000000.00" },
+    { "account": "3100", "credit": "20000000.00" },
+    { "account": "3000", "credit": "24200000.00" }
+  ]
+}

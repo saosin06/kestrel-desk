@@ -12,12 +12,12 @@
       "lines": [
         {
           "partId": "P07",
-          "qty": 1200,
-          "unitPriceE4": 110000
+          "qty": 1600,
+          "unitPriceE4": 1180000
         },
         {
           "partId": "P14",
-          "qty": 21600,
+          "qty": 33600,
           "unitPriceE4": 350
         }
       ]
@@ -31,18 +31,18 @@
       "lines": [
         {
           "partId": "P01",
-          "qty": 180,
-          "unitPriceE4": 1850000
+          "qty": 280,
+          "unitPriceE4": 14500000
         },
         {
           "partId": "P02",
-          "qty": 360,
-          "unitPriceE4": 95000
+          "qty": 560,
+          "unitPriceE4": 850000
         },
         {
           "partId": "P03",
-          "qty": 180,
-          "unitPriceE4": 240000
+          "qty": 280,
+          "unitPriceE4": 2400000
         }
       ]
     },
@@ -55,13 +55,13 @@
       "lines": [
         {
           "partId": "P10",
-          "qty": 180,
-          "unitPriceE4": 960000000
+          "qty": 280,
+          "unitPriceE4": 5200000000
         },
         {
           "partId": "P11",
-          "qty": 180,
-          "unitPriceE4": 185000000
+          "qty": 280,
+          "unitPriceE4": 980000000
         }
       ]
     },
@@ -74,18 +74,18 @@
       "lines": [
         {
           "partId": "P12",
-          "qty": 180,
-          "unitPriceE4": 110000
+          "qty": 280,
+          "unitPriceE4": 1400000
         },
         {
           "partId": "P13",
-          "qty": 2160,
-          "unitPriceE4": 32000
+          "qty": 3360,
+          "unitPriceE4": 110000
         },
         {
           "partId": "P15",
-          "qty": 180,
-          "unitPriceE4": 180000
+          "qty": 280,
+          "unitPriceE4": 1600000
         }
       ]
     },
@@ -98,18 +98,18 @@
       "lines": [
         {
           "partId": "P06",
-          "qty": 360,
-          "unitPriceE4": 2100000
+          "qty": 560,
+          "unitPriceE4": 11500000
         },
         {
           "partId": "P08",
-          "qty": 180,
-          "unitPriceE4": 950000
+          "qty": 280,
+          "unitPriceE4": 7800000
         },
         {
           "partId": "P09",
-          "qty": 180,
-          "unitPriceE4": 1600000
+          "qty": 280,
+          "unitPriceE4": 12000000
         }
       ]
     },
@@ -122,13 +122,13 @@
       "lines": [
         {
           "partId": "P04",
-          "qty": 180,
-          "unitPriceE4": 1850000
+          "qty": 280,
+          "unitPriceE4": 18500000
         },
         {
           "partId": "P05",
-          "qty": 180,
-          "unitPriceE4": 420000
+          "qty": 280,
+          "unitPriceE4": 3800000
         }
       ]
     },
@@ -142,11 +142,11 @@
         {
           "partId": "P07",
           "qty": 3000,
-          "unitPriceE4": 110000
+          "unitPriceE4": 1180000
         },
         {
           "partId": "P14",
-          "qty": 24000,
+          "qty": 36000,
           "unitPriceE4": 350
         }
       ]
@@ -160,18 +160,18 @@
       "lines": [
         {
           "partId": "P01",
-          "qty": 200,
-          "unitPriceE4": 1850000
+          "qty": 300,
+          "unitPriceE4": 14500000
         },
         {
           "partId": "P02",
-          "qty": 400,
-          "unitPriceE4": 95000
+          "qty": 600,
+          "unitPriceE4": 850000
         },
         {
           "partId": "P03",
-          "qty": 200,
-          "unitPriceE4": 240000
+          "qty": 300,
+          "unitPriceE4": 2400000
         }
       ]
     },
@@ -184,13 +184,13 @@
       "lines": [
         {
           "partId": "P10",
-          "qty": 200,
-          "unitPriceE4": 960000000
+          "qty": 300,
+          "unitPriceE4": 5200000000
         },
         {
           "partId": "P11",
-          "qty": 200,
-          "unitPriceE4": 185000000
+          "qty": 300,
+          "unitPriceE4": 980000000
         }
       ]
     },
@@ -203,18 +203,18 @@
       "lines": [
         {
           "partId": "P12",
-          "qty": 200,
-          "unitPriceE4": 110000
+          "qty": 300,
+          "unitPriceE4": 1400000
         },
         {
           "partId": "P13",
-          "qty": 2400,
-          "unitPriceE4": 32000
+          "qty": 3600,
+          "unitPriceE4": 110000
         },
         {
           "partId": "P15",
-          "qty": 200,
-          "unitPriceE4": 180000
+          "qty": 300,
+          "unitPriceE4": 1600000
         }
       ]
     },
@@ -227,18 +227,18 @@
       "lines": [
         {
           "partId": "P06",
-          "qty": 400,
-          "unitPriceE4": 2100000
+          "qty": 600,
+          "unitPriceE4": 11500000
         },
         {
           "partId": "P08",
-          "qty": 200,
-          "unitPriceE4": 950000
+          "qty": 300,
+          "unitPriceE4": 7800000
         },
         {
           "partId": "P09",
-          "qty": 200,
-          "unitPriceE4": 1600000
+          "qty": 300,
+          "unitPriceE4": 12000000
         }
       ]
     },
@@ -251,13 +251,13 @@
       "lines": [
         {
           "partId": "P04",
-          "qty": 200,
-          "unitPriceE4": 1850000
+          "qty": 300,
+          "unitPriceE4": 18500000
         },
         {
           "partId": "P05",
-          "qty": 200,
-          "unitPriceE4": 420000
+          "qty": 300,
+          "unitPriceE4": 3800000
         }
       ]
     },
@@ -270,7 +270,7 @@
       "lines": [
         {
           "partId": "P14",
-          "qty": 25200,
+          "qty": 37200,
           "unitPriceE4": 350
         }
       ]
@@ -284,18 +284,18 @@
       "lines": [
         {
           "partId": "P01",
-          "qty": 210,
-          "unitPriceE4": 1850000
+          "qty": 310,
+          "unitPriceE4": 14500000
         },
         {
           "partId": "P02",
-          "qty": 420,
-          "unitPriceE4": 95000
+          "qty": 620,
+          "unitPriceE4": 850000
         },
         {
           "partId": "P03",
-          "qty": 210,
-          "unitPriceE4": 240000
+          "qty": 310,
+          "unitPriceE4": 2400000
         }
       ]
     },
@@ -308,13 +308,13 @@
       "lines": [
         {
           "partId": "P10",
-          "qty": 210,
-          "unitPriceE4": 960000000
+          "qty": 310,
+          "unitPriceE4": 5200000000
         },
         {
           "partId": "P11",
-          "qty": 210,
-          "unitPriceE4": 185000000
+          "qty": 310,
+          "unitPriceE4": 980000000
         }
       ]
     },
@@ -327,18 +327,18 @@
       "lines": [
         {
           "partId": "P12",
-          "qty": 210,
-          "unitPriceE4": 110000
+          "qty": 310,
+          "unitPriceE4": 1400000
         },
         {
           "partId": "P13",
-          "qty": 2520,
-          "unitPriceE4": 32000
+          "qty": 3720,
+          "unitPriceE4": 110000
         },
         {
           "partId": "P15",
-          "qty": 210,
-          "unitPriceE4": 180000
+          "qty": 310,
+          "unitPriceE4": 1600000
         }
       ]
     },
@@ -351,18 +351,18 @@
       "lines": [
         {
           "partId": "P06",
-          "qty": 420,
-          "unitPriceE4": 2100000
+          "qty": 620,
+          "unitPriceE4": 11500000
         },
         {
           "partId": "P08",
-          "qty": 210,
-          "unitPriceE4": 950000
+          "qty": 310,
+          "unitPriceE4": 7800000
         },
         {
           "partId": "P09",
-          "qty": 210,
-          "unitPriceE4": 1600000
+          "qty": 310,
+          "unitPriceE4": 12000000
         }
       ]
     },
@@ -375,13 +375,13 @@
       "lines": [
         {
           "partId": "P04",
-          "qty": 210,
-          "unitPriceE4": 1850000
+          "qty": 310,
+          "unitPriceE4": 18500000
         },
         {
           "partId": "P05",
-          "qty": 210,
-          "unitPriceE4": 420000
+          "qty": 310,
+          "unitPriceE4": 3800000
         }
       ]
     },
@@ -393,8 +393,13 @@
       "status": "open",
       "lines": [
         {
+          "partId": "P07",
+          "qty": 1200,
+          "unitPriceE4": 1180000
+        },
+        {
           "partId": "P14",
-          "qty": 24000,
+          "qty": 36000,
           "unitPriceE4": 350
         }
       ]
@@ -408,18 +413,18 @@
       "lines": [
         {
           "partId": "P01",
-          "qty": 200,
-          "unitPriceE4": 1850000
+          "qty": 300,
+          "unitPriceE4": 14500000
         },
         {
           "partId": "P02",
-          "qty": 400,
-          "unitPriceE4": 95000
+          "qty": 600,
+          "unitPriceE4": 850000
         },
         {
           "partId": "P03",
-          "qty": 200,
-          "unitPriceE4": 240000
+          "qty": 300,
+          "unitPriceE4": 2400000
         }
       ]
     },
@@ -432,13 +437,13 @@
       "lines": [
         {
           "partId": "P10",
-          "qty": 200,
-          "unitPriceE4": 960000000
+          "qty": 300,
+          "unitPriceE4": 5200000000
         },
         {
           "partId": "P11",
-          "qty": 200,
-          "unitPriceE4": 185000000
+          "qty": 300,
+          "unitPriceE4": 980000000
         }
       ]
     },
@@ -451,18 +456,18 @@
       "lines": [
         {
           "partId": "P12",
-          "qty": 200,
-          "unitPriceE4": 110000
+          "qty": 300,
+          "unitPriceE4": 1400000
         },
         {
           "partId": "P13",
-          "qty": 2400,
-          "unitPriceE4": 32000
+          "qty": 3600,
+          "unitPriceE4": 110000
         },
         {
           "partId": "P15",
-          "qty": 200,
-          "unitPriceE4": 180000
+          "qty": 300,
+          "unitPriceE4": 1600000
         }
       ]
     },
@@ -475,18 +480,18 @@
       "lines": [
         {
           "partId": "P06",
-          "qty": 400,
-          "unitPriceE4": 2100000
+          "qty": 600,
+          "unitPriceE4": 11500000
         },
         {
           "partId": "P08",
-          "qty": 200,
-          "unitPriceE4": 950000
+          "qty": 300,
+          "unitPriceE4": 7800000
         },
         {
           "partId": "P09",
-          "qty": 200,
-          "unitPriceE4": 1600000
+          "qty": 300,
+          "unitPriceE4": 12000000
         }
       ]
     },
@@ -499,13 +504,13 @@
       "lines": [
         {
           "partId": "P04",
-          "qty": 200,
-          "unitPriceE4": 1850000
+          "qty": 300,
+          "unitPriceE4": 18500000
         },
         {
           "partId": "P05",
-          "qty": 200,
-          "unitPriceE4": 420000
+          "qty": 300,
+          "unitPriceE4": 3800000
         }
       ]
     },
@@ -518,12 +523,12 @@
       "lines": [
         {
           "partId": "P07",
-          "qty": 880,
-          "unitPriceE4": 110000
+          "qty": 1280,
+          "unitPriceE4": 1180000
         },
         {
           "partId": "P14",
-          "qty": 26400,
+          "qty": 38400,
           "unitPriceE4": 350
         }
       ]
@@ -537,18 +542,18 @@
       "lines": [
         {
           "partId": "P01",
-          "qty": 220,
-          "unitPriceE4": 1850000
+          "qty": 320,
+          "unitPriceE4": 14500000
         },
         {
           "partId": "P02",
-          "qty": 440,
-          "unitPriceE4": 95000
+          "qty": 640,
+          "unitPriceE4": 850000
         },
         {
           "partId": "P03",
-          "qty": 220,
-          "unitPriceE4": 240000
+          "qty": 320,
+          "unitPriceE4": 2400000
         }
       ]
     },
@@ -561,13 +566,13 @@
       "lines": [
         {
           "partId": "P10",
-          "qty": 220,
-          "unitPriceE4": 960000000
+          "qty": 320,
+          "unitPriceE4": 5200000000
         },
         {
           "partId": "P11",
-          "qty": 220,
-          "unitPriceE4": 185000000
+          "qty": 320,
+          "unitPriceE4": 980000000
         }
       ]
     },
@@ -580,18 +585,18 @@
       "lines": [
         {
           "partId": "P12",
-          "qty": 220,
-          "unitPriceE4": 110000
+          "qty": 320,
+          "unitPriceE4": 1400000
         },
         {
           "partId": "P13",
-          "qty": 2640,
-          "unitPriceE4": 32000
+          "qty": 3840,
+          "unitPriceE4": 110000
         },
         {
           "partId": "P15",
-          "qty": 220,
-          "unitPriceE4": 180000
+          "qty": 320,
+          "unitPriceE4": 1600000
         }
       ]
     },
@@ -604,18 +609,18 @@
       "lines": [
         {
           "partId": "P06",
-          "qty": 440,
-          "unitPriceE4": 2100000
+          "qty": 640,
+          "unitPriceE4": 11500000
         },
         {
           "partId": "P08",
-          "qty": 220,
-          "unitPriceE4": 950000
+          "qty": 320,
+          "unitPriceE4": 7800000
         },
         {
           "partId": "P09",
-          "qty": 220,
-          "unitPriceE4": 1600000
+          "qty": 320,
+          "unitPriceE4": 12000000
         }
       ]
     },
@@ -628,13 +633,13 @@
       "lines": [
         {
           "partId": "P04",
-          "qty": 220,
-          "unitPriceE4": 1850000
+          "qty": 320,
+          "unitPriceE4": 18500000
         },
         {
           "partId": "P05",
-          "qty": 220,
-          "unitPriceE4": 420000
+          "qty": 320,
+          "unitPriceE4": 3800000
         }
       ]
     },
@@ -647,12 +652,12 @@
       "lines": [
         {
           "partId": "P07",
-          "qty": 800,
-          "unitPriceE4": 110000
+          "qty": 1200,
+          "unitPriceE4": 1180000
         },
         {
           "partId": "P14",
-          "qty": 24000,
+          "qty": 36000,
           "unitPriceE4": 350
         }
       ]
@@ -666,18 +671,18 @@
       "lines": [
         {
           "partId": "P01",
-          "qty": 200,
-          "unitPriceE4": 1850000
+          "qty": 300,
+          "unitPriceE4": 14500000
         },
         {
           "partId": "P02",
-          "qty": 400,
-          "unitPriceE4": 95000
+          "qty": 600,
+          "unitPriceE4": 850000
         },
         {
           "partId": "P03",
-          "qty": 200,
-          "unitPriceE4": 240000
+          "qty": 300,
+          "unitPriceE4": 2400000
         }
       ]
     },
@@ -690,13 +695,13 @@
       "lines": [
         {
           "partId": "P10",
-          "qty": 200,
-          "unitPriceE4": 960000000
+          "qty": 300,
+          "unitPriceE4": 5200000000
         },
         {
           "partId": "P11",
-          "qty": 200,
-          "unitPriceE4": 185000000
+          "qty": 300,
+          "unitPriceE4": 980000000
         }
       ]
     },
@@ -709,18 +714,18 @@
       "lines": [
         {
           "partId": "P12",
-          "qty": 200,
-          "unitPriceE4": 110000
+          "qty": 300,
+          "unitPriceE4": 1400000
         },
         {
           "partId": "P13",
-          "qty": 2400,
-          "unitPriceE4": 32000
+          "qty": 3600,
+          "unitPriceE4": 110000
         },
         {
           "partId": "P15",
-          "qty": 200,
-          "unitPriceE4": 180000
+          "qty": 300,
+          "unitPriceE4": 1600000
         }
       ]
     },
@@ -733,18 +738,18 @@
       "lines": [
         {
           "partId": "P06",
-          "qty": 400,
-          "unitPriceE4": 2100000
+          "qty": 600,
+          "unitPriceE4": 11500000
         },
         {
           "partId": "P08",
-          "qty": 200,
-          "unitPriceE4": 950000
+          "qty": 300,
+          "unitPriceE4": 7800000
         },
         {
           "partId": "P09",
-          "qty": 200,
-          "unitPriceE4": 1600000
+          "qty": 300,
+          "unitPriceE4": 12000000
         }
       ]
     },
@@ -757,13 +762,13 @@
       "lines": [
         {
           "partId": "P04",
-          "qty": 200,
-          "unitPriceE4": 1850000
+          "qty": 300,
+          "unitPriceE4": 18500000
         },
         {
           "partId": "P05",
-          "qty": 200,
-          "unitPriceE4": 420000
+          "qty": 300,
+          "unitPriceE4": 3800000
         }
       ]
     },
@@ -776,12 +781,12 @@
       "lines": [
         {
           "partId": "P07",
-          "qty": 760,
-          "unitPriceE4": 110000
+          "qty": 1160,
+          "unitPriceE4": 1180000
         },
         {
           "partId": "P14",
-          "qty": 22800,
+          "qty": 34800,
           "unitPriceE4": 350
         }
       ]
@@ -795,18 +800,18 @@
       "lines": [
         {
           "partId": "P01",
-          "qty": 190,
-          "unitPriceE4": 1850000
+          "qty": 290,
+          "unitPriceE4": 14500000
         },
         {
           "partId": "P02",
-          "qty": 380,
-          "unitPriceE4": 95000
+          "qty": 580,
+          "unitPriceE4": 850000
         },
         {
           "partId": "P03",
-          "qty": 190,
-          "unitPriceE4": 240000
+          "qty": 290,
+          "unitPriceE4": 2400000
         }
       ]
     },
@@ -819,13 +824,13 @@
       "lines": [
         {
           "partId": "P10",
-          "qty": 190,
-          "unitPriceE4": 960000000
+          "qty": 290,
+          "unitPriceE4": 5200000000
         },
         {
           "partId": "P11",
-          "qty": 190,
-          "unitPriceE4": 185000000
+          "qty": 290,
+          "unitPriceE4": 980000000
         }
       ]
     },
@@ -838,18 +843,18 @@
       "lines": [
         {
           "partId": "P12",
-          "qty": 190,
-          "unitPriceE4": 110000
+          "qty": 290,
+          "unitPriceE4": 1400000
         },
         {
           "partId": "P13",
-          "qty": 2280,
-          "unitPriceE4": 32000
+          "qty": 3480,
+          "unitPriceE4": 110000
         },
         {
           "partId": "P15",
-          "qty": 190,
-          "unitPriceE4": 180000
+          "qty": 290,
+          "unitPriceE4": 1600000
         }
       ]
     },
@@ -862,18 +867,18 @@
       "lines": [
         {
           "partId": "P06",
-          "qty": 380,
-          "unitPriceE4": 2100000
+          "qty": 580,
+          "unitPriceE4": 11500000
         },
         {
           "partId": "P08",
-          "qty": 190,
-          "unitPriceE4": 950000
+          "qty": 290,
+          "unitPriceE4": 7800000
         },
         {
           "partId": "P09",
-          "qty": 190,
-          "unitPriceE4": 1600000
+          "qty": 290,
+          "unitPriceE4": 12000000
         }
       ]
     },
@@ -886,13 +891,13 @@
       "lines": [
         {
           "partId": "P04",
-          "qty": 190,
-          "unitPriceE4": 1850000
+          "qty": 290,
+          "unitPriceE4": 18500000
         },
         {
           "partId": "P05",
-          "qty": 190,
-          "unitPriceE4": 420000
+          "qty": 290,
+          "unitPriceE4": 3800000
         }
       ]
     }

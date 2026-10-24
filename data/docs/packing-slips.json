@@ -12,13 +12,13 @@
         {
           "partId": "P10",
           "description": "Mapping camera",
-          "qty": 180,
+          "qty": 280,
           "manufacturerPartNo": "HOS-MC42"
         },
         {
           "partId": "P11",
           "description": "Camera gimbal",
-          "qty": 180,
+          "qty": 280,
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
@@ -33,13 +33,13 @@
         {
           "partId": "P04",
           "description": "Flight controller",
-          "qty": 180,
+          "qty": 280,
           "manufacturerPartNo": "VFC-2"
         },
         {
           "partId": "P05",
           "description": "ESC board, 4-in-1",
-          "qty": 180,
+          "qty": 280,
           "manufacturerPartNo": "VESC-4X"
         }
       ],
@@ -54,19 +54,19 @@
         {
           "partId": "P01",
           "description": "Carbon-fiber airframe (center body + arms)",
-          "qty": 180,
+          "qty": 280,
           "manufacturerPartNo": "CAS-K2-FRM"
         },
         {
           "partId": "P02",
           "description": "Propeller set (pair, 15 in)",
-          "qty": 360,
+          "qty": 560,
           "manufacturerPartNo": "CAS-PRP-15"
         },
         {
           "partId": "P03",
           "description": "Landing gear assembly",
-          "qty": 180,
+          "qty": 280,
           "manufacturerPartNo": "CAS-LG-2"
         }
       ],
@@ -81,13 +81,13 @@
         {
           "partId": "P07",
           "description": "Brushless motor, 400 W (NdFeB magnets)",
-          "qty": 1200,
+          "qty": 1600,
           "manufacturerPartNo": "ATL-BL400"
         },
         {
           "partId": "P14",
           "description": "Machine screw, M3 × 8 mm",
-          "qty": 21600,
+          "qty": 33600,
           "manufacturerPartNo": "ATL-M3X8"
         }
       ],
@@ -102,19 +102,19 @@
         {
           "partId": "P12",
           "description": "Wiring harness",
-          "qty": 180,
+          "qty": 280,
           "manufacturerPartNo": "NW-HAR-K2"
         },
         {
           "partId": "P13",
           "description": "Connector",
-          "qty": 2160,
+          "qty": 3360,
           "manufacturerPartNo": "NW-CN-8P"
         },
         {
           "partId": "P15",
           "description": "Canopy / housing set",
-          "qty": 180,
+          "qty": 280,
           "manufacturerPartNo": "NW-CNP-K2"
         }
       ],
@@ -129,19 +129,19 @@
         {
           "partId": "P06",
           "description": "Li-ion battery pack",
-          "qty": 360,
+          "qty": 560,
           "manufacturerPartNo": "RDG-LI-22"
         },
         {
           "partId": "P08",
           "description": "GNSS/RTK module",
-          "qty": 180,
+          "qty": 280,
           "manufacturerPartNo": "RDG-RTK-3"
         },
         {
           "partId": "P09",
           "description": "Data-link radio",
-          "qty": 180,
+          "qty": 280,
           "manufacturerPartNo": "RDG-DL-900"
         }
       ],
@@ -162,7 +162,7 @@
         {
           "partId": "P14",
           "description": "Machine screw, M3 × 8 mm",
-          "qty": 24000,
+          "qty": 36000,
           "manufacturerPartNo": "ATL-M3X8"
         }
       ],
@@ -177,13 +177,13 @@
         {
           "partId": "P10",
           "description": "Mapping camera",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "HOS-MC42"
         },
         {
           "partId": "P11",
           "description": "Camera gimbal",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
@@ -198,13 +198,13 @@
         {
           "partId": "P04",
           "description": "Flight controller FC-2 Lite (functional equivalent of VFC-2)",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "VFC-2-LC"
         },
         {
           "partId": "P05",
           "description": "ESC board, 4-in-1",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "VESC-4X"
         }
       ],
@@ -219,19 +219,19 @@
         {
           "partId": "P01",
           "description": "Carbon-fiber airframe (center body + arms)",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "CAS-K2-FRM"
         },
         {
           "partId": "P02",
           "description": "Propeller set (pair, 15 in)",
-          "qty": 400,
+          "qty": 600,
           "manufacturerPartNo": "CAS-PRP-15"
         },
         {
           "partId": "P03",
           "description": "Landing gear assembly",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "CAS-LG-2"
         }
       ],
@@ -246,19 +246,19 @@
         {
           "partId": "P12",
           "description": "Wiring harness",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "NW-HAR-K2"
         },
         {
           "partId": "P13",
           "description": "Connector",
-          "qty": 2400,
+          "qty": 3600,
           "manufacturerPartNo": "NW-CN-8P"
         },
         {
           "partId": "P15",
           "description": "Canopy / housing set",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "NW-CNP-K2"
         }
       ],
@@ -273,19 +273,19 @@
         {
           "partId": "P06",
           "description": "Li-ion battery pack",
-          "qty": 400,
+          "qty": 600,
           "manufacturerPartNo": "RDG-LI-22"
         },
         {
           "partId": "P08",
           "description": "GNSS/RTK module",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "RDG-RTK-3"
         },
         {
           "partId": "P09",
           "description": "Data-link radio",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "RDG-DL-900"
         }
       ],
@@ -300,7 +300,7 @@
         {
           "partId": "P14",
           "description": "Machine screw, M3 × 8 mm",
-          "qty": 25200,
+          "qty": 37200,
           "manufacturerPartNo": "ATL-M3X8"
         }
       ],
@@ -315,13 +315,13 @@
         {
           "partId": "P10",
           "description": "Mapping camera",
-          "qty": 210,
+          "qty": 310,
           "manufacturerPartNo": "HOS-MC42"
         },
         {
           "partId": "P11",
           "description": "Camera gimbal",
-          "qty": 210,
+          "qty": 310,
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
@@ -336,19 +336,19 @@
         {
           "partId": "P12",
           "description": "Wiring harness",
-          "qty": 210,
+          "qty": 310,
           "manufacturerPartNo": "NW-HAR-K2"
         },
         {
           "partId": "P13",
           "description": "Connector",
-          "qty": 2520,
+          "qty": 3720,
           "manufacturerPartNo": "NW-CN-8P"
         },
         {
           "partId": "P15",
           "description": "Canopy / housing set",
-          "qty": 210,
+          "qty": 310,
           "manufacturerPartNo": "NW-CNP-K2"
         }
       ],
@@ -363,19 +363,19 @@
         {
           "partId": "P01",
           "description": "Carbon-fiber airframe (center body + arms)",
-          "qty": 210,
+          "qty": 310,
           "manufacturerPartNo": "CAS-K2-FRM"
         },
         {
           "partId": "P02",
           "description": "Propeller set (pair, 15 in)",
-          "qty": 420,
+          "qty": 620,
           "manufacturerPartNo": "CAS-PRP-15"
         },
         {
           "partId": "P03",
           "description": "Landing gear assembly",
-          "qty": 210,
+          "qty": 310,
           "manufacturerPartNo": "CAS-LG-2"
         }
       ],
@@ -390,19 +390,19 @@
         {
           "partId": "P06",
           "description": "Li-ion battery pack",
-          "qty": 420,
+          "qty": 620,
           "manufacturerPartNo": "RDG-LI-22"
         },
         {
           "partId": "P08",
           "description": "GNSS/RTK module",
-          "qty": 210,
+          "qty": 310,
           "manufacturerPartNo": "RDG-RTK-3"
         },
         {
           "partId": "P09",
           "description": "Data-link radio",
-          "qty": 210,
+          "qty": 310,
           "manufacturerPartNo": "RDG-DL-900"
         }
       ],
@@ -417,13 +417,13 @@
         {
           "partId": "P04",
           "description": "Flight controller",
-          "qty": 210,
+          "qty": 310,
           "manufacturerPartNo": "VFC-2"
         },
         {
           "partId": "P05",
           "description": "ESC board, 4-in-1",
-          "qty": 210,
+          "qty": 310,
           "manufacturerPartNo": "VESC-4X"
         }
       ],
@@ -438,13 +438,13 @@
         {
           "partId": "P04",
           "description": "Flight controller",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "VFC-2"
         },
         {
           "partId": "P05",
           "description": "ESC board, 4-in-1",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "VESC-4X"
         }
       ],
@@ -459,13 +459,13 @@
         {
           "partId": "P10",
           "description": "Mapping camera",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "HOS-MC42"
         },
         {
           "partId": "P11",
           "description": "Camera gimbal",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
@@ -480,19 +480,19 @@
         {
           "partId": "P12",
           "description": "Wiring harness",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "NW-HAR-K2"
         },
         {
           "partId": "P13",
           "description": "Connector",
-          "qty": 2400,
+          "qty": 3600,
           "manufacturerPartNo": "NW-CN-8P"
         },
         {
           "partId": "P15",
           "description": "Canopy / housing set",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "NW-CNP-K2"
         }
       ],
@@ -505,9 +505,15 @@
       "date": "2026-06-10",
       "lines": [
         {
+          "partId": "P07",
+          "description": "Brushless motor, 400 W (NdFeB magnets)",
+          "qty": 1200,
+          "manufacturerPartNo": "ATL-BL400"
+        },
+        {
           "partId": "P14",
           "description": "Machine screw, M3 × 8 mm",
-          "qty": 24000,
+          "qty": 36000,
           "manufacturerPartNo": "ATL-M3X8"
         }
       ],
@@ -522,19 +528,19 @@
         {
           "partId": "P01",
           "description": "Carbon-fiber airframe (center body + arms)",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "CAS-K2-FRM"
         },
         {
           "partId": "P02",
           "description": "Propeller set (pair, 15 in)",
-          "qty": 400,
+          "qty": 600,
           "manufacturerPartNo": "CAS-PRP-15"
         },
         {
           "partId": "P03",
           "description": "Landing gear assembly",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "CAS-LG-2"
         }
       ],
@@ -549,19 +555,19 @@
         {
           "partId": "P06",
           "description": "Li-ion battery pack",
-          "qty": 400,
+          "qty": 600,
           "manufacturerPartNo": "RDG-LI-22"
         },
         {
           "partId": "P08",
           "description": "GNSS/RTK module",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "RDG-RTK-3"
         },
         {
           "partId": "P09",
           "description": "Data-link radio",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "RDG-DL-900"
         }
       ],
@@ -576,13 +582,13 @@
         {
           "partId": "P07",
           "description": "Brushless motor, 400 W (NdFeB magnets)",
-          "qty": 880,
+          "qty": 1280,
           "manufacturerPartNo": "ATL-BL400"
         },
         {
           "partId": "P14",
           "description": "Machine screw, M3 × 8 mm",
-          "qty": 26400,
+          "qty": 38400,
           "manufacturerPartNo": "ATL-M3X8"
         }
       ],
@@ -597,19 +603,19 @@
         {
           "partId": "P12",
           "description": "Wiring harness",
-          "qty": 220,
+          "qty": 320,
           "manufacturerPartNo": "NW-HAR-K2"
         },
         {
           "partId": "P13",
           "description": "Connector",
-          "qty": 2640,
+          "qty": 3840,
           "manufacturerPartNo": "NW-CN-8P"
         },
         {
           "partId": "P15",
           "description": "Canopy / housing set",
-          "qty": 220,
+          "qty": 320,
           "manufacturerPartNo": "NW-CNP-K2"
         }
       ],
@@ -624,13 +630,13 @@
         {
           "partId": "P04",
           "description": "Flight controller",
-          "qty": 220,
+          "qty": 320,
           "manufacturerPartNo": "VFC-2"
         },
         {
           "partId": "P05",
           "description": "ESC board, 4-in-1",
-          "qty": 220,
+          "qty": 320,
           "manufacturerPartNo": "VESC-4X"
         }
       ],
@@ -645,19 +651,19 @@
         {
           "partId": "P01",
           "description": "Carbon-fiber airframe (center body + arms)",
-          "qty": 220,
+          "qty": 320,
           "manufacturerPartNo": "CAS-K2-FRM"
         },
         {
           "partId": "P02",
           "description": "Propeller set (pair, 15 in)",
-          "qty": 440,
+          "qty": 640,
           "manufacturerPartNo": "CAS-PRP-15"
         },
         {
           "partId": "P03",
           "description": "Landing gear assembly",
-          "qty": 220,
+          "qty": 320,
           "manufacturerPartNo": "CAS-LG-2"
         }
       ],
@@ -672,13 +678,13 @@
         {
           "partId": "P10",
           "description": "Mapping camera",
-          "qty": 220,
+          "qty": 320,
           "manufacturerPartNo": "HOS-MC42"
         },
         {
           "partId": "P11",
           "description": "Camera gimbal",
-          "qty": 220,
+          "qty": 320,
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
@@ -693,19 +699,19 @@
         {
           "partId": "P06",
           "description": "Li-ion battery pack",
-          "qty": 440,
+          "qty": 640,
           "manufacturerPartNo": "RDG-LI-22"
         },
         {
           "partId": "P08",
           "description": "GNSS/RTK module",
-          "qty": 220,
+          "qty": 320,
           "manufacturerPartNo": "RDG-RTK-3"
         },
         {
           "partId": "P09",
           "description": "Data-link radio",
-          "qty": 220,
+          "qty": 320,
           "manufacturerPartNo": "RDG-DL-900"
         }
       ],
@@ -720,13 +726,13 @@
         {
           "partId": "P10",
           "description": "Mapping camera",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "HOS-MC42"
         },
         {
           "partId": "P11",
           "description": "Camera gimbal",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
@@ -741,19 +747,19 @@
         {
           "partId": "P12",
           "description": "Wiring harness",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "NW-HAR-K2"
         },
         {
           "partId": "P13",
           "description": "Connector",
-          "qty": 2400,
+          "qty": 3600,
           "manufacturerPartNo": "NW-CN-8P"
         },
         {
           "partId": "P15",
           "description": "Canopy / housing set",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "NW-CNP-K2"
         }
       ],
@@ -768,13 +774,13 @@
         {
           "partId": "P07",
           "description": "Brushless motor, 400 W (NdFeB magnets)",
-          "qty": 800,
+          "qty": 1200,
           "manufacturerPartNo": "ATL-BL400"
         },
         {
           "partId": "P14",
           "description": "Machine screw, M3 × 8 mm",
-          "qty": 24000,
+          "qty": 36000,
           "manufacturerPartNo": "ATL-M3X8"
         }
       ],
@@ -789,13 +795,13 @@
         {
           "partId": "P04",
           "description": "Flight controller",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "VFC-2"
         },
         {
           "partId": "P05",
           "description": "ESC board, 4-in-1",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "VESC-4X"
         }
       ],
@@ -810,19 +816,19 @@
         {
           "partId": "P01",
           "description": "Carbon-fiber airframe (center body + arms)",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "CAS-K2-FRM"
         },
         {
           "partId": "P02",
           "description": "Propeller set (pair, 15 in)",
-          "qty": 400,
+          "qty": 600,
           "manufacturerPartNo": "CAS-PRP-15"
         },
         {
           "partId": "P03",
           "description": "Landing gear assembly",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "CAS-LG-2"
         }
       ],
@@ -837,19 +843,19 @@
         {
           "partId": "P06",
           "description": "Li-ion battery pack",
-          "qty": 400,
+          "qty": 600,
           "manufacturerPartNo": "RDG-LI-22"
         },
         {
           "partId": "P08",
           "description": "GNSS/RTK module",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "RDG-RTK-3"
         },
         {
           "partId": "P09",
           "description": "Data-link radio",
-          "qty": 200,
+          "qty": 300,
           "manufacturerPartNo": "RDG-DL-900"
         }
       ],
@@ -864,13 +870,13 @@
         {
           "partId": "P07",
           "description": "Brushless motor, 400 W (NdFeB magnets)",
-          "qty": 760,
+          "qty": 1160,
           "manufacturerPartNo": "ATL-BL400"
         },
         {
           "partId": "P14",
           "description": "Machine screw, M3 × 8 mm",
-          "qty": 22800,
+          "qty": 34800,
           "manufacturerPartNo": "ATL-M3X8"
         }
       ],
@@ -885,13 +891,13 @@
         {
           "partId": "P04",
           "description": "Flight controller",
-          "qty": 190,
+          "qty": 290,
           "manufacturerPartNo": "VFC-2"
         },
         {
           "partId": "P05",
           "description": "ESC board, 4-in-1",
-          "qty": 190,
+          "qty": 290,
           "manufacturerPartNo": "VESC-4X"
         }
       ],
@@ -906,13 +912,13 @@
         {
           "partId": "P10",
           "description": "Mapping camera",
-          "qty": 190,
+          "qty": 290,
           "manufacturerPartNo": "HOS-MC42"
         },
         {
           "partId": "P11",
           "description": "Camera gimbal",
-          "qty": 190,
+          "qty": 290,
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
@@ -927,19 +933,19 @@
         {
           "partId": "P01",
           "description": "Carbon-fiber airframe (center body + arms)",
-          "qty": 190,
+          "qty": 290,
           "manufacturerPartNo": "CAS-K2-FRM"
         },
         {
           "partId": "P02",
           "description": "Propeller set (pair, 15 in)",
-          "qty": 380,
+          "qty": 580,
           "manufacturerPartNo": "CAS-PRP-15"
         },
         {
           "partId": "P03",
           "description": "Landing gear assembly",
-          "qty": 190,
+          "qty": 290,
           "manufacturerPartNo": "CAS-LG-2"
         }
       ],
@@ -954,19 +960,19 @@
         {
           "partId": "P12",
           "description": "Wiring harness",
-          "qty": 190,
+          "qty": 290,
           "manufacturerPartNo": "NW-HAR-K2"
         },
         {
           "partId": "P13",
           "description": "Connector",
-          "qty": 2280,
+          "qty": 3480,
           "manufacturerPartNo": "NW-CN-8P"
         },
         {
           "partId": "P15",
           "description": "Canopy / housing set",
-          "qty": 190,
+          "qty": 290,
           "manufacturerPartNo": "NW-CNP-K2"
         }
       ],
@@ -981,19 +987,19 @@
         {
           "partId": "P06",
           "description": "Li-ion battery pack",
-          "qty": 380,
+          "qty": 580,
           "manufacturerPartNo": "RDG-LI-22"
         },
         {
           "partId": "P08",
           "description": "GNSS/RTK module",
-          "qty": 190,
+          "qty": 290,
           "manufacturerPartNo": "RDG-RTK-3"
         },
         {
           "partId": "P09",
           "description": "Data-link radio",
-          "qty": 190,
+          "qty": 290,
           "manufacturerPartNo": "RDG-DL-900"
         }
       ],
