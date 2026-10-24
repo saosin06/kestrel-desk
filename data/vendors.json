@@ -1,0 +1,79 @@
+{
+  "generatedBy": "scripts/generate.ts",
+  "seed": 42,
+  "simulated": true,
+  "items": [
+    {
+      "supplierId": "S-NW",
+      "legalName": "Northwind Components, Inc.",
+      "remitTo": {
+        "id": "VM-NW",
+        "bankName": "Pacific Commerce Bank",
+        "accountLast4": "4821",
+        "routingLast4": "0072"
+      },
+      "verifiedOn": "2025-11-04",
+      "verifiedBy": "controller"
+    },
+    {
+      "supplierId": "S-ATL",
+      "legalName": "Atlas Motors S.A. de C.V.",
+      "remitTo": {
+        "id": "VM-ATL",
+        "bankName": "Banco del Norte (USD account)",
+        "accountLast4": "9930",
+        "routingLast4": "1186"
+      },
+      "verifiedOn": "2025-09-18",
+      "verifiedBy": "controller"
+    },
+    {
+      "supplierId": "S-VIR",
+      "legalName": "Vireo Avionics Co., Ltd.",
+      "remitTo": {
+        "id": "VM-VIR",
+        "bankName": "Formosa Trade Bank (USD account)",
+        "accountLast4": "5507",
+        "routingLast4": "3301"
+      },
+      "verifiedOn": "2025-10-02",
+      "verifiedBy": "controller"
+    },
+    {
+      "supplierId": "S-HOS",
+      "legalName": "Hoshi Optics K.K.",
+      "remitTo": {
+        "id": "VM-HOS",
+        "bankName": "Kansai Industrial Bank",
+        "accountLast4": "2246",
+        "routingLast4": "0419"
+      },
+      "verifiedOn": "2025-08-27",
+      "verifiedBy": "controller"
+    },
+    {
+      "supplierId": "S-RDG",
+      "legalName": "Ridgeline Power & Radio LLC",
+      "remitTo": {
+        "id": "VM-RDG",
+        "bankName": "Front Range Savings",
+        "accountLast4": "7314",
+        "routingLast4": "0951"
+      },
+      "verifiedOn": "2026-01-12",
+      "verifiedBy": "controller"
+    },
+    {
+      "supplierId": "S-CAS",
+      "legalName": "Cascade Composites & Motion, Inc.",
+      "remitTo": {
+        "id": "VM-CAS",
+        "bankName": "Columbia Valley Bank",
+        "accountLast4": "6650",
+        "routingLast4": "0233"
+      },
+      "verifiedOn": "2025-12-01",
+      "verifiedBy": "controller"
+    }
+  ]
+}

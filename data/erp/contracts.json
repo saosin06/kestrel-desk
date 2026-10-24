@@ -1,0 +1,263 @@
+{
+  "generatedBy": "scripts/generate.ts",
+  "seed": 42,
+  "simulated": true,
+  "items": [
+    {
+      "id": "C-01",
+      "supplierId": "S-CAS",
+      "partId": "P01",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 1850000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-01 §4.2"
+        }
+      ],
+      "incoterm": "DAP",
+      "leadTimeDays": 14
+    },
+    {
+      "id": "C-02",
+      "supplierId": "S-CAS",
+      "partId": "P02",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 95000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-02 §4.2"
+        }
+      ],
+      "incoterm": "DAP",
+      "leadTimeDays": 14
+    },
+    {
+      "id": "C-03",
+      "supplierId": "S-CAS",
+      "partId": "P03",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 240000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-03 §4.2"
+        }
+      ],
+      "incoterm": "DAP",
+      "leadTimeDays": 14
+    },
+    {
+      "id": "C-04",
+      "supplierId": "S-VIR",
+      "partId": "P04",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 1850000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-04 §4.2"
+        }
+      ],
+      "incoterm": "FCA",
+      "leadTimeDays": 28
+    },
+    {
+      "id": "C-05",
+      "supplierId": "S-VIR",
+      "partId": "P05",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 420000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-05 §4.2"
+        }
+      ],
+      "incoterm": "FCA",
+      "leadTimeDays": 28
+    },
+    {
+      "id": "C-06",
+      "supplierId": "S-RDG",
+      "partId": "P06",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 2100000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-06 §4.2"
+        }
+      ],
+      "incoterm": "DAP",
+      "leadTimeDays": 14
+    },
+    {
+      "id": "C-07",
+      "supplierId": "S-CAS",
+      "partId": "P07",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 118000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-07 §4.2"
+        }
+      ],
+      "incoterm": "DAP",
+      "leadTimeDays": 14
+    },
+    {
+      "id": "C-08",
+      "supplierId": "S-RDG",
+      "partId": "P08",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 950000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-08 §4.2"
+        }
+      ],
+      "incoterm": "DAP",
+      "leadTimeDays": 14
+    },
+    {
+      "id": "C-09",
+      "supplierId": "S-RDG",
+      "partId": "P09",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 1600000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-09 §4.2"
+        }
+      ],
+      "incoterm": "DAP",
+      "leadTimeDays": 14
+    },
+    {
+      "id": "C-10",
+      "supplierId": "S-HOS",
+      "partId": "P10",
+      "currency": "JPY",
+      "prices": [
+        {
+          "unitPriceE4": 960000000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-10 §4.2"
+        }
+      ],
+      "incoterm": "FCA",
+      "leadTimeDays": 28
+    },
+    {
+      "id": "C-11",
+      "supplierId": "S-HOS",
+      "partId": "P11",
+      "currency": "JPY",
+      "prices": [
+        {
+          "unitPriceE4": 185000000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-11 §4.2"
+        }
+      ],
+      "incoterm": "FCA",
+      "leadTimeDays": 28
+    },
+    {
+      "id": "C-12",
+      "supplierId": "S-ATL",
+      "partId": "P07",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 110000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-12 §4.2"
+        }
+      ],
+      "incoterm": "FCA",
+      "leadTimeDays": 28
+    },
+    {
+      "id": "C-13",
+      "supplierId": "S-NW",
+      "partId": "P12",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 110000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-13 §4.2"
+        }
+      ],
+      "incoterm": "DAP",
+      "leadTimeDays": 14
+    },
+    {
+      "id": "C-14",
+      "supplierId": "S-NW",
+      "partId": "P13",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 32000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-14 §4.2"
+        }
+      ],
+      "incoterm": "DAP",
+      "leadTimeDays": 14
+    },
+    {
+      "id": "C-15",
+      "supplierId": "S-ATL",
+      "partId": "P14",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 350,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-15 §4.2"
+        }
+      ],
+      "incoterm": "FCA",
+      "leadTimeDays": 28
+    },
+    {
+      "id": "C-16",
+      "supplierId": "S-NW",
+      "partId": "P15",
+      "currency": "USD",
+      "prices": [
+        {
+          "unitPriceE4": 180000,
+          "validFrom": "2026-01-01",
+          "validTo": "2026-12-31",
+          "clauseRef": "C-16 §4.2"
+        }
+      ],
+      "incoterm": "DAP",
+      "leadTimeDays": 14
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "generatedBy": "scripts/generate.ts",
+  "seed": 42,
+  "simulated": true,
+  "items": [
+    {
+      "id": "COO-2603-HOS-P10",
+      "invoiceId": "VI-2603-HOS",
+      "partId": "P10",
+      "manufacturer": "Hoshi Optics K.K.",
+      "manufacturerPartNo": "HOS-MC42",
+      "countryOfOrigin": "JP",
+      "sourceFile": "simulated:COO-2603-HOS-P10"
+    },
+    {
+      "id": "COO-2603-HOS-P11",
+      "invoiceId": "VI-2603-HOS",
+      "partId": "P11",
+      "manufacturer": "Hoshi Optics K.K.",
+      "manufacturerPartNo": "HOS-GB3",
+      "countryOfOrigin": "JP",
+      "sourceFile": "simulated:COO-2603-HOS-P11"
+    },
+    {
+      "id": "COO-2603-RDG-P09",
+      "invoiceId": "VI-2603-RDG",
+      "partId": "P09",
+      "manufacturer": "Ridgeline Power & Radio LLC",
+      "manufacturerPartNo": "RDG-DL-900",
+      "countryOfOrigin": "US",
+      "sourceFile": "simulated:COO-2603-RDG-P09"
+    },
+    {
+      "id": "COO-2603-VIR-P04",
+      "invoiceId": "VI-2603-VIR",
+      "partId": "P04",
+      "manufacturer": "Vireo Avionics Co., Ltd.",
+      "manufacturerPartNo": "VFC-2",
+      "countryOfOrigin": "TW",
+      "sourceFile": "simulated:COO-2603-VIR-P04"
+    },
+    {
+      "id": "COO-2604-HOS-P10",
+      "invoiceId": "VI-2604-HOS",
+      "partId": "P10",
+      "manufacturer": "Hoshi Optics K.K.",
+      "manufacturerPartNo": "HOS-MC42",
+      "countryOfOrigin": "JP",
+      "sourceFile": "simulated:COO-2604-HOS-P10"
+    },
+    {
+      "id": "COO-2604-HOS-P11",
+      "invoiceId": "VI-2604-HOS",
+      "partId": "P11",
+      "manufacturer": "Hoshi Optics K.K.",
+      "manufacturerPartNo": "HOS-GB3",
+      "countryOfOrigin": "JP",
+      "sourceFile": "simulated:COO-2604-HOS-P11"
+    },
+    {
+      "id": "COO-2604-RDG-P09",
+      "invoiceId": "VI-2604-RDG",
+      "partId": "P09",
+      "manufacturer": "Ridgeline Power & Radio LLC",
+      "manufacturerPartNo": "RDG-DL-900",
+      "countryOfOrigin": "US",
+      "sourceFile": "simulated:COO-2604-RDG-P09"
+    },
+    {
+      "id": "COO-2604-VIR-P04",
+      "invoiceId": "VI-2604-VIR",
+      "partId": "P04",
+      "manufacturer": "Lianchuang Electronics Co., Ltd. (Shenzhen)",
+      "manufacturerPartNo": "VFC-2-LC",
+      "countryOfOrigin": "CN",
+      "sourceFile": "simulated:COO-2604-VIR-P04"
+    },
+    {
+      "id": "COO-2605-HOS-P10",
+      "invoiceId": "VI-2605-HOS",
+      "partId": "P10",
+      "manufacturer": "Hoshi Optics K.K.",
+      "manufacturerPartNo": "HOS-MC42",
+      "countryOfOrigin": "JP",
+      "sourceFile": "simulated:COO-2605-HOS-P10"
+    },
+    {
+      "id": "COO-2605-HOS-P11",
+      "invoiceId": "VI-2605-HOS",
+      "partId": "P11",
+      "manufacturer": "Hoshi Optics K.K.",
+      "manufacturerPartNo": "HOS-GB3",
+      "countryOfOrigin": "JP",
+      "sourceFile": "simulated:COO-2605-HOS-P11"
+    },
+    {
+      "id": "COO-2605-RDG-P09",
+      "invoiceId": "VI-2605-RDG",
+      "partId": "P09",
+      "manufacturer": "Ridgeline Power & Radio LLC",
+      "manufacturerPartNo": "RDG-DL-900",
+      "countryOfOrigin": "US",
+      "sourceFile": "simulated:COO-2605-RDG-P09"
+    },
+    {
+      "id": "COO-2605-VIR-P04",
+      "invoiceId": "VI-2605-VIR",
+      "partId": "P04",
+      "manufacturer": "Vireo Avionics Co., Ltd.",
+      "manufacturerPartNo": "VFC-2",
+      "countryOfOrigin": "TW",
+      "sourceFile": "simulated:COO-2605-VIR-P04"
+    },
+    {
+      "id": "COO-2606-HOS-P10",
+      "invoiceId": "VI-2606-HOS",
+      "partId": "P10",
+      "manufacturer": "Hoshi Optics K.K.",
+      "manufacturerPartNo": "HOS-MC42",
+      "countryOfOrigin": "JP",
+      "sourceFile": "simulated:COO-2606-HOS-P10"
+    },
+    {
+      "id": "COO-2606-HOS-P11",
+      "invoiceId": "VI-2606-HOS",
+      "partId": "P11",
+      "manufacturer": "Hoshi Optics K.K.",
+      "manufacturerPartNo": "HOS-GB3",
+      "countryOfOrigin": "JP",
+      "sourceFile": "simulated:COO-2606-HOS-P11"
+    },
+    {
+      "id": "COO-2606-RDG-P09",
+      "invoiceId": "VI-2606-RDG",
+      "partId": "P09",
+      "manufacturer": "Ridgeline Power & Radio LLC",
+      "manufacturerPartNo": "RDG-DL-900",
+      "countryOfOrigin": "US",
+      "sourceFile": "simulated:COO-2606-RDG-P09"
+    },
+    {
+      "id": "COO-2606-RDG-P09-2",
+      "invoiceId": "VI-2606-RDG-2",
+      "partId": "P09",
+      "manufacturer": "Ridgeline Power & Radio LLC",
+      "manufacturerPartNo": "RDG-DL-900",
+      "countryOfOrigin": "US",
+      "sourceFile": "simulated:COO-2606-RDG-P09-2"
+    },
+    {
+      "id": "COO-2606-VIR-P04",
+      "invoiceId": "VI-2606-VIR",
+      "partId": "P04",
+      "manufacturer": "Vireo Avionics Co., Ltd.",
+      "manufacturerPartNo": "VFC-2",
+      "countryOfOrigin": "TW",
+      "sourceFile": "simulated:COO-2606-VIR-P04"
+    },
+    {
+      "id": "COO-2607-HOS-P11",
+      "invoiceId": "VI-2607-HOS",
+      "partId": "P11",
+      "manufacturer": "Hoshi Optics K.K.",
+      "manufacturerPartNo": "HOS-GB3",
+      "countryOfOrigin": "JP",
+      "sourceFile": "simulated:COO-2607-HOS-P11"
+    },
+    {
+      "id": "COO-2607-RDG-P09",
+      "invoiceId": "VI-2607-RDG",
+      "partId": "P09",
+      "manufacturer": "Ridgeline Power & Radio LLC",
+      "manufacturerPartNo": "RDG-DL-900",
+      "countryOfOrigin": "US",
+      "sourceFile": "simulated:COO-2607-RDG-P09"
+    },
+    {
+      "id": "COO-2607-VIR-P04",
+      "invoiceId": "VI-2607-VIR",
+      "partId": "P04",
+      "manufacturer": "Vireo Avionics Co., Ltd.",
+      "manufacturerPartNo": "VFC-2",
+      "countryOfOrigin": "TW",
+      "sourceFile": "simulated:COO-2607-VIR-P04"
+    },
+    {
+      "id": "COO-2608-HOS-P10",
+      "invoiceId": "VI-2608-HOS",
+      "partId": "P10",
+      "manufacturer": "Hoshi Optics K.K.",
+      "manufacturerPartNo": "HOS-MC42",
+      "countryOfOrigin": "JP",
+      "sourceFile": "simulated:COO-2608-HOS-P10"
+    },
+    {
+      "id": "COO-2608-HOS-P11",
+      "invoiceId": "VI-2608-HOS",
+      "partId": "P11",
+      "manufacturer": "Hoshi Optics K.K.",
+      "manufacturerPartNo": "HOS-GB3",
+      "countryOfOrigin": "JP",
+      "sourceFile": "simulated:COO-2608-HOS-P11"
+    },
+    {
+      "id": "COO-2608-RDG-P09",
+      "invoiceId": "VI-2608-RDG",
+      "partId": "P09",
+      "manufacturer": "Ridgeline Power & Radio LLC",
+      "manufacturerPartNo": "RDG-DL-900",
+      "countryOfOrigin": "US",
+      "sourceFile": "simulated:COO-2608-RDG-P09"
+    },
+    {
+      "id": "COO-2608-VIR-P04",
+      "invoiceId": "VI-2608-VIR",
+      "partId": "P04",
+      "manufacturer": "Vireo Avionics Co., Ltd.",
+      "manufacturerPartNo": "VFC-2",
+      "countryOfOrigin": "TW",
+      "sourceFile": "simulated:COO-2608-VIR-P04"
+    },
+    {
+      "id": "COO-2609-HOS-P10",
+      "invoiceId": "VI-2609-HOS",
+      "partId": "P10",
+      "manufacturer": "Hoshi Optics K.K.",
+      "manufacturerPartNo": "HOS-MC42",
+      "countryOfOrigin": "JP",
+      "sourceFile": "simulated:COO-2609-HOS-P10"
+    },
+    {
+      "id": "COO-2609-HOS-P11",
+      "invoiceId": "VI-2609-HOS",
+      "partId": "P11",
+      "manufacturer": "Hoshi Optics K.K.",
+      "manufacturerPartNo": "HOS-GB3",
+      "countryOfOrigin": "JP",
+      "sourceFile": "simulated:COO-2609-HOS-P11"
+    },
+    {
+      "id": "COO-2609-RDG-P09",
+      "invoiceId": "VI-2609-RDG",
+      "partId": "P09",
+      "manufacturer": "Ridgeline Power & Radio LLC",
+      "manufacturerPartNo": "RDG-DL-900",
+      "countryOfOrigin": "US",
+      "sourceFile": "simulated:COO-2609-RDG-P09"
+    },
+    {
+      "id": "COO-2609-VIR-P04",
+      "invoiceId": "VI-2609-VIR",
+      "partId": "P04",
+      "manufacturer": "Vireo Avionics Co., Ltd.",
+      "manufacturerPartNo": "VFC-2",
+      "countryOfOrigin": "TW",
+      "sourceFile": "simulated:COO-2609-VIR-P04"
+    }
+  ]
+}

@@ -1,0 +1,1003 @@
+{
+  "generatedBy": "scripts/generate.ts",
+  "seed": 42,
+  "simulated": true,
+  "items": [
+    {
+      "id": "PS-2603-HOS",
+      "poId": "PO-2603-HOS",
+      "supplierId": "S-HOS",
+      "date": "2026-03-08",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 180,
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 180,
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "sourceFile": "simulated:PS-2603-HOS"
+    },
+    {
+      "id": "PS-2603-VIR",
+      "poId": "PO-2603-VIR",
+      "supplierId": "S-VIR",
+      "date": "2026-03-08",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller",
+          "qty": 180,
+          "manufacturerPartNo": "VFC-2"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 180,
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "sourceFile": "simulated:PS-2603-VIR"
+    },
+    {
+      "id": "PS-2603-CAS",
+      "poId": "PO-2603-CAS",
+      "supplierId": "S-CAS",
+      "date": "2026-03-10",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 180,
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 360,
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 180,
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2603-CAS"
+    },
+    {
+      "id": "PS-2603-ATL",
+      "poId": "PO-2603-ATL",
+      "supplierId": "S-ATL",
+      "date": "2026-03-12",
+      "lines": [
+        {
+          "partId": "P07",
+          "description": "Brushless motor, 400 W (NdFeB magnets)",
+          "qty": 1200,
+          "manufacturerPartNo": "ATL-BL400"
+        },
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 21600,
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "sourceFile": "simulated:PS-2603-ATL"
+    },
+    {
+      "id": "PS-2603-NW",
+      "poId": "PO-2603-NW",
+      "supplierId": "S-NW",
+      "date": "2026-03-15",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 180,
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2160,
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 180,
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2603-NW"
+    },
+    {
+      "id": "PS-2603-RDG",
+      "poId": "PO-2603-RDG",
+      "supplierId": "S-RDG",
+      "date": "2026-03-15",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 360,
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 180,
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 180,
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "sourceFile": "simulated:PS-2603-RDG"
+    },
+    {
+      "id": "PS-2604-ATL",
+      "poId": "PO-2604-ATL",
+      "supplierId": "S-ATL",
+      "date": "2026-04-08",
+      "lines": [
+        {
+          "partId": "P07",
+          "description": "Brushless motor, 400 W (NdFeB magnets)",
+          "qty": 3000,
+          "manufacturerPartNo": "ATL-BL400"
+        },
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 24000,
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "sourceFile": "simulated:PS-2604-ATL"
+    },
+    {
+      "id": "PS-2604-HOS",
+      "poId": "PO-2604-HOS",
+      "supplierId": "S-HOS",
+      "date": "2026-04-08",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 200,
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 200,
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "sourceFile": "simulated:PS-2604-HOS"
+    },
+    {
+      "id": "PS-2604-VIR",
+      "poId": "PO-2604-VIR",
+      "supplierId": "S-VIR",
+      "date": "2026-04-12",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller FC-2 Lite (functional equivalent of VFC-2)",
+          "qty": 200,
+          "manufacturerPartNo": "VFC-2-LC"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 200,
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "sourceFile": "simulated:PS-2604-VIR"
+    },
+    {
+      "id": "PS-2604-CAS",
+      "poId": "PO-2604-CAS",
+      "supplierId": "S-CAS",
+      "date": "2026-04-13",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 200,
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 400,
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 200,
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2604-CAS"
+    },
+    {
+      "id": "PS-2604-NW",
+      "poId": "PO-2604-NW",
+      "supplierId": "S-NW",
+      "date": "2026-04-14",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 200,
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2400,
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 200,
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2604-NW"
+    },
+    {
+      "id": "PS-2604-RDG",
+      "poId": "PO-2604-RDG",
+      "supplierId": "S-RDG",
+      "date": "2026-04-14",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 400,
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 200,
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 200,
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "sourceFile": "simulated:PS-2604-RDG"
+    },
+    {
+      "id": "PS-2605-ATL",
+      "poId": "PO-2605-ATL",
+      "supplierId": "S-ATL",
+      "date": "2026-05-09",
+      "lines": [
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 25200,
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "sourceFile": "simulated:PS-2605-ATL"
+    },
+    {
+      "id": "PS-2605-HOS",
+      "poId": "PO-2605-HOS",
+      "supplierId": "S-HOS",
+      "date": "2026-05-09",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 210,
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 210,
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "sourceFile": "simulated:PS-2605-HOS"
+    },
+    {
+      "id": "PS-2605-NW",
+      "poId": "PO-2605-NW",
+      "supplierId": "S-NW",
+      "date": "2026-05-10",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 210,
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2520,
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 210,
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2605-NW"
+    },
+    {
+      "id": "PS-2605-CAS",
+      "poId": "PO-2605-CAS",
+      "supplierId": "S-CAS",
+      "date": "2026-05-11",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 210,
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 420,
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 210,
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2605-CAS"
+    },
+    {
+      "id": "PS-2605-RDG",
+      "poId": "PO-2605-RDG",
+      "supplierId": "S-RDG",
+      "date": "2026-05-12",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 420,
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 210,
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 210,
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "sourceFile": "simulated:PS-2605-RDG"
+    },
+    {
+      "id": "PS-2605-VIR",
+      "poId": "PO-2605-VIR",
+      "supplierId": "S-VIR",
+      "date": "2026-05-12",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller",
+          "qty": 210,
+          "manufacturerPartNo": "VFC-2"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 210,
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "sourceFile": "simulated:PS-2605-VIR"
+    },
+    {
+      "id": "PS-2606-VIR",
+      "poId": "PO-2606-VIR",
+      "supplierId": "S-VIR",
+      "date": "2026-06-08",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller",
+          "qty": 200,
+          "manufacturerPartNo": "VFC-2"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 200,
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "sourceFile": "simulated:PS-2606-VIR"
+    },
+    {
+      "id": "PS-2606-HOS",
+      "poId": "PO-2606-HOS",
+      "supplierId": "S-HOS",
+      "date": "2026-06-09",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 200,
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 200,
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "sourceFile": "simulated:PS-2606-HOS"
+    },
+    {
+      "id": "PS-2606-NW",
+      "poId": "PO-2606-NW",
+      "supplierId": "S-NW",
+      "date": "2026-06-09",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 200,
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2400,
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 200,
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2606-NW"
+    },
+    {
+      "id": "PS-2606-ATL",
+      "poId": "PO-2606-ATL",
+      "supplierId": "S-ATL",
+      "date": "2026-06-10",
+      "lines": [
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 24000,
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "sourceFile": "simulated:PS-2606-ATL"
+    },
+    {
+      "id": "PS-2606-CAS",
+      "poId": "PO-2606-CAS",
+      "supplierId": "S-CAS",
+      "date": "2026-06-14",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 200,
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 400,
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 200,
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2606-CAS"
+    },
+    {
+      "id": "PS-2606-RDG",
+      "poId": "PO-2606-RDG",
+      "supplierId": "S-RDG",
+      "date": "2026-06-14",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 400,
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 200,
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 200,
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "sourceFile": "simulated:PS-2606-RDG"
+    },
+    {
+      "id": "PS-2607-ATL",
+      "poId": "PO-2607-ATL",
+      "supplierId": "S-ATL",
+      "date": "2026-07-07",
+      "lines": [
+        {
+          "partId": "P07",
+          "description": "Brushless motor, 400 W (NdFeB magnets)",
+          "qty": 880,
+          "manufacturerPartNo": "ATL-BL400"
+        },
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 26400,
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "sourceFile": "simulated:PS-2607-ATL"
+    },
+    {
+      "id": "PS-2607-NW",
+      "poId": "PO-2607-NW",
+      "supplierId": "S-NW",
+      "date": "2026-07-12",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 220,
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2640,
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 220,
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2607-NW"
+    },
+    {
+      "id": "PS-2607-VIR",
+      "poId": "PO-2607-VIR",
+      "supplierId": "S-VIR",
+      "date": "2026-07-12",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller",
+          "qty": 220,
+          "manufacturerPartNo": "VFC-2"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 220,
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "sourceFile": "simulated:PS-2607-VIR"
+    },
+    {
+      "id": "PS-2607-CAS",
+      "poId": "PO-2607-CAS",
+      "supplierId": "S-CAS",
+      "date": "2026-07-15",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 220,
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 440,
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 220,
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2607-CAS"
+    },
+    {
+      "id": "PS-2607-HOS",
+      "poId": "PO-2607-HOS",
+      "supplierId": "S-HOS",
+      "date": "2026-07-15",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 220,
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 220,
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "sourceFile": "simulated:PS-2607-HOS"
+    },
+    {
+      "id": "PS-2607-RDG",
+      "poId": "PO-2607-RDG",
+      "supplierId": "S-RDG",
+      "date": "2026-07-15",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 440,
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 220,
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 220,
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "sourceFile": "simulated:PS-2607-RDG"
+    },
+    {
+      "id": "PS-2608-HOS",
+      "poId": "PO-2608-HOS",
+      "supplierId": "S-HOS",
+      "date": "2026-08-09",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 200,
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 200,
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "sourceFile": "simulated:PS-2608-HOS"
+    },
+    {
+      "id": "PS-2608-NW",
+      "poId": "PO-2608-NW",
+      "supplierId": "S-NW",
+      "date": "2026-08-09",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 200,
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2400,
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 200,
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2608-NW"
+    },
+    {
+      "id": "PS-2608-ATL",
+      "poId": "PO-2608-ATL",
+      "supplierId": "S-ATL",
+      "date": "2026-08-10",
+      "lines": [
+        {
+          "partId": "P07",
+          "description": "Brushless motor, 400 W (NdFeB magnets)",
+          "qty": 800,
+          "manufacturerPartNo": "ATL-BL400"
+        },
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 24000,
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "sourceFile": "simulated:PS-2608-ATL"
+    },
+    {
+      "id": "PS-2608-VIR",
+      "poId": "PO-2608-VIR",
+      "supplierId": "S-VIR",
+      "date": "2026-08-10",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller",
+          "qty": 200,
+          "manufacturerPartNo": "VFC-2"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 200,
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "sourceFile": "simulated:PS-2608-VIR"
+    },
+    {
+      "id": "PS-2608-CAS",
+      "poId": "PO-2608-CAS",
+      "supplierId": "S-CAS",
+      "date": "2026-08-13",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 200,
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 400,
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 200,
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2608-CAS"
+    },
+    {
+      "id": "PS-2608-RDG",
+      "poId": "PO-2608-RDG",
+      "supplierId": "S-RDG",
+      "date": "2026-08-16",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 400,
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 200,
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 200,
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "sourceFile": "simulated:PS-2608-RDG"
+    },
+    {
+      "id": "PS-2609-ATL",
+      "poId": "PO-2609-ATL",
+      "supplierId": "S-ATL",
+      "date": "2026-09-06",
+      "lines": [
+        {
+          "partId": "P07",
+          "description": "Brushless motor, 400 W (NdFeB magnets)",
+          "qty": 760,
+          "manufacturerPartNo": "ATL-BL400"
+        },
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 22800,
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "sourceFile": "simulated:PS-2609-ATL"
+    },
+    {
+      "id": "PS-2609-VIR",
+      "poId": "PO-2609-VIR",
+      "supplierId": "S-VIR",
+      "date": "2026-09-09",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller",
+          "qty": 190,
+          "manufacturerPartNo": "VFC-2"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 190,
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "sourceFile": "simulated:PS-2609-VIR"
+    },
+    {
+      "id": "PS-2609-HOS",
+      "poId": "PO-2609-HOS",
+      "supplierId": "S-HOS",
+      "date": "2026-09-10",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 190,
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 190,
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "sourceFile": "simulated:PS-2609-HOS"
+    },
+    {
+      "id": "PS-2609-CAS",
+      "poId": "PO-2609-CAS",
+      "supplierId": "S-CAS",
+      "date": "2026-09-13",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 190,
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 380,
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 190,
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2609-CAS"
+    },
+    {
+      "id": "PS-2609-NW",
+      "poId": "PO-2609-NW",
+      "supplierId": "S-NW",
+      "date": "2026-09-13",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 190,
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2280,
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 190,
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "sourceFile": "simulated:PS-2609-NW"
+    },
+    {
+      "id": "PS-2609-RDG",
+      "poId": "PO-2609-RDG",
+      "supplierId": "S-RDG",
+      "date": "2026-09-13",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 380,
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 190,
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 190,
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "sourceFile": "simulated:PS-2609-RDG"
+    }
+  ]
+}

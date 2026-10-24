@@ -1,0 +1,516 @@
+{
+  "generatedBy": "scripts/generate.ts",
+  "seed": 42,
+  "simulated": true,
+  "items": [
+    {
+      "id": "CE-2603-HOS",
+      "invoiceId": "VI-2603-HOS",
+      "date": "2026-03-15",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8525.89.50",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 10942328,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8807.30.00",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 2108678,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 15000
+    },
+    {
+      "id": "CE-2603-VIR",
+      "invoiceId": "VI-2603-VIR",
+      "date": "2026-03-15",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8537.10.91",
+          "countryOfOrigin": "TW",
+          "valueUSDCents": 3330000,
+          "dutyRateBp": 270,
+          "dutyUSDCents": 89910
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8504.40.40",
+          "countryOfOrigin": "TW",
+          "valueUSDCents": 756000,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 104910
+    },
+    {
+      "id": "CE-2603-ATL",
+      "invoiceId": "VI-2603-ATL",
+      "date": "2026-03-19",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8501.31.40",
+          "countryOfOrigin": "MX",
+          "valueUSDCents": 1320000,
+          "dutyRateBp": 400,
+          "dutyUSDCents": 52800
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "7318.15.60",
+          "countryOfOrigin": "MX",
+          "valueUSDCents": 75600,
+          "dutyRateBp": 620,
+          "dutyUSDCents": 4687
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 72487
+    },
+    {
+      "id": "CE-2604-HOS",
+      "invoiceId": "VI-2604-HOS",
+      "date": "2026-04-14",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8525.89.50",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 12140399,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8807.30.00",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 2339556,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 15000
+    },
+    {
+      "id": "CE-2604-ATL",
+      "invoiceId": "VI-2604-ATL",
+      "date": "2026-04-15",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8501.31.40",
+          "countryOfOrigin": "MX",
+          "valueUSDCents": 4200000,
+          "dutyRateBp": 400,
+          "dutyUSDCents": 168000
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "7318.15.60",
+          "countryOfOrigin": "MX",
+          "valueUSDCents": 84000,
+          "dutyRateBp": 620,
+          "dutyUSDCents": 5208
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 188208
+    },
+    {
+      "id": "CE-2604-VIR",
+      "invoiceId": "VI-2604-VIR",
+      "date": "2026-04-19",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8537.10.91",
+          "countryOfOrigin": "CN",
+          "valueUSDCents": 3240000,
+          "dutyRateBp": 270,
+          "dutyUSDCents": 87480
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8504.40.40",
+          "countryOfOrigin": "TW",
+          "valueUSDCents": 840000,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 102480
+    },
+    {
+      "id": "CE-2605-ATL",
+      "invoiceId": "VI-2605-ATL",
+      "date": "2026-05-17",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "7318.15.60",
+          "countryOfOrigin": "MX",
+          "valueUSDCents": 88200,
+          "dutyRateBp": 620,
+          "dutyUSDCents": 5468
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 20468
+    },
+    {
+      "id": "CE-2605-HOS",
+      "invoiceId": "VI-2605-HOS",
+      "date": "2026-05-17",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8525.89.50",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 12860105,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8807.30.00",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 2478249,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 15000
+    },
+    {
+      "id": "CE-2605-VIR",
+      "invoiceId": "VI-2605-VIR",
+      "date": "2026-05-17",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8537.10.91",
+          "countryOfOrigin": "TW",
+          "valueUSDCents": 3885000,
+          "dutyRateBp": 270,
+          "dutyUSDCents": 104895
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8504.40.40",
+          "countryOfOrigin": "TW",
+          "valueUSDCents": 882000,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 119895
+    },
+    {
+      "id": "CE-2606-HOS",
+      "invoiceId": "VI-2606-HOS",
+      "date": "2026-06-15",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8525.89.50",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 11988217,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8807.30.00",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 2310229,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 15000
+    },
+    {
+      "id": "CE-2606-VIR",
+      "invoiceId": "VI-2606-VIR",
+      "date": "2026-06-15",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8537.10.91",
+          "countryOfOrigin": "TW",
+          "valueUSDCents": 3700000,
+          "dutyRateBp": 270,
+          "dutyUSDCents": 99900
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8504.40.40",
+          "countryOfOrigin": "TW",
+          "valueUSDCents": 840000,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 114900
+    },
+    {
+      "id": "CE-2606-ATL",
+      "invoiceId": "VI-2606-ATL",
+      "date": "2026-06-17",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "7318.15.80",
+          "countryOfOrigin": "MX",
+          "valueUSDCents": 84000,
+          "dutyRateBp": 850,
+          "dutyUSDCents": 7140
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 22140
+    },
+    {
+      "id": "CE-2607-ATL",
+      "invoiceId": "VI-2607-ATL",
+      "date": "2026-07-14",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8501.31.40",
+          "countryOfOrigin": "MX",
+          "valueUSDCents": 968000,
+          "dutyRateBp": 400,
+          "dutyUSDCents": 38720
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "7318.15.80",
+          "countryOfOrigin": "MX",
+          "valueUSDCents": 92400,
+          "dutyRateBp": 850,
+          "dutyUSDCents": 7854
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 61574
+    },
+    {
+      "id": "CE-2607-VIR",
+      "invoiceId": "VI-2607-VIR",
+      "date": "2026-07-19",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8537.10.91",
+          "countryOfOrigin": "TW",
+          "valueUSDCents": 4070000,
+          "dutyRateBp": 270,
+          "dutyUSDCents": 109890
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8504.40.40",
+          "countryOfOrigin": "TW",
+          "valueUSDCents": 924000,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 124890
+    },
+    {
+      "id": "CE-2607-HOS",
+      "invoiceId": "VI-2607-HOS",
+      "date": "2026-07-20",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8525.89.50",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 13005870,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8807.30.00",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 2506339,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 15000
+    },
+    {
+      "id": "CE-2608-ATL",
+      "invoiceId": "VI-2608-ATL",
+      "date": "2026-08-16",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8501.31.40",
+          "countryOfOrigin": "MX",
+          "valueUSDCents": 880000,
+          "dutyRateBp": 400,
+          "dutyUSDCents": 35200
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "7318.15.80",
+          "countryOfOrigin": "MX",
+          "valueUSDCents": 84000,
+          "dutyRateBp": 850,
+          "dutyUSDCents": 7140
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 57340
+    },
+    {
+      "id": "CE-2608-HOS",
+      "invoiceId": "VI-2608-HOS",
+      "date": "2026-08-16",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8525.89.50",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 12126150,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8807.30.00",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 2336810,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 15000
+    },
+    {
+      "id": "CE-2608-VIR",
+      "invoiceId": "VI-2608-VIR",
+      "date": "2026-08-18",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8537.10.91",
+          "countryOfOrigin": "TW",
+          "valueUSDCents": 3700000,
+          "dutyRateBp": 270,
+          "dutyUSDCents": 99900
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8504.40.40",
+          "countryOfOrigin": "TW",
+          "valueUSDCents": 840000,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 114900
+    },
+    {
+      "id": "CE-2609-ATL",
+      "invoiceId": "VI-2609-ATL",
+      "date": "2026-09-14",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8501.31.40",
+          "countryOfOrigin": "MX",
+          "valueUSDCents": 836000,
+          "dutyRateBp": 400,
+          "dutyUSDCents": 33440
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "7318.15.80",
+          "countryOfOrigin": "MX",
+          "valueUSDCents": 79800,
+          "dutyRateBp": 850,
+          "dutyUSDCents": 6783
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 55223
+    },
+    {
+      "id": "CE-2609-HOS",
+      "invoiceId": "VI-2609-HOS",
+      "date": "2026-09-17",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8525.89.50",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 11830691,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8807.30.00",
+          "countryOfOrigin": "JP",
+          "valueUSDCents": 2279873,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 15000
+    },
+    {
+      "id": "CE-2609-VIR",
+      "invoiceId": "VI-2609-VIR",
+      "date": "2026-09-17",
+      "lines": [
+        {
+          "invoiceLineIndex": 0,
+          "hts": "8537.10.91",
+          "countryOfOrigin": "TW",
+          "valueUSDCents": 3515000,
+          "dutyRateBp": 270,
+          "dutyUSDCents": 94905
+        },
+        {
+          "invoiceLineIndex": 1,
+          "hts": "8504.40.40",
+          "countryOfOrigin": "TW",
+          "valueUSDCents": 798000,
+          "dutyRateBp": 0,
+          "dutyUSDCents": 0
+        }
+      ],
+      "brokerFeeUSDCents": 15000,
+      "totalUSDCents": 109905
+    }
+  ]
+}

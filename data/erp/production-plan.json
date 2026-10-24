@@ -1,0 +1,42 @@
+{
+  "generatedBy": "scripts/generate.ts",
+  "seed": 42,
+  "simulated": true,
+  "items": [
+    {
+      "period": "2026-03",
+      "productId": "K2",
+      "units": 180
+    },
+    {
+      "period": "2026-04",
+      "productId": "K2",
+      "units": 200
+    },
+    {
+      "period": "2026-05",
+      "productId": "K2",
+      "units": 210
+    },
+    {
+      "period": "2026-06",
+      "productId": "K2",
+      "units": 200
+    },
+    {
+      "period": "2026-07",
+      "productId": "K2",
+      "units": 220
+    },
+    {
+      "period": "2026-08",
+      "productId": "K2",
+      "units": 200
+    },
+    {
+      "period": "2026-09",
+      "productId": "K2",
+      "units": 190
+    }
+  ]
+}

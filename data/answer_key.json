@@ -1,0 +1,197 @@
+{
+  "seed": 42,
+  "window": {
+    "from": "2026-03-01",
+    "to": "2026-09-30"
+  },
+  "entries": [
+    {
+      "id": "AK-01",
+      "problem": 1,
+      "title": "Substituted flight controller with restricted origin",
+      "kind": "noncompliant_substitution",
+      "objectId": "VI-2604-VIR",
+      "relatedIds": [
+        "COO-2604-VIR-P04",
+        "PS-2604-VIR",
+        "PO-2604-VIR",
+        "R-2604-VIR",
+        "P04",
+        "KESTREL-UAS-1"
+      ],
+      "period": "2026-04",
+      "supplierId": "S-VIR",
+      "partId": "P04",
+      "impactUSDCents": 3240000,
+      "expectedHandling": "Payment hold on the line; noncompliant_substitution case; required approvers engineering (Mei) + controller (Dana); government-contract eligibility flagged. Not a price saving.",
+      "note": "Three-way match passes (price is below contract: info only); only the compliance check catches it. Invoice line says TW, certificate says CN — certificate is the system of record for origin. Expected duty on the customs entry is column 1 only until the CN × 8537.10.91 Chapter 99 entry is verified."
+    },
+    {
+      "id": "AK-02",
+      "problem": 2,
+      "title": "Invoice price above contract (C-12 §4.2)",
+      "kind": "price_variance_vs_contract",
+      "objectId": "VI-2604-ATL",
+      "relatedIds": [
+        "C-12",
+        "PO-2604-ATL",
+        "R-2604-ATL",
+        "P07"
+      ],
+      "period": "2026-04",
+      "supplierId": "S-ATL",
+      "partId": "P07",
+      "impactUSDCents": 900000,
+      "expectedHandling": "Hold the invoice; defend with C-12 §4.2; request a corrected invoice or a debit memo for the difference."
+    },
+    {
+      "id": "AK-04",
+      "problem": 4,
+      "title": "Receipt quantity disagrees with packing slip and invoice",
+      "kind": "qty_mismatch",
+      "objectId": "VI-2604-CAS",
+      "relatedIds": [
+        "R-2604-CAS",
+        "PS-2604-CAS",
+        "PO-2604-CAS",
+        "P02"
+      ],
+      "period": "2026-04",
+      "supplierId": "S-CAS",
+      "partId": "P02",
+      "impactUSDCents": 76000,
+      "expectedHandling": "Hold; packing slip and invoice agree (400), so the dock receipt is the outlier — ask receiving (Luis) to recount before paying. Impact = inventory overstated by 80 units."
+    },
+    {
+      "id": "AK-05",
+      "problem": 5,
+      "title": "Duplicate invoice re-sent with a suffixed number",
+      "kind": "duplicate_invoice",
+      "objectId": "VI-2606-RDG-2",
+      "relatedIds": [
+        "VI-2606-RDG",
+        "PO-2606-RDG"
+      ],
+      "period": "2026-06",
+      "supplierId": "S-RDG",
+      "impactUSDCents": 13500000,
+      "expectedHandling": "Block payment of the re-send; cite the original invoice; no new payment request.",
+      "secondaryKinds": [
+        "qty_mismatch"
+      ],
+      "note": "The re-send also fails three-way match (nothing received awaits invoicing)."
+    },
+    {
+      "id": "AK-06-1",
+      "problem": 6,
+      "title": "Duty overcharge: P14 entered as 7318.15.80 (occurrence 1)",
+      "kind": "duty_overcharge",
+      "objectId": "CE-2606-ATL",
+      "relatedIds": [
+        "VI-2606-ATL",
+        "P14",
+        "7318.15.60",
+        "7318.15.80"
+      ],
+      "period": "2026-06",
+      "supplierId": "S-ATL",
+      "partId": "P14",
+      "impactUSDCents": 1932,
+      "expectedHandling": "Below $250 materiality: log as info, no case yet."
+    },
+    {
+      "id": "AK-06-2",
+      "problem": 6,
+      "title": "Duty overcharge: P14 entered as 7318.15.80 (occurrence 2)",
+      "kind": "duty_overcharge",
+      "objectId": "CE-2607-ATL",
+      "relatedIds": [
+        "VI-2607-ATL",
+        "P14",
+        "7318.15.60",
+        "7318.15.80"
+      ],
+      "period": "2026-07",
+      "supplierId": "S-ATL",
+      "partId": "P14",
+      "impactUSDCents": 2125,
+      "expectedHandling": "Below $250 materiality: log as info, no case yet."
+    },
+    {
+      "id": "AK-06-3",
+      "problem": 6,
+      "title": "Duty overcharge: P14 entered as 7318.15.80 (occurrence 3)",
+      "kind": "duty_overcharge",
+      "objectId": "CE-2608-ATL",
+      "relatedIds": [
+        "VI-2608-ATL",
+        "P14",
+        "7318.15.60",
+        "7318.15.80"
+      ],
+      "period": "2026-08",
+      "supplierId": "S-ATL",
+      "partId": "P14",
+      "impactUSDCents": 1932,
+      "expectedHandling": "Recurring 3+ times: open a duty_overcharge case covering every affected entry; ask the broker for post-summary corrections."
+    },
+    {
+      "id": "AK-06-4",
+      "problem": 6,
+      "title": "Duty overcharge: P14 entered as 7318.15.80 (occurrence 4)",
+      "kind": "duty_overcharge",
+      "objectId": "CE-2609-ATL",
+      "relatedIds": [
+        "VI-2609-ATL",
+        "P14",
+        "7318.15.60",
+        "7318.15.80"
+      ],
+      "period": "2026-09",
+      "supplierId": "S-ATL",
+      "partId": "P14",
+      "impactUSDCents": 1835,
+      "expectedHandling": "Recurring 3+ times: open a duty_overcharge case covering every affected entry; ask the broker for post-summary corrections."
+    },
+    {
+      "id": "AK-13a",
+      "problem": 13,
+      "title": "Invoice from a supplier not in the vendor master",
+      "kind": "unknown_supplier",
+      "objectId": "VI-2607-UNREG",
+      "relatedIds": [],
+      "period": "2026-07",
+      "supplierId": "UNREGISTERED",
+      "impactUSDCents": 185000,
+      "expectedHandling": "Escalate to the controller; no PO, no vendor-master record — do not pay or create a vendor."
+    },
+    {
+      "id": "AK-13b",
+      "problem": 13,
+      "title": "No certificate of origin for a covered component",
+      "kind": "missing_document",
+      "objectId": "VI-2607-HOS",
+      "relatedIds": [
+        "P10",
+        "PO-2607-HOS",
+        "R-2607-HOS"
+      ],
+      "period": "2026-07",
+      "supplierId": "S-HOS",
+      "partId": "P10",
+      "impactUSDCents": 13005870,
+      "expectedHandling": "Compliance status unknown: hold the P10 line and request the certificate from the supplier; escalate rather than assume compliant."
+    }
+  ],
+  "cleanSuppliers": [
+    "S-NW"
+  ],
+  "deferredProblems": [
+    3,
+    7,
+    8,
+    9,
+    10,
+    11
+  ]
+}

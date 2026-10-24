@@ -147,7 +147,7 @@ type Case = { id: string; kind: CaseKind; openedPeriod: string; status: CaseStat
 type CaseKind = "price_variance_vs_contract" | "qty_mismatch" | "duplicate_invoice"
   | "noncompliant_substitution" | "duty_overcharge" | "remittance_change_unverified"
   | "export_restriction_exposure" | "defect_return" | "fx_variance" | "grni_accrual"
-  | "unknown_supplier" | "source_disagreement";
+  | "unknown_supplier" | "missing_document" | "source_disagreement";
 
 type Request = { id: string; kind: "po" | "payment" | "payment_hold" | "debit_memo" | "journal_entry"
   | "supplier_switch" | "substitution_approval" | "vendor_change";
@@ -267,7 +267,9 @@ Rules:
 
 ## 11. Demo data, answer key, scorecard
 
-`scripts/generate.ts` creates Mar–Sep 2026 sim data (October excluded: ECB rates for late October don't exist before judging, and rates are never invented): production plan, BOM consumption, POs, receipts, invoices (JSON + 3 PDFs), packing slips, certificates of origin, customs entries, bank, inbox.
+`scripts/generate.ts` (pure core in `simulation/world.ts`, seeded, byte-identical per seed) creates Mar–Sep 2026 sim data (October excluded: ECB rates for late October don't exist before judging, and rates are never invented): production plan, BOM consumption, POs, receipts, invoices (JSON; the 3 PDFs are deferred until a PDF dependency is approved), packing slips, certificates of origin, customs entries, bank, inbox.
+
+**Agents' read tools must never expose `data/answer_key.json`** (or `simulation/`); only the scorer reads it. `simulation/sweep.ts` is the deterministic baseline: its findings must equal the key exactly (tested for two seeds).
 
 **Planted problems → `data/answer_key.json` (site/part/supplier, period, kind, expected impact, expected handling):**
 1. **Noncompliant substitution** — Supplier Vireo ships a cheaper flight controller (P04) whose certificate of origin shows a restricted origin; invoice description differs from BOM part number. *(Headline moment.)*
@@ -275,7 +277,7 @@ Rules:
 3. **Remittance-change fraud email** before a $38k Atlas payment.
 4. **Qty mismatch** — Luis enters 480, packing slip and invoice say 400.
 5. **Duplicate invoice** — same supplier, same amount, new invoice number suffix.
-6. **Duty overcharge** — broker applies wrong HTS code (higher rate) on one entry.
+6. **Duty overcharge** — broker's system misclassifies Atlas's P14 M3 screws as 7318.15.80 (≥ 6 mm, 8.5%) instead of 7318.15.60 (6.2%) on every entry from June. Each is below materiality; the 3rd occurrence trips "recurring 3+ times" → case covering all entries.
 7. **GRNI** — late-March receipt, April invoice.
 8. **Defect → return → July credit.**
 9. **Mid-contract price change** May 1.

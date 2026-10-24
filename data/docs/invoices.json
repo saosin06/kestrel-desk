@@ -1,0 +1,1625 @@
+{
+  "generatedBy": "scripts/generate.ts",
+  "seed": 42,
+  "simulated": true,
+  "items": [
+    {
+      "id": "VI-2603-HOS",
+      "invoiceNo": "HO-7710",
+      "supplierId": "S-HOS",
+      "supplierName": "Hoshi Optics K.K.",
+      "poId": "PO-2603-HOS",
+      "date": "2026-03-08",
+      "currency": "JPY",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 180,
+          "unitPriceE4": 960000000,
+          "amountMinor": 17280000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 180,
+          "unitPriceE4": 185000000,
+          "amountMinor": 3330000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "totalMinor": 20610000,
+      "remitTo": "VM-HOS",
+      "sourceFile": "simulated:VI-2603-HOS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2603-VIR",
+      "invoiceNo": "VA26-311",
+      "supplierId": "S-VIR",
+      "supplierName": "Vireo Avionics Co., Ltd.",
+      "poId": "PO-2603-VIR",
+      "date": "2026-03-08",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller",
+          "qty": 180,
+          "unitPriceE4": 1850000,
+          "amountMinor": 3330000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VFC-2"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 180,
+          "unitPriceE4": 420000,
+          "amountMinor": 756000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "totalMinor": 4086000,
+      "remitTo": "VM-VIR",
+      "sourceFile": "simulated:VI-2603-VIR",
+      "simulated": true
+    },
+    {
+      "id": "VI-2603-ATL",
+      "invoiceNo": "INV-2040",
+      "supplierId": "S-ATL",
+      "supplierName": "Atlas Motors S.A. de C.V.",
+      "poId": "PO-2603-ATL",
+      "date": "2026-03-12",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P07",
+          "description": "Brushless motor, 400 W (NdFeB magnets)",
+          "qty": 1200,
+          "unitPriceE4": 110000,
+          "amountMinor": 1320000,
+          "countryOfOrigin": "MX",
+          "manufacturerPartNo": "ATL-BL400"
+        },
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 21600,
+          "unitPriceE4": 350,
+          "amountMinor": 75600,
+          "countryOfOrigin": "MX",
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "totalMinor": 1395600,
+      "remitTo": "VM-ATL",
+      "sourceFile": "simulated:VI-2603-ATL",
+      "simulated": true
+    },
+    {
+      "id": "VI-2603-CAS",
+      "invoiceNo": "CC-4402",
+      "supplierId": "S-CAS",
+      "supplierName": "Cascade Composites & Motion, Inc.",
+      "poId": "PO-2603-CAS",
+      "date": "2026-03-16",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 180,
+          "unitPriceE4": 1850000,
+          "amountMinor": 3330000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 360,
+          "unitPriceE4": 95000,
+          "amountMinor": 342000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 180,
+          "unitPriceE4": 240000,
+          "amountMinor": 432000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "totalMinor": 4104000,
+      "remitTo": "VM-CAS",
+      "sourceFile": "simulated:VI-2603-CAS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2603-NW",
+      "invoiceNo": "NW-1038",
+      "supplierId": "S-NW",
+      "supplierName": "Northwind Components, Inc.",
+      "poId": "PO-2603-NW",
+      "date": "2026-03-18",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 180,
+          "unitPriceE4": 110000,
+          "amountMinor": 198000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2160,
+          "unitPriceE4": 32000,
+          "amountMinor": 691200,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 180,
+          "unitPriceE4": 180000,
+          "amountMinor": 324000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "totalMinor": 1213200,
+      "remitTo": "VM-NW",
+      "sourceFile": "simulated:VI-2603-NW",
+      "simulated": true
+    },
+    {
+      "id": "VI-2603-RDG",
+      "invoiceNo": "RDG-5510",
+      "supplierId": "S-RDG",
+      "supplierName": "Ridgeline Power & Radio LLC",
+      "poId": "PO-2603-RDG",
+      "date": "2026-03-18",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 360,
+          "unitPriceE4": 2100000,
+          "amountMinor": 7560000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 180,
+          "unitPriceE4": 950000,
+          "amountMinor": 1710000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 180,
+          "unitPriceE4": 1600000,
+          "amountMinor": 2880000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "totalMinor": 12150000,
+      "remitTo": "VM-RDG",
+      "sourceFile": "simulated:VI-2603-RDG",
+      "simulated": true
+    },
+    {
+      "id": "VI-2604-ATL",
+      "invoiceNo": "INV-2041",
+      "supplierId": "S-ATL",
+      "supplierName": "Atlas Motors S.A. de C.V.",
+      "poId": "PO-2604-ATL",
+      "date": "2026-04-08",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P07",
+          "description": "Brushless motor, 400 W (NdFeB magnets)",
+          "qty": 3000,
+          "unitPriceE4": 140000,
+          "amountMinor": 4200000,
+          "countryOfOrigin": "MX",
+          "manufacturerPartNo": "ATL-BL400"
+        },
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 24000,
+          "unitPriceE4": 350,
+          "amountMinor": 84000,
+          "countryOfOrigin": "MX",
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "totalMinor": 4284000,
+      "remitTo": "VM-ATL",
+      "sourceFile": "simulated:VI-2604-ATL",
+      "simulated": true
+    },
+    {
+      "id": "VI-2604-HOS",
+      "invoiceNo": "HO-7711",
+      "supplierId": "S-HOS",
+      "supplierName": "Hoshi Optics K.K.",
+      "poId": "PO-2604-HOS",
+      "date": "2026-04-08",
+      "currency": "JPY",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 200,
+          "unitPriceE4": 960000000,
+          "amountMinor": 19200000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 200,
+          "unitPriceE4": 185000000,
+          "amountMinor": 3700000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "totalMinor": 22900000,
+      "remitTo": "VM-HOS",
+      "sourceFile": "simulated:VI-2604-HOS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2604-VIR",
+      "invoiceNo": "VA26-312",
+      "supplierId": "S-VIR",
+      "supplierName": "Vireo Avionics Co., Ltd.",
+      "poId": "PO-2604-VIR",
+      "date": "2026-04-12",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller FC-2 Lite (functional equivalent of VFC-2)",
+          "qty": 200,
+          "unitPriceE4": 1620000,
+          "amountMinor": 3240000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VFC-2-LC"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 200,
+          "unitPriceE4": 420000,
+          "amountMinor": 840000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "totalMinor": 4080000,
+      "remitTo": "VM-VIR",
+      "sourceFile": "simulated:VI-2604-VIR",
+      "simulated": true
+    },
+    {
+      "id": "VI-2604-CAS",
+      "invoiceNo": "CC-4403",
+      "supplierId": "S-CAS",
+      "supplierName": "Cascade Composites & Motion, Inc.",
+      "poId": "PO-2604-CAS",
+      "date": "2026-04-15",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 200,
+          "unitPriceE4": 1850000,
+          "amountMinor": 3700000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 400,
+          "unitPriceE4": 95000,
+          "amountMinor": 380000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 200,
+          "unitPriceE4": 240000,
+          "amountMinor": 480000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "totalMinor": 4560000,
+      "remitTo": "VM-CAS",
+      "sourceFile": "simulated:VI-2604-CAS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2604-NW",
+      "invoiceNo": "NW-1039",
+      "supplierId": "S-NW",
+      "supplierName": "Northwind Components, Inc.",
+      "poId": "PO-2604-NW",
+      "date": "2026-04-16",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 200,
+          "unitPriceE4": 110000,
+          "amountMinor": 220000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2400,
+          "unitPriceE4": 32000,
+          "amountMinor": 768000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 200,
+          "unitPriceE4": 180000,
+          "amountMinor": 360000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "totalMinor": 1348000,
+      "remitTo": "VM-NW",
+      "sourceFile": "simulated:VI-2604-NW",
+      "simulated": true
+    },
+    {
+      "id": "VI-2604-RDG",
+      "invoiceNo": "RDG-5511",
+      "supplierId": "S-RDG",
+      "supplierName": "Ridgeline Power & Radio LLC",
+      "poId": "PO-2604-RDG",
+      "date": "2026-04-16",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 400,
+          "unitPriceE4": 2100000,
+          "amountMinor": 8400000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 200,
+          "unitPriceE4": 950000,
+          "amountMinor": 1900000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 200,
+          "unitPriceE4": 1600000,
+          "amountMinor": 3200000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "totalMinor": 13500000,
+      "remitTo": "VM-RDG",
+      "sourceFile": "simulated:VI-2604-RDG",
+      "simulated": true
+    },
+    {
+      "id": "VI-2605-ATL",
+      "invoiceNo": "INV-2042",
+      "supplierId": "S-ATL",
+      "supplierName": "Atlas Motors S.A. de C.V.",
+      "poId": "PO-2605-ATL",
+      "date": "2026-05-09",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 25200,
+          "unitPriceE4": 350,
+          "amountMinor": 88200,
+          "countryOfOrigin": "MX",
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "totalMinor": 88200,
+      "remitTo": "VM-ATL",
+      "sourceFile": "simulated:VI-2605-ATL",
+      "simulated": true
+    },
+    {
+      "id": "VI-2605-HOS",
+      "invoiceNo": "HO-7712",
+      "supplierId": "S-HOS",
+      "supplierName": "Hoshi Optics K.K.",
+      "poId": "PO-2605-HOS",
+      "date": "2026-05-09",
+      "currency": "JPY",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 210,
+          "unitPriceE4": 960000000,
+          "amountMinor": 20160000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 210,
+          "unitPriceE4": 185000000,
+          "amountMinor": 3885000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "totalMinor": 24045000,
+      "remitTo": "VM-HOS",
+      "sourceFile": "simulated:VI-2605-HOS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2605-NW",
+      "invoiceNo": "NW-1040",
+      "supplierId": "S-NW",
+      "supplierName": "Northwind Components, Inc.",
+      "poId": "PO-2605-NW",
+      "date": "2026-05-12",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 210,
+          "unitPriceE4": 110000,
+          "amountMinor": 231000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2520,
+          "unitPriceE4": 32000,
+          "amountMinor": 806400,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 210,
+          "unitPriceE4": 180000,
+          "amountMinor": 378000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "totalMinor": 1415400,
+      "remitTo": "VM-NW",
+      "sourceFile": "simulated:VI-2605-NW",
+      "simulated": true
+    },
+    {
+      "id": "VI-2605-VIR",
+      "invoiceNo": "VA26-313",
+      "supplierId": "S-VIR",
+      "supplierName": "Vireo Avionics Co., Ltd.",
+      "poId": "PO-2605-VIR",
+      "date": "2026-05-12",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller",
+          "qty": 210,
+          "unitPriceE4": 1850000,
+          "amountMinor": 3885000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VFC-2"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 210,
+          "unitPriceE4": 420000,
+          "amountMinor": 882000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "totalMinor": 4767000,
+      "remitTo": "VM-VIR",
+      "sourceFile": "simulated:VI-2605-VIR",
+      "simulated": true
+    },
+    {
+      "id": "VI-2605-CAS",
+      "invoiceNo": "CC-4404",
+      "supplierId": "S-CAS",
+      "supplierName": "Cascade Composites & Motion, Inc.",
+      "poId": "PO-2605-CAS",
+      "date": "2026-05-14",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 210,
+          "unitPriceE4": 1850000,
+          "amountMinor": 3885000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 420,
+          "unitPriceE4": 95000,
+          "amountMinor": 399000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 210,
+          "unitPriceE4": 240000,
+          "amountMinor": 504000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "totalMinor": 4788000,
+      "remitTo": "VM-CAS",
+      "sourceFile": "simulated:VI-2605-CAS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2605-RDG",
+      "invoiceNo": "RDG-5512",
+      "supplierId": "S-RDG",
+      "supplierName": "Ridgeline Power & Radio LLC",
+      "poId": "PO-2605-RDG",
+      "date": "2026-05-18",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 420,
+          "unitPriceE4": 2100000,
+          "amountMinor": 8820000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 210,
+          "unitPriceE4": 950000,
+          "amountMinor": 1995000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 210,
+          "unitPriceE4": 1600000,
+          "amountMinor": 3360000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "totalMinor": 14175000,
+      "remitTo": "VM-RDG",
+      "sourceFile": "simulated:VI-2605-RDG",
+      "simulated": true
+    },
+    {
+      "id": "VI-2606-VIR",
+      "invoiceNo": "VA26-314",
+      "supplierId": "S-VIR",
+      "supplierName": "Vireo Avionics Co., Ltd.",
+      "poId": "PO-2606-VIR",
+      "date": "2026-06-08",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller",
+          "qty": 200,
+          "unitPriceE4": 1850000,
+          "amountMinor": 3700000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VFC-2"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 200,
+          "unitPriceE4": 420000,
+          "amountMinor": 840000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "totalMinor": 4540000,
+      "remitTo": "VM-VIR",
+      "sourceFile": "simulated:VI-2606-VIR",
+      "simulated": true
+    },
+    {
+      "id": "VI-2606-HOS",
+      "invoiceNo": "HO-7713",
+      "supplierId": "S-HOS",
+      "supplierName": "Hoshi Optics K.K.",
+      "poId": "PO-2606-HOS",
+      "date": "2026-06-09",
+      "currency": "JPY",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 200,
+          "unitPriceE4": 960000000,
+          "amountMinor": 19200000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 200,
+          "unitPriceE4": 185000000,
+          "amountMinor": 3700000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "totalMinor": 22900000,
+      "remitTo": "VM-HOS",
+      "sourceFile": "simulated:VI-2606-HOS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2606-ATL",
+      "invoiceNo": "INV-2043",
+      "supplierId": "S-ATL",
+      "supplierName": "Atlas Motors S.A. de C.V.",
+      "poId": "PO-2606-ATL",
+      "date": "2026-06-10",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 24000,
+          "unitPriceE4": 350,
+          "amountMinor": 84000,
+          "countryOfOrigin": "MX",
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "totalMinor": 84000,
+      "remitTo": "VM-ATL",
+      "sourceFile": "simulated:VI-2606-ATL",
+      "simulated": true
+    },
+    {
+      "id": "VI-2606-NW",
+      "invoiceNo": "NW-1041",
+      "supplierId": "S-NW",
+      "supplierName": "Northwind Components, Inc.",
+      "poId": "PO-2606-NW",
+      "date": "2026-06-11",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 200,
+          "unitPriceE4": 110000,
+          "amountMinor": 220000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2400,
+          "unitPriceE4": 32000,
+          "amountMinor": 768000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 200,
+          "unitPriceE4": 180000,
+          "amountMinor": 360000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "totalMinor": 1348000,
+      "remitTo": "VM-NW",
+      "sourceFile": "simulated:VI-2606-NW",
+      "simulated": true
+    },
+    {
+      "id": "VI-2606-CAS",
+      "invoiceNo": "CC-4405",
+      "supplierId": "S-CAS",
+      "supplierName": "Cascade Composites & Motion, Inc.",
+      "poId": "PO-2606-CAS",
+      "date": "2026-06-16",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 200,
+          "unitPriceE4": 1850000,
+          "amountMinor": 3700000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 400,
+          "unitPriceE4": 95000,
+          "amountMinor": 380000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 200,
+          "unitPriceE4": 240000,
+          "amountMinor": 480000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "totalMinor": 4560000,
+      "remitTo": "VM-CAS",
+      "sourceFile": "simulated:VI-2606-CAS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2606-RDG",
+      "invoiceNo": "RDG-5513",
+      "supplierId": "S-RDG",
+      "supplierName": "Ridgeline Power & Radio LLC",
+      "poId": "PO-2606-RDG",
+      "date": "2026-06-18",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 400,
+          "unitPriceE4": 2100000,
+          "amountMinor": 8400000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 200,
+          "unitPriceE4": 950000,
+          "amountMinor": 1900000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 200,
+          "unitPriceE4": 1600000,
+          "amountMinor": 3200000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "totalMinor": 13500000,
+      "remitTo": "VM-RDG",
+      "sourceFile": "simulated:VI-2606-RDG",
+      "simulated": true
+    },
+    {
+      "id": "VI-2606-RDG-2",
+      "invoiceNo": "RDG-5513-A",
+      "supplierId": "S-RDG",
+      "supplierName": "Ridgeline Power & Radio LLC",
+      "poId": "PO-2606-RDG",
+      "date": "2026-06-25",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 400,
+          "unitPriceE4": 2100000,
+          "amountMinor": 8400000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 200,
+          "unitPriceE4": 950000,
+          "amountMinor": 1900000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 200,
+          "unitPriceE4": 1600000,
+          "amountMinor": 3200000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "totalMinor": 13500000,
+      "remitTo": "VM-RDG",
+      "sourceFile": "simulated:VI-2606-RDG-2",
+      "simulated": true
+    },
+    {
+      "id": "VI-2607-ATL",
+      "invoiceNo": "INV-2044",
+      "supplierId": "S-ATL",
+      "supplierName": "Atlas Motors S.A. de C.V.",
+      "poId": "PO-2607-ATL",
+      "date": "2026-07-07",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P07",
+          "description": "Brushless motor, 400 W (NdFeB magnets)",
+          "qty": 880,
+          "unitPriceE4": 110000,
+          "amountMinor": 968000,
+          "countryOfOrigin": "MX",
+          "manufacturerPartNo": "ATL-BL400"
+        },
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 26400,
+          "unitPriceE4": 350,
+          "amountMinor": 92400,
+          "countryOfOrigin": "MX",
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "totalMinor": 1060400,
+      "remitTo": "VM-ATL",
+      "sourceFile": "simulated:VI-2607-ATL",
+      "simulated": true
+    },
+    {
+      "id": "VI-2607-VIR",
+      "invoiceNo": "VA26-315",
+      "supplierId": "S-VIR",
+      "supplierName": "Vireo Avionics Co., Ltd.",
+      "poId": "PO-2607-VIR",
+      "date": "2026-07-12",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller",
+          "qty": 220,
+          "unitPriceE4": 1850000,
+          "amountMinor": 4070000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VFC-2"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 220,
+          "unitPriceE4": 420000,
+          "amountMinor": 924000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "totalMinor": 4994000,
+      "remitTo": "VM-VIR",
+      "sourceFile": "simulated:VI-2607-VIR",
+      "simulated": true
+    },
+    {
+      "id": "VI-2607-NW",
+      "invoiceNo": "NW-1042",
+      "supplierId": "S-NW",
+      "supplierName": "Northwind Components, Inc.",
+      "poId": "PO-2607-NW",
+      "date": "2026-07-14",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 220,
+          "unitPriceE4": 110000,
+          "amountMinor": 242000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2640,
+          "unitPriceE4": 32000,
+          "amountMinor": 844800,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 220,
+          "unitPriceE4": 180000,
+          "amountMinor": 396000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "totalMinor": 1482800,
+      "remitTo": "VM-NW",
+      "sourceFile": "simulated:VI-2607-NW",
+      "simulated": true
+    },
+    {
+      "id": "VI-2607-UNREG",
+      "invoiceNo": "AUS-00981",
+      "supplierId": "UNREGISTERED",
+      "supplierName": "Apex UAV Supply LLC",
+      "date": "2026-07-14",
+      "currency": "USD",
+      "lines": [
+        {
+          "description": "Rotor arm set — expedited",
+          "qty": 10,
+          "unitPriceE4": 1850000,
+          "amountMinor": 185000
+        }
+      ],
+      "totalMinor": 185000,
+      "sourceFile": "simulated:VI-2607-UNREG",
+      "simulated": true
+    },
+    {
+      "id": "VI-2607-HOS",
+      "invoiceNo": "HO-7714",
+      "supplierId": "S-HOS",
+      "supplierName": "Hoshi Optics K.K.",
+      "poId": "PO-2607-HOS",
+      "date": "2026-07-15",
+      "currency": "JPY",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 220,
+          "unitPriceE4": 960000000,
+          "amountMinor": 21120000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 220,
+          "unitPriceE4": 185000000,
+          "amountMinor": 4070000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "totalMinor": 25190000,
+      "remitTo": "VM-HOS",
+      "sourceFile": "simulated:VI-2607-HOS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2607-CAS",
+      "invoiceNo": "CC-4406",
+      "supplierId": "S-CAS",
+      "supplierName": "Cascade Composites & Motion, Inc.",
+      "poId": "PO-2607-CAS",
+      "date": "2026-07-17",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 220,
+          "unitPriceE4": 1850000,
+          "amountMinor": 4070000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 440,
+          "unitPriceE4": 95000,
+          "amountMinor": 418000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 220,
+          "unitPriceE4": 240000,
+          "amountMinor": 528000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "totalMinor": 5016000,
+      "remitTo": "VM-CAS",
+      "sourceFile": "simulated:VI-2607-CAS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2607-RDG",
+      "invoiceNo": "RDG-5514",
+      "supplierId": "S-RDG",
+      "supplierName": "Ridgeline Power & Radio LLC",
+      "poId": "PO-2607-RDG",
+      "date": "2026-07-20",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 440,
+          "unitPriceE4": 2100000,
+          "amountMinor": 9240000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 220,
+          "unitPriceE4": 950000,
+          "amountMinor": 2090000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 220,
+          "unitPriceE4": 1600000,
+          "amountMinor": 3520000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "totalMinor": 14850000,
+      "remitTo": "VM-RDG",
+      "sourceFile": "simulated:VI-2607-RDG",
+      "simulated": true
+    },
+    {
+      "id": "VI-2608-HOS",
+      "invoiceNo": "HO-7715",
+      "supplierId": "S-HOS",
+      "supplierName": "Hoshi Optics K.K.",
+      "poId": "PO-2608-HOS",
+      "date": "2026-08-09",
+      "currency": "JPY",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 200,
+          "unitPriceE4": 960000000,
+          "amountMinor": 19200000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 200,
+          "unitPriceE4": 185000000,
+          "amountMinor": 3700000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "totalMinor": 22900000,
+      "remitTo": "VM-HOS",
+      "sourceFile": "simulated:VI-2608-HOS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2608-ATL",
+      "invoiceNo": "INV-2045",
+      "supplierId": "S-ATL",
+      "supplierName": "Atlas Motors S.A. de C.V.",
+      "poId": "PO-2608-ATL",
+      "date": "2026-08-10",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P07",
+          "description": "Brushless motor, 400 W (NdFeB magnets)",
+          "qty": 800,
+          "unitPriceE4": 110000,
+          "amountMinor": 880000,
+          "countryOfOrigin": "MX",
+          "manufacturerPartNo": "ATL-BL400"
+        },
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 24000,
+          "unitPriceE4": 350,
+          "amountMinor": 84000,
+          "countryOfOrigin": "MX",
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "totalMinor": 964000,
+      "remitTo": "VM-ATL",
+      "sourceFile": "simulated:VI-2608-ATL",
+      "simulated": true
+    },
+    {
+      "id": "VI-2608-VIR",
+      "invoiceNo": "VA26-316",
+      "supplierId": "S-VIR",
+      "supplierName": "Vireo Avionics Co., Ltd.",
+      "poId": "PO-2608-VIR",
+      "date": "2026-08-10",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller",
+          "qty": 200,
+          "unitPriceE4": 1850000,
+          "amountMinor": 3700000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VFC-2"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 200,
+          "unitPriceE4": 420000,
+          "amountMinor": 840000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "totalMinor": 4540000,
+      "remitTo": "VM-VIR",
+      "sourceFile": "simulated:VI-2608-VIR",
+      "simulated": true
+    },
+    {
+      "id": "VI-2608-NW",
+      "invoiceNo": "NW-1043",
+      "supplierId": "S-NW",
+      "supplierName": "Northwind Components, Inc.",
+      "poId": "PO-2608-NW",
+      "date": "2026-08-11",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 200,
+          "unitPriceE4": 110000,
+          "amountMinor": 220000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2400,
+          "unitPriceE4": 32000,
+          "amountMinor": 768000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 200,
+          "unitPriceE4": 180000,
+          "amountMinor": 360000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "totalMinor": 1348000,
+      "remitTo": "VM-NW",
+      "sourceFile": "simulated:VI-2608-NW",
+      "simulated": true
+    },
+    {
+      "id": "VI-2608-CAS",
+      "invoiceNo": "CC-4407",
+      "supplierId": "S-CAS",
+      "supplierName": "Cascade Composites & Motion, Inc.",
+      "poId": "PO-2608-CAS",
+      "date": "2026-08-17",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 200,
+          "unitPriceE4": 1850000,
+          "amountMinor": 3700000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 400,
+          "unitPriceE4": 95000,
+          "amountMinor": 380000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 200,
+          "unitPriceE4": 240000,
+          "amountMinor": 480000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "totalMinor": 4560000,
+      "remitTo": "VM-CAS",
+      "sourceFile": "simulated:VI-2608-CAS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2608-RDG",
+      "invoiceNo": "RDG-5515",
+      "supplierId": "S-RDG",
+      "supplierName": "Ridgeline Power & Radio LLC",
+      "poId": "PO-2608-RDG",
+      "date": "2026-08-18",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 400,
+          "unitPriceE4": 2100000,
+          "amountMinor": 8400000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 200,
+          "unitPriceE4": 950000,
+          "amountMinor": 1900000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 200,
+          "unitPriceE4": 1600000,
+          "amountMinor": 3200000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "totalMinor": 13500000,
+      "remitTo": "VM-RDG",
+      "sourceFile": "simulated:VI-2608-RDG",
+      "simulated": true
+    },
+    {
+      "id": "VI-2609-ATL",
+      "invoiceNo": "INV-2046",
+      "supplierId": "S-ATL",
+      "supplierName": "Atlas Motors S.A. de C.V.",
+      "poId": "PO-2609-ATL",
+      "date": "2026-09-06",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P07",
+          "description": "Brushless motor, 400 W (NdFeB magnets)",
+          "qty": 760,
+          "unitPriceE4": 110000,
+          "amountMinor": 836000,
+          "countryOfOrigin": "MX",
+          "manufacturerPartNo": "ATL-BL400"
+        },
+        {
+          "partId": "P14",
+          "description": "Machine screw, M3 × 8 mm",
+          "qty": 22800,
+          "unitPriceE4": 350,
+          "amountMinor": 79800,
+          "countryOfOrigin": "MX",
+          "manufacturerPartNo": "ATL-M3X8"
+        }
+      ],
+      "totalMinor": 915800,
+      "remitTo": "VM-ATL",
+      "sourceFile": "simulated:VI-2609-ATL",
+      "simulated": true
+    },
+    {
+      "id": "VI-2609-VIR",
+      "invoiceNo": "VA26-317",
+      "supplierId": "S-VIR",
+      "supplierName": "Vireo Avionics Co., Ltd.",
+      "poId": "PO-2609-VIR",
+      "date": "2026-09-09",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P04",
+          "description": "Flight controller",
+          "qty": 190,
+          "unitPriceE4": 1850000,
+          "amountMinor": 3515000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VFC-2"
+        },
+        {
+          "partId": "P05",
+          "description": "ESC board, 4-in-1",
+          "qty": 190,
+          "unitPriceE4": 420000,
+          "amountMinor": 798000,
+          "countryOfOrigin": "TW",
+          "manufacturerPartNo": "VESC-4X"
+        }
+      ],
+      "totalMinor": 4313000,
+      "remitTo": "VM-VIR",
+      "sourceFile": "simulated:VI-2609-VIR",
+      "simulated": true
+    },
+    {
+      "id": "VI-2609-HOS",
+      "invoiceNo": "HO-7716",
+      "supplierId": "S-HOS",
+      "supplierName": "Hoshi Optics K.K.",
+      "poId": "PO-2609-HOS",
+      "date": "2026-09-10",
+      "currency": "JPY",
+      "lines": [
+        {
+          "partId": "P10",
+          "description": "Mapping camera",
+          "qty": 190,
+          "unitPriceE4": 960000000,
+          "amountMinor": 18240000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-MC42"
+        },
+        {
+          "partId": "P11",
+          "description": "Camera gimbal",
+          "qty": 190,
+          "unitPriceE4": 185000000,
+          "amountMinor": 3515000,
+          "countryOfOrigin": "JP",
+          "manufacturerPartNo": "HOS-GB3"
+        }
+      ],
+      "totalMinor": 21755000,
+      "remitTo": "VM-HOS",
+      "sourceFile": "simulated:VI-2609-HOS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2609-RDG",
+      "invoiceNo": "RDG-5516",
+      "supplierId": "S-RDG",
+      "supplierName": "Ridgeline Power & Radio LLC",
+      "poId": "PO-2609-RDG",
+      "date": "2026-09-16",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P06",
+          "description": "Li-ion battery pack",
+          "qty": 380,
+          "unitPriceE4": 2100000,
+          "amountMinor": 7980000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-LI-22"
+        },
+        {
+          "partId": "P08",
+          "description": "GNSS/RTK module",
+          "qty": 190,
+          "unitPriceE4": 950000,
+          "amountMinor": 1805000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-RTK-3"
+        },
+        {
+          "partId": "P09",
+          "description": "Data-link radio",
+          "qty": 190,
+          "unitPriceE4": 1600000,
+          "amountMinor": 3040000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "RDG-DL-900"
+        }
+      ],
+      "totalMinor": 12825000,
+      "remitTo": "VM-RDG",
+      "sourceFile": "simulated:VI-2609-RDG",
+      "simulated": true
+    },
+    {
+      "id": "VI-2609-CAS",
+      "invoiceNo": "CC-4408",
+      "supplierId": "S-CAS",
+      "supplierName": "Cascade Composites & Motion, Inc.",
+      "poId": "PO-2609-CAS",
+      "date": "2026-09-17",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P01",
+          "description": "Carbon-fiber airframe (center body + arms)",
+          "qty": 190,
+          "unitPriceE4": 1850000,
+          "amountMinor": 3515000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-K2-FRM"
+        },
+        {
+          "partId": "P02",
+          "description": "Propeller set (pair, 15 in)",
+          "qty": 380,
+          "unitPriceE4": 95000,
+          "amountMinor": 361000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-PRP-15"
+        },
+        {
+          "partId": "P03",
+          "description": "Landing gear assembly",
+          "qty": 190,
+          "unitPriceE4": 240000,
+          "amountMinor": 456000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "CAS-LG-2"
+        }
+      ],
+      "totalMinor": 4332000,
+      "remitTo": "VM-CAS",
+      "sourceFile": "simulated:VI-2609-CAS",
+      "simulated": true
+    },
+    {
+      "id": "VI-2609-NW",
+      "invoiceNo": "NW-1044",
+      "supplierId": "S-NW",
+      "supplierName": "Northwind Components, Inc.",
+      "poId": "PO-2609-NW",
+      "date": "2026-09-17",
+      "currency": "USD",
+      "lines": [
+        {
+          "partId": "P12",
+          "description": "Wiring harness",
+          "qty": 190,
+          "unitPriceE4": 110000,
+          "amountMinor": 209000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-HAR-K2"
+        },
+        {
+          "partId": "P13",
+          "description": "Connector",
+          "qty": 2280,
+          "unitPriceE4": 32000,
+          "amountMinor": 729600,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CN-8P"
+        },
+        {
+          "partId": "P15",
+          "description": "Canopy / housing set",
+          "qty": 190,
+          "unitPriceE4": 180000,
+          "amountMinor": 342000,
+          "countryOfOrigin": "US",
+          "manufacturerPartNo": "NW-CNP-K2"
+        }
+      ],
+      "totalMinor": 1280600,
+      "remitTo": "VM-NW",
+      "sourceFile": "simulated:VI-2609-NW",
+      "simulated": true
+    }
+  ]
+}

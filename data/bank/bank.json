@@ -1,0 +1,11 @@
+{
+  "generatedBy": "scripts/generate.ts",
+  "seed": 42,
+  "simulated": true,
+  "items": {
+    "account": "1000",
+    "openingBalanceCents": 250000000,
+    "asOf": "2026-02-28",
+    "transactions": []
+  }
+}
