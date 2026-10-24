@@ -1,0 +1,464 @@
+Source: https://www.irs.gov/pub/irs-pdf/p15.pdf (2026 Publication 15), retrieved 2026-10-23
+
+===== page 20 =====
+rates established by the federal government. The stand-           Whether meals or lodging is provided for the conven-
+ard mileage rate for auto expenses is provided in Pub.        ience of the employer depends on all of the facts and cir-
+15-B.                                                         cumstances. A written statement that the meals or lodging
+   The government per diem rates for meals and lodging        is for your convenience isn’t sufficient.
+in the continental United States can be found by going to
+                                                                  50% test. If over 50% of the employees who are pro-
+the U.S. General Services Administration website at
+                                                              vided meals on an employer’s business premises receive
+GSA.gov/PerDiemRates. Other than the amount of these
+                                                              these meals for the convenience of the employer, all
+expenses, your employees’ business expenses must be
+                                                              meals provided on the premises are treated as furnished
+substantiated (for example, the business purpose of the
+                                                              for the convenience of the employer. If this 50% test is
+travel or the number of business miles driven). For infor-
+                                                              met, the value of the meals is excludable from income for
+mation on substantiation methods, see Pub. 463, Travel,
+                                                              all employees and isn’t subject to federal income tax with-
+Gift, and Car Expenses.
+                                                              holding or employment taxes. For more information, see
+   If the per diem or allowance paid exceeds the amounts
+                                                              Pub. 15-B.
+substantiated, you must report the excess amount as wa-
+ges. This excess amount is subject to income tax with-        Health insurance plans. If you pay the cost of an acci-
+holding and payment of social security, Medicare, and         dent or health insurance plan for your employees, includ-
+FUTA taxes. Show the amount equal to the substantiated        ing an employee’s spouse and dependents, your pay-
+amount (that is, the nontaxable portion) in box 12 of Form    ments aren’t wages and aren’t subject to social security,
+W-2 using code “L.” Employers in Puerto Rico report the       Medicare, and FUTA taxes, or federal income tax with-
+amount in box 12 (no code needed).                            holding. Generally, this exclusion also applies to qualified
+                                                              long-term-care insurance contracts. However, for income
+Wages not paid in money. If in the course of your trade
+                                                              tax withholding, the value of health insurance benefits
+or business you pay your employees in a medium that is
+                                                              must be included in the wages of S corporation employ-
+neither cash nor a readily negotiable instrument, such as a
+                                                              ees who own more than 2% of the S corporation (2%
+check, you’re said to pay them “in kind.” Payments in kind
+                                                              shareholders). For social security, Medicare, and FUTA
+may be in the form of goods, lodging, food, clothing, or
+                                                              taxes, the health insurance benefits are excluded from the
+services. Generally, the FMV of such payments at the time
+                                                              2% shareholder’s wages. See Announcement 92-16 for
+they’re provided is subject to federal income tax withhold-
+                                                              more information. You can find Announcement 92-16 on
+ing and social security, Medicare, and FUTA taxes.
+                                                              page 53 of Internal Revenue Bulletin 1992-5.
+    However, noncash payments for household work, agri-
+cultural labor, and service not in the employer’s trade or         Health savings accounts (HSAs) and medical sav-
+business are exempt from social security, Medicare, and       ings accounts (MSAs). Your contributions to an employ-
+FUTA taxes. Withhold income tax on these payments only        ee’s HSA or Archer MSA aren’t subject to social security,
+if you and the employee agree to do so. Nonetheless, non-     Medicare, or FUTA tax, or federal income tax withholding
+cash payments for agricultural labor, such as commodity       if it is reasonable to believe at the time of payment of the
+wages, are treated as cash payments subject to employ-        contributions they’ll be excludable from the income of the
+ment taxes if the substance of the transaction is a cash      employee. To the extent it isn’t reasonable to believe
+payment. See Noncash wages, including commodity wa-           they’ll be excludable, your contributions are subject to
+ges, paid to farmworkers, earlier in this section, for more   these taxes. Employee contributions to their HSAs or
+information.                                                  MSAs through a payroll deduction plan must be included
+                                                              in wages and are subject to social security, Medicare, and
+Meals and lodging. The value of meals isn’t taxable in-       FUTA taxes, and federal income tax withholding. However,
+come and isn’t subject to federal income tax withholding      HSA contributions made under a salary reduction ar-
+and social security, Medicare, and FUTA taxes if the meals    rangement in a section 125 cafeteria plan aren’t wages
+are furnished for the employer’s convenience and on the       and aren’t subject to employment taxes or withholding. For
+employer’s premises. The value of lodging isn’t subject to    more information, see the Instructions for Form 8889.
+federal income tax withholding and social security, Medi-
+care, and FUTA taxes if the lodging is furnished for the      Medical care reimbursements. Generally, medical care
+employer’s convenience, on the employer’s premises, and       reimbursements paid for an employee under an employ-
+as a condition of employment.                                 er’s self-insured medical reimbursement plan aren’t wages
+   “For the convenience of the employer” means you have       and aren’t subject to social security, Medicare, and FUTA
+a substantial business reason for providing the meals and     taxes, or federal income tax withholding. See Pub. 15-B
+lodging other than to provide additional compensation to      for a rule regarding inclusion of certain reimbursements in
+the employee. For example, meals you provide at the           the gross income of highly compensated individuals.
+place of work so that an employee is available for emer-
+gencies during their lunch period are generally considered    Differential wage payments. Differential wage pay-
+to be for your convenience. You must be able to show          ments are any payments made by an employer to an indi-
+these emergency calls have occurred or can reasonably         vidual for a period during which the individual is perform-
+be expected to occur, and that the calls have resulted, or    ing service in the uniformed services while on active duty
+will result, in you calling on your employees to perform      for a period of more than 30 days and represent all or a
+their jobs during their meal period.                          portion of the wages the individual would have received
+
+
+20                                                                                                Publication 15 (2026)
+
+
+===== page 29 =====
+language by which the employee certifies the form is cor-       taxes and federal income tax withholding if either of the
+rect. A Form W-4 is also invalid if, by the date an em-         two tests below is met.
+ployee gives it to you, they clearly indicate it is false. An
+                                                                 • You pay cash wages to an employee of $150 or more
+employee who submits a false Form W-4 may be subject
+                                                                    in a year for farmwork (count all cash wages paid on a
+to a $500 penalty. You may treat a Form W-4 as invalid if
+                                                                    time, piecework, or other basis). The $150 test applies
+the employee wrote “exempt” below Step 4(c) and
+                                                                    separately to each farmworker that you employ. If you
+checked the box in Step 2(c) or entered numbers for
+                                                                    employ a family of workers, each member is treated
+Steps 3 and 4.
+                                                                    separately. Don’t count wages paid by other employ-
+   When you get an invalid Form W-4, don’t use it to figure
+                                                                    ers.
+federal income tax withholding. Tell the employee it is in-
+valid and ask for another one. If the employee doesn’t give      • The total that you pay for farmwork (cash and non-
+you a valid one, and you have an earlier Form W-4 for this          cash) to all your employees is $2,500 or more during
+employee that is valid, withhold as you did before. If you          the year.
+don’t have an earlier Form W-4 that is valid, withhold tax         Exceptions. Annual cash wages of less than $150
+as if the employee had checked the box for Single or Mar-       you pay to a seasonal farmworker aren’t subject to social
+ried filing separately in Step 1(c) and made no entries in      security and Medicare taxes, or federal income tax with-
+Step 2, Step 3, or Step 4 of the 2026 Form W-4. However,        holding, even if you pay $2,500 or more to all your farm-
+an employee who was paid wages in 2019 who never sub-           workers. However, these wages count toward the $2,500
+mitted a valid Form W-4 and submits an invalid Form W-4         test for determining whether other farmworkers’ wages are
+in 2026 should continue to be treated as single and claim-      subject to social security and Medicare taxes.
+ing zero allowances on a 2019 Form W-4. If you use the             A seasonal farmworker is a worker who:
+optional computational bridge, described earlier under Re-
+designed Form W-4, you may treat this employee as if             • Is employed in agriculture as a hand-harvest laborer,
+they had checked the box for Single or Married filing sepa-      • Is paid piece rates in an operation that is usually paid
+rately in Step 1(c), and made no entries in Step 2 and              on a piece-rate basis in the region of employment,
+Step 3, an entry of $8,600 in Step 4(a), and an entry of
+zero in Step 4(b) of the 2026 Form W-4.                          • Commutes daily from their permanent home to the
+                                                                    farm, and
+Amounts exempt from levy on wages, salary, and                   • Had been employed in agriculture less than 13 weeks
+other income. If you receive a Notice of Levy on Wages,             in the preceding calendar year.
+Salary, and Other Income (a notice in the Form 668 ser-
+ies), you must withhold amounts as described in the in-             Wages paid to a child under 18 working on a farm that
+structions for these forms. Pub. 1494 has tables to figure      is a sole proprietorship or a partnership in which each
+the amount exempt from levy. If a levy issued in a prior        partner is a parent of a child aren’t subject to social secur-
+year is still in effect and the taxpayer submits a new State-   ity and Medicare taxes. However, these wages count to-
+ment of Exemptions and Filing Status, use the current           ward the $2,500 test for determining whether other farm-
+year Pub. 1494 to figure the exempt amount.                     workers’ wages are subject to social security and
+                                                                Medicare taxes.
+Social Security and Medicare Taxes                                Deducting the tax. Deduct the employee tax from
+                                                                each wage payment. If you’re not sure that the wages that
+The Federal Insurance Contributions Act (FICA) provides         you pay to a farmworker during the year will be taxable,
+for a federal system of old-age, survivors, disability, and     you may either deduct the tax when you make the pay-
+hospital insurance. The old-age, survivors, and disability      ments or wait until the $2,500 test or the $150 test dis-
+insurance part is financed by the social security tax. The      cussed earlier has been met.
+hospital insurance part is financed by the Medicare tax.
+Each of these taxes is reported separately.                     Tax rates and the social security wage base limit. So-
+                                                                cial security and Medicare taxes have different rates and
+   Generally, you’re required to withhold social security       only the social security tax has a wage base limit. The
+and Medicare taxes from your employees’ wages and pay           wage base limit is the maximum wage subject to the tax
+the employer share of these taxes. Certain types of wages       for the year. Determine the amount of withholding for so-
+and compensation aren’t subject to social security and          cial security and Medicare taxes by multiplying each pay-
+Medicare taxes. See section 5 and section 15 for details.       ment by the employee tax rate.
+Generally, employee wages are subject to social security           For 2026, the social security tax rate is 6.2% (amount
+and Medicare taxes regardless of the employee’s age or          withheld) each for the employer and employee (12.4% to-
+whether they are receiving social security benefits. If the     tal). The social security wage base limit is $184,500. The
+employee reported tips, see section 6.                          tax rate for Medicare is 1.45% (amount withheld) each for
+                                                                the employee and employer (2.9% total). There is no wage
+The $150 test or the $2,500 test for farmwork. All
+                                                                base limit for Medicare tax; all covered wages are subject
+cash wages that you pay to an employee during the year
+                                                                to Medicare tax.
+for farmwork are subject to social security and Medicare
+                                                                Additional Medicare Tax withholding. In addition to
+                                                                withholding Medicare tax at 1.45%, you must withhold a
+
+Publication 15 (2026)                                                                                                      29
+
+
+===== page 30 =====
+0.9% Additional Medicare Tax from wages you pay to an          don’t count it as social security and Medicare wages and
+employee in excess of $200,000 in a calendar year. You’re      don’t include it in boxes 3 and 5 (boxes 20 and 22 of Form
+required to begin withholding Additional Medicare Tax in       499R-2/W-2PR). Also, don’t count the additional income
+the pay period in which you pay wages in excess of             as wages for FUTA tax purposes. Different rules apply to
+$200,000 to an employee and continue to withhold it each       employer payments of social security and Medicare taxes
+pay period until the end of the calendar year. Additional      for non-household and non-agricultural employees. See
+Medicare Tax is only imposed on the employee. There is         section 7 of Pub. 15-A.
+no employer share of Additional Medicare Tax. All wages
+that are subject to Medicare tax are subject to Additional         Example. Gavrielle operates a small family fruit farm.
+Medicare Tax withholding if paid in excess of the $200,000     Gavrielle employs day laborers in the picking season to al-
+withholding threshold.                                         low Gavrielle time to get the crops to market. Gavrielle
+    For more information on what wages are subject to          doesn’t deduct the employees’ share of social security
+Medicare tax, see section 15. For more information on Ad-      and Medicare taxes from their pay; instead, Gavrielle pays
+ditional Medicare Tax, go to IRS.gov/ADMTfaqs.                 it on their behalf. When Gavrielle prepares the employees’
+                                                               Forms W-2, Gavrielle adds each employee’s share of so-
+Successor employer. When corporate acquisitions                cial security and Medicare taxes that Gavrielle paid to the
+meet certain requirements, wages paid by the predeces-         employee’s wage income (box 1 of Form W-2), but doesn’t
+sor are treated as if paid by the successor for purposes of    include it in box 3 (social security wages) or box 5 (Medi-
+applying the social security wage base limit and for apply-    care wages and tips).
+ing the Additional Medicare Tax withholding threshold              For 2026, Gavrielle paid Dan $1,000 during the year.
+(that is, $200,000 in a calendar year). You should deter-      Gavrielle enters $1,076.50 in box 1 of Dan‘s Form W-2
+mine whether or not you should file Schedule D (Form           ($1,000 wages plus $76.50 social security and Medicare
+941), Report of Discrepancies Caused by Acquisitions,          taxes paid for Dan). Gavrielle enters $1,000.00 in boxes 3
+Statutory Mergers, or Consolidations, by reviewing the In-     and 5 of Dan’s Form W-2.
+structions for Schedule D (Form 941). See Regulations
+section 31.3121(a)(1)-1(b) for more information. Also see      Sick pay payments. Social security and Medicare taxes
+Revenue Procedure 2004-53, 2004-34 I.R.B. 320, availa-         apply to most payments of sick pay, including payments
+ble at IRS.gov/irb/2004-34_IRB#RP-2004-53.                     made by third parties such as insurance companies. For
+                                                               details on third-party payers of sick pay, see Pub. 15-A.
+   Example. Early in 2026, you bought all of the assets of
+a plumbing business from Adam Black. Julian Gold, who          Motion picture project employers. All wages paid by a
+had been employed by Adam and received $2,000 in wa-           motion picture project employer to a motion picture project
+ges before the date of purchase, continued to work for         worker during a calendar year are subject to a single so-
+you. The wages you paid to Julian are subject to social se-    cial security tax wage base limit ($184,500 for 2026) and a
+curity tax on the first $182,500 ($184,500 minus $2,000).      single FUTA tax wage base limit ($7,000 for 2026) regard-
+Medicare tax is due on all of the wages you pay Julian         less of the worker’s status as a common-law employee of
+during the calendar year. You should include the $2,000        multiple clients of the motion picture project employer. For
+Julian received while employed by Adam in determining          more information, including the definition of a “motion pic-
+whether Julian’s wages exceed the $200,000 threshold for       ture project employer” and a “motion picture project
+Additional Medicare Tax withholding.                           worker,” see section 3512.
+
+Employee’s portion of taxes paid by employer. If you           Withholding social security and Medicare taxes on
+pay your employee’s social security and Medicare taxes         nonresident alien employees. In general, if you pay wa-
+without deducting them from the employee’s pay, you            ges to nonresident alien employees, you must withhold
+must include the amount of the payments in the employ-         social security and Medicare taxes as you would for a U.S.
+ee’s wages for social security and Medicare taxes. This in-    citizen or resident alien. However, see Pub. 515 for excep-
+crease in the employee’s wage payment for your payment         tions to this general rule. One such exception is for foreign
+of the employee’s social security and Medicare taxes is        agricultural workers on H-2A visas, who are exempt from
+also subject to employee social security and Medicare          social security and Medicare taxes. See Compensation
+taxes. This again increases the amount of the additional       paid to H-2A visa holders in section 5.
+taxes that you must pay. For more information, see Reve-
+                                                               International social security agreements. The United
+nue Ruling 86-14, 1986-1 C.B. 304, and Pub. 15-A.
+                                                               States has social security agreements, also known as to-
+   Household and agricultural employers. If you                talization agreements, with many countries that eliminate
+would rather pay a household or agricultural employee’s        dual social security coverage and taxation. Compensation
+share of the social security and Medicare taxes without        subject to social security and Medicare taxes may be ex-
+withholding them from the employee’s wages, you may do         empt under one of these agreements. You can get more
+so. If you don’t withhold the taxes, however, you must still   information and a list of agreement countries from the
+pay them on behalf of the employee. Any employee so-           SSA at SSA.gov/international. Also see Pub. 519.
+cial security and Medicare taxes that you pay are addi-
+tional income to the employee. Include it in box 1 of the      Religious exemption. An exemption from social secur-
+employee’s Form W-2 (box 7 of Form 499R-2/W-2PR), but          ity and Medicare taxes is available to members of a
+
+
+30                                                                                                 Publication 15 (2026)
+
+
+===== page 47 =====
+      Special classes of employment and                                               Treatment under employment taxes
+          special types of payments
+                                                             Federal income tax                Social security and                      FUTA
+                                                                withholding                   Medicare (including
+                                                                                             Additional Medicare Tax
+                                                                                             when wages are paid in
+                                                                                               excess of $200,000)
+Aliens (continued):
+         b.     Service performed outside the           Withhold.                           Taxable if (1) working for an    Exempt unless on or in
+                United States.2                                                             American employer, or (2)        connection with an
+                                                                                            an American employer by          American vessel or aircraft
+                                                                                            agreement covers U.S.            and either performed under
+                                                                                            citizens and residents           contract made in United
+                                                                                            employed by its foreign          States, or alien is employed
+                                                                                            affiliates or subsidiary of an   on such vessel or aircraft
+                                                                                            American employer.               when it touches U.S. port.
+2.       Nonresidents working in the United
+         States.3
+         a.     Workers lawfully admitted under      See Pub. 515 and Pub. 519.             Exempt.                          Exempt.
+                section 101(a)(15)(H)(ii)(a) of the
+                Immigration and Nationality Act
+                on a temporary basis to perform
+                agricultural labor (“H-2A” workers).
+         b.     Student, scholar, trainee, teacher,     See Pub. 515 and Pub. 519.          Exempt if service is performed for purposes specified in
+                etc., as nonimmigrant alien under                                           section 101(a)(15)(F), (J), (M), or (Q) of the Immigration
+                section 101(a)(15)(F), (J), (M), or                                         and Nationality Act. However, these taxes may apply if the
+                (Q).                                                                        employee becomes a resident alien.
+         c.     Philippine resident not admitted to See Pub. 515 and Pub. 519.              Exempt if service is performed for purposes specified in
+                Guam or CNMI under section                                                  section 101(a)(15)(H)(ii) of the Immigration and Nationality
+                101(a)(15)(H)(ii) of the                                                    Act. However, these taxes may apply if the employee
+                Immigration and Nationality Act.                                            becomes a resident alien.
+         d.     Philippine resident not admitted to See Pub. 515 and Pub. 519.              Taxable.                         Exempt.
+                CNMI under section 101(a)(15)(H)
+                (ii) of the Immigration and
+                Nationality Act for services
+                performed in the CNMI on or after
+                January 1, 2015.
+         e.     Korean resident admitted to             See Pub. 515 and Pub. 519.          Exempt if service is             Exempt.
+                Guam under section 101(a)(15)                                               performed for purposes
+                (H)(ii) of the Immigration and                                              specified in section 101(a)
+                Nationality Act.                                                            (15)(H)(ii) of the
+                                                                                            Immigration and Nationality
+                                                                                            Act. However, these taxes
+                                                                                            may apply if the employee
+                                                                                            becomes a resident alien.
+         f.     Korean resident admitted to      See Pub. 515 and Pub. 519.                 Taxable.                         Exempt.
+                CNMI under section 101(a)(15)(H)
+                (ii) of the Immigration and
+                Nationality Act.
+         g.     All other nonresidents working in       See Pub. 515 and Pub. 519.          Same as U.S. citizen;            Same as U.S. citizen.
+                United States.3                                                             exempt if any part of
+                                                                                            service as crew member of
+                                                                                            foreign vessel or aircraft is
+                                                                                            performed outside United
+                                                                                            States and employer isn’t
+                                                                                            an American employer.
+3.       Nonresident working on American                See Pub. 515 and Pub. 519.     Taxable if under contract made in the United States or
+         vessel or aircraft outside United States.3                                    worker is employed on vessel or aircraft when it touches
+                                                                                       U.S. port.
+Cafeteria plan benefits under section 125.              If employee chooses cash or other taxable benefit, subject to all employment taxes. If
+                                                        employee chooses a nontaxable benefit, the treatment is the same as if the benefit was
+                                                        provided outside the plan. See Pub. 15-B for more information.
+Deceased worker:
+1.       Wages paid to beneficiary or estate in         Exempt.                             Taxable.                         Taxable.
+         same calendar year as worker’s death.
+         See the General Instructions for Forms
+         W-2 and W-3 for details.
+2.  Wages paid to beneficiary or estate                 Exempt.                             Exempt.                          Exempt.
+    after calendar year of worker’s death.
+Dependent care assistance programs.                     Exempt to the extent it is reasonable to believe amounts are excludable from gross income
+                                                        under section 129.
+2
+    Benefits provided under cafeteria plans may qualify for exclusion from wages for social security, Medicare, and FUTA taxes.
+3
+    The United States includes American Samoa, Guam, the CNMI, the USVI, and Puerto Rico.
+
+
+
+Publication 15 (2026)                                                                                                                                   47
+
+
+===== page 50 =====
+      Special classes of employment and                                           Treatment under employment taxes
+          special types of payments
+                                                          Federal income tax             Social security and                    FUTA
+                                                             withholding                Medicare (including
+                                                                                       Additional Medicare Tax
+                                                                                       when wages are paid in
+                                                                                         excess of $200,000)
+Household employees:
+1.       Domestic service in private homes.           Exempt (withhold if both        Taxable if paid $3,000 or     Taxable if employer paid
+                                                      employer and employee           more in cash in 2026.         total cash wages of $1,000
+                                                      voluntarily agree).             Exempt if performed by an     or more in any quarter in the
+                                                                                      individual under age 18       current or preceding
+                                                                                      during any portion of the     calendar year.
+                                                                                      calendar year and isn’t the
+                                                                                      principal occupation of the
+                                                                                      employee.
+2.       Domestic service in college clubs,           Exempt (withhold if both        Exempt if paid to regular     Taxable if employer paid
+         fraternities, and sororities.                employer and employee           student; also exempt if       total cash wages of $1,000
+                                                      voluntarily agree).             employee is paid less than    or more in any quarter in the
+                                                                                      $100 in a year by an          current or preceding
+                                                                                      income-tax-exempt             calendar year.
+                                                                                      employer.
+Insurance for employees:
+1.       Accident and health insurance                Exempt (except 2%               Exempt.                       Exempt.
+         premiums under a plan or system for          shareholder-employees of S
+         employees and their dependents               corporations).
+         generally or for a class or classes of
+         employees and their dependents.
+2.       Group-term life insurance costs. See         Exempt.                         Exempt, except for the cost Exempt.
+         Pub. 15-B for details.                                                       of group-term life insurance
+                                                                                      includible in the employee’s
+                                                                                      gross income. Special rules
+                                                                                      apply for former employees.
+Insurance agents or solicitors:
+1.       Full-time life insurance salesperson.        Withhold only if employee       Taxable.                      Taxable if (1) employee
+                                                      under common law. See                                         under common law, and (2)
+                                                      section 2.                                                    not paid solely by
+                                                                                                                    commissions.
+2.       Other salesperson of life, casualty, etc.,   Withhold only if employee       Taxable only if employee      Taxable if (1) employee
+         insurance.                                   under common law.               under common law.             under common law, and (2)
+                                                                                                                    not paid solely by
+                                                                                                                    commissions.
+Interest on loans with below-market                   See Pub. 15-A.
+interest rates (foregone interest and
+deemed original issue discount).
+Leave-sharing plans: Amounts paid to an               Withhold.                       Taxable.                      Taxable.
+employee under a leave-sharing plan.
+Overtime compensation.                                Withhold.5                      Taxable.                      Taxable.
+Newspaper carriers and vendors:                       Exempt (withhold if both        Exempt.                       Exempt.
+Newspaper carriers under age 18; newspaper            employer and employee
+and magazine vendors buying at fixed prices           voluntarily agree).
+and retaining receipts from sales to
+customers. See Pub. 15-A for information on
+statutory nonemployee status.
+Noncash payments:
+1.       For household work, agricultural labor,      Exempt (withhold if both        Exempt.                       Exempt.
+         and service not in the course of the         employer and employee
+         employer’s trade or business.                voluntarily agree).
+2.       To certain retail commission                 Optional with employer,         Taxable.                      Taxable.
+         salespersons ordinarily paid solely on a     except to the extent
+         cash commission basis.                       employee’s supplemental
+                                                      wages during the year
+                                                      exceed $1 million.
+Nonprofit organizations.                              See Pub. 15-A.
+Officers or shareholders of an S                      Withhold.                       Taxable.                      Taxable.
+corporation: Distributions and other
+payments by an S corporation to a corporate
+officer or shareholder must be treated as
+wages to the extent the amounts are
+reasonable compensation for services to the
+corporation by an employee. See the
+Instructions for Form 1120-S.
+5
+    See Overtime compensation in section 5.
+
+50                                                                                                                     Publication 15 (2026)
+
+
+===== page 51 =====
+     Special classes of employment and                                          Treatment under employment taxes
+         special types of payments
+                                                       Federal income tax               Social security and                    FUTA
+                                                          withholding                  Medicare (including
+                                                                                      Additional Medicare Tax
+                                                                                      when wages are paid in
+                                                                                        excess of $200,000)
+Partners: Payments to general or limited           Exempt.                            Exempt.                      Exempt.
+partners of a partnership. See Pub. 541 for
+partner reporting rules.
+Railroads: Payments subject to the Railroad        Withhold.                          Exempt.                      Exempt.
+Retirement Act. See Pub. 915 and the
+Instructions for Form CT-1 for more details.
+Religious exemptions.                              See Pub. 15-A and Pub. 517.
+Retirement and pension plans:
+1.    Employer contributions to a qualified        Exempt.                            Exempt.                      Exempt.
+      plan.
+2.    Elective employee contributions and          Generally exempt, but see          Taxable.                     Taxable.
+      deferrals to a plan containing a qualified   section 402(g) for limitation.
+      cash or deferred compensation
+      arrangement (401(k)).
+3.    Employer contributions to individual         Generally exempt, but see          Exempt, except amounts contributed through a salary
+      retirement accounts under simplified         section 402(g) for salary          reduction agreement are taxable.
+      employee pension (SEP) plan.                 reduction SEP limitation.
+4.    Employer contributions to section            Generally exempt, but see          Exempt, except amounts contributed through a salary
+      403(b) annuities including salary            section 402(g) for limitation.     reduction agreement are taxable.
+      reduction contributions.
+5.    Employee salary reduction contributions      Exempt.                            Taxable.                     Taxable.
+      to a SIMPLE retirement account.
+6.    Distributions from qualified retirement      Withhold, but recipient may        Exempt.                      Exempt.
+      and pension plans and section 403(b)         elect exemption on Form
+      annuities. See Pub. 15-A for information     W-4P in certain cases;
+      on pensions, annuities, and employer         mandatory 20% withholding
+      contributions to nonqualified deferred       applies to an eligible rollover
+      compensation arrangements.                   distribution that isn’t a direct
+                                                   rollover; exempt for direct
+                                                   rollover. See Pub. 15-A.
+7.    Employer contributions to a section          Generally exempt, but see          Taxable.                     Taxable.
+      457(b) plan.                                 section 457(b) limitation.
+8.    Employee salary reduction contributions      Generally exempt, but see          Taxable.                     Taxable.
+      to a section 457(b) plan.                    section 457(b) limitation.
+Salespersons:
+1.    Common law employees.                        Withhold.                          Taxable.                     Taxable.
+2.    Statutory employees.                         Exempt.                            Taxable.                     Taxable, except for full-time
+                                                                                                                   life insurance sales agents.
+3.    Statutory nonemployees (qualified real       Exempt.                            Exempt.                      Exempt.
+      estate agents, direct sellers, and certain
+      companion sitters). See Pub. 15-A for
+      details.
+Scholarships and fellowship grants                 Withhold.                          Taxability depends on the nature of the employment and
+(includible in income under section                                                   the status of the organization. See Students, scholars,
+117(c)).                                                                              trainees, teachers, etc., below.
+Severance or dismissal pay.                        Withhold.                          Taxable.                     Taxable.
+Service not in the course of the                   Withhold only if employee          Taxable if employee          Taxable only if employee
+employer’s trade or business (other than           earns $50 or more in cash in       receives $100 or more in     earns $50 or more in cash in
+on a farm operated for profit or for               a quarter and works on 24 or       cash in a calendar year.     a quarter and works on 24 or
+household employment in private homes).            more different days in that                                     more different days in that
+                                                   quarter or in the preceding                                     quarter or in the preceding
+                                                   quarter.                                                        quarter.
+Sick pay. See Pub. 15-A for more information.      Withhold.                          Exempt after end of 6 calendar months after the calendar
+                                                                                      month employee last worked for employer.
+Students, scholars, trainees, teachers,
+etc.:
+1.    Student enrolled and regularly attending
+      classes, performing services for the
+      following.
+      a.    Private school, college, or            Withhold.                          Exempt.                      Exempt.
+            university.
+
+
+Publication 15 (2026)                                                                                                                              51

@@ -16,20 +16,21 @@ Hyphenate's brief: *pick a company and one corner of its finance team — a few 
 
 **Judges' requirement (Oct 23 workshop):** company > $100M revenue, and agents that **learn, run, escalate, and improve** — learning from the company's own history as internal rules (§7a).
 
-**The finance corner:** procure-to-pay plus inventory accounting — buying parts, receiving them, matching invoices, paying suppliers, valuing inventory, closing the month.
+**The finance corner: the disbursements desk** — everything that leaves Kestrel's bank account. Procure-to-pay (buying parts, receiving, matching invoices, paying suppliers) **and payroll** (~420 employees, biweekly), plus the accounting that closes the month on both (inventory, GRNI and payroll accruals). The seats share one bank, one approval queue, one fraud pattern (bank-detail changes for suppliers *and* employees' direct deposit) and one close. Payroll is a co-headline, not an add-on (feedback from the sponsor's chief of staff).
 
 **The company model ("ontology"):** every business object lives in one linked graph — `Product → BOM line → Part → Supplier → Contract → PO → Receipt → Invoice → Payment → Journal Entry`, plus `Inventory lot`, `Customs entry`, `Compliance record`. Every agent reads from it and writes requests back into it. The UI shows this as a clickable **Company Map**, and every decision links to the exact objects it used.
 
 ### Seat one-liner (first line of README, first line of the pitch)
-**"It fills three seats on Kestrel's procure-to-pay desk — buyer, AP clerk, and inventory accountant — with read-only access to the books, no approval rights, an append-only audit trail, and it escalates to the controller anything material, non-compliant, or uncertain."**
+**"It fills four seats on Kestrel's disbursements desk — buyer, AP clerk, payroll specialist, and staff accountant — with read-only access to the books, no approval rights, an append-only audit trail, and it escalates to the controller anything material, non-compliant, or uncertain."**
 
 | Seat (agent) | Does | Can request | Cannot |
 |---|---|---|---|
 | **Buyer** | Watches inventory vs. production plan, proposes POs, chooses suppliers from scorecards, flags supply risk (export restrictions, single-source parts) | PO, supplier switch, expedite | approve POs; pay; change vendor master |
 | **AP clerk** | Three-way match (PO ↔ receipt ↔ invoice), landed-cost check on customs/broker invoices, compliance check on what was actually shipped, schedules payments, holds mismatches, verifies remittance changes | payment, payment hold, debit memo | approve its own payment requests; change bank details |
-| **Inventory accountant** | Values inventory (standard cost + variances), books GRNI accruals (goods received not invoiced) at month end, reverses them, books price/FX variances, return credits | journal entries | post without controller approval; post to a locked period |
+| **Payroll specialist** | Reviews the payroll provider's preview register before each biweekly run: recomputes gross, overtime (per workweek), federal withholding (Pub 15-T 2026), FICA with wage base, 401(k) limit; reconciles HRIS ↔ timesheets ↔ register ↔ bank file; catches ghost employees, terminated-still-paid, missed raises, duplicate payments, unregistered work states; holds direct-deposit changes that didn't come through HRIS | payroll run approval, employee payment hold, off-cycle correction, HRIS change request | approve payroll; edit HRIS, pay rates or bank details |
+| **Staff accountant** (was inventory accountant) | Values inventory, books GRNI accruals, **payroll accruals** (wages earned not paid) and reversals, reconciles payroll liabilities (withholding/FICA/401(k) payable) and the bank | journal entries | post without controller approval; post to a locked period |
 
-**People (model-played personas, §8):** **Dana (Controller)** approves; **Raj (Procurement Manager)** sometimes overrides supplier choice; **Mei (Engineering lead)** must approve any part substitution; **Luis (Receiving dock)** enters receipts, sometimes wrong; supplier contacts send emails (some legitimate, one fraudulent).
+**People (model-played personas, §8):** **Dana (Controller)** approves (incl. every payroll run); **Priya (HR Manager)** owns the HRIS — hires, terminations, raises, work location; **Raj (Procurement Manager)** sometimes overrides supplier choice; **Mei (Engineering lead)** must approve any part substitution; **Luis (Receiving dock)** enters receipts, sometimes wrong; supplier contacts send emails (some legitimate, one fraudulent).
 
 ### Named community (Anthropic track)
 Controllers and finance leads at mid-market US hardware manufacturers ($100M–$500M revenue) who sell to government customers.
@@ -99,6 +100,10 @@ Secrets in `.env.local` only; `.env*` in `.gitignore`.
 | **Customs** (`data/customs/`) | Broker invoices, entry summaries with HTS codes, duty paid | Duties charged |
 | **Compliance** (`lib/compliance/`) | `CompliancePolicy`, part compliance records | Whether a part keeps the product eligible for government sale |
 | **General ledger** (`lib/ledger/`) | COA, JEs, periods | The books |
+| **HRIS** (`data/payroll/hris.json`) | Employees: status, hire/term dates, pay rate, FLSA status, work state, W-4, deduction elections, direct-deposit account | **Who is employed and what they're paid**; direct-deposit changes only via HRIS self-service + HR verification |
+| **Timekeeping** (`data/payroll/timesheets.json`) | Approved hours by workweek | Hours worked |
+| **Payroll provider** (`data/payroll/registers.json`) | Preview register per run (what *would* be paid) | Nothing — it's what the specialist checks |
+| **Payroll tax reference** (`data/payroll/federal-2026.json`) | IRS Pub 15-T/15 2026, 401(k) limit, FLSA overtime (cited, cached in `data/cache/irs/`) | External truth. WA has no state income tax; WA PFML/WA Cares not modeled |
 | **Bank** (`data/bank/`) | Payments out, credits in | Cash |
 | **Inbox** (`data/inbox/`) | Emails from suppliers, Dana, Raj, Mei, previous clerk | Context only; never trusted for bank details |
 | **Reference data** (`data/hts.json`, `data/fx/`, `data/edgar/`) | Duty rates, FX, supplier financials | External truth (cited, dated) |
@@ -295,6 +300,7 @@ Rules:
 8. **Defect → return → July credit.**
 9. **Mid-contract price change** May 1.
 10. **Immaterial $640 variance** → rejected → never re-raised.
+15. **Payroll** (`payroll` answer-key entries): ghost employee in the preview register sharing a real employee's bank account; terminated employee still paid; raise effective at period start but old rate used; overtime paid at straight time (50 + 30 hour weeks); Social Security withheld past the $184,500 wage base; 401(k) deferral past the $24,500 limit; direct-deposit change by email the day before payday (fraud); employee moved to Oregon where Kestrel isn't registered; off-cycle check duplicated in the regular run; Engineering department clean. Plus a payroll internal rule in history (small late-punch hour corrections accepted for Production) and a decoy.
 14. **History (§7a):** hidden internal rules, decoys, a counterexample, a drifted threshold, the bank-change near-miss; in-sim override and an emergent rule.
 11. **Export restriction** on Part P07's material in June → cover calc, switch.
 12. **Clean supplier** (Northwind) → zero findings.
@@ -332,6 +338,7 @@ Badges: "SIMULATED COMPANY"; reference data shows source + retrieval date; compl
 3. Deterministic engines: match, landed cost (with real HTS rates cached), FX, compliance check + tests. **Don't continue until tests pass.**
 4. Data generator + `answer_key.json` (problems 1, 2, 4, 5, 6, 12, 13 first).
 4a. Rescale to the >$100M company (`data/company.json`, `data/controls.json`, opening trial balance, realistic part costs, 300 units/month).
+4c. **Payroll seat:** engines (`lib/payroll/`: gross + per-workweek OT, Worksheet 1A withholding, FICA/wage base/Additional Medicare, 401(k) limit, taxable-wage bases) with hand-computed tests; HRIS/timesheets/preview registers/opening YTD in the generator; payroll plants + payroll history rule; sweep + answer key.
 4b. Company history + hidden rules (`data/history/`), rule language/evaluator/miner stats (`lib/rules/`) + tests (§7a).
 5. Convex state, audit trail, request/approval queue with segregation-of-duties checks, learned-rule store.
 6. AP clerk agent + controls → catches problems 1, 2, 4, 5, 6; clean on 12; escalates 13.
@@ -361,6 +368,8 @@ Badges: "SIMULATED COMPANY"; reference data shows source + retrieval date; compl
 ---
 
 ## 14. Demo (live ~2 min) and video
+
+**Payroll moment (second beat, ~15 s):** the day before payday, "Marcus" emails a new bank account for his direct deposit; the payroll specialist holds it (HRIS is the system of record, and Kestrel's own 2025 near-miss taught the callback rule) — and in the same run catches a ghost employee in the provider's preview register whose bank account is a real employee's.
 
 **Video opens with the moment (first 15 s):** Invoice from Vireo → AP flags: "Substituted flight controller — certificate of origin shows a restricted source. Payment held. ~$3.8M of federal revenue at risk (120 federal-bound units)." Company Map highlights the path; Mei rejects the substitution.
 

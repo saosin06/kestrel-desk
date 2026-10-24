@@ -1,0 +1,129 @@
+Source: https://www.irs.gov/pub/irs-pdf/p15t.pdf (2026 Publication 15-T), retrieved 2026-10-23
+
+===== page 10 =====
+                                                                                                        method works for Forms W-4 for all prior, current, and fu-
+1. Percentage Method Tables                                                                             ture years. This method also works for any amount of wa-
+                                                                                                        ges. If the Form W-4 is from 2019 or earlier, this method
+for Automated Payroll Systems                                                                           works for any number of withholding allowances claimed.
+
+and Withholding on Periodic                                                                                If you’re a payer making periodic payments of pensions
+                                                                                                        and annuities, use Worksheet 1B and the Percentage
+Payments of Pensions and                                                                                Method tables in this section to figure federal income tax
+                                                                                                        withholding. This method works for Forms W-4P for all
+Annuities                                                                                               prior, current, and future years. If a payer is figuring with-
+                                                                                                        holding on periodic payments based on a 2021 or earlier
+If you’re an employer with an automated payroll system,                                                 Form W-4P, the payer may also figure withholding using
+use Worksheet 1A and the Percentage Method tables in                                                    the methods described in section 3 and section 5.
+this section to figure federal income tax withholding. This
+Worksheet 1A. Employer’s Withholding Worksheet for Percentage Method Tables for
+Automated Payroll Systems
+                                                                                                                                                                                      Keep for Your
+                                                                                                                                                                                           Records
+           Table 3       Semiannually            Quarterly             Monthly            Semimonthly              Biweekly               Weekly                  Daily
+                                 2                     4                   12                     24                    26                    52                    260
+
+     Step 1.      Adjust the employee’s payment amount
+                  1a Enter the employee’s total taxable wages this payroll period . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1a                          $
+                  1b Enter the number of pay periods you have per year (see Table 3) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1b
+                  1c Multiply the amount on line 1a by the number on line 1b . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1c                         $
+
+         If the employee HAS submitted a Form W-4 for 2020 or later, figure the Adjusted Annual Wage Amount as follows.
+                 1d Enter the amount from Step 4(a) of the employee’s Form W-4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                             1d   $
+                 1e Add lines 1c and 1d . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .          1e   $
+                 1f Enter the amount from Step 4(b) of the employee’s Form W-4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                             1f   $
+                 1g If the box in Step 2 of Form W-4 is checked, enter -0-. If the box is not checked, enter $12,900 if the taxpayer
+                      is married filing jointly or $8,600 otherwise . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              1g   $
+                 1h Add lines 1f and 1g . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .          1h   $
+                 1i Subtract line 1h from line 1e. If zero or less, enter -0-. This is the Adjusted Annual Wage Amount . . . . . . .                                         1i   $
+
+         If the employee HAS NOT submitted a Form W-4 for 2020 or later, figure the Adjusted Annual Wage Amount as follows.
+                 1j Enter the number of allowances claimed on the employee’s most recent Form W-4 . . . . . . . . . . . . . . . . . . . 1j
+                 1k Multiply line 1j by $4,300 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1k             $
+                 1l Subtract line 1k from line 1c. If zero or less, enter -0-. This is the Adjusted Annual Wage Amount . . . . . . . 1l                                           $
+
+     Step 2.      Figure the Tentative Withholding Amount
+                  based on the employee’s Adjusted Annual Wage Amount; filing status (Step 1(c) of the 2020 or later Form W-4) or marital status (line 3 of
+                  Form W-4 from 2019 or earlier); and whether the box in Step 2 of 2020 or later Form W-4 is checked.
+                  Note: Don’t use the Head of Household table if the Form W-4 is from 2019 or earlier.
+
+                  2a Enter the employee’s Adjusted Annual Wage Amount from line 1i or 1l above . . . . . . . . . . . . . . . . . . . . .                                     2a   $
+                  2b Find the row in the appropriate Annual Percentage Method table in which the amount on line 2a is at least the
+                     amount in column A but less than the amount in column B, then enter here the amount from column A of that
+                     row . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   2b   $
+                  2c Enter the amount from column C of that row . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                    2c   $
+                  2d Enter the percentage from column D of that row . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                    2d                  %
+                  2e Subtract line 2b from line 2a . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .           2e   $
+                  2f Multiply the amount on line 2e by the percentage on line 2d . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                       2f   $
+                  2g Add lines 2c and 2f . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .         2g   $
+                  2h Divide the amount on line 2g by the number of pay periods on line 1b. This is the Tentative
+                     Withholding Amount . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .              2h   $
+
+     Step 3.      Account for tax credits
+                  3a If the employee’s Form W-4 is from 2020 or later, enter the amount from Step 3 of that form; otherwise,
+                     enter -0- . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3a     $
+                  3b Divide the amount on line 3a by the number of pay periods on line 1b . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3b                              $
+                  3c Subtract line 3b from line 2h. If zero or less, enter -0- . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3c                   $
+
+     Step 4.      Figure the final amount to withhold
+                  4a Enter the additional amount to withhold from the employee’s Form W-4 (Step 4(c) of the 2020 or later form, or
+                      line 6 on earlier forms) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4a         $
+                  4b Add lines 3c and 4a. This is the amount to withhold from the employee’s wages this
+                      pay period . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4b       $
+
+
+
+
+10                                                                                                                                                                 Publication 15-T (2026)
+
+
+===== page 12 =====
+       2026 Percentage Method Tables for Automated Payroll Systems and Withholding on Periodic
+                                Payments of Pensions and Annuities
+                  STANDARD Withholding Rate Schedules                                  Form W-4, Step 2, Checkbox, Withholding Rate Schedules
+    (Use these if the Form W-4 is from 2019 or earlier, or if the Form W-4 is      (Use these if the Form W-4 is from 2020 or later and the box in Step 2 of
+ from 2020 or later and the box in Step 2 of Form W-4 is NOT checked. Also,                                Form W-4 IS checked.)
+                    use these for Form W-4P from any year.)
+If the Adjusted Annual                                                          If the Adjusted Annual
+Wage Amount on                                                                  Wage Amount on
+Worksheet 1A or                                                                 Worksheet 1A is:
+the Adjusted Annual                                         of the
+Payment Amount on                                           amount that                                                                     of the
+Worksheet 1B is:                The                         the Adjusted                                        The                         amount that
+                                tentative                   Annual Wage                                         tentative                   the Adjusted
+                   But less     amount to       Plus this   or Payment                            But less      amount to       Plus this   Annual Wage
+     At least—      than—       withhold is:    percentage— exceeds—             At least—         than—        withhold is:    percentage— exceeds—
+        A             B               C               D               E               A               B               C               D                E
+                          Married Filing Jointly                                                          Married Filing Jointly
+             $0       $19,300           $0.00              0%              $0             $0         $16,100           $0.00               0%              $0
+        $19,300       $44,100           $0.00             10%         $19,300        $16,100         $28,500           $0.00              10%         $16,100
+        $44,100      $120,100       $2,480.00             12%         $44,100        $28,500         $66,500       $1,240.00              12%         $28,500
+       $120,100      $230,700      $11,600.00             22%        $120,100        $66,500        $121,800       $5,800.00              22%         $66,500
+       $230,700      $422,850      $35,932.00             24%        $230,700       $121,800        $217,875      $17,966.00              24%        $121,800
+       $422,850      $531,750      $82,048.00             32%        $422,850       $217,875        $272,325      $41,024.00              32%        $217,875
+       $531,750      $788,000     $116,896.00             35%        $531,750       $272,325        $400,450      $58,448.00              35%        $272,325
+       $788,000                   $206,583.50             37%        $788,000       $400,450                     $103,291.75              37%        $400,450
+
+                  Single or Married Filing Separately                                            Single or Married Filing Separately
+             $0        $7,500           $0.00              0%              $0             $0          $8,050            $0.00              0%              $0
+         $7,500       $19,900           $0.00             10%          $7,500         $8,050         $14,250            $0.00             10%          $8,050
+        $19,900       $57,900       $1,240.00             12%         $19,900        $14,250         $33,250          $620.00             12%         $14,250
+        $57,900      $113,200       $5,800.00             22%         $57,900        $33,250         $60,900        $2,900.00             22%         $33,250
+       $113,200      $209,275      $17,966.00             24%        $113,200        $60,900        $108,938        $8,983.00             24%         $60,900
+       $209,275      $263,725      $41,024.00             32%        $209,275       $108,938        $136,163       $20,512.00             32%        $108,938
+       $263,725      $648,100      $58,448.00             35%        $263,725       $136,163        $328,350       $29,224.00             35%        $136,163
+       $648,100                   $192,979.25             37%        $648,100       $328,350                       $96,489.63             37%        $328,350
+
+                           Head of Household                                                                 Head of Household
+             $0       $15,550           $0.00              0%              $0             $0         $12,075            $0.00              0%              $0
+        $15,550       $33,250           $0.00             10%         $15,550        $12,075         $20,925            $0.00             10%         $12,075
+        $33,250       $83,000       $1,770.00             12%         $33,250        $20,925         $45,800          $885.00             12%         $20,925
+        $83,000      $121,250       $7,740.00             22%         $83,000        $45,800         $64,925        $3,870.00             22%         $45,800
+       $121,250      $217,300      $16,155.00             24%        $121,250        $64,925        $112,950        $8,077.50             24%         $64,925
+       $217,300      $271,750      $39,207.00             32%        $217,300       $112,950        $140,175       $19,603.50             32%        $112,950
+       $271,750      $656,150      $56,631.00             35%        $271,750       $140,175        $332,375       $28,315.50             35%        $140,175
+       $656,150                   $191,171.00             37%        $656,150       $332,375                       $95,585.50             37%        $332,375
+
+
+
+
+12                                                                                                                             Publication 15-T (2026)

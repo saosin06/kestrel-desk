@@ -1,0 +1,251 @@
+{
+  "taxYear": 2026,
+  "note": "US federal payroll reference data for 2026, transcribed from IRS publications (cached extracts in data/cache/irs/). Money is decimal-string USD. Only the STANDARD schedules (Form W-4 Step 2 box NOT checked) are modeled.",
+  "incomeTaxWithholding": {
+    "method": "Annual Percentage Method for Automated Payroll Systems (Worksheet 1A), Form W-4 2020 or later",
+    "source": {
+      "doc": "IRS Publication 15-T (2026)",
+      "url": "https://www.irs.gov/pub/irs-pdf/p15t.pdf",
+      "pages": [
+        10,
+        12
+      ],
+      "retrievedAt": "2026-10-23"
+    },
+    "payPeriodsPerYear": {
+      "weekly": 52,
+      "biweekly": 26,
+      "semimonthly": 24,
+      "monthly": 12
+    },
+    "line1gAdjustment": {
+      "married_filing_jointly": "12900.00",
+      "other": "8600.00",
+      "note": "Worksheet 1A line 1g, when the Step 2 box is not checked"
+    },
+    "standardSchedules": {
+      "married_filing_jointly": [
+        {
+          "atLeast": "0",
+          "lessThan": "19300",
+          "base": "0.00",
+          "ratePct": "0"
+        },
+        {
+          "atLeast": "19300",
+          "lessThan": "44100",
+          "base": "0.00",
+          "ratePct": "10"
+        },
+        {
+          "atLeast": "44100",
+          "lessThan": "120100",
+          "base": "2480.00",
+          "ratePct": "12"
+        },
+        {
+          "atLeast": "120100",
+          "lessThan": "230700",
+          "base": "11600.00",
+          "ratePct": "22"
+        },
+        {
+          "atLeast": "230700",
+          "lessThan": "422850",
+          "base": "35932.00",
+          "ratePct": "24"
+        },
+        {
+          "atLeast": "422850",
+          "lessThan": "531750",
+          "base": "82048.00",
+          "ratePct": "32"
+        },
+        {
+          "atLeast": "531750",
+          "lessThan": "788000",
+          "base": "116896.00",
+          "ratePct": "35"
+        },
+        {
+          "atLeast": "788000",
+          "lessThan": null,
+          "base": "206583.50",
+          "ratePct": "37"
+        }
+      ],
+      "single_or_mfs": [
+        {
+          "atLeast": "0",
+          "lessThan": "7500",
+          "base": "0.00",
+          "ratePct": "0"
+        },
+        {
+          "atLeast": "7500",
+          "lessThan": "19900",
+          "base": "0.00",
+          "ratePct": "10"
+        },
+        {
+          "atLeast": "19900",
+          "lessThan": "57900",
+          "base": "1240.00",
+          "ratePct": "12"
+        },
+        {
+          "atLeast": "57900",
+          "lessThan": "113200",
+          "base": "5800.00",
+          "ratePct": "22"
+        },
+        {
+          "atLeast": "113200",
+          "lessThan": "209275",
+          "base": "17966.00",
+          "ratePct": "24"
+        },
+        {
+          "atLeast": "209275",
+          "lessThan": "263725",
+          "base": "41024.00",
+          "ratePct": "32"
+        },
+        {
+          "atLeast": "263725",
+          "lessThan": "648100",
+          "base": "58448.00",
+          "ratePct": "35"
+        },
+        {
+          "atLeast": "648100",
+          "lessThan": null,
+          "base": "192979.25",
+          "ratePct": "37"
+        }
+      ],
+      "head_of_household": [
+        {
+          "atLeast": "0",
+          "lessThan": "15550",
+          "base": "0.00",
+          "ratePct": "0"
+        },
+        {
+          "atLeast": "15550",
+          "lessThan": "33250",
+          "base": "0.00",
+          "ratePct": "10"
+        },
+        {
+          "atLeast": "33250",
+          "lessThan": "83000",
+          "base": "1770.00",
+          "ratePct": "12"
+        },
+        {
+          "atLeast": "83000",
+          "lessThan": "121250",
+          "base": "7740.00",
+          "ratePct": "22"
+        },
+        {
+          "atLeast": "121250",
+          "lessThan": "217300",
+          "base": "16155.00",
+          "ratePct": "24"
+        },
+        {
+          "atLeast": "217300",
+          "lessThan": "271750",
+          "base": "39207.00",
+          "ratePct": "32"
+        },
+        {
+          "atLeast": "271750",
+          "lessThan": "656150",
+          "base": "56631.00",
+          "ratePct": "35"
+        },
+        {
+          "atLeast": "656150",
+          "lessThan": null,
+          "base": "191171.00",
+          "ratePct": "37"
+        }
+      ]
+    }
+  },
+  "fica": {
+    "source": {
+      "doc": "IRS Publication 15 (2026)",
+      "url": "https://www.irs.gov/pub/irs-pdf/p15.pdf",
+      "pages": [
+        29,
+        30
+      ],
+      "retrievedAt": "2026-10-23"
+    },
+    "socialSecurityRatePct": "6.2",
+    "socialSecurityWageBase": "184500.00",
+    "medicareRatePct": "1.45",
+    "additionalMedicareRatePct": "0.9",
+    "additionalMedicareThreshold": "200000.00",
+    "note": "Employer matches 6.2% and 1.45%; Additional Medicare Tax is employee-only, withheld once calendar-year wages exceed $200,000."
+  },
+  "pretaxTreatment": {
+    "source": {
+      "doc": "IRS Publication 15 (2026)",
+      "url": "https://www.irs.gov/pub/irs-pdf/p15.pdf",
+      "pages": [
+        20,
+        47,
+        50,
+        51
+      ],
+      "retrievedAt": "2026-10-23"
+    },
+    "elective401k": {
+      "incomeTax": "exempt",
+      "socialSecurity": "taxable",
+      "medicare": "taxable",
+      "ref": "p.51 Retirement and pension plans, row 2"
+    },
+    "section125HealthPremium": {
+      "incomeTax": "exempt",
+      "socialSecurity": "exempt",
+      "medicare": "exempt",
+      "ref": "p.47 cafeteria plans (nontaxable benefit treated as outside the plan); p.20 and p.50 accident and health insurance premiums"
+    }
+  },
+  "retirement": {
+    "source": {
+      "doc": "IRS: Retirement topics — 401(k) and profit-sharing plan contribution limits",
+      "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits",
+      "retrievedAt": "2026-10-23"
+    },
+    "electiveDeferralLimit": "24500.00",
+    "catchUp50Plus": "8000.00",
+    "note": "Catch-up contributions are NOT modeled; the over-limit plant uses an employee under 50."
+  },
+  "overtime": {
+    "source": {
+      "doc": "29 U.S.C. § 207(a)(1) (FLSA)",
+      "url": "https://www.law.cornell.edu/uscode/text/29/207",
+      "retrievedAt": "2026-10-23"
+    },
+    "weeklyHoursThreshold": 40,
+    "multiplier": "1.5",
+    "note": "Per workweek, for non-exempt employees. Not averaged across a biweekly period."
+  },
+  "state": {
+    "WA": {
+      "incomeTax": "none",
+      "notModeled": [
+        "WA Paid Family & Medical Leave premiums",
+        "WA Cares Fund premiums",
+        "WA L&I industrial insurance"
+      ]
+    }
+  }
+}
