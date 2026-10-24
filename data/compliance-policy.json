@@ -1,0 +1,15 @@
+{
+  "id": "KESTREL-UAS-1",
+  "label": "Policy modeled on federal drone component restrictions — verify with counsel",
+  "disclaimer": "Kestrel internal policy, modeled on US federal restrictions on foreign-made UAS components. Not legal advice; the component classes, countries, and categories below have not been verified against the statutes. See docs/compliance-sources.md.",
+  "appliesToCustomerTypes": ["federal"],
+  "rules": [
+    {
+      "id": "CP-1",
+      "ruleRef": "KESTREL-UAS-1 §CP-1 (covered UAS components)",
+      "componentClasses": ["flight_controller", "radio_datalink", "camera", "gimbal"],
+      "restrictedOrigins": ["CN", "RU", "IR", "KP"],
+      "restrictedManufacturerCategories": ["covered_foreign_entity"]
+    }
+  ]
+}
