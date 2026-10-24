@@ -9,7 +9,7 @@
     "lint": "eslint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "next typegen && tsc --noEmit",
     "fetch:hts": "tsx scripts/fetch-hts.ts",
     "fetch:fx": "tsx scripts/fetch-fx.ts"
   },
