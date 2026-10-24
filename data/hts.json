@@ -1,0 +1,146 @@
+{
+  "source": "USITC Harmonized Tariff Schedule (hts.usitc.gov REST API)",
+  "entries": {
+    "3926.90.99": {
+      "htsno": "3926.90.99",
+      "description": "Other",
+      "general": "5.3%",
+      "generalRateBp": 530,
+      "footnotes": [],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=3926.90.99",
+      "retrievedAt": "2026-10-24"
+    },
+    "7318.15.60": {
+      "htsno": "7318.15.60",
+      "description": "Having shanks or threads with a diameter of less than 6 mm",
+      "general": "6.2%",
+      "generalRateBp": 620,
+      "footnotes": [],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=7318.15.60",
+      "retrievedAt": "2026-10-24"
+    },
+    "7318.15.80": {
+      "htsno": "7318.15.80",
+      "description": "Having shanks or threads with a diameter of 6 mm or more",
+      "general": "8.5%",
+      "generalRateBp": 850,
+      "footnotes": [],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=7318.15.80",
+      "retrievedAt": "2026-10-24"
+    },
+    "8501.31.40": {
+      "htsno": "8501.31.40",
+      "description": "Exceeding 74.6 W but not exceeding 735 W",
+      "general": "4%",
+      "generalRateBp": 400,
+      "footnotes": [],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=8501.31.40",
+      "retrievedAt": "2026-10-24"
+    },
+    "8504.40.95": {
+      "htsno": "8504.40.95",
+      "description": "Other",
+      "general": "Free",
+      "generalRateBp": 0,
+      "footnotes": [],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=8504.40.95",
+      "retrievedAt": "2026-10-24"
+    },
+    "8507.60.00": {
+      "htsno": "8507.60.00",
+      "description": "Lithium-ion batteries",
+      "general": "3.4%",
+      "generalRateBp": 340,
+      "footnotes": [],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=8507.60.00",
+      "retrievedAt": "2026-10-24"
+    },
+    "8517.62.00": {
+      "htsno": "8517.62.00",
+      "description": "Machines for the reception, conversion and transmission or regeneration of voice, images or other data, including switching and routing apparatus",
+      "general": "Free",
+      "generalRateBp": 0,
+      "footnotes": [],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=8517.62.00",
+      "retrievedAt": "2026-10-24"
+    },
+    "8525.89.50": {
+      "htsno": "8525.89.50",
+      "description": "Other",
+      "general": "Free",
+      "generalRateBp": 0,
+      "footnotes": [],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=8525.89.50",
+      "retrievedAt": "2026-10-24"
+    },
+    "8526.91.00": {
+      "htsno": "8526.91.00",
+      "description": "Radio navigational aid apparatus",
+      "general": "Free",
+      "generalRateBp": 0,
+      "footnotes": [],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=8526.91.00",
+      "retrievedAt": "2026-10-24"
+    },
+    "8536.69.40": {
+      "htsno": "8536.69.40",
+      "description": "Coaxial connectors; cylindrical multicontact connectors; rack and panel connectors; printed circuit connectors; ribbon or flat cable connectors",
+      "general": "Free",
+      "generalRateBp": 0,
+      "footnotes": [],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=8536.69.40",
+      "retrievedAt": "2026-10-24"
+    },
+    "8537.10.91": {
+      "htsno": "8537.10.91",
+      "description": "Other",
+      "general": "2.7%",
+      "generalRateBp": 270,
+      "footnotes": [],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=8537.10.91",
+      "retrievedAt": "2026-10-24"
+    },
+    "8544.42.90": {
+      "htsno": "8544.42.90",
+      "description": "Other",
+      "general": "2.6%",
+      "generalRateBp": 260,
+      "footnotes": [],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=8544.42.90",
+      "retrievedAt": "2026-10-24"
+    },
+    "8807.10.00": {
+      "htsno": "8807.10.00",
+      "description": "Propellers and rotors and parts thereof",
+      "general": "Free",
+      "generalRateBp": 0,
+      "footnotes": [
+        "See 9903.90.08."
+      ],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=8807.10.00",
+      "retrievedAt": "2026-10-24"
+    },
+    "8807.20.00": {
+      "htsno": "8807.20.00",
+      "description": "Undercarriages and parts thereof",
+      "general": "Free",
+      "generalRateBp": 0,
+      "footnotes": [
+        "See 9903.90.08."
+      ],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=8807.20.00",
+      "retrievedAt": "2026-10-24"
+    },
+    "8807.30.00": {
+      "htsno": "8807.30.00",
+      "description": "Other parts of airplanes, helicopters or unmanned aircraft",
+      "general": "Free",
+      "generalRateBp": 0,
+      "footnotes": [
+        "See 9903.90.08."
+      ],
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=8807.30.00",
+      "retrievedAt": "2026-10-24"
+    }
+  }
+}

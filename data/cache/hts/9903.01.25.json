@@ -1,0 +1,40 @@
+{
+  "url": "https://hts.usitc.gov/reststop/search?keyword=9903.01.25",
+  "retrievedAt": "2026-10-24",
+  "rows": [
+    {
+      "additionalDuties": null,
+      "description": "Articles the product of any country, except for products described in headings 9903.01.26–9903.01.33, 9903.02.02–9903.02.91, 9903.96.01, and 9903.96.02, and except as provided for in headings 9903.01.34 and 9903.02.01, as provided for in subdivision (v) of U.S. note 2 to this subchapter",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": " See chapter 99 statistical note 1. "
+        }
+      ],
+      "general": "The duty provided in the applicable subheading + 10%",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9903.01.25",
+      "indent": "0",
+      "other": "The duty provided in the applicable subheading",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "The duty provided in the applicable subheading + 10%",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": null
+    }
+  ]
+}

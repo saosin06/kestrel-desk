@@ -1,0 +1,82 @@
+{
+  "note": "Chapter 99 additional duties per (origin, HTS) pair. Applied ONLY when verified: true. 'none: true' is itself a claim and needs a source. Effective dates must cite the HTS revision in force, not today's text.",
+  "entries": [
+    {
+      "origin": "MX",
+      "hts": "8501.31.40",
+      "coverage": {
+        "from": "2026-03-01",
+        "to": "2026-09-30"
+      },
+      "headings": [],
+      "verified": false,
+      "note": "Atlas Motors — P07 brushless motor. UNRESEARCHED — see docs/tariff-sources.md. Engine flags unverifiedAdditionalDuty until verified."
+    },
+    {
+      "origin": "MX",
+      "hts": "7318.15.60",
+      "coverage": {
+        "from": "2026-03-01",
+        "to": "2026-09-30"
+      },
+      "headings": [],
+      "verified": false,
+      "note": "Atlas Motors — P14 M3 machine screws. UNRESEARCHED — see docs/tariff-sources.md. Engine flags unverifiedAdditionalDuty until verified."
+    },
+    {
+      "origin": "TW",
+      "hts": "8537.10.91",
+      "coverage": {
+        "from": "2026-03-01",
+        "to": "2026-09-30"
+      },
+      "headings": [],
+      "verified": false,
+      "note": "Vireo Avionics — P04 flight controller. UNRESEARCHED — see docs/tariff-sources.md. Engine flags unverifiedAdditionalDuty until verified."
+    },
+    {
+      "origin": "TW",
+      "hts": "8504.40.95",
+      "coverage": {
+        "from": "2026-03-01",
+        "to": "2026-09-30"
+      },
+      "headings": [],
+      "verified": false,
+      "note": "Vireo Avionics — P05 ESC board. UNRESEARCHED — see docs/tariff-sources.md. Engine flags unverifiedAdditionalDuty until verified."
+    },
+    {
+      "origin": "JP",
+      "hts": "8525.89.50",
+      "coverage": {
+        "from": "2026-03-01",
+        "to": "2026-09-30"
+      },
+      "headings": [],
+      "verified": false,
+      "note": "Hoshi Optics — P10 mapping camera. UNRESEARCHED — see docs/tariff-sources.md. Engine flags unverifiedAdditionalDuty until verified."
+    },
+    {
+      "origin": "JP",
+      "hts": "8807.30.00",
+      "coverage": {
+        "from": "2026-03-01",
+        "to": "2026-09-30"
+      },
+      "headings": [],
+      "verified": false,
+      "note": "Hoshi Optics — P11 gimbal. UNRESEARCHED — see docs/tariff-sources.md. Engine flags unverifiedAdditionalDuty until verified."
+    },
+    {
+      "origin": "CN",
+      "hts": "8537.10.91",
+      "coverage": {
+        "from": "2026-03-01",
+        "to": "2026-09-30"
+      },
+      "headings": [],
+      "verified": false,
+      "note": "Planted: Vireo's substitute P04 (certificate of origin shows CN). UNRESEARCHED — see docs/tariff-sources.md. Engine flags unverifiedAdditionalDuty until verified."
+    }
+  ]
+}

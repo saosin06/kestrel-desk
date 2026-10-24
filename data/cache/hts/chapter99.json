@@ -1,0 +1,40 @@
+{
+  "note": "Current-revision text of Chapter 99 headings, for research only. Rates are applied only via verified entries in data/additional-duties.json.",
+  "headings": {
+    "9903.88.01": {
+      "heading": "9903.88.01",
+      "general": "The duty provided in the applicable subheading plus 25%",
+      "description": "Except as provided in headings 9903.88.05, 9903.88.06, 9903.88.07, 9903.88.08, 9903.88.10, 9903.88.11, 9903.88.14, 9903.88.19, 9903.88.50, 9903.88.52, 9903.88.58, 9903.88.60, 9903.88.62, 9903.88.66, 9903.88.67, 9903.88.68, or 9903.88.69, articles the product of China, as provided for in U.S. note 20(a) to this subchapter and as provided for in the subheadings enumerated in U.S. note 20(b) [to this subchapter]",
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=9903.88.01",
+      "retrievedAt": "2026-10-24"
+    },
+    "9903.88.03": {
+      "heading": "9903.88.03",
+      "general": "The duty provided in the applicable subheading + 25%",
+      "description": "Except as provided in headings 9903.88.13, 9903.88.18, 9903.88.33, 9903.88.34, 9903.88.35, 9903.88.36, 9903.88.37, 9903.88.38, 9903.88.40, 9903.88.41, 9903.88.43, 9903.88.45, 9903.88.46, 9903.88.48, 9903.88.56, 9903.88.64, 9903.88.66, 9903.88.67, 9903.88.68, or 9903.88.69, articles the product of China, as provided for in U.S. note 20(e) to this subchapter and as provided for in the subheadings enumerated in U.S. note 20(f)",
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=9903.88.03",
+      "retrievedAt": "2026-10-24"
+    },
+    "9903.01.24": {
+      "heading": "9903.01.24",
+      "general": "The duty provided in the applicable subheading + 10%",
+      "description": "Except for products described in headings 9903.01.21, 9903.01.22, 9903.01.23, articles the product of China and Hong Kong, as provided for in U.S. note 2(u) to this subchapter",
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=9903.01.24",
+      "retrievedAt": "2026-10-24"
+    },
+    "9903.01.25": {
+      "heading": "9903.01.25",
+      "general": "The duty provided in the applicable subheading + 10%",
+      "description": "Articles the product of any country, except for products described in headings 9903.01.26–9903.01.33, 9903.02.02–9903.02.91, 9903.96.01, and 9903.96.02, and except as provided for in headings 9903.01.34 and 9903.02.01, as provided for in subdivision (v) of U.S. note 2 to this subchapter",
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=9903.01.25",
+      "retrievedAt": "2026-10-24"
+    },
+    "9903.02.02": {
+      "heading": "9903.02.02",
+      "general": "The duty provided in the applicable subheading + 15%",
+      "description": "Except for goods loaded onto a vessel at the port of loading and in transit on the final mode of transit before 12:01 a.m. eastern daylight time on August 7, 2025, and entered for consumption or withdrawn from warehouse for consumption before 12:01 a.m. eastern daylight time on October 5, 2025, except for products described in headings 9903.01.30-9903.01.33 and 9903.02.78, and except as provided for in headings 9903.01.34 and 9903.02.01, articles the product of Afghanistan, as provided for in subdivision (v) of U.S. note 2 to this subchapter",
+      "sourceUrl": "https://hts.usitc.gov/reststop/search?keyword=9903.02.02",
+      "retrievedAt": "2026-10-24"
+    }
+  }
+}

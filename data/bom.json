@@ -1,0 +1,22 @@
+{
+  "products": [
+    { "id": "K2", "name": "Kestrel K2", "customerTypes": ["federal", "state_local", "commercial"] }
+  ],
+  "bom": [
+    { "productId": "K2", "partId": "P01", "qtyPer": 1, "approvedMpn": "CAS-K2-FRM" },
+    { "productId": "K2", "partId": "P02", "qtyPer": 2, "approvedMpn": "CAS-PRP-15" },
+    { "productId": "K2", "partId": "P03", "qtyPer": 1, "approvedMpn": "CAS-LG-2" },
+    { "productId": "K2", "partId": "P04", "qtyPer": 1, "approvedMpn": "VFC-2" },
+    { "productId": "K2", "partId": "P05", "qtyPer": 1, "approvedMpn": "VESC-4X" },
+    { "productId": "K2", "partId": "P06", "qtyPer": 2, "approvedMpn": "RDG-LI-22" },
+    { "productId": "K2", "partId": "P07", "qtyPer": 4, "approvedMpn": "ATL-BL400" },
+    { "productId": "K2", "partId": "P08", "qtyPer": 1, "approvedMpn": "RDG-RTK-3" },
+    { "productId": "K2", "partId": "P09", "qtyPer": 1, "approvedMpn": "RDG-DL-900" },
+    { "productId": "K2", "partId": "P10", "qtyPer": 1, "approvedMpn": "HOS-MC42" },
+    { "productId": "K2", "partId": "P11", "qtyPer": 1, "approvedMpn": "HOS-GB3" },
+    { "productId": "K2", "partId": "P12", "qtyPer": 1, "approvedMpn": "NW-HAR-K2" },
+    { "productId": "K2", "partId": "P13", "qtyPer": 12, "approvedMpn": "NW-CN-8P" },
+    { "productId": "K2", "partId": "P14", "qtyPer": 120, "approvedMpn": "ATL-M3X8" },
+    { "productId": "K2", "partId": "P15", "qtyPer": 1, "approvedMpn": "NW-CNP-K2" }
+  ]
+}

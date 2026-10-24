@@ -1,0 +1,40 @@
+{
+  "url": "https://hts.usitc.gov/reststop/search?keyword=9903.01.24",
+  "retrievedAt": "2026-10-24",
+  "rows": [
+    {
+      "additionalDuties": null,
+      "description": "Except for products described in headings 9903.01.21, 9903.01.22, 9903.01.23, articles the product of China and Hong Kong, as provided for in U.S. note 2(u) to this subchapter",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": " See chapter 99 statistical note 1. "
+        }
+      ],
+      "general": "The duty provided in the applicable subheading + 10%",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9903.01.24",
+      "indent": "0",
+      "other": "No Change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "The duty provided in the applicable subheading + 10%",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": null
+    }
+  ]
+}

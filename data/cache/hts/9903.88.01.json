@@ -1,0 +1,40 @@
+{
+  "url": "https://hts.usitc.gov/reststop/search?keyword=9903.88.01",
+  "retrievedAt": "2026-10-24",
+  "rows": [
+    {
+      "additionalDuties": null,
+      "description": "Except as provided in headings 9903.88.05, 9903.88.06, 9903.88.07, 9903.88.08, 9903.88.10, 9903.88.11, 9903.88.14, 9903.88.19, 9903.88.50, 9903.88.52, 9903.88.58, 9903.88.60, 9903.88.62, 9903.88.66, 9903.88.67, 9903.88.68, or 9903.88.69, articles the product of China, as provided for in U.S. note 20(a) to this subchapter and as provided for in the subheadings enumerated in U.S. note 20(b) [to this subchapter]",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": " See chapter 99 statistical note 1. "
+        }
+      ],
+      "general": "The duty provided in the applicable subheading plus 25%",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9903.88.01",
+      "indent": "0",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": null
+    }
+  ]
+}

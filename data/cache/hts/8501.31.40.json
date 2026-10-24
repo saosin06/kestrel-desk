@@ -1,0 +1,100 @@
+{
+  "url": "https://hts.usitc.gov/reststop/search?keyword=8501.31.40",
+  "retrievedAt": "2026-10-24",
+  "rows": [
+    {
+      "additionalDuties": null,
+      "description": "Exceeding <il>74.6 W</il> but not exceeding <il>735 W</il>",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "4%",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8501.31.40.00",
+      "indent": "4",
+      "other": "35%",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "Free (A*,AU,B,BH,CL,CO,D,E,IL,JO,KR,MA,OM,P,PA,PE,S,SG)",
+      "statisticalSuffix": "00",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No."
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Power back door (liftgate) actuator assemblies for the motor vehicles of headings 8701 to 8705, each consisting of a brushless electric DC motor that generates between 350 and 400 W, an electromagnetic clutch, a clutch magnet, a clutch flywheel, a clutch plate, a sensor and a housing (provided for in subheading 8501.31.40)",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "1.7%",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.16.06",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "DC motors of an output between 190 W and 290 W, weighing less than 1 kg, each in a cylindrical housing with height of approximately 55 mm and a radius of approximately 45 mm (provided for in subheading 8501.31.40)",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "2.8%",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.16.07",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    }
+  ]
+}

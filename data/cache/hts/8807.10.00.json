@@ -1,0 +1,135 @@
+{
+  "url": "https://hts.usitc.gov/reststop/search?keyword=8807.10.00",
+  "retrievedAt": "2026-10-24",
+  "rows": [
+    {
+      "additionalDuties": null,
+      "description": "Propellers and rotors and parts thereof",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "other"
+          ],
+          "marker": "1",
+          "type": "endnote",
+          "value": "See 9903.90.08. "
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8807.10.00",
+      "indent": "1",
+      "other": "27.5%",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": null
+    },
+    {
+      "additionalDuties": null,
+      "description": "For use by the Department of Defense or the United States Coast Guard",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "desc"
+          ],
+          "marker": "1",
+          "type": "endnote",
+          "value": "See general note 6. "
+        }
+      ],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8807.10.00.15",
+      "indent": "3",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "15",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "kg"
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Other",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "desc"
+          ],
+          "marker": "1",
+          "type": "endnote",
+          "value": "See general note 6. "
+        }
+      ],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8807.10.00.30",
+      "indent": "3",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "30",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "kg"
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Other",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8807.10.00.60",
+      "indent": "2",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "60",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "kg"
+      ]
+    }
+  ]
+}

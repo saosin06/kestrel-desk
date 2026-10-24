@@ -1,0 +1,82 @@
+{
+  "url": "https://hts.usitc.gov/reststop/search?keyword=8525.89.50",
+  "retrievedAt": "2026-10-24",
+  "rows": [
+    {
+      "additionalDuties": null,
+      "description": "Other",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8525.89.50",
+      "indent": "3",
+      "other": "35%",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": null
+    },
+    {
+      "additionalDuties": null,
+      "description": "Camcorders",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8525.89.50.30",
+      "indent": "4",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "30",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No."
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Other",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8525.89.50.50",
+      "indent": "4",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "50",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No."
+      ]
+    }
+  ]
+}

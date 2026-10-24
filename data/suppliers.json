@@ -1,0 +1,11 @@
+{
+  "note": "Simulated suppliers. 3 domestic; imports from MX, TW, JP. Remit-to bank details live in data/vendors.json (vendor master).",
+  "suppliers": [
+    { "id": "S-NW", "name": "Northwind Components", "country": "US", "currency": "USD", "remitToId": "VM-NW" },
+    { "id": "S-ATL", "name": "Atlas Motors", "country": "MX", "currency": "USD", "remitToId": "VM-ATL" },
+    { "id": "S-VIR", "name": "Vireo Avionics", "country": "TW", "currency": "USD", "remitToId": "VM-VIR" },
+    { "id": "S-HOS", "name": "Hoshi Optics", "country": "JP", "currency": "JPY", "remitToId": "VM-HOS" },
+    { "id": "S-RDG", "name": "Ridgeline Power & Radio", "country": "US", "currency": "USD", "remitToId": "VM-RDG" },
+    { "id": "S-CAS", "name": "Cascade Composites & Motion", "country": "US", "currency": "USD", "remitToId": "VM-CAS" }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "url": "https://hts.usitc.gov/reststop/search?keyword=8544.42.90",
+  "retrievedAt": "2026-10-24",
+  "rows": [
+    {
+      "additionalDuties": null,
+      "description": "Other",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "2.6%",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8544.42.90",
+      "indent": "4",
+      "other": "35%",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "Free (A,AU,B,BH,CL,CO,D,E,IL,JO,KR,MA,OM,P,PA,PE,S,SG)",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        ""
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Extension cords as defined in statistical note 7 to this chapter",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8544.42.90.10",
+      "indent": "5",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "10",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No."
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Other",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8544.42.90.90",
+      "indent": "5",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "90",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No."
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Electrical cables and cable bundles for a voltage not exceeding 1,000 V, fitted with connectors (provided for in subheading 8544.42.90), the foregoing of a kind used with machines and apparatus for the manufacture or inspection of semiconductor devices of subheading 8486.20.00 or with optical instruments and appliances for inspecting semiconductor wafers of 9031.41.00",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.16.96",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Insulated electric conductors, for a voltage not exceeding 80 V, fitted with connectors",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9920.85.01",
+      "indent": "2",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "Free (KR)",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    }
+  ]
+}

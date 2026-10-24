@@ -1,0 +1,82 @@
+{
+  "url": "https://hts.usitc.gov/reststop/search?keyword=8526.91.00",
+  "retrievedAt": "2026-10-24",
+  "rows": [
+    {
+      "additionalDuties": null,
+      "description": "Radio navigational aid apparatus",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8526.91.00",
+      "indent": "2",
+      "other": "35%",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": null
+    },
+    {
+      "additionalDuties": null,
+      "description": "Reception only apparatus",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8526.91.00.20",
+      "indent": "3",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "20",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No."
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Other",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8526.91.00.40",
+      "indent": "3",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "40",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No."
+      ]
+    }
+  ]
+}

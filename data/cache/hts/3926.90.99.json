@@ -1,0 +1,1080 @@
+{
+  "url": "https://hts.usitc.gov/reststop/search?keyword=3926.90.99",
+  "retrievedAt": "2026-10-24",
+  "rows": [
+    {
+      "additionalDuties": null,
+      "description": "Other",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "5.3%",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "3926.90.99",
+      "indent": "2",
+      "other": "80%",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "Free (A,AU,B,BH,C,CL,CO,D,E,IL,JO,KR,MA,OM,P,PA,PE,S,SG)",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": null
+    },
+    {
+      "additionalDuties": null,
+      "description": "Elastic bands made wholly of plastics",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "3926.90.99.05",
+      "indent": "3",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "05",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "kg"
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Separatory funnels",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "3926.90.99.15",
+      "indent": "4",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "15",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No."
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Other",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "3926.90.99.20",
+      "indent": "4",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "20",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No."
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Reflective triangular warning signs for road use",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "3926.90.99.25",
+      "indent": "3",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "25",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No."
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Ladders",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "3926.90.99.30",
+      "indent": "3",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "30",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No."
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Covers, rings and frames for manholes; catch basins; drainage gates and frames thereof; cleanout covers and frames thereof; valve, service and meter boxes",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "3926.90.99.40",
+      "indent": "3",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "40",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No."
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Face masks and shields, medical positioning or transport pads, medical waste containers or disinfectant wipes dispensers",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "3926.90.99.50",
+      "indent": "3",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "50",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No. and kg"
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Rigid tubes or pipes suitable for use as electrical conduit",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "3926.90.99.87",
+      "indent": "3",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "87",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "kg"
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Other",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "3926.90.99.89",
+      "indent": "3",
+      "other": "",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "89",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No. and kg"
+      ]
+    },
+    {
+      "additionalDuties": null,
+      "description": "Plastic components of a kind used as one-piece internal top and bottom dividers for golf bags (provided for in subheading 3926.90.99)",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.05",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Vinyl rings, slitted on one side to attach to bottom of toilet brush caddies, valued no greater than $0.083 each (provided for in subheading 3926.90.99)\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.06",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Cut-to-shape pieces or profiles of polyvinyl chloride plastics, the foregoing designed to be attached to the edge of a dust pan tray having contact with the floor or other surface, rigid and flexible in form, each measuring 24.77 cm to 30 cm in length and 1.35 cm to 1.87 cm in width, valued not over $0.09 each (provided for in subheading 3926.90.99)\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.07",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Adjustable squeeze-trigger bar clamps of plastics (provided for in subheading 3926.90.99)",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "0.2%",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.08",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Back-shell style smartphone cases of hard plastics, each incorporating flexible rubber over command buttons and specially fitted rigid plastic clip with adjustable neoprene fabric armband (provided for in subheading 3926.90.99).",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.09",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Rectangular plastic block filled with a polymer based freezer gel, designed to attach to reusable food storage containers (provided for in 3926.90.99)\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "1.0%",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.10",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Accessories of plastics for cameras of subheading 8525.80.40, each incorporating a handheld camera grip, folding extension arms and a tripod screwed into the base of the handle the foregoing measuring between 50 and 53 cm when fully extended without the tripod, 62 to 65 cm when fully extended with the tripod and 18 to 21 cm when folded and collapsed (provided for in subheading 3926.90.99). \n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.11",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Mounts of plastics, designed to secure cameras of subheading 8525.80.40 to a person's head; each mount incorporating an adjustable head-strap designed to encircle the forehead, a strap designed to cross the top of the user's head, a plastic mount designed to clip the camera to the head strap, a thumbscrew to allow the mounting of the camera and the adjustment of the viewing direction of the camera on a pivot (provided for in subheading 3926.90.99)\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.12",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Accessories of plastics, designed for use with cameras of subheading 8525.80.40; such goods measuring between 14 cm and 17 cm in length, buoyant in water, each incorporating a handle designed to allow a user to grip with the hand, an adjustable hand-strap and an adjustable thumb screw designed to permit mounting of the camera and adjusting the viewing angle of the camera on a pivot (provided for in subheading 3926.90.99).\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.13",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Mounts of plastics, engineered to attach to cameras of subheading 8525.80.40; designed to attach to flat surfaces by means of a round suction cup measuring between 8 and 10 cm in diameter; each incorporating x, y and z-directional pivots to adjust the camera's viewpoint (provided for in subheading 3926.90.99).\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.14",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Camera mounts of plastics, designed to clamp to tubes measuring 10 to 23 mm, each mount designed to hold two cameras in such positions as to permit the user to take photos with immersive front-facing and rear-facing perspectives (provided for in subheading 3926.90.99)\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.15",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Mounting frame enclosures for digital still image video cameras of subheading 8525.80.40, incorporating openings for camera microSD, micro HDMI and USB ports, camera latching mechanism, and glass protective screen (provided for in subheading 3926.90.99)",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.16",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Camera mounts of plastics, engineered to operate with cameras of subheading 8525.80.40 and facilitate mounting of cameras onto tubes measuring 3.5 to 6.35 cm in diameter, the foregoing incorporating a base capable of rotating the camera 360 degrees on a plane (provided for in subheading 3926.90.99)\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.17",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": " Mounting frame enclosures of plastics, designed for digital still image video cameras of subheading 8525.80.40, the foregoing incorporating an adhesive circular base of a diameter of 15 cm (provided for in subheading 3926.90.99)",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.18",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Plastic screen protectors having dimensions not exceeding 40 mm by 60 mm but at least 35 mm by 50 mm for digital still image video cameras of 8525.80.40 (provided for in subheading 3926.90.99)",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.19",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Replacement doors of plastics, designed for use on waterproof camera housings (provided for in subheading 3926.90.99)",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.20",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Replacement side doors of plastics, designed for housings for digital still image video cameras of subheading 8525.80.40 (provided for in subheading 3926.90.99)",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.21",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Camera mounts of plastics, designed to attach cameras of subheading 8525.80.40 securely onto tubes measuring 9 to 35 mm in diameter, each incorporating a base capable of rotating the camera 360 degrees on a plane (provided for in subheading 3926.90.99)\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.22",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Camera mounts of plastics, designed to hold cameras of subheading 8525.80.40, each mount measuring 4 and 10 cm in length, 3 to 5 cm in width and less than 2 cm in height, incorporating adhesive pads to attach the mount to flat surfaces (provided for in subheading 3926.90.99)\n\n\n\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.23",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Camera mounts each designed to clip a camera of subheading 8525.80.40 to a surfboard, such mounts of plastics, designed to be inserted into a cross-sectional hole drilled into the surfboard and held thereto by screws (provided for in 3926.90.99)\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.24",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Anchors suitable for use with cameras of subheading 8525.80.40, designed to be affixed to cameras by means of an adhesive, incorporating tethers that may be tied to the anchors (provided for in subheading 3926.90.99)\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.25",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Camera mounts of plastics, each with an elongated, segmented plastic neck composed of 6 to 8 ball joints, incorporating a base that clips into other types of mounts but not incorporating a clamp, engineered to mount cameras of subheading 8525.80.40 (provided for in subheading 3926.90.99).\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.26",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Sets each containing five camera mounts of plastics, designed for cameras of subheading 8525.80.40; such sets each containing mounts having various different profile configurations including but not limited to rectangular, curved or raised profiles (provided for in subheading 3926.90.99)",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.27",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    },
+    {
+      "additionalDuties": null,
+      "description": "Camera mounts of plastics, designed for mounting cameras of subheading 8525.80.40 to musical instruments or microphone stands; each incorporating a spring-loaded clamp and a folding extension arm (provided for in subheading 3926.90.99)\n",
+      "effectivePeriod": null,
+      "footnotes": [
+        {
+          "columns": [
+            "stat",
+            "units"
+          ],
+          "marker": "1",
+          "type": "footnote",
+          "value": "See chapter 99 statistical note 1."
+        }
+      ],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "9902.12.28",
+      "indent": "0",
+      "other": "No change",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "No change",
+      "statisticalSuffix": "",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": []
+    }
+  ]
+}
