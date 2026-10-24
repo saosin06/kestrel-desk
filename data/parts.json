@@ -5,7 +5,7 @@
     { "id": "P02", "name": "Propeller set (pair, 15 in)", "hts": "8807.10.00", "componentClass": "propulsion", "standardCost": "9.50", "approvedSuppliers": ["S-CAS"], "criticality": "standard" },
     { "id": "P03", "name": "Landing gear assembly", "hts": "8807.20.00", "componentClass": "airframe", "standardCost": "24.00", "approvedSuppliers": ["S-CAS"], "criticality": "standard" },
     { "id": "P04", "name": "Flight controller", "hts": "8537.10.91", "componentClass": "flight_controller", "standardCost": "185.00", "approvedSuppliers": ["S-VIR"], "criticality": "critical" },
-    { "id": "P05", "name": "ESC board, 4-in-1", "hts": "8504.40.95", "componentClass": "esc", "standardCost": "42.00", "approvedSuppliers": ["S-VIR"], "criticality": "critical" },
+    { "id": "P05", "name": "ESC board, 4-in-1", "hts": "8504.40.40", "htsBasis": "Electronic speed controller: a static converter that drives the motors' speed → 8504.40.40 Speed drive controllers for electric motors", "componentClass": "esc", "standardCost": "42.00", "approvedSuppliers": ["S-VIR"], "criticality": "critical" },
     { "id": "P06", "name": "Li-ion battery pack", "hts": "8507.60.00", "componentClass": "battery", "standardCost": "210.00", "approvedSuppliers": ["S-RDG"], "criticality": "critical" },
     { "id": "P07", "name": "Brushless motor, 400 W (NdFeB magnets)", "hts": "8501.31.40", "htsBasis": "DC motor, 400 W output: exceeding 74.6 W but not exceeding 735 W → 8501.31.40", "componentClass": "motor", "standardCost": "11.00", "approvedSuppliers": ["S-ATL", "S-CAS"], "criticality": "critical" },
     { "id": "P08", "name": "GNSS/RTK module", "hts": "8526.91.00", "componentClass": "gnss", "standardCost": "95.00", "approvedSuppliers": ["S-RDG"], "criticality": "critical" },

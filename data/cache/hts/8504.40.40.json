@@ -1,0 +1,32 @@
+{
+  "url": "https://hts.usitc.gov/reststop/search?keyword=8504.40.40",
+  "retrievedAt": "2026-10-24",
+  "rows": [
+    {
+      "additionalDuties": null,
+      "description": "Speed drive controllers for electric motors",
+      "effectivePeriod": null,
+      "footnotes": [],
+      "general": "Free",
+      "hasHighlight": null,
+      "highlightHtsNo": null,
+      "highlightStatSuffix": null,
+      "htmlStatNote": null,
+      "htscode": null,
+      "htsno": "8504.40.40.00",
+      "indent": "2",
+      "other": "35%",
+      "quotaQuantity": null,
+      "selector": "htsno",
+      "special": "",
+      "statisticalSuffix": "00",
+      "status": null,
+      "tariff": null,
+      "type": null,
+      "unique": null,
+      "units": [
+        "No."
+      ]
+    }
+  ]
+}

@@ -11,7 +11,7 @@ and any duty gap on the broker's customs entry becomes a `source_disagreement` t
 | MX | 8501.31.40 | P07 motor (Atlas) | unresearched |
 | MX | 7318.15.60 | P14 M3 screws (Atlas) | unresearched |
 | TW | 8537.10.91 | P04 flight controller (Vireo) | unresearched |
-| TW | 8504.40.95 | P05 ESC (Vireo) | unresearched |
+| TW | 8504.40.40 | P05 ESC (Vireo) | unresearched |
 | JP | 8525.89.50 | P10 camera (Hoshi) | unresearched |
 | JP | 8807.30.00 | P11 gimbal (Hoshi) | unresearched |
 | CN | 8537.10.91 | P04 substitute (planted) | unresearched |
