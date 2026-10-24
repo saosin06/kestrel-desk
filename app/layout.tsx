@@ -1,7 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Shell } from "@/components/shell";
 import "./globals.css";
 import { Providers } from "./providers";
+
+// Designed light; ask browsers not to auto-darken it.
+export const viewport: Viewport = { colorScheme: "only light" };
 
 export const metadata: Metadata = {
   title: { default: "Kestrel Desk", template: "%s · Kestrel Desk" },

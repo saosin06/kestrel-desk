@@ -37,7 +37,7 @@
   --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
 }
 
-html { color-scheme: light; }
+html { color-scheme: only light; }
 body {
   background: var(--page);
   color: var(--ink);
