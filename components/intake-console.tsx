@@ -204,7 +204,7 @@ export function IntakeConsole({ options }: { options: IntakeOptions }) {
             </Panel>
           </>
         )}
-        {error && <div className="mb-3 rounded-[4px] border border-[var(--warn)] bg-[var(--warn-bg)] px-3 py-2 text-[var(--warn)]">{error}</div>}
+        {error && <div className="mb-3 rounded-lg border border-[var(--warn)] bg-[var(--warn-bg)] px-3 py-2 text-[var(--warn)]">{error}</div>}
       </div>
 
       <div>

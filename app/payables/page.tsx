@@ -60,7 +60,7 @@ export default function Payables() {
         ]}
       />
       <Panel title={`Flagged (${flagged.length})`} flush>{table(flagged)}</Panel>
-      <details className="mb-4 rounded-[4px] border border-line bg-panel">
+      <details className="mb-4 card">
         <summary className="cursor-pointer px-3 py-2 text-[13px] font-semibold text-ink">Matched ({clean.length})</summary>
         <div className="border-t border-line">{table(clean)}</div>
       </details>

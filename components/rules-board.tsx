@@ -40,7 +40,7 @@ export function RulesBoard({ views, historyCount, totalEffect }: { views: RuleVi
 
   return (
     <>
-      <section className="mb-4 rounded-[4px] border border-line bg-panel">
+      <section className="mb-4 card">
         <div className="flex">
           <Step n={1} title="History" text={`${historyCount} past exceptions with Dana's decision and reason (Jan 2025 – Feb 2026)`} />
           <Step n={2} title="Pattern" text="Found when the same kind of exception recurs 5+ times and Dana's decisions agree ≥ 75% of the time" />
@@ -50,13 +50,13 @@ export function RulesBoard({ views, historyCount, totalEffect }: { views: RuleVi
         </div>
       </section>
 
-      {error && <div className="mb-3 rounded-[4px] border border-[var(--crit)] bg-[var(--crit-bg)] px-3 py-2 text-[var(--crit)]">{error}</div>}
+      {error && <div className="mb-3 rounded-lg border border-[var(--crit)] bg-[var(--crit-bg)] px-3 py-2 text-[var(--crit)]">{error}</div>}
 
       {views.map((v) => {
         const r = live.get(v.id);
         const status = r?.status ?? "proposed";
         return (
-          <section key={v.id} className="mb-3 rounded-[4px] border border-line bg-panel">
+          <section key={v.id} className="mb-3 card">
             <header className="flex items-start justify-between gap-4 border-b border-line px-3 py-2.5">
               <div className="min-w-0">
                 <div className="flex items-center gap-2">
@@ -118,7 +118,7 @@ export function RulesBoard({ views, historyCount, totalEffect }: { views: RuleVi
         );
       })}
 
-      <section className="rounded-[4px] border border-line bg-subtle px-3 py-2.5 text-[12.5px] text-ink-2">
+      <section className="card-muted px-3 py-2.5 text-[12.5px] text-ink-2">
         <span className="font-semibold text-ink">Never learnable.</span> Compliance (restricted origins, missing certificates), bank and direct-deposit changes, duplicate invoices and payments, unknown suppliers, ghost or terminated employees, and segregation of duties. Patterns found in history about these are discarded — including the time in Nov 2025 Dana approved an emailed bank change that turned out to be a near-miss.
       </section>
     </>

@@ -28,7 +28,7 @@ export function CaseDetail() {
         subtitle={<><span className="id text-muted">{c.caseId} · {kindLabel(c.kind)}</span><div className="mt-1">{c.summary}</div></>}
         actions={<><Pill tone={dispositionTone(c.disposition)}>{dispositionLabel(c.disposition)}</Pill><Pill tone={statusTone(c.status)}>{statusLabel(c.status)}</Pill></>}
       />
-      <div className="grid grid-cols-[1fr_340px] gap-4">
+      <div className="grid grid-cols-[1fr_320px] gap-5">
         <div>
           <Panel title="Why?" note={COMPLIANCE.has(c.kind) ? "Policy modeled on federal drone component restrictions — verify with counsel." : undefined}>
             {evidence.map((e, i) => (
@@ -70,7 +70,7 @@ export function CaseDetail() {
                 <tbody>
                   {d.requests.map((r) => (
                     <tr key={r.reqId}>
-                      <td>{requestTitle(r, c)}<div className="id text-[11px] text-muted">{r.reqId}</div></td>
+                      <td className="min-w-[280px]">{requestTitle(r, c)}<div className="id text-[11px] text-muted">{r.reqId}</div></td>
                       <td className="whitespace-nowrap text-ink-2">{r.requiredApprovers.map((a) => roleLabel(a).split(" · ")[0]).join(" + ")}</td>
                       <td className="num">{usd(r.amountUSDCents)}</td>
                       <td className="text-[12px] text-ink-2">{r.approvals.length === 0 ? "—" : r.approvals.map((a, k) => <div key={k}>{roleLabel(a.by).split(" · ")[0]}: {a.decision} — {a.reason}</div>)}</td>

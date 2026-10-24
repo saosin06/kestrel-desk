@@ -7,11 +7,13 @@ import { type ReactNode, Suspense, useState } from "react";
 import { APPROVER_ROLES, useActingAs } from "@/app/providers";
 import { api } from "@/convex/_generated/api";
 import { date, roleLabel } from "@/lib/ui/format";
+import { Icons, Logo } from "./icons";
 
-const NAV: { group: string; items: { href: string; label: string; badge?: "approvals" | "cases" }[] }[] = [
-  { group: "Kestrel desk", items: [{ href: "/", label: "Story" }, { href: "/desk", label: "Desk overview" }, { href: "/approvals", label: "Approvals", badge: "approvals" }, { href: "/cases", label: "Cases", badge: "cases" }, { href: "/intake", label: "Try it live" }] },
-  { group: "Learning", items: [{ href: "/rules", label: "Internal rules" }] },
-  { group: "Back office", items: [{ href: "/payables", label: "Payables" }, { href: "/payroll", label: "Payroll" }, { href: "/ledger", label: "General ledger" }, { href: "/audit", label: "Audit log" }, { href: "/sources", label: "Data sources" }] },
+type NavItem = { href: string; label: string; icon: keyof typeof Icons; badge?: "approvals" | "cases" };
+const NAV: { group: string; items: NavItem[] }[] = [
+  { group: "", items: [{ href: "/", label: "Story", icon: "story" }, { href: "/desk", label: "Desk overview", icon: "desk" }, { href: "/approvals", label: "Approvals", icon: "approvals", badge: "approvals" }, { href: "/cases", label: "Cases", icon: "cases", badge: "cases" }, { href: "/intake", label: "Try it live", icon: "live" }] },
+  { group: "Learning", items: [{ href: "/rules", label: "Internal rules", icon: "rules" }] },
+  { group: "Back office", items: [{ href: "/payables", label: "Payables", icon: "payables" }, { href: "/payroll", label: "Payroll", icon: "payroll" }, { href: "/ledger", label: "General ledger", icon: "ledger" }, { href: "/audit", label: "Audit log", icon: "audit" }, { href: "/sources", label: "Data sources", icon: "sources" }] },
 ];
 
 type Counts = { pendingApprovals?: number; openCases?: number } | undefined;
@@ -20,19 +22,22 @@ function NavList({ path, counts }: { path: string | null; counts: Counts }) {
   const active = (href: string) => path !== null && (href === "/" ? path === "/" : path.startsWith(href));
   return (
     <>
-      {NAV.map((g) => (
-        <div key={g.group} className="mb-3">
-          <div className="px-2 pb-1 text-[10.5px] font-semibold uppercase tracking-[0.05em] text-muted">{g.group}</div>
+      {NAV.map((g, gi) => (
+        <div key={gi} className="mb-4">
+          {g.group && <div className="px-3 pb-1.5 text-[11.5px] font-medium text-muted">{g.group}</div>}
           {g.items.map((it) => {
             const n = it.badge === "approvals" ? counts?.pendingApprovals : it.badge === "cases" ? counts?.openCases : undefined;
+            const Icon = Icons[it.icon];
+            const on = active(it.href);
             return (
               <Link
                 key={it.href}
                 href={it.href}
-                className={`flex items-center justify-between rounded-[3px] px-2 py-[5px] text-[13px] no-underline hover:no-underline ${active(it.href) ? "bg-[var(--neutral-bg)] font-semibold text-ink shadow-[inset_2px_0_0_var(--accent)]" : "text-ink-2 hover:bg-subtle"}`}
+                className={`mb-0.5 flex items-center gap-2.5 rounded-lg px-3 py-[7px] text-[14px] no-underline hover:no-underline ${on ? "bg-[var(--accent-soft)] font-medium text-[var(--accent)]" : "text-ink-2 hover:bg-[var(--neutral-bg)] hover:text-ink"}`}
               >
-                <span>{it.label}</span>
-                {n ? <span className="num text-[11px] text-muted">{n}</span> : null}
+                <span className={on ? "text-[var(--accent)]" : "text-muted"}><Icon /></span>
+                <span className="flex-1">{it.label}</span>
+                {n ? <span className={`num rounded-full px-1.5 text-[11.5px] ${on ? "bg-white text-[var(--accent)]" : "bg-[var(--neutral-bg)] text-ink-2"}`}>{n}</span> : null}
               </Link>
             );
           })}
@@ -75,46 +80,51 @@ export function Shell({ children }: { children: ReactNode }) {
 
   return (
     <div className="flex min-h-screen">
-      <aside className="sticky top-0 flex h-screen w-[212px] shrink-0 flex-col border-r border-line bg-panel">
-        <div className="border-b border-line px-4 py-3">
-          <div className="text-[13px] font-semibold text-ink">Kestrel Aerial</div>
-          <div className="text-[11.5px] text-muted">Disbursements desk</div>
+      <aside className="sticky top-0 flex h-screen w-[240px] shrink-0 flex-col border-r border-line bg-panel">
+        <div className="flex items-center gap-2.5 px-5 pb-4 pt-5">
+          <Logo />
+          <div className="leading-tight">
+            <div className="text-[15px] font-semibold tracking-[-0.01em] text-ink">Kestrel</div>
+            <div className="text-[12px] text-muted">Disbursements desk</div>
+          </div>
         </div>
-        <nav className="flex-1 overflow-y-auto px-2 py-2">
+        <nav className="flex-1 overflow-y-auto px-3 py-1">
           <Suspense fallback={<NavList path={null} counts={overview} />}>
             <ActiveNav counts={overview} />
           </Suspense>
         </nav>
-        <div className="border-t border-line px-4 py-2.5 text-[11px] leading-snug text-muted">
-          Simulated company for demonstration. Reference data is real and cited.
+        <div className="m-3 rounded-lg bg-[var(--warn-bg)] px-3 py-2.5 text-[12px] leading-snug text-[var(--warn)]">
+          <div className="font-semibold">Simulated company</div>
+          Kestrel Aerial is fictional. Tax tables, tariffs and FX rates are real and cited.
         </div>
       </aside>
 
       <div className="flex min-w-0 flex-1 flex-col">
-        <header className="sticky top-0 z-10 flex h-11 items-center justify-between gap-4 border-b border-line bg-panel px-5">
-          <div className="flex items-center gap-3 text-[12.5px]">
-            <span className="font-semibold text-ink">Kestrel Aerial, Inc.</span>
-            <span className="rounded-[3px] border border-[color-mix(in_srgb,var(--warn)_30%,transparent)] bg-[var(--warn-bg)] px-1.5 py-[1px] text-[10.5px] font-semibold tracking-[0.04em] text-[var(--warn)]">SIMULATED COMPANY</span>
-            <span className="text-line-strong">|</span>
-            <span className="text-ink-2">FY2026</span>
-            <span className="text-ink-2">Period {period ? date(period) : "—"} · Open</span>
-            <span className="text-ink-2">As of {date(overview?.simDate)}</span>
+        <header className="sticky top-0 z-10 flex h-14 items-center justify-between gap-4 border-b border-line bg-[rgba(255,255,255,0.85)] px-8 backdrop-blur">
+          <div className="flex items-center gap-2 text-[13.5px] text-ink-2">
+            <span className="font-medium text-ink">Kestrel Aerial, Inc.</span>
+            <span className="text-line-strong">·</span>
+            <span>FY2026</span>
+            <span className="text-line-strong">·</span>
+            <span>{period ? `${date(period)} open` : "—"}</span>
+            <span className="text-line-strong">·</span>
+            <span>As of {date(overview?.simDate)}</span>
           </div>
-          <div className="flex items-center gap-3">
-          <ResetButton />
-          <label className="flex items-center gap-2 text-[12px] text-ink-2">
-            Acting as
-            <select className="select" value={role} onChange={(e) => setRole(e.target.value as (typeof APPROVER_ROLES)[number])}>
-              {APPROVER_ROLES.map((r) => (
-                <option key={r} value={r}>
-                  {roleLabel(r)}
-                </option>
-              ))}
-            </select>
-          </label>
+          <div className="flex items-center gap-2.5">
+            <ResetButton />
+            <label className="flex items-center gap-2 text-[13px] text-muted">
+              Acting as
+              <select className="select" value={role} onChange={(e) => setRole(e.target.value as (typeof APPROVER_ROLES)[number])}>
+                {APPROVER_ROLES.map((r) => (
+                  <option key={r} value={r}>
+                    {roleLabel(r)}
+                  </option>
+                ))}
+              </select>
+            </label>
           </div>
         </header>
-        <main className="mx-auto w-full max-w-[1320px] flex-1 px-5 py-4">{children}</main>
+        <main className="mx-auto w-full max-w-[1280px] flex-1 px-8 py-7">{children}</main>
       </div>
     </div>
   );
