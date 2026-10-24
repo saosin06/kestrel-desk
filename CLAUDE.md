@@ -12,7 +12,9 @@ Hyphenate's brief: *pick a company and one corner of its finance team — a few 
 
 ## 1. The product
 
-**Company:** **Kestrel Aerial** (fictional), a US maker of mapping and firefighting-support drones. Sells to fire departments and federal agencies, so **component country-of-origin compliance affects revenue**. Builds ~200 units/month of **one model (Kestrel K2)** from **15 purchased parts** from **6 suppliers** (some domestic, some imported).
+**Company:** **Kestrel Aerial** (fictional), a US maker of mapping and firefighting-support drones, **~$137M revenue** (FY2025 actual $128.4M; ~420 employees). Sells to federal agencies (~40%), state/local fire departments (~35%) and commercial operators (~25%), so **component country-of-origin compliance affects revenue**. Builds **~300 units/month of one model (Kestrel K2, ASP ~$32,000)** plus fleet-software and support revenue (~$22M/yr). The K2 has **15 purchased parts (~$13.3k/unit)** from **6 suppliers** (~$4M/month direct materials). Profile in `data/company.json`; revenue enters the books as monthly sales summaries at close (outside the desk's seats). "Revenue at risk" = federal share × affected units × ASP.
+
+**Judges' requirement (Oct 23 workshop):** company > $100M revenue, and agents that **learn, run, escalate, and improve** — learning from the company's own history as internal rules (§7a).
 
 **The finance corner:** procure-to-pay plus inventory accounting — buying parts, receiving them, matching invoices, paying suppliers, valuing inventory, closing the month.
 
@@ -30,7 +32,7 @@ Hyphenate's brief: *pick a company and one corner of its finance team — a few 
 **People (model-played personas, §8):** **Dana (Controller)** approves; **Raj (Procurement Manager)** sometimes overrides supplier choice; **Mei (Engineering lead)** must approve any part substitution; **Luis (Receiving dock)** enters receipts, sometimes wrong; supplier contacts send emails (some legitimate, one fraudulent).
 
 ### Named community (Anthropic track)
-Controllers and finance leads at small US hardware manufacturers (20–200 people) who sell to government customers.
+Controllers and finance leads at mid-market US hardware manufacturers ($100M–$500M revenue) who sell to government customers.
 
 ---
 
@@ -39,9 +41,9 @@ Controllers and finance leads at small US hardware manufacturers (20–200 peopl
 | Question | Our answer |
 |---|---|
 | **Is it real enough?** | Real **US Harmonized Tariff Schedule** duty rates for the parts' HTS codes, real **FX rates**, real **SEC EDGAR** financial data for public suppliers in the scorecard, deterministic matching/costing/ledger math with tests, planted errors with an **answer key + scorecard**; optional run on a public invoice benchmark (§11). |
-| **Would you hire it?** | Three named seats, permission table, segregation of duties enforced in code, materiality thresholds, compliance gates, append-only audit trail, escalates when unsure, respects overrides. |
+| **Would you hire it?** | Three named seats, permission table, segregation of duties enforced in code, materiality thresholds, compliance gates, append-only audit trail, escalates when unsure, respects overrides. **Learns Kestrel's unwritten internal rules from 14 months of company history**, with evidence, and gets measurably better (fewer escalations, same catch rate). |
 | **Something new?** | Compliance-aware procure-to-pay for a government-facing hardware maker, on a live company graph: the AP check isn't just "does the invoice match" but "does what we received keep us eligible to sell." |
-| **The moment** | **(1)** A supplier quietly ships a cheaper substitute part whose paperwork shows a restricted origin; AP catches it during matching, holds payment, flags government-contract revenue at risk, routes to engineering + controller. **(2)** Invoice says $14/unit, contract says $11 — held and defended with the contract clause. **(3)** Bank-detail change email the day before a large payment — held. **(4)** Export restriction hits a critical part — buyer shows 8 weeks of cover, switches to backup supplier; accountant books the cost impact. |
+| **The moment** | **(1)** A supplier quietly ships a cheaper substitute part whose paperwork shows a restricted origin; AP catches it during matching, holds payment, flags government-contract revenue at risk, routes to engineering + controller. **(2)** Invoice says $132/motor, contract says $118 — $42,000 held and defended with the contract clause. **(3)** Bank-detail change email the day before a large payment — held, and the agent cites the rule it learned from Kestrel's own 2025 near-miss. **(5)** "It learned how Kestrel works": rules mined from history, approved by Dana, escalations per month falling while catch rate stays 100%. **(4)** Export restriction hits a critical part — buyer shows 8 weeks of cover, switches to backup supplier; accountant books the cost impact. |
 
 ### Their "what makes it hard" — where we handle each
 
@@ -71,7 +73,7 @@ Use their vocabulary everywhere: **three-way match, GRNI, materiality, segregati
 ## 4. Stack
 
 - **Next.js (App Router) + TypeScript + Tailwind**, **Vitest**.
-- **Convex** for state, audit trail, approval queue (realtime). Fallback: SQLite + polling if Convex blocks >30 min.
+- **Convex** (local deployment, no account: `npx convex dev` → run locally; offline after first download) for state, audit trail, approval queue, learned rules (realtime). Engines stay pure TS so storage is swappable. Fallback: SQLite + polling if Convex blocks >30 min.
 - **Ledger:** our own double-entry ledger in `lib/ledger/` with hard invariants (balanced JEs, locked periods, reversing entries only); **Beancount export** (`scripts/export-beancount.ts`) so books open in Fava.
 - **Anthropic API** (`@anthropic-ai/sdk`), model `claude-sonnet-5-5`, tool use for agents, personas, and document extraction (invoices, packing slips, certificates of origin).
 - **Company Map:** React Flow (or d3) graph view of the ontology.
@@ -170,11 +172,22 @@ Audit trail is append-only. JEs are never edited — only reversed.
 2. **Defect → return → credit:** Mei flags a defective lot in May → AP requests debit memo / return → supplier credit appears on July invoice → matched to the May case, closed.
 3. **Scorecard drift:** a supplier's late deliveries and invoice errors over Mar–May lower its score; the buyer's June PO goes to the alternate supplier (unless Raj overrides — then respect it and note it).
 4. **Mid-contract price change:** contract amendment effective May 1; invoices after that date must use the new price; invoices before must not.
-5. **Remembered rejection:** Dana rejects a $90 price variance as immaterial in April; not re-raised in May/June.
+5. **Remembered rejection:** Dana rejects a $640 variance as immaterial in April; not re-raised in May/June.
 6. **Export restriction:** news item in June restricts a material used in Part P07 → buyer computes weeks of cover from inventory + open POs vs. production plan → proposes switch to backup supplier → accountant books the cost impact when the new PO is approved.
 7. **Locked periods:** corrections after close post in the current period with a memo referencing the original.
 
 UI: timeline bar with month slider, "Run next day / next month", period status.
+
+### 7a. Learning: internal rules from company history
+
+Kestrel has 14 months of history before the sim (Jan 2025–Feb 2026) in `data/history/` at **exception-log level**: past AP exceptions with the decision and Dana's free-text reason, incidents, dated policy memos, and monthly volumes per supplier (amounts in USD as booked; no customs math in history). The desk **mines it for Kestrel's unwritten internal rules**, applies approved rules while it runs, escalates what no rule covers, and improves rules as new decisions arrive.
+
+- **Rule language** (`lib/rules/`, deterministic): scope (supplier, part, finding kind, amount range, currency, date range) → action (`info` | `require_check` | `route_to(role)` | `escalate`). Support, counterexamples, confidence and thresholds are computed in code; the LLM only extracts conditions from Dana's reasons and drafts the rule statement.
+- **Lifecycle:** proposed → approved / rejected → in review (when a counterexample or override arrives) → retired. Every rule cites the history events behind it.
+- **Guardrails:** never learnable — compliance, bank/remittance, segregation of duties, locked periods, duplicate payments. Tightening rules apply on proposal; loosening rules need Dana's approval and only reach below-materiality items. A suppressed finding is still logged with the rule id in its "Why?" panel — improvement means fewer escalations, never fewer findings.
+- **History fights back:** decoys (low-support patterns that must not become rules), a counterexample that lowers confidence, drift (a threshold changed by a dated memo — recency wins), and a trap (Dana once approved an emailed bank change → near-miss; the rule to learn is "callback required", not "approve bank changes"). Hidden rules and their parameters vary by seed and live only in the answer key.
+- **Improvement in the sim:** one in-sim override sends a rule to review; one new rule emerges mid-sim (the recurring broker misclassification, #6). Scored: rule discovery precision/recall vs. hidden rules (decoys included), escalations per month cold vs. with memory, catch rate unchanged.
+- **Test:** applying the hidden rules as approved rules to the sweep yields exactly the key's expected escalations and suppressions, and no rule ever swallows #1, #2, #5 or #13.
 
 ---
 
@@ -182,12 +195,12 @@ UI: timeline bar with month slider, "Run next day / next month", period status.
 
 `simulation/people.ts`. Each persona is a separate Claude call with its own prompt and **seeded, scripted key decisions for the demo run** (so they behave predictably in front of judges), plus a free mode for judges.
 
-- **Dana (Controller):** approves/rejects with reasons; slow sometimes (agent reminds at day 3, escalates at day 5); rejects variances < $250 materiality; asks "why?" on the noncompliant-substitution hold and the $14 vs $11 dispute.
+- **Dana (Controller):** approves/rejects with reasons; slow sometimes (agent reminds at day 3, escalates at day 5); rejects variances < $1,000 materiality; asks "why?" on the noncompliant-substitution hold and the $14 vs $11 dispute.
 - **Raj (Procurement Mgr):** overrides one supplier choice for relationship reasons → buyer complies and records the override.
 - **Mei (Engineering):** must approve any part substitution; rejects the noncompliant substitute; flags a defective lot in May.
-- **Luis (Receiving):** enters 480 instead of 400 on one receipt → AP finds the disagreement with the packing slip and invoice, asks Luis to recount before paying.
+- **Luis (Receiving):** enters 660 instead of 600 on one receipt → AP finds the disagreement with the packing slip and invoice, asks Luis to recount before paying.
 - **Previous AP clerk (handoff):** inbox note: "paid Northwind and Atlas, still need the other 4, one invoice looked off" → AP resumes without double-paying.
-- **Fraud email:** "Atlas Motors" asks to change remit-to bank the day before a $38k payment → AP holds, never edits vendor master, escalates to Dana.
+- **Fraud email:** "Atlas Motors" asks to change remit-to bank the day before a large (~$380k) payment → AP holds, never edits vendor master, escalates to Dana.
 
 A **"Play the controller"** toggle lets a judge make Dana's decisions live.
 
@@ -214,10 +227,10 @@ No tool approves, pays, posts directly, or edits the vendor master. Posting/paym
 ### Controls (`lib/controls.ts`, deterministic, outside the models)
 - **Segregation of duties:** approver ≠ requester; approver must be in `requiredApprovers`.
 - **Three-way match tolerance:** qty exact; price within the larger of ±1% or $0.05/unit; outside tolerance → hold. Expected price = contract price in force on the invoice date (PO price if no contract); a PO price that disagrees with the contract is an info diff. Favorable deviations → info, not hold.
-- **Materiality:** variances < $250 logged as info unless recurring 3+ times.
+- **Materiality:** variances < $1,000 logged as info unless recurring 3+ times. All thresholds live in `data/controls.json`.
 - **Compliance gate:** any received/invoiced part whose origin or manufacturer violates `CompliancePolicy` for a government-bound product → payment hold + `noncompliant_substitution` case + Mei and Dana as required approvers.
 - **Substitutions** (manufacturer part no. ≠ BOM) → engineering approval required before payment.
-- Payments > $5,000, all POs > $10,000, all JEs → controller approval.
+- Payments > $25,000, POs > $50,000, all JEs → controller approval.
 - **Remittance changes** only via vendor-master change request with verification note → controller approval. Any email-driven change → `remittance_change_unverified`, hold.
 - **Duplicate guard:** invoice number + supplier + amount; AP subledger reconciled to bank before new payment requests.
 - Ledger invariants: balanced JEs; no posting to locked periods; trial balance check after each posting.
@@ -273,15 +286,16 @@ Rules:
 
 **Planted problems → `data/answer_key.json` (site/part/supplier, period, kind, expected impact, expected handling):**
 1. **Noncompliant substitution** — Supplier Vireo ships a cheaper flight controller (P04) whose certificate of origin shows a restricted origin; invoice description differs from BOM part number. *(Headline moment.)*
-2. **Price vs. contract** — Atlas invoices $14.00/unit vs. $11.00 contract (Contract §4.2), 3,000 units.
-3. **Remittance-change fraud email** before a $38k Atlas payment.
-4. **Qty mismatch** — Luis enters 480, packing slip and invoice say 400.
+2. **Price vs. contract** — Atlas invoices $132.00/motor vs. $118.00 contract (C-12 §4.2), 3,000 units → $42,000.
+3. **Remittance-change fraud email** before a ~$380k Atlas payment.
+4. **Qty mismatch** — Luis enters 660 propeller sets, packing slip and invoice say 600.
 5. **Duplicate invoice** — same supplier, same amount, new invoice number suffix.
 6. **Duty overcharge** — broker's system misclassifies Atlas's P14 M3 screws as 7318.15.80 (≥ 6 mm, 8.5%) instead of 7318.15.60 (6.2%) on every entry from June. Each is below materiality; the 3rd occurrence trips "recurring 3+ times" → case covering all entries.
 7. **GRNI** — late-March receipt, April invoice.
 8. **Defect → return → July credit.**
 9. **Mid-contract price change** May 1.
-10. **Immaterial $90 variance** → rejected → never re-raised.
+10. **Immaterial $640 variance** → rejected → never re-raised.
+14. **History (§7a):** hidden internal rules, decoys, a counterexample, a drifted threshold, the bank-change near-miss; in-sim override and an emergent rule.
 11. **Export restriction** on Part P07's material in June → cover calc, switch.
 12. **Clean supplier** (Northwind) → zero findings.
 13. Edge: unknown supplier invoice; missing certificate of origin → escalate.
@@ -317,7 +331,9 @@ Badges: "SIMULATED COMPANY"; reference data shows source + retrieval date; compl
 2. Types + ERP data model (`lib/erp/`), ledger with invariants + tests.
 3. Deterministic engines: match, landed cost (with real HTS rates cached), FX, compliance check + tests. **Don't continue until tests pass.**
 4. Data generator + `answer_key.json` (problems 1, 2, 4, 5, 6, 12, 13 first).
-5. Convex state, audit trail, request/approval queue with segregation-of-duties checks.
+4a. Rescale to the >$100M company (`data/company.json`, `data/controls.json`, opening trial balance, realistic part costs, 300 units/month).
+4b. Company history + hidden rules (`data/history/`), rule language/evaluator/miner stats (`lib/rules/`) + tests (§7a).
+5. Convex state, audit trail, request/approval queue with segregation-of-duties checks, learned-rule store.
 6. AP clerk agent + controls → catches problems 1, 2, 4, 5, 6; clean on 12; escalates 13.
 7. Minimal UI: approval queue, case view, invoice-vs-PO-vs-receipt diff, simple audit trail.
 
@@ -327,7 +343,7 @@ Badges: "SIMULATED COMPANY"; reference data shows source + retrieval date; compl
 10. Remittance fraud hold (3) + previous-clerk handoff.
 11. Inventory accountant: GRNI (7), price change (9), defect credit (8), remembered rejection (10).
 12. Buyer: scorecards, Raj override, export restriction (11).
-13. Scorecard page + `scripts/score.ts`.
+13. Scorecard page + `scripts/score.ts` (incl. rule discovery P/R and cold-vs-memory escalations per month).
 14. Company Map view with "path behind this decision".
 
 **Tier 3 — polish / extra tracks**
@@ -346,13 +362,13 @@ Badges: "SIMULATED COMPANY"; reference data shows source + retrieval date; compl
 
 ## 14. Demo (live ~2 min) and video
 
-**Video opens with the moment (first 15 s):** Invoice from Vireo → AP flags: "Substituted flight controller — certificate of origin shows a restricted source. Payment held. Government contract eligibility at risk for 140 units." Company Map highlights the path; Mei rejects the substitution.
+**Video opens with the moment (first 15 s):** Invoice from Vireo → AP flags: "Substituted flight controller — certificate of origin shows a restricted source. Payment held. ~$3.8M of federal revenue at risk (120 federal-bound units)." Company Map highlights the path; Mei rejects the substitution.
 
 **Live script**
 1. (10 s) Seat line.
 2. (30 s) Run April. Seats work; audit trail streams. Vireo substitution caught → hold → Dana asks "why?" → AP answers with the certificate, BOM part number, policy rule; Mei rejects.
-3. (20 s) Atlas $14 vs. $11 → defended with Contract §4.2; then the "new bank details" email → held, vendor master untouched.
-4. (20 s) Scrub to July: defect credit matched to May case; GRNI reversed; $90 variance Dana rejected in April not re-raised.
+3. (20 s) Atlas $132 vs. $118 → defended with C-12 §4.2; then the "new bank details" email → held, vendor master untouched.
+4. (20 s) Scrub to July: defect credit matched to May case; GRNI reversed; $640 variance Dana rejected in April not re-raised. "Learned rules" panel: rules mined from 2025 history with evidence; escalations per month falling.
 5. (15 s) June export restriction: 8 weeks of cover, switch proposed, cost impact booked after approval; Raj override respected elsewhere.
 6. (15 s) Scorecard: planted problems caught, zero false findings, zero control violations, books balanced every close.
 7. Invite: "Play the controller" or "Hand me any invoice."
