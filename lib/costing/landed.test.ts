@@ -234,3 +234,38 @@ describe("LC9 unexplained duty gap", () => {
     expect(compareToCustoms(landedCost(inp), entry, PARTS, HTS, inp.additionalDuties, "2026-04-01").lines[0].kind).toBe("ok");
   });
 });
+
+describe("LC11 certificate of origin is the system of record for origin", () => {
+  const coo = { id: "COO-77", invoiceId: "INV-T", partId: "P04", manufacturer: "Shenzhen OEM", countryOfOrigin: "CN", sourceFile: "test" };
+
+  it("Vireo (TW) invoice line with no origin + CN certificate → priced as CN, CN entry applied", () => {
+    const r = landedCost(input(TW, [line("P04", 100, 1_000_000)], { additionalDuties: [cnFlightController], certificates: [coo] }));
+    const l = r.lines[0];
+    expect(l.origin).toBe("CN");
+    expect(l.originSource).toBe("certificate_of_origin");
+    expect(l.dutyCents).toBe(377_000);
+  });
+  it("certificate overrides a conflicting invoice line and records the conflict", () => {
+    const r = landedCost(input(TW, [line("P04", 100, 1_000_000, { countryOfOrigin: "TW" })], { additionalDuties: [cnFlightController], certificates: [coo] }));
+    expect(r.lines[0].origin).toBe("CN");
+    expect(r.lines[0].originConflict).toContain("COO-77 says CN");
+  });
+});
+
+describe("LC12 broker's declared value is checked, not trusted", () => {
+  it("inflated entered value with duty consistent on it → source_disagreement", () => {
+    const inp = input(TW, [line("P06", 500, 2_100_000)], { additionalDuties: [verifiedNone("TW", "8507.60.00")] });
+    const entry: CustomsEntry = {
+      id: "CE-12",
+      invoiceId: "INV-T",
+      lines: [{ invoiceLineIndex: 0, hts: "8507.60.00", valueUSDCents: 2_300_000, dutyRateBp: 340, dutyUSDCents: 78_200 }],
+      brokerFeeUSDCents: 0,
+      totalUSDCents: 78_200,
+    };
+    const check = compareToCustoms(landedCost(inp), entry, PARTS, HTS, inp.additionalDuties, "2026-04-01");
+    expect(check.lines[0].kind).toBe("source_disagreement");
+    expect(check.lines[0].valueDeltaCents).toBe(200_000);
+    expect(check.lines[0].note).toContain("declared value");
+    expect(check.needsEscalation).toBe(true);
+  });
+});

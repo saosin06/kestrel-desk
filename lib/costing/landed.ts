@@ -3,7 +3,7 @@
 // a simplification (CBP uses the date of exportation). Duty is assessed on
 // invoice value, which assumes FOB/FCA terms. MPF/HMF are not modeled.
 
-import type { CalcStep, CustomsEntry, Invoice, Part, Supplier } from "@/lib/erp/types";
+import type { CalcStep, CertificateOfOrigin, CustomsEntry, Invoice, Part, Supplier } from "@/lib/erp/types";
 import { allocate, divRound, pctOf } from "@/lib/money";
 import { convert, type RateTable } from "./fx";
 import {
@@ -16,6 +16,7 @@ import {
 } from "./tariff";
 
 export const DUTY_ROUNDING_TOLERANCE_CENTS = 1;
+export const VALUE_ROUNDING_TOLERANCE_CENTS = 1;
 
 export type LandedCostInput = {
   invoice: Invoice;
@@ -26,7 +27,11 @@ export type LandedCostInput = {
   fx: RateTable;
   freightUSDCents: number;
   brokerFeeUSDCents: number;
+  /** Certificates of origin for this invoice; the system of record for origin. */
+  certificates?: readonly CertificateOfOrigin[];
 };
+
+export type OriginSource = "certificate_of_origin" | "invoice_line" | "supplier_country";
 
 export type LandedLine = {
   lineIndex: number;
@@ -34,7 +39,9 @@ export type LandedLine = {
   qty: number;
   hts: string;
   origin: string;
-  originSource: "invoice_line" | "supplier_country";
+  originSource: OriginSource;
+  /** set when the certificate and the invoice line name different origins */
+  originConflict?: string;
   goodsUSDCents: number;
   generalDutyCents: number;
   additionalDutyCents: number;
@@ -66,8 +73,15 @@ export function landedCost(input: LandedCostInput): LandedCost {
     const part = parts[line.partId];
     if (!part) throw new Error(`unknown part ${line.partId} on invoice ${invoice.id}`);
     const conv = convert(fx, line.amountMinor, invoice.currency, "USD", invoice.date);
-    const origin = line.countryOfOrigin ?? supplier.country;
-    return { line, lineIndex, part, conv, origin };
+    // Precedence: certificate of origin → invoice line → supplier country.
+    const coo = input.certificates?.find((c) => c.invoiceId === invoice.id && c.partId === part.id);
+    const origin = coo?.countryOfOrigin ?? line.countryOfOrigin ?? supplier.country;
+    const originSource: OriginSource = coo ? "certificate_of_origin" : line.countryOfOrigin ? "invoice_line" : "supplier_country";
+    const originConflict =
+      coo && line.countryOfOrigin && coo.countryOfOrigin !== line.countryOfOrigin
+        ? `certificate ${coo.id} says ${coo.countryOfOrigin}, invoice line says ${line.countryOfOrigin}`
+        : undefined;
+    return { line, lineIndex, part, conv, origin, originSource, originConflict };
   });
 
   const goods = base.map((b) => b.conv.amountMinor);
@@ -111,7 +125,8 @@ export function landedCost(input: LandedCostInput): LandedCost {
       qty: b.line.qty,
       hts: b.part.hts,
       origin: b.origin,
-      originSource: b.line.countryOfOrigin ? "invoice_line" : "supplier_country",
+      originSource: b.originSource,
+      originConflict: b.originConflict,
       goodsUSDCents: goods[i],
       generalDutyCents,
       additionalDutyCents,
@@ -154,6 +169,8 @@ export type CustomsLineCheck = {
   expectedDutyCents: number;
   /** charged − expected */
   deltaCents: number;
+  /** broker's declared value − our invoice value in USD */
+  valueDeltaCents: number;
   kind: "ok" | "duty_overcharge" | "source_disagreement";
   note: string;
   steps: CalcStep[];
@@ -196,6 +213,9 @@ export function compareToCustoms(
     }
 
     const deltaCents = el.dutyUSDCents - expectedDutyCents;
+    const valueDeltaCents = el.valueUSDCents - ll.goodsUSDCents;
+    const valueOff = Math.abs(valueDeltaCents) > VALUE_ROUNDING_TOLERANCE_CENTS;
+    const valueNote = `declared value ${el.valueUSDCents}¢ ≠ invoice value ${ll.goodsUSDCents}¢ at the invoice-date rate`;
     const base = {
       lineIndex: el.invoiceLineIndex,
       partId: ll.partId,
@@ -204,10 +224,12 @@ export function compareToCustoms(
       chargedDutyCents: el.dutyUSDCents,
       expectedDutyCents,
       deltaCents,
+      valueDeltaCents,
       steps,
     };
 
     if (Math.abs(deltaCents) <= DUTY_ROUNDING_TOLERANCE_CENTS) {
+      if (valueOff) return { ...base, kind: "source_disagreement" as const, note: valueNote };
       return { ...base, kind: "ok" as const, note: "duty charged matches expected" };
     }
     if (el.hts !== part.hts && deltaCents > 0) {
@@ -223,7 +245,8 @@ export function compareToCustoms(
         result: deltaCents,
         ruleRef: `USITC HTS ${part.hts}: ${expectedEntry.description}`,
       });
-      return { ...base, kind: "duty_overcharge" as const, note: `broker entered ${el.hts} instead of ${part.hts}` };
+      const note = `broker entered ${el.hts} instead of ${part.hts}`;
+      return { ...base, kind: "duty_overcharge" as const, note: valueOff ? `${note}; also ${valueNote}` : note };
     }
     const why =
       el.hts !== part.hts
@@ -231,7 +254,7 @@ export function compareToCustoms(
         : extra.unverified
           ? `gap not explained by column 1; ${extra.reason}`
           : "gap not explained by column 1 or verified Chapter 99 duties";
-    return { ...base, kind: "source_disagreement" as const, note: why };
+    return { ...base, kind: "source_disagreement" as const, note: valueOff ? `${why}; also ${valueNote}` : why };
   });
 
   return {
