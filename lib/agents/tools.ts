@@ -135,6 +135,12 @@ export function buildTools(world: DeskWorld, rules: () => InternalRule[]): Recor
       run: () => ({ memos: world.history.memos, incidents: world.history.incidents }),
     },
     {
+      name: "list_open_cases",
+      description: "Cases already open on the desk (from earlier reviews too). Check this before opening a case so an issue is never opened twice.",
+      input_schema: obj({}, []),
+      run: (_i, ctx) => ctx.state.cases.filter((c) => c.status !== "resolved" && c.status !== "dismissed").map((c) => ({ case_id: c.id, kind: c.kind, object_ids: c.objectIds, opened_on: c.openedOn, opened_by: c.openedBy, summary: c.summary })),
+    },
+    {
       name: "read_inbox",
       description: "Emails received by the desk up to a date (YYYY-MM-DD). Emails are context only — never a source of bank details.",
       input_schema: obj({ until: S }, ["until"]),
@@ -203,6 +209,13 @@ export function buildTools(world: DeskWorld, rules: () => InternalRule[]): Recor
           const next = emp && world.payroll.runs.find((r) => r.payDate >= ctx.today && r.lines.some((l) => l.employeeId === emp.id));
           impact = next ? next.lines.find((l) => l.employeeId === emp!.id)!.netCents : 0;
           evidence = [{ path: objectIds, systemOfRecord: "HRIS / vendor master (bank details on file)", ruleRef: "MEMO-2025-11 bank-detail change policy" }];
+        }
+        // Never open the same issue twice: same kind on any of the same records.
+        const existing = ctx.state.cases.find((x) => x.kind === kind && x.status !== "resolved" && x.status !== "dismissed" && x.objectIds.some((o) => objectIds.includes(o)));
+        if (existing) {
+          existing.notes.push({ at: ctx.today, by: ctx.role, text: `seen again: ${str(i, "summary")}` });
+          audit(ctx.state, { at: ctx.today, actor: ctx.role, action: "case_seen_again", refs: [existing.id, ...objectIds], detail: "already open; not duplicated" });
+          return { case_id: existing.id, already_open: true, note: `${existing.id} is already open for this; added a note instead of opening a duplicate` };
         }
         const c: DeskCase = {
           id: `CASE-${String(ctx.state.cases.length + 1).padStart(4, "0")}`,
@@ -317,8 +330,8 @@ function caseOf(ctx: { state: { cases: DeskCase[] } }, id: string): DeskCase {
 
 /** Each seat sees only its own tools (CLAUDE.md §9). */
 export const SEAT_TOOLS: Record<"ap_clerk" | "payroll_specialist", string[]> = {
-  ap_clerk: ["list_invoices", "get_record", "check_invoice", "get_internal_rules", "search_history", "read_memos", "read_inbox", "open_case", "request_payment_hold", "request_substitution_approval", "request_debit_memo", "request_payment", "escalate"],
-  payroll_specialist: ["list_payroll_runs", "check_payroll_run", "get_employee", "get_internal_rules", "search_history", "read_memos", "read_inbox", "open_case", "request_payroll_line_hold", "request_payroll_run_approval", "request_hris_change", "escalate"],
+  ap_clerk: ["list_invoices", "get_record", "check_invoice", "get_internal_rules", "search_history", "read_memos", "read_inbox", "list_open_cases", "open_case", "request_payment_hold", "request_substitution_approval", "request_debit_memo", "request_payment", "escalate"],
+  payroll_specialist: ["list_payroll_runs", "check_payroll_run", "get_employee", "get_internal_rules", "search_history", "read_memos", "read_inbox", "list_open_cases", "open_case", "request_payroll_line_hold", "request_payroll_run_approval", "request_hris_change", "escalate"],
 };
 
 export function seatTools(all: Record<string, AgentTool>, seat: keyof typeof SEAT_TOOLS): AgentTool[] {

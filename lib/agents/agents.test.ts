@@ -149,6 +149,21 @@ describe("payroll specialist loop (scripted)", () => {
   });
 });
 
+describe("case memory", () => {
+  it("open_case never duplicates an open issue; it notes it on the existing case", () => {
+    const state = createDeskState();
+    const tools = buildTools(view, () => approvedRules);
+    const emp = world.payroll.inbox[0].refs[0];
+    const args = { kind: "direct_deposit_change_unverified", object_ids: ["MSG-2026-07-23-DD", emp], summary: "email bank change", system_of_record: "HRIS" };
+    const first = tools.open_case.run(args, { state, role: "payroll_specialist", today: "2026-07-23" }) as { case_id: string };
+    const again = tools.open_case.run(args, { state, role: "payroll_specialist", today: "2026-08-06" }) as { case_id: string; already_open: boolean };
+    expect(again).toMatchObject({ case_id: first.case_id, already_open: true });
+    expect(state.cases).toHaveLength(1);
+    expect(state.cases[0].notes.at(-1)!.text).toContain("seen again");
+    expect((tools.list_open_cases.run({}, { state, role: "payroll_specialist", today: "2026-08-06" }) as unknown[]).length).toBe(1);
+  });
+});
+
 describe("controls", () => {
   it("segregation of duties: a requester can't approve its own request; only required approvers decide", () => {
     const state = createDeskState();
