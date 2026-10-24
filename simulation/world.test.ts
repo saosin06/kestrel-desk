@@ -8,14 +8,15 @@ import { createCompany, validateCompany } from "@/lib/erp/store";
 import { sweep } from "./sweep";
 import { DEFAULT_SEED, generate, serializeWorld, SIM_WINDOW, type World } from "./world";
 
-const SEEDS = [DEFAULT_SEED, 7];
+// Seed 11 hides different rule parameters from 42 (0.40% tolerance, ¥1,000 rounding).
+const SEEDS = [DEFAULT_SEED, 11];
 const ROOT = join(import.meta.dirname, "..");
 
 const keyOf = (kind: string, objectId: string) => `${kind} ${objectId}`;
 
 function expectedFindings(w: World): string[] {
   return w.answerKey.entries
-    .flatMap((e) => [keyOf(e.kind, e.objectId), ...(e.secondaryKinds ?? []).map((k) => keyOf(k, e.objectId))])
+    .flatMap((e) => [keyOf(e.kind, e.objectId), ...(e.secondary ?? []).map((x) => keyOf(x.kind, e.objectId))])
     .sort();
 }
 

@@ -23,6 +23,10 @@
       "supplierId": "S-VIR",
       "partId": "P04",
       "impactUSDCents": 42600000,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
       "expectedHandling": "Payment hold on the line; noncompliant_substitution case; required approvers engineering (Mei) + controller (Dana); government-contract eligibility flagged. Not a price saving.",
       "note": "Three-way match passes (price is below contract: info only); only the compliance check catches it. Invoice line says TW, certificate says CN — certificate is the system of record for origin. Expected duty on the customs entry is column 1 only until the CN × 8537.10.91 Chapter 99 entry is verified."
     },
@@ -42,6 +46,10 @@
       "supplierId": "S-ATL",
       "partId": "P07",
       "impactUSDCents": 4200000,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
       "expectedHandling": "Hold the invoice; defend with C-12 §4.2; request a corrected invoice or a debit memo for the difference."
     },
     {
@@ -60,6 +68,10 @@
       "supplierId": "S-CAS",
       "partId": "P02",
       "impactUSDCents": 510000,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "check:recount"
+      },
       "expectedHandling": "Hold; packing slip and invoice agree (600), so the dock receipt (660) is the outlier — ask receiving (Luis) to recount before paying. Impact = inventory overstated by 60 units."
     },
     {
@@ -76,8 +88,16 @@
       "supplierId": "S-RDG",
       "impactUSDCents": 128400000,
       "expectedHandling": "Block payment of the re-send; cite the original invoice; no new payment request.",
-      "secondaryKinds": [
-        "qty_mismatch"
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
+      "secondary": [
+        {
+          "kind": "qty_mismatch",
+          "cold": "escalate",
+          "withRules": "escalate"
+        }
       ],
       "note": "The re-send also fails three-way match (nothing received awaits invoicing)."
     },
@@ -97,6 +117,10 @@
       "supplierId": "S-ATL",
       "partId": "P14",
       "impactUSDCents": 2898,
+      "dispositions": {
+        "cold": "info",
+        "withRules": "info"
+      },
       "expectedHandling": "Below materiality ($1,000, data/controls.json): log as info, no case yet."
     },
     {
@@ -115,6 +139,10 @@
       "supplierId": "S-ATL",
       "partId": "P14",
       "impactUSDCents": 3091,
+      "dispositions": {
+        "cold": "info",
+        "withRules": "info"
+      },
       "expectedHandling": "Below materiality ($1,000, data/controls.json): log as info, no case yet."
     },
     {
@@ -133,6 +161,10 @@
       "supplierId": "S-ATL",
       "partId": "P14",
       "impactUSDCents": 2898,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
       "expectedHandling": "Recurring 3+ times: open a duty_overcharge case covering every affected entry; ask the broker for post-summary corrections."
     },
     {
@@ -151,6 +183,10 @@
       "supplierId": "S-ATL",
       "partId": "P14",
       "impactUSDCents": 2801,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
       "expectedHandling": "Recurring 3+ times: open a duty_overcharge case covering every affected entry; ask the broker for post-summary corrections."
     },
     {
@@ -163,6 +199,10 @@
       "period": "2026-07",
       "supplierId": "UNREGISTERED",
       "impactUSDCents": 185000,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
       "expectedHandling": "Escalate to the controller; no PO, no vendor-master record — do not pay or create a vendor."
     },
     {
@@ -179,8 +219,211 @@
       "period": "2026-07",
       "supplierId": "S-HOS",
       "partId": "P10",
-      "impactUSDCents": 102470489,
+      "impactUSDCents": 102467964,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
       "expectedHandling": "Compliance status unknown: hold the P10 line and request the certificate from the supplier; escalate rather than assume compliant."
+    },
+    {
+      "id": "PAT-HOS-2603",
+      "problem": 14,
+      "title": "Hoshi rounded line totals down to ¥100",
+      "kind": "source_disagreement",
+      "objectId": "VI-2603-HOS",
+      "relatedIds": [
+        "HR2",
+        "PO-2603-HOS"
+      ],
+      "period": "2026-03",
+      "supplierId": "S-HOS",
+      "impactUSDCents": 48,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "info"
+      },
+      "expectedHandling": "Known Hoshi rounding: log as info, pay the invoiced amount."
+    },
+    {
+      "id": "PAT-HOS-2604",
+      "problem": 14,
+      "title": "Hoshi rounded line totals down to ¥100",
+      "kind": "source_disagreement",
+      "objectId": "VI-2604-HOS",
+      "relatedIds": [
+        "HR2",
+        "PO-2604-HOS"
+      ],
+      "period": "2026-04",
+      "supplierId": "S-HOS",
+      "impactUSDCents": 20,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "info"
+      },
+      "expectedHandling": "Known Hoshi rounding: log as info, pay the invoiced amount."
+    },
+    {
+      "id": "PAT-HOS-2605",
+      "problem": 14,
+      "title": "Hoshi rounded line totals down to ¥100",
+      "kind": "source_disagreement",
+      "objectId": "VI-2605-HOS",
+      "relatedIds": [
+        "HR2",
+        "PO-2605-HOS"
+      ],
+      "period": "2026-05",
+      "supplierId": "S-HOS",
+      "impactUSDCents": 101,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "info"
+      },
+      "expectedHandling": "Known Hoshi rounding: log as info, pay the invoiced amount."
+    },
+    {
+      "id": "PAT-HOS-2606",
+      "problem": 14,
+      "title": "Hoshi rounded line totals down to ¥100",
+      "kind": "source_disagreement",
+      "objectId": "VI-2606-HOS",
+      "relatedIds": [
+        "HR2",
+        "PO-2606-HOS"
+      ],
+      "period": "2026-06",
+      "supplierId": "S-HOS",
+      "impactUSDCents": 19,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "info"
+      },
+      "expectedHandling": "Known Hoshi rounding: log as info, pay the invoiced amount."
+    },
+    {
+      "id": "PAT-HOS-2607",
+      "problem": 14,
+      "title": "Hoshi rounded line totals down to ¥100",
+      "kind": "source_disagreement",
+      "objectId": "VI-2607-HOS",
+      "relatedIds": [
+        "HR2",
+        "PO-2607-HOS"
+      ],
+      "period": "2026-07",
+      "supplierId": "S-HOS",
+      "impactUSDCents": 53,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "info"
+      },
+      "expectedHandling": "Known Hoshi rounding: log as info, pay the invoiced amount."
+    },
+    {
+      "id": "PAT-HOS-2608",
+      "problem": 14,
+      "title": "Hoshi rounded line totals down to ¥100",
+      "kind": "source_disagreement",
+      "objectId": "VI-2608-HOS",
+      "relatedIds": [
+        "HR2",
+        "PO-2608-HOS"
+      ],
+      "period": "2026-08",
+      "supplierId": "S-HOS",
+      "impactUSDCents": 20,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "info"
+      },
+      "expectedHandling": "Known Hoshi rounding: log as info, pay the invoiced amount."
+    },
+    {
+      "id": "PAT-HOS-2609",
+      "problem": 14,
+      "title": "Hoshi rounded line totals down to ¥100",
+      "kind": "source_disagreement",
+      "objectId": "VI-2609-HOS",
+      "relatedIds": [
+        "HR2",
+        "PO-2609-HOS"
+      ],
+      "period": "2026-09",
+      "supplierId": "S-HOS",
+      "impactUSDCents": 67,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "info"
+      },
+      "expectedHandling": "Known Hoshi rounding: log as info, pay the invoiced amount."
+    },
+    {
+      "id": "PAT-P14-2607",
+      "problem": 14,
+      "title": "Atlas screws weighed 0.30% light (weight-count tolerance)",
+      "kind": "qty_mismatch",
+      "objectId": "VI-2607-ATL",
+      "relatedIds": [
+        "R-2607-ATL",
+        "PS-2607-ATL",
+        "P14",
+        "HR1"
+      ],
+      "period": "2026-07",
+      "supplierId": "S-ATL",
+      "partId": "P14",
+      "impactUSDCents": 403,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "info"
+      },
+      "expectedHandling": "Within the weight-count tolerance Kestrel applies to fasteners: accept the invoice quantity, log as info."
+    },
+    {
+      "id": "PAT-P14-2608",
+      "problem": 14,
+      "title": "Atlas screws weighed 0.30% light (weight-count tolerance)",
+      "kind": "qty_mismatch",
+      "objectId": "VI-2608-ATL",
+      "relatedIds": [
+        "R-2608-ATL",
+        "PS-2608-ATL",
+        "P14",
+        "HR1"
+      ],
+      "period": "2026-08",
+      "supplierId": "S-ATL",
+      "partId": "P14",
+      "impactUSDCents": 378,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "info"
+      },
+      "expectedHandling": "Within the weight-count tolerance Kestrel applies to fasteners: accept the invoice quantity, log as info."
+    },
+    {
+      "id": "PAT-P14-2609",
+      "problem": 14,
+      "title": "Atlas screws weighed 0.30% light (third month in a row)",
+      "kind": "qty_mismatch",
+      "objectId": "VI-2609-ATL",
+      "relatedIds": [
+        "R-2609-ATL",
+        "PS-2609-ATL",
+        "P14",
+        "HR1"
+      ],
+      "period": "2026-09",
+      "supplierId": "S-ATL",
+      "partId": "P14",
+      "impactUSDCents": 364,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
+      "expectedHandling": "Third short month in a row: the weight-count rule's exception applies — escalate (Raj to raise with Atlas)."
     }
   ],
   "cleanSuppliers": [
@@ -193,5 +436,112 @@
     9,
     10,
     11
-  ]
+  ],
+  "hiddenRules": [
+    {
+      "id": "HR1",
+      "statement": "Atlas M3 screws are counted by weight: accept the invoice quantity when the dock is short by 0.60% or less, unless it's the third short month in a row.",
+      "scope": {
+        "kind": "qty_mismatch",
+        "diffKind": "qty_mismatch",
+        "supplierId": "S-ATL",
+        "partId": "P14",
+        "attr": "qtyVarianceBp",
+        "maxAttr": 60,
+        "unlessConsecutiveMonths": 3
+      },
+      "action": {
+        "type": "info"
+      },
+      "source": "statistics",
+      "discoverableBy": "statistics"
+    },
+    {
+      "id": "HR2",
+      "statement": "Hoshi rounds yen line totals down to ¥100: accept line differences under ¥100.",
+      "scope": {
+        "kind": "source_disagreement",
+        "diffKind": "line_amount_mismatch",
+        "supplierId": "S-HOS",
+        "currency": "JPY",
+        "attr": "lineDiffMinor",
+        "maxAttr": 99
+      },
+      "action": {
+        "type": "info"
+      },
+      "source": "statistics",
+      "discoverableBy": "statistics"
+    },
+    {
+      "id": "HR3",
+      "statement": "Cascade quantity disagreements are usually dock miscounts: ask receiving to recount before escalating.",
+      "scope": {
+        "kind": "qty_mismatch",
+        "diffKind": "qty_mismatch",
+        "supplierId": "S-CAS"
+      },
+      "action": {
+        "type": "require_check",
+        "check": "recount"
+      },
+      "source": "statistics",
+      "discoverableBy": "statistics"
+    },
+    {
+      "id": "HR4",
+      "statement": "Remit-to changes are verified by calling the supplier on the number on file, then a vendor-change request to the controller; never from email.",
+      "scope": {
+        "kind": "remittance_change_unverified"
+      },
+      "action": {
+        "type": "route_to",
+        "role": "controller"
+      },
+      "source": "memo",
+      "discoverableBy": "memo"
+    }
+  ],
+  "decoys": [
+    {
+      "id": "D1",
+      "description": "Vireo late fees accepted twice — too little support to be a rule",
+      "evidence": [
+        "HX-0032",
+        "HX-0033"
+      ]
+    },
+    {
+      "id": "D2",
+      "description": "Ridgeline year-end price accepted twice — explicitly one-off",
+      "evidence": [
+        "HX-0034",
+        "HX-0035"
+      ]
+    },
+    {
+      "id": "D3",
+      "description": "Northwind freight lines — mixed outcomes, depends on who asked for expediting",
+      "evidence": [
+        "HX-0036",
+        "HX-0037",
+        "HX-0038",
+        "HX-0039",
+        "HX-0040"
+      ]
+    },
+    {
+      "id": "D4",
+      "description": "Trap: Dana approved an emailed bank change once; it was a near-miss. Never a rule to approve bank changes.",
+      "evidence": [
+        "HX-0041"
+      ]
+    }
+  ],
+  "historyParams": {
+    "p14ToleranceBp": 60,
+    "p14MemoDate": "2025-09-15",
+    "hoshiRoundingYen": 100,
+    "cascadeRecounts": 7
+  }
 }

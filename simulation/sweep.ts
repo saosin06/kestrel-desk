@@ -10,15 +10,13 @@ import { compareToCustoms, landedCost } from "@/lib/costing/landed";
 import { loadAdditionalDuties, loadEcbRates, loadHtsTable } from "@/lib/costing/reference";
 import { loadBom, loadParts, loadProducts, loadSuppliers } from "@/lib/erp/master";
 import { type DiffKind, findDuplicates, threeWayMatch } from "@/lib/erp/match";
-import type { CaseKind, CompliancePolicy, Invoice, PeriodId } from "@/lib/erp/types";
+import type { CaseKind, CompliancePolicy, Invoice } from "@/lib/erp/types";
+import { lineAmount } from "@/lib/money";
+import type { FindingFacts } from "@/lib/rules/types";
 import type { World } from "./world";
 
-export type Finding = {
-  kind: CaseKind;
-  objectId: string;
-  period: PeriodId;
+export type Finding = FindingFacts & {
   source: "integrity" | "duplicate" | "match" | "compliance" | "customs";
-  impactUSDCents?: number;
   detail: string;
 };
 
@@ -49,8 +47,15 @@ export function sweep(world: World): Finding[] {
   const product = loadProducts()[0];
 
   const findings: Finding[] = [];
-  const add = (f: Finding) => {
-    if (!findings.some((x) => x.kind === f.kind && x.objectId === f.objectId)) findings.push(f);
+  /** One finding per (kind, object); repeats merge (largest attribute, summed impact). */
+  const add = (f: Omit<Finding, "attrs"> & { attrs?: Finding["attrs"] }) => {
+    const full: Finding = { ...f, attrs: f.attrs ?? {} };
+    const prev = findings.find((x) => x.kind === full.kind && x.objectId === full.objectId);
+    if (!prev) return void findings.push(full);
+    if (full.impactUSDCents !== undefined) prev.impactUSDCents = (prev.impactUSDCents ?? 0) + full.impactUSDCents;
+    for (const k of ["qtyVarianceBp", "lineDiffMinor"] as const) {
+      if (full.attrs[k] !== undefined) prev.attrs[k] = Math.max(prev.attrs[k] ?? 0, full.attrs[k]!);
+    }
   };
 
   const seen: Invoice[] = [];
@@ -58,21 +63,22 @@ export function sweep(world: World): Finding[] {
 
   for (const inv of world.invoices) {
     const period = inv.date.slice(0, 7);
+    const at = { date: inv.date, period, supplierId: inv.supplierId };
     const supplier = suppliers[inv.supplierId];
     if (!supplier) {
-      add({ kind: "unknown_supplier", objectId: inv.id, period, source: "integrity", detail: `"${inv.supplierName}" is not in the vendor master` });
+      add({ ...at, kind: "unknown_supplier", objectId: inv.id, source: "integrity", detail: `"${inv.supplierName}" is not in the vendor master` });
       continue;
     }
     const po = world.pos.find((p) => p.id === inv.poId);
     if (!po) {
-      add({ kind: "source_disagreement", objectId: inv.id, period, source: "integrity", detail: `no PO ${inv.poId ?? "(none cited)"}` });
+      add({ ...at, kind: "source_disagreement", objectId: inv.id, source: "integrity", detail: `no PO ${inv.poId ?? "(none cited)"}` });
       continue;
     }
 
     const dups = findDuplicates(inv, seen);
     seen.push(inv);
     if (dups.length > 0) {
-      add({ kind: "duplicate_invoice", objectId: inv.id, period, source: "duplicate", detail: `same bill as ${dups.map((d) => d.id).join(", ")}` });
+      add({ ...at, kind: "duplicate_invoice", objectId: inv.id, source: "duplicate", detail: `same bill as ${dups.map((d) => d.id).join(", ")}` });
     }
 
     const result = threeWayMatch({
@@ -84,9 +90,22 @@ export function sweep(world: World): Finding[] {
       contracts: world.contracts.filter((c) => c.supplierId === inv.supplierId),
       fx,
     });
+    const usd = (minor: number) => convert(fx, minor, inv.currency, "USD", inv.date).amountMinor;
     for (const d of result.diffs.filter((d) => d.severity === "hold")) {
-      const impact = d.deltaMinor === undefined ? undefined : convert(fx, d.deltaMinor, inv.currency, "USD", inv.date).amountMinor;
-      add({ kind: MATCH_HOLD_KIND[d.kind], objectId: inv.id, period, source: "match", impactUSDCents: impact, detail: `${d.kind}: ${d.note}` });
+      const attrs: Finding["attrs"] = {};
+      let impact = d.deltaMinor === undefined ? undefined : usd(d.deltaMinor);
+      if (d.kind === "qty_mismatch" && typeof d.expected === "number" && typeof d.actual === "number") {
+        const gap = Math.abs(d.expected - d.actual);
+        attrs.qtyVarianceBp = Math.round((gap * 10_000) / d.actual);
+        const price = po.lines.find((l) => l.partId === d.partId)!.unitPriceE4;
+        impact = usd(lineAmount(gap, price, inv.currency));
+      }
+      if (d.kind === "line_amount_mismatch") {
+        attrs.lineDiffMinor = Math.abs(d.deltaMinor ?? 0);
+        attrs.currency = inv.currency;
+        impact = Math.abs(impact ?? 0);
+      }
+      add({ ...at, kind: MATCH_HOLD_KIND[d.kind], objectId: inv.id, partId: d.partId, diffKind: d.kind, source: "match", impactUSDCents: impact, attrs, detail: `${d.kind}: ${d.note}` });
     }
     if (result.status === "match" && dups.length === 0) accepted.set(po.id, [...(accepted.get(po.id) ?? []), inv]);
 
@@ -106,11 +125,11 @@ export function sweep(world: World): Finding[] {
         },
       });
       if (r.status === "fail") {
-        add({ kind: "noncompliant_substitution", objectId: inv.id, period, source: "compliance", detail: r.reasons.join("; ") });
+        add({ ...at, partId: line.partId, kind: "noncompliant_substitution", objectId: inv.id, source: "compliance", detail: r.reasons.join("; ") });
       } else if (r.status === "unknown") {
-        add({ kind: "missing_document", objectId: inv.id, period, source: "compliance", detail: r.reasons.join("; ") });
+        add({ ...at, partId: line.partId, kind: "missing_document", objectId: inv.id, source: "compliance", detail: r.reasons.join("; ") });
       } else if (r.substitution) {
-        add({ kind: "source_disagreement", objectId: inv.id, period, source: "compliance", detail: `unapproved substitution: ${r.reasons.join("; ")}` });
+        add({ ...at, partId: line.partId, kind: "source_disagreement", objectId: inv.id, source: "compliance", detail: `unapproved substitution: ${r.reasons.join("; ")}` });
       }
     }
 
@@ -128,12 +147,12 @@ export function sweep(world: World): Finding[] {
         certificates: world.certificates.filter((c) => c.invoiceId === inv.id),
       });
       const check = compareToCustoms(landed, entry, parts, hts, additionalDuties, inv.date);
-      const entryPeriod = entry.date.slice(0, 7);
+      const ce = { date: entry.date, period: entry.date.slice(0, 7), supplierId: inv.supplierId, objectId: entry.id, source: "customs" as const };
       for (const l of check.lines) {
         if (l.kind === "duty_overcharge") {
-          add({ kind: "duty_overcharge", objectId: entry.id, period: entryPeriod, source: "customs", impactUSDCents: l.deltaCents, detail: l.note });
+          add({ ...ce, kind: "duty_overcharge", partId: l.partId, diffKind: "wrong_hts", impactUSDCents: l.deltaCents, detail: l.note });
         } else if (l.kind === "source_disagreement") {
-          add({ kind: "source_disagreement", objectId: entry.id, period: entryPeriod, source: "customs", detail: l.note });
+          add({ ...ce, kind: "source_disagreement", partId: l.partId, diffKind: "customs_gap", detail: l.note });
         }
       }
     }

@@ -12,7 +12,7 @@
           "invoiceLineIndex": 0,
           "hts": "8525.89.50",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 92199244,
+          "valueUSDCents": 92196964,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         },
@@ -20,7 +20,7 @@
           "invoiceLineIndex": 1,
           "hts": "8807.30.00",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 17376011,
+          "valueUSDCents": 17375188,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         }
@@ -87,7 +87,7 @@
           "invoiceLineIndex": 0,
           "hts": "8525.89.50",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 98640739,
+          "valueUSDCents": 98638336,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         },
@@ -95,7 +95,7 @@
           "invoiceLineIndex": 1,
           "hts": "8807.30.00",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 18589985,
+          "valueUSDCents": 18589100,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         }
@@ -179,7 +179,7 @@
           "invoiceLineIndex": 0,
           "hts": "8525.89.50",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 102829810,
+          "valueUSDCents": 102827258,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         },
@@ -187,7 +187,7 @@
           "invoiceLineIndex": 1,
           "hts": "8807.30.00",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 19379464,
+          "valueUSDCents": 19378507,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         }
@@ -229,7 +229,7 @@
           "invoiceLineIndex": 0,
           "hts": "8525.89.50",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 97404262,
+          "valueUSDCents": 97401890,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         },
@@ -237,7 +237,7 @@
           "invoiceLineIndex": 1,
           "hts": "8807.30.00",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 18356957,
+          "valueUSDCents": 18356083,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         }
@@ -354,7 +354,7 @@
           "invoiceLineIndex": 0,
           "hts": "8525.89.50",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 102470489,
+          "valueUSDCents": 102467964,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         },
@@ -362,7 +362,7 @@
           "invoiceLineIndex": 1,
           "hts": "8807.30.00",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 19311746,
+          "valueUSDCents": 19310822,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         }
@@ -404,7 +404,7 @@
           "invoiceLineIndex": 0,
           "hts": "8525.89.50",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 98524967,
+          "valueUSDCents": 98522567,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         },
@@ -412,7 +412,7 @@
           "invoiceLineIndex": 1,
           "hts": "8807.30.00",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 18568167,
+          "valueUSDCents": 18567283,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         }
@@ -479,7 +479,7 @@
           "invoiceLineIndex": 0,
           "hts": "8525.89.50",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 97810754,
+          "valueUSDCents": 97808355,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         },
@@ -487,7 +487,7 @@
           "invoiceLineIndex": 1,
           "hts": "8807.30.00",
           "countryOfOrigin": "JP",
-          "valueUSDCents": 18433565,
+          "valueUSDCents": 18432657,
           "dutyRateBp": 0,
           "dutyUSDCents": 0
         }

@@ -154,7 +154,7 @@
       "currency": "JPY",
       "prices": [
         {
-          "unitPriceE4": 5200000000,
+          "unitPriceE4": 5199874000,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-10 §4.2"
@@ -170,7 +170,7 @@
       "currency": "JPY",
       "prices": [
         {
-          "unitPriceE4": 980000000,
+          "unitPriceE4": 979953700,
           "validFrom": "2026-01-01",
           "validTo": "2026-12-31",
           "clauseRef": "C-11 §4.2"

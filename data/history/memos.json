@@ -1,0 +1,28 @@
+{
+  "generatedBy": "scripts/generate.ts",
+  "seed": 42,
+  "simulated": true,
+  "items": [
+    {
+      "id": "MEMO-2025-03",
+      "date": "2025-03-03",
+      "from": "controller",
+      "subject": "AP materiality",
+      "body": "Price and duty variances under $1,000 are logged, not escalated, unless the same thing keeps happening. Quantity problems always come to me until resolved."
+    },
+    {
+      "id": "MEMO-P14",
+      "date": "2025-09-15",
+      "from": "controller",
+      "subject": "Weight-count tolerance for fasteners",
+      "body": "Effective today, when the dock counts fasteners by weight, we accept the invoice quantity if the shortfall is 0.60% or less (was 1%). Anything over that gets a recount. Three short deliveries in a row still come to me."
+    },
+    {
+      "id": "MEMO-2025-11",
+      "date": "2025-11-20",
+      "from": "controller",
+      "subject": "Bank detail changes — new rule after the Hoshi near-miss",
+      "body": "No remit-to change goes into the vendor master from an email, ever. AP calls the supplier on the number already on file, documents the call, and sends me a vendor-change request. I approve; AP never edits the vendor master."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 // Writes the simulated world and answer key to data/.
 //   npm run generate              # seed 42 (committed)
-//   npm run generate -- --seed 7  # a second world, to show the desk isn't overfit
+//   npm run generate -- --seed 11 # a second world (different hidden rules), to show the desk isn't overfit
 
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";

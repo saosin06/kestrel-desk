@@ -16,8 +16,8 @@
           "partId": "P10",
           "description": "Mapping camera",
           "qty": 280,
-          "unitPriceE4": 5200000000,
-          "amountMinor": 145600000,
+          "unitPriceE4": 5199874000,
+          "amountMinor": 145596400,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-MC42"
         },
@@ -25,13 +25,13 @@
           "partId": "P11",
           "description": "Camera gimbal",
           "qty": 280,
-          "unitPriceE4": 980000000,
-          "amountMinor": 27440000,
+          "unitPriceE4": 979953700,
+          "amountMinor": 27438700,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
-      "totalMinor": 173040000,
+      "totalMinor": 173035100,
       "remitTo": "VM-HOS",
       "sourceFile": "simulated:VI-2603-HOS",
       "simulated": true
@@ -274,8 +274,8 @@
           "partId": "P10",
           "description": "Mapping camera",
           "qty": 300,
-          "unitPriceE4": 5200000000,
-          "amountMinor": 156000000,
+          "unitPriceE4": 5199874000,
+          "amountMinor": 155996200,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-MC42"
         },
@@ -283,13 +283,13 @@
           "partId": "P11",
           "description": "Camera gimbal",
           "qty": 300,
-          "unitPriceE4": 980000000,
-          "amountMinor": 29400000,
+          "unitPriceE4": 979953700,
+          "amountMinor": 29398600,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
-      "totalMinor": 185400000,
+      "totalMinor": 185394800,
       "remitTo": "VM-HOS",
       "sourceFile": "simulated:VI-2604-HOS",
       "simulated": true
@@ -490,8 +490,8 @@
           "partId": "P10",
           "description": "Mapping camera",
           "qty": 310,
-          "unitPriceE4": 5200000000,
-          "amountMinor": 161200000,
+          "unitPriceE4": 5199874000,
+          "amountMinor": 161196000,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-MC42"
         },
@@ -499,13 +499,13 @@
           "partId": "P11",
           "description": "Camera gimbal",
           "qty": 310,
-          "unitPriceE4": 980000000,
-          "amountMinor": 30380000,
+          "unitPriceE4": 979953700,
+          "amountMinor": 30378500,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
-      "totalMinor": 191580000,
+      "totalMinor": 191574500,
       "remitTo": "VM-HOS",
       "sourceFile": "simulated:VI-2605-HOS",
       "simulated": true
@@ -715,8 +715,8 @@
           "partId": "P10",
           "description": "Mapping camera",
           "qty": 300,
-          "unitPriceE4": 5200000000,
-          "amountMinor": 156000000,
+          "unitPriceE4": 5199874000,
+          "amountMinor": 155996200,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-MC42"
         },
@@ -724,13 +724,13 @@
           "partId": "P11",
           "description": "Camera gimbal",
           "qty": 300,
-          "unitPriceE4": 980000000,
-          "amountMinor": 29400000,
+          "unitPriceE4": 979953700,
+          "amountMinor": 29398600,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
-      "totalMinor": 185400000,
+      "totalMinor": 185394800,
       "remitTo": "VM-HOS",
       "sourceFile": "simulated:VI-2606-HOS",
       "simulated": true
@@ -1076,8 +1076,8 @@
           "partId": "P10",
           "description": "Mapping camera",
           "qty": 320,
-          "unitPriceE4": 5200000000,
-          "amountMinor": 166400000,
+          "unitPriceE4": 5199874000,
+          "amountMinor": 166395900,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-MC42"
         },
@@ -1085,13 +1085,13 @@
           "partId": "P11",
           "description": "Camera gimbal",
           "qty": 320,
-          "unitPriceE4": 980000000,
-          "amountMinor": 31360000,
+          "unitPriceE4": 979953700,
+          "amountMinor": 31358500,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
-      "totalMinor": 197760000,
+      "totalMinor": 197754400,
       "remitTo": "VM-HOS",
       "sourceFile": "simulated:VI-2607-HOS",
       "simulated": true
@@ -1193,8 +1193,8 @@
           "partId": "P10",
           "description": "Mapping camera",
           "qty": 300,
-          "unitPriceE4": 5200000000,
-          "amountMinor": 156000000,
+          "unitPriceE4": 5199874000,
+          "amountMinor": 155996200,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-MC42"
         },
@@ -1202,13 +1202,13 @@
           "partId": "P11",
           "description": "Camera gimbal",
           "qty": 300,
-          "unitPriceE4": 980000000,
-          "amountMinor": 29400000,
+          "unitPriceE4": 979953700,
+          "amountMinor": 29398600,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
-      "totalMinor": 185400000,
+      "totalMinor": 185394800,
       "remitTo": "VM-HOS",
       "sourceFile": "simulated:VI-2608-HOS",
       "simulated": true
@@ -1484,8 +1484,8 @@
           "partId": "P10",
           "description": "Mapping camera",
           "qty": 290,
-          "unitPriceE4": 5200000000,
-          "amountMinor": 150800000,
+          "unitPriceE4": 5199874000,
+          "amountMinor": 150796300,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-MC42"
         },
@@ -1493,13 +1493,13 @@
           "partId": "P11",
           "description": "Camera gimbal",
           "qty": 290,
-          "unitPriceE4": 980000000,
-          "amountMinor": 28420000,
+          "unitPriceE4": 979953700,
+          "amountMinor": 28418600,
           "countryOfOrigin": "JP",
           "manufacturerPartNo": "HOS-GB3"
         }
       ],
-      "totalMinor": 179220000,
+      "totalMinor": 179214900,
       "remitTo": "VM-HOS",
       "sourceFile": "simulated:VI-2609-HOS",
       "simulated": true

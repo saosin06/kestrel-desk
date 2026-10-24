@@ -31,6 +31,8 @@ import { UNREGISTERED_SUPPLIER } from "@/lib/erp/types";
 import companyData from "@/data/company.json";
 import openingData from "@/data/opening-balances.json";
 import { allocate, type Currency, lineAmount, parseMoney, parseUnitPrice, pctOf } from "@/lib/money";
+import type { Disposition } from "@/lib/rules/types";
+import { type Decoy, generateHistory, type HiddenRule, type History, type HistoryParams, historyParams } from "./history";
 
 export const DEFAULT_SEED = 42;
 export const SIM_WINDOW = { from: "2026-03-01", to: "2026-09-30" } as const;
@@ -66,8 +68,9 @@ const CONTRACTS: ContractSpec[] = [
   { id: "C-07", partId: "P07", supplierId: "S-CAS", price: "126.00", currency: "USD" }, // backup source
   { id: "C-08", partId: "P08", supplierId: "S-RDG", price: "780.00", currency: "USD" },
   { id: "C-09", partId: "P09", supplierId: "S-RDG", price: "1200.00", currency: "USD" },
-  { id: "C-10", partId: "P10", supplierId: "S-HOS", price: "520000", currency: "JPY" },
-  { id: "C-11", partId: "P11", supplierId: "S-HOS", price: "98000", currency: "JPY" },
+  // Hoshi's yen prices come from USD-negotiated prices at the contract FX rate, hence the fractions.
+  { id: "C-10", partId: "P10", supplierId: "S-HOS", price: "519987.40", currency: "JPY" },
+  { id: "C-11", partId: "P11", supplierId: "S-HOS", price: "97995.37", currency: "JPY" },
   { id: "C-12", partId: "P07", supplierId: "S-ATL", price: "118.00", currency: "USD" },
   { id: "C-13", partId: "P12", supplierId: "S-NW", price: "140.00", currency: "USD" },
   { id: "C-14", partId: "P13", supplierId: "S-NW", price: "11.00", currency: "USD" },
@@ -108,8 +111,10 @@ export type AnswerKeyEntry = {
   partId?: string;
   impactUSDCents: number;
   expectedHandling: string;
+  /** what should happen: with no learned rules, and with the hidden rules approved */
+  dispositions: { cold: Disposition; withRules: Disposition };
   /** other finding kinds the same object legitimately raises */
-  secondaryKinds?: CaseKind[];
+  secondary?: { kind: CaseKind; cold: Disposition; withRules: Disposition }[];
   note?: string;
 };
 
@@ -121,6 +126,11 @@ export type AnswerKey = {
   cleanSuppliers: string[];
   /** CLAUDE.md §11 problems not planted yet (Tier 2) */
   deferredProblems: number[];
+  /** internal rules hidden in the history (agents must discover these) */
+  hiddenRules: HiddenRule[];
+  /** patterns in the history that must NOT become rules */
+  decoys: Decoy[];
+  historyParams: HistoryParams;
 };
 
 export type SalesSummary = {
@@ -169,6 +179,7 @@ export type World = {
   bank: { account: string; openingBalanceCents: number; asOf: ISODate; transactions: never[] };
   sales: SalesSummary[];
   inbox: InboxMessage[];
+  history: History;
   answerKey: AnswerKey;
 };
 
@@ -185,10 +196,11 @@ function mulberry32(seed: number) {
   };
 }
 
-type Rng = { int: (min: number, max: number) => number };
+type Rng = { int: (min: number, max: number) => number; pick: <T>(xs: readonly T[]) => T };
 function makeRng(seed: number): Rng {
   const next = mulberry32(seed);
-  return { int: (min, max) => min + Math.floor(next() * (max - min + 1)) };
+  const int = (min: number, max: number) => min + Math.floor(next() * (max - min + 1));
+  return { int, pick: (xs) => xs[int(0, xs.length - 1)] };
 }
 
 function addDays(date: ISODate, n: number): ISODate {
@@ -278,6 +290,9 @@ export function generate(seed: number = DEFAULT_SEED): World {
     leadTimeDays: suppliers[c.supplierId].country === "US" ? 14 : 28,
   }));
   const ctx: Ctx = { rng: makeRng(seed), fx: loadEcbRates(), hts: loadHtsTable(), parts, suppliers, bom, contracts };
+  // History has its own random stream so changing it doesn't move sim dates.
+  const historyRng = makeRng(seed ^ 0x5bd1e995);
+  const hParams = historyParams(historyRng);
   const invoiceSeq: Record<string, number> = Object.fromEntries(Object.entries(INVOICE_NO_START).map(([s, [, n]]) => [s, n]));
   const nextInvoiceNo = (supplierId: string) => `${INVOICE_NO_START[supplierId][0]}${invoiceSeq[supplierId]++}`;
 
@@ -325,6 +340,8 @@ export function generate(seed: number = DEFAULT_SEED): World {
         lines: lines.map((l) => ({ partId: l.part.id, qty: l.qty, lot: `LOT-${tag}-${l.part.id}` })),
       };
       const invLines = po.lines.map((l) => invoiceLine(ctx, supplier, l.partId, l.qty, l.unitPriceE4));
+      // Hoshi's billing system rounds every line total down (internal rule HR2 in the history).
+      if (supplier.id === "S-HOS") for (const l of invLines) l.amountMinor -= l.amountMinor % hParams.hoshiRoundingYen;
       const invoice: Invoice = {
         id: `VI-${tag}`,
         invoiceNo: nextInvoiceNo(supplier.id),
@@ -394,6 +411,7 @@ export function generate(seed: number = DEFAULT_SEED): World {
       supplierId: "S-VIR",
       partId: "P04",
       impactUSDCents: line.amountMinor,
+      dispositions: { cold: "escalate", withRules: "escalate" },
       expectedHandling:
         "Payment hold on the line; noncompliant_substitution case; required approvers engineering (Mei) + controller (Dana); government-contract eligibility flagged. Not a price saving.",
       note: "Three-way match passes (price is below contract: info only); only the compliance check catches it. Invoice line says TW, certificate says CN — certificate is the system of record for origin. Expected duty on the customs entry is column 1 only until the CN × 8537.10.91 Chapter 99 entry is verified.",
@@ -418,6 +436,7 @@ export function generate(seed: number = DEFAULT_SEED): World {
       supplierId: "S-ATL",
       partId: "P07",
       impactUSDCents: lineAmount(line.qty, line.unitPriceE4 - contractPrice, "USD"),
+      dispositions: { cold: "escalate", withRules: "escalate" },
       expectedHandling: "Hold the invoice; defend with C-12 §4.2; request a corrected invoice or a debit memo for the difference.",
     });
   }
@@ -439,6 +458,7 @@ export function generate(seed: number = DEFAULT_SEED): World {
       supplierId: "S-CAS",
       partId: "P02",
       impactUSDCents: lineAmount(rl.qty - slipQty, contractFor(ctx, "S-CAS", "P02").prices[0].unitPriceE4, "USD"),
+      dispositions: { cold: "escalate", withRules: "check:recount" },
       expectedHandling: `Hold; packing slip and invoice agree (${slipQty}), so the dock receipt (${rl.qty}) is the outlier — ask receiving (Luis) to recount before paying. Impact = inventory overstated by ${rl.qty - slipQty} units.`,
     });
   }
@@ -464,7 +484,8 @@ export function generate(seed: number = DEFAULT_SEED): World {
       supplierId: "S-RDG",
       impactUSDCents: resend.totalMinor,
       expectedHandling: "Block payment of the re-send; cite the original invoice; no new payment request.",
-      secondaryKinds: ["qty_mismatch"],
+      dispositions: { cold: "escalate", withRules: "escalate" },
+      secondary: [{ kind: "qty_mismatch", cold: "escalate", withRules: "escalate" }],
       note: "The re-send also fails three-way match (nothing received awaits invoicing).",
     });
   }
@@ -494,6 +515,7 @@ export function generate(seed: number = DEFAULT_SEED): World {
           supplierId: "S-ATL",
           partId: "P14",
           impactUSDCents: el.dutyUSDCents - expected,
+          dispositions: occurrence < 3 ? { cold: "info", withRules: "info" } : { cold: "escalate", withRules: "escalate" },
           expectedHandling:
             occurrence < 3
               ? "Below materiality ($1,000, data/controls.json): log as info, no case yet."
@@ -529,6 +551,7 @@ export function generate(seed: number = DEFAULT_SEED): World {
       period: "2026-07",
       supplierId: UNREGISTERED_SUPPLIER,
       impactUSDCents: inv.totalMinor,
+      dispositions: { cold: "escalate", withRules: "escalate" },
       expectedHandling: "Escalate to the controller; no PO, no vendor-master record — do not pay or create a vendor.",
     });
   }
@@ -550,7 +573,54 @@ export function generate(seed: number = DEFAULT_SEED): World {
       supplierId: "S-HOS",
       partId: "P10",
       impactUSDCents: usdOf(ctx, line.amountMinor, m.invoice.currency, m.invoice.date),
+      dispositions: { cold: "escalate", withRules: "escalate" },
       expectedHandling: "Compliance status unknown: hold the P10 line and request the certificate from the supplier; escalate rather than assume compliant.",
+    });
+  }
+
+  // #14 Patterns the history explains (CLAUDE.md §7a). Cold, each escalates;
+  // with the learned rules approved, the routine ones become info.
+  // HR1: Atlas M3 screws weighed at the dock, 0.30% light, Jul–Sep. September
+  // is the third month in a row, so it escalates even with the rule.
+  for (const period of ["2026-07", "2026-08", "2026-09"]) {
+    const m = find(period, "S-ATL");
+    const rl = m.receipt.lines.find((l) => l.partId === "P14")!;
+    const short = Math.round((rl.qty * 30) / 10_000);
+    rl.qty -= short;
+    const third = period === "2026-09";
+    entries.push({
+      id: `PAT-P14-${yymm(period)}`,
+      problem: 14,
+      title: `Atlas screws weighed 0.30% light (${third ? "third month in a row" : "weight-count tolerance"})`,
+      kind: "qty_mismatch",
+      objectId: m.invoice.id,
+      relatedIds: [m.receipt.id, m.slip.id, "P14", "HR1"],
+      period,
+      supplierId: "S-ATL",
+      partId: "P14",
+      impactUSDCents: lineAmount(short, contractFor(ctx, "S-ATL", "P14").prices[0].unitPriceE4, "USD"),
+      dispositions: { cold: "escalate", withRules: third ? "escalate" : "info" },
+      expectedHandling: third
+        ? "Third short month in a row: the weight-count rule's exception applies — escalate (Raj to raise with Atlas)."
+        : "Within the weight-count tolerance Kestrel applies to fasteners: accept the invoice quantity, log as info.",
+    });
+  }
+  // HR2: Hoshi's line totals are rounded down on every invoice.
+  for (const m of months.filter((x) => x.supplier.id === "S-HOS")) {
+    const diffs = m.invoice.lines.map((l) => lineAmount(l.qty, l.unitPriceE4, "JPY") - l.amountMinor);
+    if (diffs.every((d) => d === 0)) continue;
+    entries.push({
+      id: `PAT-HOS-${yymm(m.period)}`,
+      problem: 14,
+      title: `Hoshi rounded line totals down to ¥${hParams.hoshiRoundingYen.toLocaleString("en-US")}`,
+      kind: "source_disagreement",
+      objectId: m.invoice.id,
+      relatedIds: ["HR2", m.po.id],
+      period: m.period,
+      supplierId: "S-HOS",
+      impactUSDCents: usdOf(ctx, diffs.reduce((a, b) => a + b, 0), "JPY", m.invoice.date),
+      dispositions: { cold: "escalate", withRules: "info" },
+      expectedHandling: "Known Hoshi rounding: log as info, pay the invoiced amount.",
     });
   }
 
@@ -572,6 +642,14 @@ export function generate(seed: number = DEFAULT_SEED): World {
     });
   for (const f of afterCustoms) f(customsEntries);
 
+  const monthlySpend = Object.fromEntries(
+    Object.values(suppliers).map((sup) => [
+      sup.id,
+      months.filter((m) => m.supplier.id === sup.id && m.period === "2026-03").reduce((a, m) => a + usdOf(ctx, m.invoice.totalMinor, m.invoice.currency, m.invoice.date), 0),
+    ]),
+  );
+  const { history, hiddenRules, decoys } = generateHistory(historyRng, hParams, monthlySpend);
+
   const byDateThenId = <T extends { date: string; id: string }>(xs: T[]) => xs.sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id));
   return {
     seed,
@@ -588,12 +666,16 @@ export function generate(seed: number = DEFAULT_SEED): World {
     bank: { account: "1000", openingBalanceCents: parseMoney(openingCash(), "USD"), asOf: "2026-02-28", transactions: [] },
     sales,
     inbox: [],
+    history,
     answerKey: {
       seed,
       window: SIM_WINDOW,
       entries: entries.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true })),
       cleanSuppliers: ["S-NW"],
       deferredProblems: [3, 7, 8, 9, 10, 11],
+      hiddenRules,
+      decoys,
+      historyParams: hParams,
     },
   };
 }
@@ -615,6 +697,10 @@ export function serializeWorld(w: World): Record<string, string> {
     "data/bank/bank.json": doc(w.bank),
     "data/erp/sales-summary.json": doc(w.sales),
     "data/inbox/messages.json": doc(w.inbox),
+    "data/history/exceptions.json": doc(w.history.exceptions),
+    "data/history/incidents.json": doc(w.history.incidents),
+    "data/history/memos.json": doc(w.history.memos),
+    "data/history/volumes.json": doc(w.history.volumes),
     "data/answer_key.json": JSON.stringify(w.answerKey, null, 2) + "\n",
   };
 }
