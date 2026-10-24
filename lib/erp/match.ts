@@ -4,7 +4,7 @@
 
 import controls from "@/data/controls.json";
 import { convert, type RateTable } from "@/lib/costing/fx";
-import { type Currency, exponentOf, lineAmount } from "@/lib/money";
+import { type Currency, exponentOf, formatUnitPrice, lineAmount } from "@/lib/money";
 import type { Contract, ContractPrice, Invoice, ISODate, PackingSlip, PO, Receipt } from "./types";
 
 /** Price tolerance: the larger of 1% of the expected price or $0.05/unit. */
@@ -277,9 +277,9 @@ export function threeWayMatch(input: MatchInput): MatchResult {
         systemOfRecord: priceSource,
       };
       if (diffE4 > 0) {
-        hold({ ...d, kind: "price_over_tolerance", note: `invoiced above ${priceRef} beyond tolerance` });
+        hold({ ...d, kind: "price_over_tolerance", note: `invoiced ${invoice.currency} ${formatUnitPrice(line.unitPriceE4)} vs ${formatUnitPrice(expectedE4)} under ${priceRef} on ${line.qty.toLocaleString("en-US")} units, beyond tolerance` });
       } else {
-        info({ ...d, kind: "favorable_price", note: `invoiced below ${priceRef}; supplier may re-bill` });
+        info({ ...d, kind: "favorable_price", note: `invoiced ${invoice.currency} ${formatUnitPrice(line.unitPriceE4)} vs ${formatUnitPrice(expectedE4)} under ${priceRef}; supplier may re-bill` });
       }
     }
   });

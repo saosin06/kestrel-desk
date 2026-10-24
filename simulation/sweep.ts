@@ -70,7 +70,7 @@ export function sweep(world: World): Finding[] {
     const at = { date: inv.date, period, supplierId: inv.supplierId };
     const supplier = suppliers[inv.supplierId];
     if (!supplier) {
-      add({ ...at, kind: "unknown_supplier", objectId: inv.id, source: "integrity", detail: `"${inv.supplierName}" is not in the vendor master`, evidence: { path: [inv.id, `supplier "${inv.supplierName}"`, "vendor master: no match"], systemOfRecord: "vendor master (data/vendors.json)" } });
+      add({ ...at, kind: "unknown_supplier", objectId: inv.id, impactUSDCents: convert(fx, inv.totalMinor, inv.currency, "USD", inv.date).amountMinor, source: "integrity", detail: `"${inv.supplierName}" is not in the vendor master`, evidence: { path: [inv.id, `supplier "${inv.supplierName}"`, "vendor master: no match"], systemOfRecord: "vendor master (data/vendors.json)" } });
       continue;
     }
     const po = world.pos.find((p) => p.id === inv.poId);
@@ -82,7 +82,7 @@ export function sweep(world: World): Finding[] {
     const dups = findDuplicates(inv, seen);
     seen.push(inv);
     if (dups.length > 0) {
-      add({ ...at, kind: "duplicate_invoice", objectId: inv.id, source: "duplicate", detail: `same bill as ${dups.map((d) => d.id).join(", ")}`, evidence: { path: [inv.id, `invoice no. ${inv.invoiceNo}`, ...dups.map((d) => `${d.id} (invoice no. ${d.invoiceNo})`)], ruleRef: "Duplicate guard: same supplier + amount + invoice number after stripping re-send suffixes", systemOfRecord: "AP subledger" } });
+      add({ ...at, kind: "duplicate_invoice", objectId: inv.id, impactUSDCents: convert(fx, inv.totalMinor, inv.currency, "USD", inv.date).amountMinor, source: "duplicate", detail: `same bill as ${dups.map((d) => d.id).join(", ")}`, evidence: { path: [inv.id, `invoice no. ${inv.invoiceNo}`, ...dups.map((d) => `${d.id} (invoice no. ${d.invoiceNo})`)], ruleRef: "Duplicate guard: same supplier + amount + invoice number after stripping re-send suffixes", systemOfRecord: "AP subledger" } });
     }
 
     const result = threeWayMatch({
@@ -114,7 +114,7 @@ export function sweep(world: World): Finding[] {
         ruleRef: d.ruleRef,
         systemOfRecord: d.systemOfRecord,
       };
-      add({ ...at, kind: MATCH_HOLD_KIND[d.kind], objectId: inv.id, partId: d.partId, diffKind: d.kind, source: "match", impactUSDCents: impact, attrs, detail: `${d.kind}: ${d.note}`, evidence });
+      add({ ...at, kind: MATCH_HOLD_KIND[d.kind], objectId: inv.id, partId: d.partId, diffKind: d.kind, source: "match", impactUSDCents: impact, attrs, detail: d.note, evidence });
     }
     if (result.status === "match" && dups.length === 0) accepted.set(po.id, [...(accepted.get(po.id) ?? []), inv]);
 

@@ -1,29 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Shell } from "@/components/shell";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "Kestrel Desk",
-  description: "Autonomous procure-to-pay desk for Kestrel Aerial (simulated company)",
+  title: { default: "Kestrel Desk", template: "%s · Kestrel Desk" },
+  description: "Disbursements desk for Kestrel Aerial (simulated company)",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      <body>
+        <Providers>
+          <Shell>{children}</Shell>
+        </Providers>
+      </body>
     </html>
   );
 }

@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
+/* Kestrel back office — quiet, dense, ledger-like. Light only. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --page: #f4f5f7;
+  --panel: #ffffff;
+  --subtle: #f8f9fa;
+  --border: #e3e6ea;
+  --border-strong: #cdd2d9;
+  --ink: #141820;
+  --ink-2: #48515e;
+  --muted: #7b8492;
+  --accent: #1f3a68;
+  --link: #1d5bb8;
+  --focus: #2a78d6;
+  --crit: #b42318; --crit-bg: #fdf2f1;
+  --warn: #9a4a06; --warn-bg: #fdf6e9;
+  --good: #0b6b3a; --good-bg: #eef8f2;
+  --info: #1d5bb8; --info-bg: #eef4fc;
+  --neutral: #48515e; --neutral-bg: #f1f3f5;
+  --series-cold: #eb6834;
+  --series-learned: #2a78d6;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-page: var(--page);
+  --color-panel: var(--panel);
+  --color-subtle: var(--subtle);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-link: var(--link);
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html { color-scheme: light; }
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+
+.num { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.id { font-family: var(--font-mono); font-size: 12px; white-space: nowrap; }
+
+/* Tables */
+.tbl { width: 100%; border-collapse: collapse; }
+.tbl th {
+  text-align: left; font-weight: 600; font-size: 11px; letter-spacing: 0.02em; text-transform: uppercase;
+  color: var(--muted); background: var(--subtle); border-bottom: 1px solid var(--border);
+  padding: 7px 10px; white-space: nowrap;
+}
+.tbl th.num { text-align: right; }
+.tbl td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.tbl tbody tr:last-child td { border-bottom: 0; }
+.tbl tbody tr:hover td { background: #fafbfc; }
+.tbl tfoot td { border-top: 1px solid var(--border-strong); font-weight: 600; padding: 7px 10px; }
+
+/* Controls */
+.btn {
+  display: inline-flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px;
+  border: 1px solid var(--border-strong); border-radius: 4px; background: var(--panel);
+  color: var(--ink); font-size: 12px; font-weight: 500; cursor: pointer; white-space: nowrap;
+}
+.btn:hover { background: var(--subtle); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-primary:hover { background: #18304f; }
+.input, .select {
+  height: 26px; padding: 0 8px; border: 1px solid var(--border-strong); border-radius: 4px;
+  background: var(--panel); color: var(--ink); font-size: 12px;
 }
