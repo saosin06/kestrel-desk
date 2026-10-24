@@ -1,0 +1,18 @@
+{
+  "source": "Kestrel Aerial chart of accounts (simulated company)",
+  "accounts": [
+    { "code": "1000", "name": "Cash — operating", "type": "asset" },
+    { "code": "1200", "name": "Inventory — raw materials at standard cost", "type": "asset" },
+    { "code": "1300", "name": "Supplier debit memos receivable", "type": "asset" },
+    { "code": "2000", "name": "Accounts payable — trade", "type": "liability" },
+    { "code": "2050", "name": "Accounts payable — customs broker", "type": "liability" },
+    { "code": "2100", "name": "GRNI accrual (goods received not invoiced)", "type": "liability" },
+    { "code": "3000", "name": "Retained earnings", "type": "equity" },
+    { "code": "4000", "name": "Revenue — K2 units", "type": "revenue" },
+    { "code": "5000", "name": "Cost of goods sold — standard", "type": "expense" },
+    { "code": "5100", "name": "Purchase price variance", "type": "expense" },
+    { "code": "5110", "name": "Duty and freight variance", "type": "expense" },
+    { "code": "5200", "name": "Realized FX gain/loss", "type": "expense" },
+    { "code": "5210", "name": "Unrealized FX gain/loss", "type": "expense" }
+  ]
+}
