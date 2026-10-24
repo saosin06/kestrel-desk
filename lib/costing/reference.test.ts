@@ -50,6 +50,7 @@ describe("LC1 landed cost with a real HTS rate", () => {
       id: "INV-LC1",
       invoiceNo: "LC1",
       supplierId: "S-KR",
+      supplierName: "test importer",
       date: "2026-04-15",
       currency: "USD",
       lines: [{ partId: "P06", description: "battery", qty: 500, unitPriceE4: 420_000, amountMinor: 2_100_000 }],

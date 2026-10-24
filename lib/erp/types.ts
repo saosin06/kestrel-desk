@@ -117,7 +117,10 @@ export type Invoice = {
   id: string;
   /** Supplier's own invoice number as printed. */
   invoiceNo: string;
+  /** Vendor-master id, or UNREGISTERED_SUPPLIER when the name matches no vendor. */
   supplierId: string;
+  /** Supplier name as printed on the invoice. */
+  supplierName: string;
   poId?: string;
   date: ISODate;
   currency: Currency;
@@ -141,6 +144,7 @@ export type CertificateOfOrigin = {
 export type CustomsEntryLine = {
   invoiceLineIndex: number;
   hts: string;
+  countryOfOrigin: string;
   valueUSDCents: number;
   dutyRateBp: number;
   dutyUSDCents: number;
@@ -149,6 +153,7 @@ export type CustomsEntryLine = {
 export type CustomsEntry = {
   id: string;
   invoiceId: string;
+  date: ISODate;
   lines: CustomsEntryLine[];
   brokerFeeUSDCents: number;
   totalUSDCents: number;
@@ -198,6 +203,7 @@ export type CaseKind =
   | "fx_variance"
   | "grni_accrual"
   | "unknown_supplier"
+  | "missing_document"
   | "source_disagreement";
 
 export type CaseStatus = "open" | "awaiting_approval" | "on_hold" | "resolved" | "dismissed";
@@ -236,6 +242,29 @@ export type Request<P = unknown> = {
   payload: P;
   status: "pending" | "approved" | "rejected" | "expired";
 };
+
+export const UNREGISTERED_SUPPLIER = "UNREGISTERED";
+
+/** Vendor master: the system of record for where money goes. */
+export type VendorRecord = {
+  supplierId: string;
+  legalName: string;
+  remitTo: { id: string; bankName: string; accountLast4: string; routingLast4: string };
+  verifiedOn: ISODate;
+  verifiedBy: string;
+};
+
+export type InboxMessage = {
+  id: string;
+  date: ISODate;
+  from: string;
+  to: string;
+  subject: string;
+  body: string;
+  refs: string[];
+};
+
+export type ProductionPlanLine = { period: PeriodId; productId: string; units: number };
 
 // ---- General ledger ----
 

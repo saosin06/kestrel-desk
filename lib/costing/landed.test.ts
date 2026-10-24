@@ -58,6 +58,7 @@ function invoice(supplier: Supplier, lines: InvoiceLine[]): Invoice {
     id: "INV-T",
     invoiceNo: "T-1",
     supplierId: supplier.id,
+    supplierName: supplier.name,
     date: "2026-04-01",
     currency: supplier.currency,
     lines,
@@ -133,7 +134,8 @@ describe("LC4 duty overcharge from a wrong HTS band", () => {
     const entry: CustomsEntry = {
       id: "CE-7",
       invoiceId: "INV-T",
-      lines: [{ invoiceLineIndex: 0, hts: "7318.15.80", valueUSDCents: 200_000, dutyRateBp: 850, dutyUSDCents: 17_000 }],
+      date: "2026-04-01",
+      lines: [{ invoiceLineIndex: 0, hts: "7318.15.80", countryOfOrigin: "TW", valueUSDCents: 200_000, dutyRateBp: 850, dutyUSDCents: 17_000 }],
       brokerFeeUSDCents: 15_000,
       totalUSDCents: 32_000,
     };
@@ -212,7 +214,8 @@ describe("LC9 unexplained duty gap", () => {
     const entry: CustomsEntry = {
       id: "CE-9",
       invoiceId: "INV-T",
-      lines: [{ invoiceLineIndex: 0, hts: "8537.10.91", valueUSDCents: 1_000_000, dutyRateBp: 2_770, dutyUSDCents: 277_000 }],
+      date: "2026-04-01",
+      lines: [{ invoiceLineIndex: 0, hts: "8537.10.91", countryOfOrigin: "CN", valueUSDCents: 1_000_000, dutyRateBp: 2_770, dutyUSDCents: 277_000 }],
       brokerFeeUSDCents: 0,
       totalUSDCents: 277_000,
     };
@@ -227,7 +230,8 @@ describe("LC9 unexplained duty gap", () => {
     const entry: CustomsEntry = {
       id: "CE-1",
       invoiceId: "INV-T",
-      lines: [{ invoiceLineIndex: 0, hts: "8507.60.00", valueUSDCents: 2_100_000, dutyRateBp: 340, dutyUSDCents: 71_401 }],
+      date: "2026-04-01",
+      lines: [{ invoiceLineIndex: 0, hts: "8507.60.00", countryOfOrigin: "TW", valueUSDCents: 2_100_000, dutyRateBp: 340, dutyUSDCents: 71_401 }],
       brokerFeeUSDCents: 0,
       totalUSDCents: 71_401,
     };
@@ -258,7 +262,8 @@ describe("LC12 broker's declared value is checked, not trusted", () => {
     const entry: CustomsEntry = {
       id: "CE-12",
       invoiceId: "INV-T",
-      lines: [{ invoiceLineIndex: 0, hts: "8507.60.00", valueUSDCents: 2_300_000, dutyRateBp: 340, dutyUSDCents: 78_200 }],
+      date: "2026-04-01",
+      lines: [{ invoiceLineIndex: 0, hts: "8507.60.00", countryOfOrigin: "TW", valueUSDCents: 2_300_000, dutyRateBp: 340, dutyUSDCents: 78_200 }],
       brokerFeeUSDCents: 0,
       totalUSDCents: 78_200,
     };

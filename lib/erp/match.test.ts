@@ -23,6 +23,7 @@ function invoice(id: string, lines: InvoiceLine[], extra: Partial<Invoice> = {})
     id,
     invoiceNo: id,
     supplierId: "S-ATL",
+    supplierName: "Atlas Motors",
     poId: "PO-311",
     date: "2026-04-15",
     currency: "USD",
