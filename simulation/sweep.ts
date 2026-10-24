@@ -13,12 +13,15 @@ import { type DiffKind, findDuplicates, threeWayMatch } from "@/lib/erp/match";
 import type { CaseKind, CompliancePolicy, Invoice } from "@/lib/erp/types";
 import { lineAmount } from "@/lib/money";
 import type { FindingFacts } from "@/lib/rules/types";
+import { type PayrollFinding, payrollSweep } from "./payrollSweep";
 import type { World } from "./world";
 
-export type Finding = FindingFacts & {
-  source: "integrity" | "duplicate" | "match" | "compliance" | "customs";
-  detail: string;
-};
+export type Finding =
+  | (FindingFacts & {
+      source: "integrity" | "duplicate" | "match" | "compliance" | "customs";
+      detail: string;
+    })
+  | PayrollFinding;
 
 const MATCH_HOLD_KIND: Record<DiffKind, CaseKind> = {
   price_over_tolerance: "price_variance_vs_contract",
@@ -157,5 +160,5 @@ export function sweep(world: World): Finding[] {
       }
     }
   }
-  return findings;
+  return [...findings, ...payrollSweep(world.payroll)];
 }

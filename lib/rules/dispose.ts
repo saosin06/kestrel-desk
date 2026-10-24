@@ -12,7 +12,7 @@ export const RECURRING_COUNT = controls.recurringCountForMateriality;
 const MATERIALITY_GATED: ReadonlySet<CaseKind> = new Set(["price_variance_vs_contract", "duty_overcharge", "fx_variance", "grni_accrual"]);
 
 /** Kinds a loosening rule may touch. Compliance, bank/remittance, duplicates and unknown suppliers never. */
-const LOOSENABLE: ReadonlySet<CaseKind> = new Set(["qty_mismatch", "price_variance_vs_contract", "duty_overcharge", "fx_variance", "source_disagreement"]);
+const LOOSENABLE: ReadonlySet<CaseKind> = new Set(["qty_mismatch", "price_variance_vs_contract", "duty_overcharge", "fx_variance", "source_disagreement", "hours_mismatch"]);
 /** For source_disagreement, only arithmetic-only gaps are loosenable. */
 const LOOSENABLE_DIFFS: ReadonlySet<string> = new Set(["line_amount_mismatch"]);
 
@@ -39,6 +39,7 @@ function matches(rule: InternalRule, f: FindingFacts): boolean {
   if (s.diffKind && s.diffKind !== f.diffKind) return false;
   if (s.supplierId && s.supplierId !== f.supplierId) return false;
   if (s.partId && s.partId !== f.partId) return false;
+  if (s.department && s.department !== f.department) return false;
   if (s.currency && s.currency !== f.attrs.currency) return false;
   if (s.effectiveFrom && f.date < s.effectiveFrom) return false;
   if (s.attr) {
@@ -49,7 +50,7 @@ function matches(rule: InternalRule, f: FindingFacts): boolean {
 }
 
 /** More specific rules win: part > supplier > any. */
-const specificity = (r: InternalRule) => (r.scope.partId ? 4 : 0) + (r.scope.supplierId ? 2 : 0) + (r.scope.diffKind ? 1 : 0);
+const specificity = (r: InternalRule) => (r.scope.partId ? 4 : 0) + (r.scope.supplierId || r.scope.department ? 2 : 0) + (r.scope.diffKind ? 1 : 0);
 
 export function dispose(findings: readonly FindingFacts[], rules: readonly InternalRule[] = []): Decision[] {
   const approved = rules.filter((r) => r.status === "approved").sort((a, b) => specificity(b) - specificity(a));
@@ -58,7 +59,7 @@ export function dispose(findings: readonly FindingFacts[], rules: readonly Inter
   const monthsSeen = new Map<string, Set<number>>();
 
   return ordered.map((f) => {
-    const recurKey = `${f.supplierId}|${f.kind}|${f.partId}`;
+    const recurKey = `${f.supplierId ?? f.department}|${f.kind}|${f.partId ?? f.employeeId}`;
     const count = (occurrences.get(recurKey) ?? 0) + 1;
     occurrences.set(recurKey, count);
     const streakKey = `${recurKey}|${f.diffKind}`;

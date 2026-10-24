@@ -204,7 +204,18 @@ export type CaseKind =
   | "grni_accrual"
   | "unknown_supplier"
   | "missing_document"
-  | "source_disagreement";
+  | "source_disagreement"
+  // payroll
+  | "ghost_employee"
+  | "terminated_paid"
+  | "pay_rate_mismatch"
+  | "overtime_error"
+  | "payroll_tax_error"
+  | "deduction_limit"
+  | "direct_deposit_change_unverified"
+  | "state_registration_missing"
+  | "duplicate_payment"
+  | "hours_mismatch";
 
 export type CaseStatus = "open" | "awaiting_approval" | "on_hold" | "resolved" | "dismissed";
 

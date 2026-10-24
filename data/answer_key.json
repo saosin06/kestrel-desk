@@ -489,6 +489,35 @@
       "discoverableBy": "statistics"
     },
     {
+      "id": "HR5",
+      "statement": "Production supervisors fix late punches after approval: accept register hours up to 0.15 h over the approved timesheet.",
+      "scope": {
+        "kind": "hours_mismatch",
+        "diffKind": "hours_mismatch",
+        "department": "Production",
+        "attr": "hoursDiffE2",
+        "maxAttr": 15
+      },
+      "action": {
+        "type": "info"
+      },
+      "source": "statistics",
+      "discoverableBy": "statistics"
+    },
+    {
+      "id": "HR6",
+      "statement": "Employee direct-deposit changes come only through HRIS self-service verified by HR; an email asking for a new account is held and escalated.",
+      "scope": {
+        "kind": "direct_deposit_change_unverified"
+      },
+      "action": {
+        "type": "route_to",
+        "role": "controller"
+      },
+      "source": "memo",
+      "discoverableBy": "memo"
+    },
+    {
       "id": "HR4",
       "statement": "Remit-to changes are verified by calling the supplier on the number on file, then a vendor-change request to the controller; never from email.",
       "scope": {
@@ -507,34 +536,43 @@
       "id": "D1",
       "description": "Vireo late fees accepted twice — too little support to be a rule",
       "evidence": [
-        "HX-0032",
-        "HX-0033"
+        "HX-0043",
+        "HX-0044"
       ]
     },
     {
       "id": "D2",
       "description": "Ridgeline year-end price accepted twice — explicitly one-off",
       "evidence": [
-        "HX-0034",
-        "HX-0035"
+        "HX-0045",
+        "HX-0046"
       ]
     },
     {
       "id": "D3",
       "description": "Northwind freight lines — mixed outcomes, depends on who asked for expediting",
       "evidence": [
-        "HX-0036",
-        "HX-0037",
-        "HX-0038",
-        "HX-0039",
-        "HX-0040"
+        "HX-0047",
+        "HX-0048",
+        "HX-0049",
+        "HX-0050",
+        "HX-0051"
+      ]
+    },
+    {
+      "id": "D5",
+      "description": "Sales commission adjustments accepted three times — too little support to be a rule",
+      "evidence": [
+        "HX-0052",
+        "HX-0053",
+        "HX-0054"
       ]
     },
     {
       "id": "D4",
       "description": "Trap: Dana approved an emailed bank change once; it was a near-miss. Never a rule to approve bank changes.",
       "evidence": [
-        "HX-0041"
+        "HX-0055"
       ]
     }
   ],
@@ -542,6 +580,256 @@
     "p14ToleranceBp": 60,
     "p14MemoDate": "2025-09-15",
     "hoshiRoundingYen": 100,
-    "cascadeRecounts": 7
-  }
+    "cascadeRecounts": 7,
+    "punchToleranceE2": 15
+  },
+  "payroll": [
+    {
+      "id": "PR-01",
+      "problem": 15,
+      "title": "Ghost employee in the preview register",
+      "kind": "ghost_employee",
+      "objectId": "RUN-2026-04-17/E-9107",
+      "relatedIds": [
+        "E-0122",
+        "BA-14514",
+        "RUN-2026-04-17"
+      ],
+      "period": "2026-04",
+      "employeeId": "E-9107",
+      "department": "Production",
+      "impactUSDCents": 205066,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
+      "expectedHandling": "Hold the line; E-9107 isn't in the HRIS and is paid into Omar Xu's account (…4118). Escalate to the controller and HR; never pay a person HR hasn't hired."
+    },
+    {
+      "id": "PR-02",
+      "problem": 15,
+      "title": "Terminated employee still paid",
+      "kind": "terminated_paid",
+      "objectId": "RUN-2026-05-29/E-0018",
+      "relatedIds": [
+        "E-0018",
+        "RUN-2026-05-29"
+      ],
+      "period": "2026-05",
+      "employeeId": "E-0018",
+      "department": "Production",
+      "impactUSDCents": 203400,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
+      "expectedHandling": "Hold; HRIS shows Grace Fujita terminated 2026-05-08, before the period started 2026-05-11. No approved timesheet."
+    },
+    {
+      "id": "PR-03",
+      "problem": 15,
+      "title": "Raise not applied",
+      "kind": "pay_rate_mismatch",
+      "objectId": "RUN-2026-06-26/E-0043",
+      "relatedIds": [
+        "E-0043",
+        "RUN-2026-06-26"
+      ],
+      "period": "2026-06",
+      "employeeId": "E-0043",
+      "department": "Production",
+      "impactUSDCents": 20000,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
+      "expectedHandling": "Underpayment: HRIS raise to $36.00/h effective 2026-06-08 (period start). Correct before approval or pay the difference off-cycle."
+    },
+    {
+      "id": "PR-04",
+      "problem": 15,
+      "title": "Overtime paid at straight time",
+      "kind": "overtime_error",
+      "objectId": "RUN-2026-07-24/E-0235",
+      "relatedIds": [
+        "E-0235",
+        "RUN-2026-07-24"
+      ],
+      "period": "2026-07",
+      "employeeId": "E-0235",
+      "department": "Field Service",
+      "impactUSDCents": 17750,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
+      "expectedHandling": "FLSA exposure: 50 h in week one owes 10 h at 1.5×, even though the period totals 80 h. Correct before approval.",
+      "note": "Withholding on the provider line is left as the provider computed it on the correct gross; the gross/OT gap is the finding."
+    },
+    {
+      "id": "PR-05",
+      "problem": 15,
+      "title": "Social Security withheld past the $184,500 wage base",
+      "kind": "payroll_tax_error",
+      "objectId": "RUN-2026-05-29/E-0411",
+      "relatedIds": [
+        "E-0411",
+        "RUN-2026-05-29"
+      ],
+      "period": "2026-05",
+      "employeeId": "E-0411",
+      "department": "Executive",
+      "impactUSDCents": 106993,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
+      "expectedHandling": "Over-withheld (employee and employer share). Only the wages up to the base are taxable this run (Pub 15 2026 p.29). Correct before approval."
+    },
+    {
+      "id": "PR-06",
+      "problem": 15,
+      "title": "401(k) deferral past the $24,500 limit",
+      "kind": "deduction_limit",
+      "objectId": "RUN-2026-06-26/E-0389",
+      "relatedIds": [
+        "E-0389",
+        "RUN-2026-06-26"
+      ],
+      "period": "2026-06",
+      "employeeId": "E-0389",
+      "department": "Sales",
+      "impactUSDCents": 190001,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
+      "expectedHandling": "Excess deferral (employee under 50, no catch-up). Cap the deferral at the remaining room; excess must not reach the plan."
+    },
+    {
+      "id": "PR-08",
+      "problem": 15,
+      "title": "Employee now works in Oregon; Kestrel isn't registered there",
+      "kind": "state_registration_missing",
+      "objectId": "E-0347",
+      "relatedIds": [
+        "RUN-2026-06-26",
+        "E-0347"
+      ],
+      "period": "2026-06",
+      "employeeId": "E-0347",
+      "department": "Operations",
+      "impactUSDCents": 0,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
+      "expectedHandling": "Escalate to the controller and HR: Oregon withholding and registration aren't set up. Don't compute Oregon tax; don't ignore it."
+    },
+    {
+      "id": "PR-09",
+      "problem": 15,
+      "title": "Off-cycle reissue paid again in the regular run",
+      "kind": "duplicate_payment",
+      "objectId": "RUN-2026-07-10/E-0089",
+      "relatedIds": [
+        "RUN-2026-07-08-OC",
+        "E-0089"
+      ],
+      "period": "2026-07",
+      "employeeId": "E-0089",
+      "department": "Production",
+      "impactUSDCents": 154974,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
+      "expectedHandling": "Remove the line from the regular run (already paid by the Jul 8 off-cycle reissue). Never pay the same period twice."
+    },
+    {
+      "id": "PAT-PUNCH-1",
+      "problem": 15,
+      "title": "Register hours differ from the approved timesheet by a late-punch correction",
+      "kind": "hours_mismatch",
+      "objectId": "RUN-2026-04-17/E-0006",
+      "relatedIds": [
+        "E-0006",
+        "RUN-2026-04-17",
+        "HR5"
+      ],
+      "period": "2026-04",
+      "employeeId": "E-0006",
+      "department": "Production",
+      "impactUSDCents": 782,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "info"
+      },
+      "expectedHandling": "Known Production pattern: supervisor corrected a late punch after approval (≤ a quarter hour). Log as info."
+    },
+    {
+      "id": "PAT-PUNCH-2",
+      "problem": 15,
+      "title": "Register hours differ from the approved timesheet by a late-punch correction",
+      "kind": "hours_mismatch",
+      "objectId": "RUN-2026-06-12/E-0072",
+      "relatedIds": [
+        "E-0072",
+        "RUN-2026-06-12",
+        "HR5"
+      ],
+      "period": "2026-06",
+      "employeeId": "E-0072",
+      "department": "Production",
+      "impactUSDCents": 540,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "info"
+      },
+      "expectedHandling": "Known Production pattern: supervisor corrected a late punch after approval (≤ a quarter hour). Log as info."
+    },
+    {
+      "id": "PAT-PUNCH-3",
+      "problem": 15,
+      "title": "Register hours differ from the approved timesheet by a late-punch correction",
+      "kind": "hours_mismatch",
+      "objectId": "RUN-2026-08-07/E-0151",
+      "relatedIds": [
+        "E-0151",
+        "RUN-2026-08-07",
+        "HR5"
+      ],
+      "period": "2026-08",
+      "employeeId": "E-0151",
+      "department": "Production",
+      "impactUSDCents": 568,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "info"
+      },
+      "expectedHandling": "Known Production pattern: supervisor corrected a late punch after approval (≤ a quarter hour). Log as info."
+    },
+    {
+      "id": "PR-07",
+      "problem": 15,
+      "title": "Direct-deposit change by email the day before payday",
+      "kind": "direct_deposit_change_unverified",
+      "objectId": "MSG-2026-07-23-DD",
+      "relatedIds": [
+        "E-0061",
+        "RUN-2026-07-24",
+        "MEMO-2025-11"
+      ],
+      "period": "2026-07",
+      "employeeId": "E-0061",
+      "department": "Production",
+      "impactUSDCents": 210694,
+      "dispositions": {
+        "cold": "escalate",
+        "withRules": "escalate"
+      },
+      "detectedBy": "agent",
+      "expectedHandling": "Hold; never edit bank details from email. Sender domain kestrel-aerial.co isn't Kestrel's. Pay to the HRIS account on file; HR verifies via HRIS self-service and a callback (memo after the 2025 near-miss)."
+    }
+  ]
 }

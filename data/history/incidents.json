@@ -9,7 +9,7 @@
       "title": "Near-miss: remit-to change from a spoofed Hoshi email",
       "narrative": "On Nov 11 we updated Hoshi's bank details from an emailed request. Before the Nov 14 payment run, our bank flagged that the new account's name didn't match Hoshi Optics K.K. A call to Hoshi's AR contact (number on file) confirmed they had sent nothing. Payment of ¥31.6M stopped; vendor master restored.",
       "refs": [
-        "HX-0041"
+        "HX-0055"
       ]
     }
   ]

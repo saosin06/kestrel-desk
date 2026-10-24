@@ -14,6 +14,7 @@ function expected(w: World, mode: "cold" | "withRules"): Record<string, Disposit
     out[`${e.kind} ${e.objectId}`] = e.dispositions[mode];
     for (const s of e.secondary ?? []) out[`${s.kind} ${e.objectId}`] = s[mode];
   }
+  for (const e of w.answerKey.payroll.filter((e) => e.detectedBy !== "agent")) out[`${e.kind} ${e.objectId}`] = e.dispositions[mode];
   return out;
 }
 const actual = (decisions: ReturnType<typeof dispose>) => Object.fromEntries(decisions.map((d) => [`${d.kind} ${d.objectId}`, d.disposition]));

@@ -22,7 +22,7 @@
       "date": "2025-11-20",
       "from": "controller",
       "subject": "Bank detail changes — new rule after the Hoshi near-miss",
-      "body": "No remit-to change goes into the vendor master from an email, ever. AP calls the supplier on the number already on file, documents the call, and sends me a vendor-change request. I approve; AP never edits the vendor master."
+      "body": "No remit-to change goes into the vendor master from an email, ever. AP calls the supplier on the number already on file, documents the call, and sends me a vendor-change request. I approve; AP never edits the vendor master. Same for employees: direct-deposit changes only through HRIS self-service, verified by HR — never from an email to payroll."
     }
   ]
 }

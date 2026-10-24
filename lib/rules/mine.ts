@@ -15,9 +15,14 @@ const NEVER_LEARNABLE: ReadonlySet<CaseKind> = new Set([
   "remittance_change_unverified",
   "duplicate_invoice",
   "unknown_supplier",
+  "ghost_employee",
+  "terminated_paid",
+  "direct_deposit_change_unverified",
+  "duplicate_payment",
+  "state_registration_missing",
 ]);
 
-const ATTR_FOR: Partial<Record<string, RuleAttr>> = { qty_mismatch: "qtyVarianceBp", line_amount_mismatch: "lineDiffMinor" };
+const ATTR_FOR: Partial<Record<string, RuleAttr>> = { qty_mismatch: "qtyVarianceBp", line_amount_mismatch: "lineDiffMinor", hours_mismatch: "hoursDiffE2" };
 
 const monthIndex = (date: ISODate) => Number(date.slice(0, 4)) * 12 + Number(date.slice(5, 7));
 
@@ -44,8 +49,9 @@ function groups(history: readonly HistoryException[]): Group[] {
   };
   for (const e of history) {
     if (NEVER_LEARNABLE.has(e.kind)) continue;
-    const base = { kind: e.kind, diffKind: e.diffKind, supplierId: e.supplierId, ...(e.attrs.currency ? { currency: e.attrs.currency } : {}) };
-    add(`${e.supplierId}|${e.kind}|${e.diffKind}|*`, base, e);
+    const owner = e.supplierId ? { supplierId: e.supplierId } : e.department ? { department: e.department } : {};
+    const base = { kind: e.kind, diffKind: e.diffKind, ...owner, ...(e.attrs.currency ? { currency: e.attrs.currency } : {}) };
+    add(`${e.supplierId ?? e.department}|${e.kind}|${e.diffKind}|*`, base, e);
     if (e.partId) add(`${e.supplierId}|${e.kind}|${e.diffKind}|${e.partId}`, { ...base, partId: e.partId }, e);
   }
   return [...out.values()];
@@ -58,7 +64,8 @@ function candidate(g: Group): InternalRule | null {
   const accepted = count("accepted");
   const recounts = count("recount_corrected");
   const ids = events.map((e) => e.id);
-  const scopeKey = `${g.scope.supplierId}${g.scope.partId ? "/" + g.scope.partId : ""}`;
+  const owner = g.scope.supplierId ?? g.scope.department;
+  const scopeKey = `${owner}${g.scope.partId ? "/" + g.scope.partId : ""}`;
 
   // Tightening: most of these were dock errors fixed by a recount.
   if (recounts > accepted) {
@@ -66,7 +73,7 @@ function candidate(g: Group): InternalRule | null {
     if (confidence < MIN_CONFIDENCE) return null;
     return {
       id: `R-${scopeKey}-${g.scope.kind}-recount`,
-      statement: `${g.scope.supplierId} ${g.scope.kind} findings were dock miscounts ${recounts} of ${events.length} times: request a recount before escalating.`,
+      statement: `${owner} ${g.scope.kind} findings were dock miscounts ${recounts} of ${events.length} times: request a recount before escalating.`,
       scope: g.scope,
       action: { type: "require_check", check: "recount" },
       status: "proposed",
@@ -108,7 +115,7 @@ function candidate(g: Group): InternalRule | null {
   return {
     id: `R-${scopeKey}-${g.scope.kind}-${attr}`,
     statement:
-      `Controller accepted ${accepted} of ${events.length} ${g.scope.supplierId} ${g.scope.diffKind} findings with ${attr} ≤ ${maxAttr}` +
+      `Controller accepted ${accepted} of ${events.length} ${owner} ${g.scope.diffKind} findings with ${attr} ≤ ${maxAttr}` +
       (regimeStart ? ` (since ${regimeStart})` : "") +
       (unlessConsecutiveMonths ? `, except after ${unlessConsecutiveMonths} months in a row` : "") +
       ".",
@@ -131,7 +138,7 @@ export function mineRules(history: readonly HistoryException[]): InternalRule[] 
   const all = groups(history)
     .map((g) => ({ g, rule: candidate(g) }))
     .filter((x): x is { g: Group; rule: InternalRule } => x.rule !== null);
-  const family = (x: { g: Group; rule: InternalRule }) => `${x.g.scope.supplierId}|${x.rule.scope.kind}|${x.rule.scope.diffKind}|${x.rule.action.type}`;
+  const family = (x: { g: Group; rule: InternalRule }) => `${x.g.scope.supplierId ?? x.g.scope.department}|${x.rule.scope.kind}|${x.rule.scope.diffKind}|${x.rule.action.type}`;
   const sameEvents = (a: Group, b: Group) => a.events.length === b.events.length && a.events.every((e) => b.events.includes(e));
   return all
     .filter((x) => {

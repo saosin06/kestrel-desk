@@ -33,6 +33,7 @@ import openingData from "@/data/opening-balances.json";
 import { allocate, type Currency, lineAmount, parseMoney, parseUnitPrice, pctOf } from "@/lib/money";
 import type { Disposition } from "@/lib/rules/types";
 import { type Decoy, generateHistory, type HiddenRule, type History, type HistoryParams, historyParams } from "./history";
+import { generatePayroll, type PayrollKeyEntry, type PayrollWorld } from "./payroll";
 
 export const DEFAULT_SEED = 42;
 export const SIM_WINDOW = { from: "2026-03-01", to: "2026-09-30" } as const;
@@ -131,6 +132,8 @@ export type AnswerKey = {
   /** patterns in the history that must NOT become rules */
   decoys: Decoy[];
   historyParams: HistoryParams;
+  /** payroll seat's planted problems and patterns */
+  payroll: PayrollKeyEntry[];
 };
 
 export type SalesSummary = {
@@ -180,6 +183,7 @@ export type World = {
   sales: SalesSummary[];
   inbox: InboxMessage[];
   history: History;
+  payroll: PayrollWorld;
   answerKey: AnswerKey;
 };
 
@@ -649,6 +653,7 @@ export function generate(seed: number = DEFAULT_SEED): World {
     ]),
   );
   const { history, hiddenRules, decoys } = generateHistory(historyRng, hParams, monthlySpend);
+  const payroll = generatePayroll(makeRng(seed ^ 0x2545f491), { punchToleranceE2: hParams.punchToleranceE2 }, SIM_WINDOW.from, SIM_WINDOW.to);
 
   const byDateThenId = <T extends { date: string; id: string }>(xs: T[]) => xs.sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id));
   return {
@@ -665,8 +670,9 @@ export function generate(seed: number = DEFAULT_SEED): World {
     customsEntries: byDateThenId(customsEntries),
     bank: { account: "1000", openingBalanceCents: parseMoney(openingCash(), "USD"), asOf: "2026-02-28", transactions: [] },
     sales,
-    inbox: [],
+    inbox: payroll.inbox,
     history,
+    payroll,
     answerKey: {
       seed,
       window: SIM_WINDOW,
@@ -676,6 +682,7 @@ export function generate(seed: number = DEFAULT_SEED): World {
       hiddenRules,
       decoys,
       historyParams: hParams,
+      payroll: payroll.entries,
     },
   };
 }
@@ -697,6 +704,11 @@ export function serializeWorld(w: World): Record<string, string> {
     "data/bank/bank.json": doc(w.bank),
     "data/erp/sales-summary.json": doc(w.sales),
     "data/inbox/messages.json": doc(w.inbox),
+    "data/payroll/hris.json": doc(w.payroll.employees),
+    "data/payroll/periods.json": doc(w.payroll.periods),
+    "data/payroll/opening-ytd.json": doc(w.payroll.openingYtd),
+    "data/payroll/timesheets.json": doc(w.payroll.timesheets),
+    "data/payroll/registers.json": doc(w.payroll.runs),
     "data/history/exceptions.json": doc(w.history.exceptions),
     "data/history/incidents.json": doc(w.history.incidents),
     "data/history/memos.json": doc(w.history.memos),

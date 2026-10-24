@@ -30,6 +30,8 @@ export type HistoryParams = {
   /** Hoshi rounds yen line totals down to this unit */
   hoshiRoundingYen: number;
   cascadeRecounts: number;
+  /** Production late-punch corrections accepted up to this many hundredths of an hour */
+  punchToleranceE2: number;
 };
 
 export function historyParams(rng: Rng): HistoryParams {
@@ -38,6 +40,7 @@ export function historyParams(rng: Rng): HistoryParams {
     p14MemoDate: rng.pick(["2025-09-15", "2025-10-01"]),
     hoshiRoundingYen: rng.pick([100, 1000]),
     cascadeRecounts: rng.int(6, 8),
+    punchToleranceE2: rng.pick([15, 25]),
   };
 }
 
@@ -129,6 +132,26 @@ export function generateHistory(rng: Rng, params: HistoryParams, monthlySpendUSD
     });
   });
 
+  // ---- HR5 (payroll): Production supervisors fix late punches after approval; small diffs accepted.
+  const punch = params.punchToleranceE2;
+  const punchAt = rng.int(2, 10);
+  for (let i = 0; i < 11; i++) {
+    const m = MONTHS[(i * 5) % MONTHS.length];
+    const diff = i === punchAt ? punch : rng.int(5, punch);
+    push({
+      date: day(m),
+      department: "Production",
+      employeeId: `E-${String(rng.int(1, 230)).padStart(4, "0")}`,
+      kind: "hours_mismatch",
+      diffKind: "hours_mismatch",
+      impactUSDCents: Math.round((diff / 100) * 3_000),
+      attrs: { hoursDiffE2: diff },
+      summary: `Provider register shows ${(diff / 100).toFixed(2)} h more than the approved timesheet`,
+      raisedBy: "ap_clerk",
+      resolution: { decidedBy: "controller", decision: "accepted", reason: "Shift supervisor fixed a late punch after the timesheet was approved. A few minutes — pay the corrected hours.", date: day(m, 25, 28) },
+    });
+  }
+
   // ---- Decoys
   const decoys: Decoy[] = [];
   {
@@ -185,6 +208,23 @@ export function generateHistory(rng: Rng, params: HistoryParams, monthlySpendUSD
       }),
     );
     decoys.push({ id: "D3", description: "Northwind freight lines — mixed outcomes, depends on who asked for expediting", evidence: ev.map((e) => e.id) });
+  }
+  {
+    const ev = ["2025-06", "2025-12", "2026-02"].map((m) =>
+      push({
+        date: day(m),
+        department: "Sales",
+        employeeId: `E-${String(rng.int(386, 410)).padStart(4, "0")}`,
+        kind: "source_disagreement",
+        diffKind: "manual_adjustment",
+        impactUSDCents: rng.int(20, 90) * 10_000,
+        attrs: {},
+        summary: "Manual commission adjustment added to the register",
+        raisedBy: "ap_clerk",
+        resolution: { decidedBy: "controller", decision: "accepted", reason: "Quarter-end commission true-up — Raj sent the calc. Fine.", date: day(m, 25, 28) },
+      }),
+    );
+    decoys.push({ id: "D5", description: "Sales commission adjustments accepted three times — too little support to be a rule", evidence: ev.map((e) => e.id) });
   }
   const trap = push({
     date: "2025-11-10",
@@ -258,7 +298,7 @@ export function generateHistory(rng: Rng, params: HistoryParams, monthlySpendUSD
       date: "2025-11-20",
       from: "controller",
       subject: "Bank detail changes — new rule after the Hoshi near-miss",
-      body: "No remit-to change goes into the vendor master from an email, ever. AP calls the supplier on the number already on file, documents the call, and sends me a vendor-change request. I approve; AP never edits the vendor master.",
+      body: "No remit-to change goes into the vendor master from an email, ever. AP calls the supplier on the number already on file, documents the call, and sends me a vendor-change request. I approve; AP never edits the vendor master. Same for employees: direct-deposit changes only through HRIS self-service, verified by HR — never from an email to payroll.",
     },
   ];
 
@@ -295,6 +335,22 @@ export function generateHistory(rng: Rng, params: HistoryParams, monthlySpendUSD
       action: { type: "require_check", check: "recount" },
       source: "statistics",
       discoverableBy: "statistics",
+    },
+    {
+      id: "HR5",
+      statement: `Production supervisors fix late punches after approval: accept register hours up to ${(punch / 100).toFixed(2)} h over the approved timesheet.`,
+      scope: { kind: "hours_mismatch", diffKind: "hours_mismatch", department: "Production", attr: "hoursDiffE2", maxAttr: punch },
+      action: { type: "info" },
+      source: "statistics",
+      discoverableBy: "statistics",
+    },
+    {
+      id: "HR6",
+      statement: "Employee direct-deposit changes come only through HRIS self-service verified by HR; an email asking for a new account is held and escalated.",
+      scope: { kind: "direct_deposit_change_unverified" },
+      action: { type: "route_to", role: "controller" },
+      source: "memo",
+      discoverableBy: "memo",
     },
     {
       id: "HR4",

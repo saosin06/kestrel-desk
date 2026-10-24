@@ -15,9 +15,10 @@ const ROOT = join(import.meta.dirname, "..");
 const keyOf = (kind: string, objectId: string) => `${kind} ${objectId}`;
 
 function expectedFindings(w: World): string[] {
-  return w.answerKey.entries
-    .flatMap((e) => [keyOf(e.kind, e.objectId), ...(e.secondary ?? []).map((x) => keyOf(x.kind, e.objectId))])
-    .sort();
+  return [
+    ...w.answerKey.entries.flatMap((e) => [keyOf(e.kind, e.objectId), ...(e.secondary ?? []).map((x) => keyOf(x.kind, e.objectId))]),
+    ...w.answerKey.payroll.filter((e) => e.detectedBy !== "agent").map((e) => keyOf(e.kind, e.objectId)),
+  ].sort();
 }
 
 function company(w: World) {
@@ -59,6 +60,19 @@ describe.each(SEEDS)("generated world, seed %i", (seed) => {
     const nwDocs = new Set([...w.invoices.filter((i) => i.supplierId === "S-NW").map((i) => i.id)]);
     expect(nwDocs.size).toBeGreaterThan(0);
     expect(findings.filter((f) => nwDocs.has(f.objectId))).toEqual([]);
+  });
+
+  it("payroll: the Engineering department raises nothing", () => {
+    const eng = new Set(w.payroll.employees.filter((e) => e.department === "Engineering").map((e) => e.id));
+    expect(eng.size).toBe(80);
+    expect(findings.filter((f) => f.employeeId && eng.has(f.employeeId))).toEqual([]);
+  });
+
+  it("payroll: ~420 employees, 15 regular runs plus one off-cycle, all inside the sim window", () => {
+    expect(w.payroll.employees).toHaveLength(420);
+    expect(w.payroll.runs.filter((r) => r.type === "regular")).toHaveLength(15);
+    expect(w.payroll.runs.filter((r) => r.type === "off_cycle")).toHaveLength(1);
+    for (const r of w.payroll.runs) expect(r.payDate >= SIM_WINDOW.from && r.payDate <= SIM_WINDOW.to, r.id).toBe(true);
   });
 
   it("the headline substitution passes three-way match and fails only on compliance", () => {

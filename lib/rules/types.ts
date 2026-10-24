@@ -12,6 +12,8 @@ export type FindingAttrs = {
   qtyVarianceBp?: number;
   /** |line amount − qty × unit price|, invoice-currency minor units */
   lineDiffMinor?: number;
+  /** |register hours − approved timesheet hours|, hundredths of an hour */
+  hoursDiffE2?: number;
   currency?: string;
 };
 export type RuleAttr = keyof Omit<FindingAttrs, "currency">;
@@ -24,6 +26,8 @@ export type FindingFacts = {
   period: PeriodId;
   supplierId?: string;
   partId?: string;
+  department?: string;
+  employeeId?: string;
   /** engine-level diff kind, e.g. "line_amount_mismatch" */
   diffKind?: string;
   impactUSDCents?: number;
@@ -35,6 +39,7 @@ export type RuleScope = {
   diffKind?: string;
   supplierId?: string;
   partId?: string;
+  department?: string;
   currency?: string;
   attr?: RuleAttr;
   /** inclusive upper bound on attr */
@@ -69,12 +74,14 @@ export type HistoryDecision = "accepted" | "rejected" | "recount_corrected" | "d
 export type HistoryException = {
   id: string;
   date: ISODate;
-  supplierId: string;
+  supplierId?: string;
   partId?: string;
+  department?: string;
+  employeeId?: string;
   kind: CaseKind;
   diffKind?: string;
   impactUSDCents: number;
-  attrs: { qtyVarianceBp?: number; lineDiffMinor?: number; currency?: string };
+  attrs: { qtyVarianceBp?: number; lineDiffMinor?: number; hoursDiffE2?: number; currency?: string };
   summary: string;
   raisedBy: Role;
   resolution: { decidedBy: Role; decision: HistoryDecision; reason: string; date: ISODate };

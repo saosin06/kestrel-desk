@@ -4,38 +4,78 @@
   "simulated": true,
   "items": [
     {
-      "id": "HX-0024",
-      "date": "2025-01-12",
-      "supplierId": "S-CAS",
-      "partId": "P03",
+      "id": "HX-0032",
+      "date": "2025-01-04",
+      "department": "Production",
+      "employeeId": "E-0060",
+      "kind": "hours_mismatch",
+      "diffKind": "hours_mismatch",
+      "impactUSDCents": 180,
+      "attrs": {
+        "hoursDiffE2": 6
+      },
+      "summary": "Provider register shows 0.06 h more than the approved timesheet",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Shift supervisor fixed a late punch after the timesheet was approved. A few minutes — pay the corrected hours.",
+        "date": "2025-01-28"
+      }
+    },
+    {
+      "id": "HX-0001",
+      "date": "2025-01-20",
+      "supplierId": "S-ATL",
+      "partId": "P14",
       "kind": "qty_mismatch",
       "diffKind": "qty_mismatch",
-      "impactUSDCents": 80000,
+      "impactUSDCents": 1085,
       "attrs": {
-        "qtyVarianceBp": 450
+        "qtyVarianceBp": 86
       },
-      "summary": "Receipt quantity for P03 disagrees with Cascade's packing slip",
+      "summary": "Dock weighed 35690 M3 screws vs 36000 invoiced (0.86% short)",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Fasteners are counted by weight at the dock; 0.86% is within scale tolerance. Accept the invoice quantity.",
+        "date": "2025-01-21"
+      }
+    },
+    {
+      "id": "HX-0024",
+      "date": "2025-01-21",
+      "supplierId": "S-CAS",
+      "partId": "P02",
+      "kind": "qty_mismatch",
+      "diffKind": "qty_mismatch",
+      "impactUSDCents": 30000,
+      "attrs": {
+        "qtyVarianceBp": 518
+      },
+      "summary": "Receipt quantity for P02 disagrees with Cascade's packing slip",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "receiving",
         "decision": "recount_corrected",
         "reason": "Luis recounted — matched the packing slip. Dock entry error, receipt corrected.",
-        "date": "2025-01-13"
+        "date": "2025-01-22"
       }
     },
     {
       "id": "HX-0010",
-      "date": "2025-01-18",
+      "date": "2025-01-22",
       "supplierId": "S-HOS",
       "partId": "P11",
       "kind": "source_disagreement",
       "diffKind": "line_amount_mismatch",
-      "impactUSDCents": 8,
+      "impactUSDCents": 47,
       "attrs": {
-        "lineDiffMinor": 12,
+        "lineDiffMinor": 71,
         "currency": "JPY"
       },
-      "summary": "Hoshi line total is ¥12 below qty × unit price",
+      "summary": "Hoshi line total is ¥71 below qty × unit price",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
@@ -45,93 +85,56 @@
       }
     },
     {
-      "id": "HX-0001",
-      "date": "2025-01-22",
-      "supplierId": "S-ATL",
-      "partId": "P14",
-      "kind": "qty_mismatch",
-      "diffKind": "qty_mismatch",
-      "impactUSDCents": 441,
-      "attrs": {
-        "qtyVarianceBp": 35
-      },
-      "summary": "Dock weighed 35874 M3 screws vs 36000 invoiced (0.35% short)",
-      "raisedBy": "ap_clerk",
-      "resolution": {
-        "decidedBy": "controller",
-        "decision": "accepted",
-        "reason": "Fasteners are counted by weight at the dock; 0.35% is within scale tolerance. Accept the invoice quantity.",
-        "date": "2025-01-26"
-      }
-    },
-    {
       "id": "HX-0011",
-      "date": "2025-02-04",
+      "date": "2025-02-06",
       "supplierId": "S-HOS",
-      "partId": "P10",
+      "partId": "P11",
       "kind": "source_disagreement",
       "diffKind": "line_amount_mismatch",
-      "impactUSDCents": 40,
+      "impactUSDCents": 1,
       "attrs": {
-        "lineDiffMinor": 60,
+        "lineDiffMinor": 2,
         "currency": "JPY"
       },
-      "summary": "Hoshi line total is ¥60 below qty × unit price",
+      "summary": "Hoshi line total is ¥2 below qty × unit price",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
-        "date": "2025-02-27"
-      }
-    },
-    {
-      "id": "HX-0036",
-      "date": "2025-02-09",
-      "supplierId": "S-NW",
-      "kind": "source_disagreement",
-      "diffKind": "unmatched_line",
-      "impactUSDCents": 56200,
-      "attrs": {},
-      "summary": "Northwind added a freight line not on the PO",
-      "raisedBy": "ap_clerk",
-      "resolution": {
-        "decidedBy": "controller",
-        "decision": "accepted",
-        "reason": "We asked for expedited shipping that time — pay it.",
-        "date": "2025-02-26"
+        "date": "2025-02-28"
       }
     },
     {
       "id": "HX-0002",
-      "date": "2025-02-12",
+      "date": "2025-02-10",
       "supplierId": "S-ATL",
       "partId": "P14",
       "kind": "qty_mismatch",
       "diffKind": "qty_mismatch",
-      "impactUSDCents": 315,
+      "impactUSDCents": 616,
       "attrs": {
-        "qtyVarianceBp": 25
+        "qtyVarianceBp": 49
       },
-      "summary": "Dock weighed 35910 M3 screws vs 36000 invoiced (0.25% short)",
+      "summary": "Dock weighed 35824 M3 screws vs 36000 invoiced (0.49% short)",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
         "decision": "accepted",
-        "reason": "Fasteners are counted by weight at the dock; 0.25% is within scale tolerance. Accept the invoice quantity.",
-        "date": "2025-02-14"
+        "reason": "Fasteners are counted by weight at the dock; 0.49% is within scale tolerance. Accept the invoice quantity.",
+        "date": "2025-02-13"
       }
     },
     {
       "id": "HX-0031",
-      "date": "2025-02-12",
+      "date": "2025-02-17",
       "supplierId": "S-CAS",
       "partId": "P02",
       "kind": "qty_mismatch",
       "diffKind": "qty_mismatch",
-      "impactUSDCents": 70000,
+      "impactUSDCents": 90000,
       "attrs": {
-        "qtyVarianceBp": 1192
+        "qtyVarianceBp": 1193
       },
       "summary": "Receipt quantity for P02 disagrees with Cascade's packing slip",
       "raisedBy": "ap_clerk",
@@ -139,17 +142,34 @@
         "decidedBy": "receiving",
         "decision": "recount_corrected",
         "reason": "Luis recounted — matched the packing slip. Dock entry error, receipt corrected.",
-        "date": "2025-02-13"
+        "date": "2025-02-18"
       }
     },
     {
-      "id": "HX-0042",
-      "date": "2025-02-14",
+      "id": "HX-0047",
+      "date": "2025-02-18",
+      "supplierId": "S-NW",
+      "kind": "source_disagreement",
+      "diffKind": "unmatched_line",
+      "impactUSDCents": 52600,
+      "attrs": {},
+      "summary": "Northwind added a freight line not on the PO",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "We asked for expedited shipping that time — pay it.",
+        "date": "2025-02-28"
+      }
+    },
+    {
+      "id": "HX-0056",
+      "date": "2025-02-21",
       "supplierId": "S-VIR",
       "partId": "P05",
       "kind": "price_variance_vs_contract",
       "diffKind": "price_over_tolerance",
-      "impactUSDCents": 8900000,
+      "impactUSDCents": 16500000,
       "attrs": {},
       "summary": "Invoice price above contract for P05",
       "raisedBy": "ap_clerk",
@@ -157,7 +177,27 @@
         "decidedBy": "controller",
         "decision": "debit_memo",
         "reason": "Contract price governs. Debit memo for the difference.",
-        "date": "2025-02-28"
+        "date": "2025-02-25"
+      }
+    },
+    {
+      "id": "HX-0035",
+      "date": "2025-02-24",
+      "department": "Production",
+      "employeeId": "E-0017",
+      "kind": "hours_mismatch",
+      "diffKind": "hours_mismatch",
+      "impactUSDCents": 390,
+      "attrs": {
+        "hoursDiffE2": 13
+      },
+      "summary": "Provider register shows 0.13 h more than the approved timesheet",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Shift supervisor fixed a late punch after the timesheet was approved. A few minutes — pay the corrected hours.",
+        "date": "2025-02-26"
       }
     },
     {
@@ -165,101 +205,6 @@
       "date": "2025-03-05",
       "supplierId": "S-HOS",
       "partId": "P10",
-      "kind": "source_disagreement",
-      "diffKind": "line_amount_mismatch",
-      "impactUSDCents": 65,
-      "attrs": {
-        "lineDiffMinor": 97,
-        "currency": "JPY"
-      },
-      "summary": "Hoshi line total is ¥97 below qty × unit price",
-      "raisedBy": "ap_clerk",
-      "resolution": {
-        "decidedBy": "controller",
-        "decision": "accepted",
-        "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
-        "date": "2025-03-27"
-      }
-    },
-    {
-      "id": "HX-0046",
-      "date": "2025-03-15",
-      "supplierId": "S-RDG",
-      "kind": "duplicate_invoice",
-      "impactUSDCents": 123000000,
-      "attrs": {},
-      "summary": "Ridgeline re-sent an unpaid invoice with a suffix",
-      "raisedBy": "ap_clerk",
-      "resolution": {
-        "decidedBy": "controller",
-        "decision": "rejected",
-        "reason": "Duplicate — paid once already. Block it.",
-        "date": "2025-03-27"
-      }
-    },
-    {
-      "id": "HX-0025",
-      "date": "2025-03-19",
-      "supplierId": "S-CAS",
-      "partId": "P01",
-      "kind": "qty_mismatch",
-      "diffKind": "qty_mismatch",
-      "impactUSDCents": 40000,
-      "attrs": {
-        "qtyVarianceBp": 947
-      },
-      "summary": "Receipt quantity for P01 disagrees with Cascade's packing slip",
-      "raisedBy": "ap_clerk",
-      "resolution": {
-        "decidedBy": "receiving",
-        "decision": "recount_corrected",
-        "reason": "Luis recounted — matched the packing slip. Dock entry error, receipt corrected.",
-        "date": "2025-03-20"
-      }
-    },
-    {
-      "id": "HX-0043",
-      "date": "2025-04-10",
-      "supplierId": "S-ATL",
-      "partId": "P07",
-      "kind": "price_variance_vs_contract",
-      "diffKind": "price_over_tolerance",
-      "impactUSDCents": 10100000,
-      "attrs": {},
-      "summary": "Invoice price above contract for P07",
-      "raisedBy": "ap_clerk",
-      "resolution": {
-        "decidedBy": "controller",
-        "decision": "debit_memo",
-        "reason": "Contract price governs. Debit memo for the difference.",
-        "date": "2025-04-27"
-      }
-    },
-    {
-      "id": "HX-0003",
-      "date": "2025-04-16",
-      "supplierId": "S-ATL",
-      "partId": "P14",
-      "kind": "qty_mismatch",
-      "diffKind": "qty_mismatch",
-      "impactUSDCents": 921,
-      "attrs": {
-        "qtyVarianceBp": 73
-      },
-      "summary": "Dock weighed 35737 M3 screws vs 36000 invoiced (0.73% short)",
-      "raisedBy": "ap_clerk",
-      "resolution": {
-        "decidedBy": "controller",
-        "decision": "accepted",
-        "reason": "Fasteners are counted by weight at the dock; 0.73% is within scale tolerance. Accept the invoice quantity.",
-        "date": "2025-04-20"
-      }
-    },
-    {
-      "id": "HX-0013",
-      "date": "2025-04-24",
-      "supplierId": "S-HOS",
-      "partId": "P11",
       "kind": "source_disagreement",
       "diffKind": "line_amount_mismatch",
       "impactUSDCents": 66,
@@ -273,16 +218,113 @@
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
-        "date": "2025-04-27"
+        "date": "2025-03-27"
       }
     },
     {
-      "id": "HX-0037",
-      "date": "2025-04-24",
+      "id": "HX-0038",
+      "date": "2025-03-05",
+      "department": "Production",
+      "employeeId": "E-0057",
+      "kind": "hours_mismatch",
+      "diffKind": "hours_mismatch",
+      "impactUSDCents": 240,
+      "attrs": {
+        "hoursDiffE2": 8
+      },
+      "summary": "Provider register shows 0.08 h more than the approved timesheet",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Shift supervisor fixed a late punch after the timesheet was approved. A few minutes — pay the corrected hours.",
+        "date": "2025-03-28"
+      }
+    },
+    {
+      "id": "HX-0025",
+      "date": "2025-03-10",
+      "supplierId": "S-CAS",
+      "partId": "P03",
+      "kind": "qty_mismatch",
+      "diffKind": "qty_mismatch",
+      "impactUSDCents": 70000,
+      "attrs": {
+        "qtyVarianceBp": 355
+      },
+      "summary": "Receipt quantity for P03 disagrees with Cascade's packing slip",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "receiving",
+        "decision": "recount_corrected",
+        "reason": "Luis recounted — matched the packing slip. Dock entry error, receipt corrected.",
+        "date": "2025-03-11"
+      }
+    },
+    {
+      "id": "HX-0060",
+      "date": "2025-03-17",
+      "supplierId": "S-RDG",
+      "kind": "duplicate_invoice",
+      "impactUSDCents": 124000000,
+      "attrs": {},
+      "summary": "Ridgeline re-sent an unpaid invoice with a suffix",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "rejected",
+        "reason": "Duplicate — paid once already. Block it.",
+        "date": "2025-03-26"
+      }
+    },
+    {
+      "id": "HX-0041",
+      "date": "2025-04-12",
+      "department": "Production",
+      "employeeId": "E-0167",
+      "kind": "hours_mismatch",
+      "diffKind": "hours_mismatch",
+      "impactUSDCents": 300,
+      "attrs": {
+        "hoursDiffE2": 10
+      },
+      "summary": "Provider register shows 0.10 h more than the approved timesheet",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Shift supervisor fixed a late punch after the timesheet was approved. A few minutes — pay the corrected hours.",
+        "date": "2025-04-26"
+      }
+    },
+    {
+      "id": "HX-0013",
+      "date": "2025-04-19",
+      "supplierId": "S-HOS",
+      "partId": "P11",
+      "kind": "source_disagreement",
+      "diffKind": "line_amount_mismatch",
+      "impactUSDCents": 65,
+      "attrs": {
+        "lineDiffMinor": 98,
+        "currency": "JPY"
+      },
+      "summary": "Hoshi line total is ¥98 below qty × unit price",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
+        "date": "2025-04-26"
+      }
+    },
+    {
+      "id": "HX-0048",
+      "date": "2025-04-19",
       "supplierId": "S-NW",
       "kind": "source_disagreement",
       "diffKind": "unmatched_line",
-      "impactUSDCents": 22200,
+      "impactUSDCents": 27200,
       "attrs": {},
       "summary": "Northwind added a freight line not on the PO",
       "raisedBy": "ap_clerk",
@@ -294,69 +336,87 @@
       }
     },
     {
+      "id": "HX-0057",
+      "date": "2025-04-21",
+      "supplierId": "S-ATL",
+      "partId": "P07",
+      "kind": "price_variance_vs_contract",
+      "diffKind": "price_over_tolerance",
+      "impactUSDCents": 6500000,
+      "attrs": {},
+      "summary": "Invoice price above contract for P07",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "debit_memo",
+        "reason": "Contract price governs. Debit memo for the difference.",
+        "date": "2025-04-28"
+      }
+    },
+    {
+      "id": "HX-0003",
+      "date": "2025-04-22",
+      "supplierId": "S-ATL",
+      "partId": "P14",
+      "kind": "qty_mismatch",
+      "diffKind": "qty_mismatch",
+      "impactUSDCents": 795,
+      "attrs": {
+        "qtyVarianceBp": 63
+      },
+      "summary": "Dock weighed 35773 M3 screws vs 36000 invoiced (0.63% short)",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Fasteners are counted by weight at the dock; 0.63% is within scale tolerance. Accept the invoice quantity.",
+        "date": "2025-04-23"
+      }
+    },
+    {
       "id": "HX-0014",
-      "date": "2025-05-05",
+      "date": "2025-05-06",
       "supplierId": "S-HOS",
       "partId": "P10",
       "kind": "source_disagreement",
       "diffKind": "line_amount_mismatch",
-      "impactUSDCents": 29,
+      "impactUSDCents": 6,
       "attrs": {
-        "lineDiffMinor": 43,
+        "lineDiffMinor": 9,
         "currency": "JPY"
       },
-      "summary": "Hoshi line total is ¥43 below qty × unit price",
+      "summary": "Hoshi line total is ¥9 below qty × unit price",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
-        "date": "2025-05-25"
-      }
-    },
-    {
-      "id": "HX-0004",
-      "date": "2025-05-19",
-      "supplierId": "S-ATL",
-      "partId": "P14",
-      "kind": "qty_mismatch",
-      "diffKind": "qty_mismatch",
-      "impactUSDCents": 214,
-      "attrs": {
-        "qtyVarianceBp": 17
-      },
-      "summary": "Dock weighed 35939 M3 screws vs 36000 invoiced (0.17% short)",
-      "raisedBy": "ap_clerk",
-      "resolution": {
-        "decidedBy": "controller",
-        "decision": "accepted",
-        "reason": "Fasteners are counted by weight at the dock; 0.17% is within scale tolerance. Accept the invoice quantity.",
-        "date": "2025-05-22"
+        "date": "2025-05-27"
       }
     },
     {
       "id": "HX-0026",
-      "date": "2025-05-22",
+      "date": "2025-05-10",
       "supplierId": "S-CAS",
-      "partId": "P01",
+      "partId": "P03",
       "kind": "qty_mismatch",
       "diffKind": "qty_mismatch",
-      "impactUSDCents": 40000,
+      "impactUSDCents": 90000,
       "attrs": {
-        "qtyVarianceBp": 1095
+        "qtyVarianceBp": 424
       },
-      "summary": "Receipt quantity for P01 disagrees with Cascade's packing slip",
+      "summary": "Receipt quantity for P03 disagrees with Cascade's packing slip",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "receiving",
         "decision": "recount_corrected",
         "reason": "Luis recounted — matched the packing slip. Dock entry error, receipt corrected.",
-        "date": "2025-05-23"
+        "date": "2025-05-11"
       }
     },
     {
-      "id": "HX-0032",
-      "date": "2025-05-24",
+      "id": "HX-0043",
+      "date": "2025-05-11",
       "supplierId": "S-VIR",
       "kind": "source_disagreement",
       "diffKind": "unmatched_line",
@@ -368,42 +428,41 @@
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "We paid late that month. Waive the fight this once — pay the fee.",
-        "date": "2025-05-25"
+        "date": "2025-05-27"
       }
     },
     {
-      "id": "HX-0015",
-      "date": "2025-06-07",
-      "supplierId": "S-HOS",
-      "partId": "P11",
-      "kind": "source_disagreement",
-      "diffKind": "line_amount_mismatch",
-      "impactUSDCents": 45,
-      "attrs": {
-        "lineDiffMinor": 67,
-        "currency": "JPY"
-      },
-      "summary": "Hoshi line total is ¥67 below qty × unit price",
-      "raisedBy": "ap_clerk",
-      "resolution": {
-        "decidedBy": "controller",
-        "decision": "accepted",
-        "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
-        "date": "2025-06-28"
-      }
-    },
-    {
-      "id": "HX-0005",
-      "date": "2025-06-13",
+      "id": "HX-0004",
+      "date": "2025-05-16",
       "supplierId": "S-ATL",
       "partId": "P14",
       "kind": "qty_mismatch",
       "diffKind": "qty_mismatch",
-      "impactUSDCents": 378,
+      "impactUSDCents": 931,
       "attrs": {
-        "qtyVarianceBp": 30
+        "qtyVarianceBp": 74
       },
-      "summary": "Dock weighed 35892 M3 screws vs 36000 invoiced (0.30% short)",
+      "summary": "Dock weighed 35734 M3 screws vs 36000 invoiced (0.74% short)",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Fasteners are counted by weight at the dock; 0.74% is within scale tolerance. Accept the invoice quantity.",
+        "date": "2025-05-19"
+      }
+    },
+    {
+      "id": "HX-0005",
+      "date": "2025-06-15",
+      "supplierId": "S-ATL",
+      "partId": "P14",
+      "kind": "qty_mismatch",
+      "diffKind": "qty_mismatch",
+      "impactUSDCents": 329,
+      "attrs": {
+        "qtyVarianceBp": 26
+      },
+      "summary": "Dock weighed 35906 M3 screws vs 36000 invoiced (0.26% short)",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
@@ -413,12 +472,12 @@
       }
     },
     {
-      "id": "HX-0038",
-      "date": "2025-06-14",
+      "id": "HX-0049",
+      "date": "2025-06-17",
       "supplierId": "S-NW",
       "kind": "source_disagreement",
       "diffKind": "unmatched_line",
-      "impactUSDCents": 43100,
+      "impactUSDCents": 23700,
       "attrs": {},
       "summary": "Northwind added a freight line not on the PO",
       "raisedBy": "ap_clerk",
@@ -426,53 +485,132 @@
         "decidedBy": "controller",
         "decision": "rejected",
         "reason": "Our terms are delivered. Short-pay the freight line.",
-        "date": "2025-06-27"
+        "date": "2025-06-28"
       }
     },
     {
-      "id": "HX-0027",
-      "date": "2025-07-14",
-      "supplierId": "S-CAS",
-      "partId": "P01",
-      "kind": "qty_mismatch",
-      "diffKind": "qty_mismatch",
-      "impactUSDCents": 60000,
-      "attrs": {
-        "qtyVarianceBp": 720
-      },
-      "summary": "Receipt quantity for P01 disagrees with Cascade's packing slip",
+      "id": "HX-0052",
+      "date": "2025-06-21",
+      "department": "Sales",
+      "employeeId": "E-0408",
+      "kind": "source_disagreement",
+      "diffKind": "manual_adjustment",
+      "impactUSDCents": 850000,
+      "attrs": {},
+      "summary": "Manual commission adjustment added to the register",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
-        "decision": "debit_memo",
-        "reason": "Recount confirmed Cascade really did short-ship us. Debit memo for the difference.",
-        "date": "2025-07-17"
+        "decision": "accepted",
+        "reason": "Quarter-end commission true-up — Raj sent the calc. Fine.",
+        "date": "2025-06-25"
       }
     },
     {
-      "id": "HX-0016",
-      "date": "2025-07-21",
+      "id": "HX-0015",
+      "date": "2025-06-23",
       "supplierId": "S-HOS",
       "partId": "P11",
       "kind": "source_disagreement",
       "diffKind": "line_amount_mismatch",
-      "impactUSDCents": 24,
+      "impactUSDCents": 11,
       "attrs": {
-        "lineDiffMinor": 36,
+        "lineDiffMinor": 16,
         "currency": "JPY"
       },
-      "summary": "Hoshi line total is ¥36 below qty × unit price",
+      "summary": "Hoshi line total is ¥16 below qty × unit price",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
+        "date": "2025-06-26"
+      }
+    },
+    {
+      "id": "HX-0033",
+      "date": "2025-06-24",
+      "department": "Production",
+      "employeeId": "E-0022",
+      "kind": "hours_mismatch",
+      "diffKind": "hours_mismatch",
+      "impactUSDCents": 240,
+      "attrs": {
+        "hoursDiffE2": 8
+      },
+      "summary": "Provider register shows 0.08 h more than the approved timesheet",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Shift supervisor fixed a late punch after the timesheet was approved. A few minutes — pay the corrected hours.",
+        "date": "2025-06-26"
+      }
+    },
+    {
+      "id": "HX-0027",
+      "date": "2025-07-15",
+      "supplierId": "S-CAS",
+      "partId": "P02",
+      "kind": "qty_mismatch",
+      "diffKind": "qty_mismatch",
+      "impactUSDCents": 50000,
+      "attrs": {
+        "qtyVarianceBp": 721
+      },
+      "summary": "Receipt quantity for P02 disagrees with Cascade's packing slip",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "debit_memo",
+        "reason": "Recount confirmed Cascade really did short-ship us. Debit memo for the difference.",
+        "date": "2025-07-18"
+      }
+    },
+    {
+      "id": "HX-0036",
+      "date": "2025-07-18",
+      "department": "Production",
+      "employeeId": "E-0119",
+      "kind": "hours_mismatch",
+      "diffKind": "hours_mismatch",
+      "impactUSDCents": 270,
+      "attrs": {
+        "hoursDiffE2": 9
+      },
+      "summary": "Provider register shows 0.09 h more than the approved timesheet",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Shift supervisor fixed a late punch after the timesheet was approved. A few minutes — pay the corrected hours.",
         "date": "2025-07-26"
       }
     },
     {
+      "id": "HX-0016",
+      "date": "2025-07-19",
+      "supplierId": "S-HOS",
+      "partId": "P10",
+      "kind": "source_disagreement",
+      "diffKind": "line_amount_mismatch",
+      "impactUSDCents": 55,
+      "attrs": {
+        "lineDiffMinor": 83,
+        "currency": "JPY"
+      },
+      "summary": "Hoshi line total is ¥83 below qty × unit price",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
+        "date": "2025-07-25"
+      }
+    },
+    {
       "id": "HX-0006",
-      "date": "2025-08-06",
+      "date": "2025-08-07",
       "supplierId": "S-ATL",
       "partId": "P14",
       "kind": "qty_mismatch",
@@ -487,55 +625,57 @@
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "Fasteners are counted by weight at the dock; 0.90% is within scale tolerance. Accept the invoice quantity.",
-        "date": "2025-08-07"
+        "date": "2025-08-08"
+      }
+    },
+    {
+      "id": "HX-0039",
+      "date": "2025-08-11",
+      "department": "Production",
+      "employeeId": "E-0125",
+      "kind": "hours_mismatch",
+      "diffKind": "hours_mismatch",
+      "impactUSDCents": 330,
+      "attrs": {
+        "hoursDiffE2": 11
+      },
+      "summary": "Provider register shows 0.11 h more than the approved timesheet",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Shift supervisor fixed a late punch after the timesheet was approved. A few minutes — pay the corrected hours.",
+        "date": "2025-08-28"
       }
     },
     {
       "id": "HX-0017",
-      "date": "2025-08-08",
+      "date": "2025-08-13",
       "supplierId": "S-HOS",
-      "partId": "P10",
+      "partId": "P11",
       "kind": "source_disagreement",
       "diffKind": "line_amount_mismatch",
-      "impactUSDCents": 1,
+      "impactUSDCents": 15,
       "attrs": {
-        "lineDiffMinor": 2,
+        "lineDiffMinor": 22,
         "currency": "JPY"
       },
-      "summary": "Hoshi line total is ¥2 below qty × unit price",
+      "summary": "Hoshi line total is ¥22 below qty × unit price",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
-        "date": "2025-08-28"
+        "date": "2025-08-27"
       }
     },
     {
-      "id": "HX-0044",
-      "date": "2025-08-09",
-      "supplierId": "S-RDG",
-      "partId": "P09",
-      "kind": "price_variance_vs_contract",
-      "diffKind": "price_over_tolerance",
-      "impactUSDCents": 3800000,
-      "attrs": {},
-      "summary": "Invoice price above contract for P09",
-      "raisedBy": "ap_clerk",
-      "resolution": {
-        "decidedBy": "controller",
-        "decision": "debit_memo",
-        "reason": "Contract price governs. Debit memo for the difference.",
-        "date": "2025-08-25"
-      }
-    },
-    {
-      "id": "HX-0039",
-      "date": "2025-08-19",
+      "id": "HX-0050",
+      "date": "2025-08-16",
       "supplierId": "S-NW",
       "kind": "source_disagreement",
       "diffKind": "unmatched_line",
-      "impactUSDCents": 63800,
+      "impactUSDCents": 34800,
       "attrs": {},
       "summary": "Northwind added a freight line not on the PO",
       "raisedBy": "ap_clerk",
@@ -547,8 +687,26 @@
       }
     },
     {
-      "id": "HX-0047",
-      "date": "2025-09-06",
+      "id": "HX-0058",
+      "date": "2025-08-23",
+      "supplierId": "S-RDG",
+      "partId": "P09",
+      "kind": "price_variance_vs_contract",
+      "diffKind": "price_over_tolerance",
+      "impactUSDCents": 15900000,
+      "attrs": {},
+      "summary": "Invoice price above contract for P09",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "debit_memo",
+        "reason": "Contract price governs. Debit memo for the difference.",
+        "date": "2025-08-25"
+      }
+    },
+    {
+      "id": "HX-0061",
+      "date": "2025-09-05",
       "supplierId": "S-RDG",
       "kind": "duplicate_invoice",
       "impactUSDCents": 121000000,
@@ -559,40 +717,80 @@
         "decidedBy": "controller",
         "decision": "rejected",
         "reason": "Duplicate — paid once already. Block it.",
-        "date": "2025-09-25"
+        "date": "2025-09-27"
       }
     },
     {
       "id": "HX-0018",
-      "date": "2025-09-09",
+      "date": "2025-09-10",
       "supplierId": "S-HOS",
-      "partId": "P10",
+      "partId": "P11",
       "kind": "source_disagreement",
       "diffKind": "line_amount_mismatch",
-      "impactUSDCents": 49,
+      "impactUSDCents": 18,
       "attrs": {
-        "lineDiffMinor": 73,
+        "lineDiffMinor": 27,
         "currency": "JPY"
       },
-      "summary": "Hoshi line total is ¥73 below qty × unit price",
+      "summary": "Hoshi line total is ¥27 below qty × unit price",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
-        "date": "2025-09-28"
+        "date": "2025-09-27"
+      }
+    },
+    {
+      "id": "HX-0007",
+      "date": "2025-09-20",
+      "supplierId": "S-ATL",
+      "partId": "P14",
+      "kind": "qty_mismatch",
+      "diffKind": "qty_mismatch",
+      "impactUSDCents": 1071,
+      "attrs": {
+        "qtyVarianceBp": 85
+      },
+      "summary": "Dock weighed 35694 M3 screws vs 36000 invoiced (0.85% short)",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "rejected",
+        "reason": "Over the new weight-count tolerance in my memo of 2025-09-15. Hold for a recount.",
+        "date": "2025-09-21"
+      }
+    },
+    {
+      "id": "HX-0042",
+      "date": "2025-09-20",
+      "department": "Production",
+      "employeeId": "E-0139",
+      "kind": "hours_mismatch",
+      "diffKind": "hours_mismatch",
+      "impactUSDCents": 360,
+      "attrs": {
+        "hoursDiffE2": 12
+      },
+      "summary": "Provider register shows 0.12 h more than the approved timesheet",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Shift supervisor fixed a late punch after the timesheet was approved. A few minutes — pay the corrected hours.",
+        "date": "2025-09-27"
       }
     },
     {
       "id": "HX-0028",
-      "date": "2025-09-17",
+      "date": "2025-09-21",
       "supplierId": "S-CAS",
       "partId": "P02",
       "kind": "qty_mismatch",
       "diffKind": "qty_mismatch",
-      "impactUSDCents": 80000,
+      "impactUSDCents": 40000,
       "attrs": {
-        "qtyVarianceBp": 635
+        "qtyVarianceBp": 538
       },
       "summary": "Receipt quantity for P02 disagrees with Cascade's packing slip",
       "raisedBy": "ap_clerk",
@@ -600,36 +798,34 @@
         "decidedBy": "receiving",
         "decision": "recount_corrected",
         "reason": "Luis recounted — matched the packing slip. Dock entry error, receipt corrected.",
-        "date": "2025-09-18"
+        "date": "2025-09-22"
       }
     },
     {
-      "id": "HX-0007",
-      "date": "2025-09-30",
-      "supplierId": "S-ATL",
-      "partId": "P14",
-      "kind": "qty_mismatch",
-      "diffKind": "qty_mismatch",
-      "impactUSDCents": 945,
-      "attrs": {
-        "qtyVarianceBp": 75
-      },
-      "summary": "Dock weighed 35730 M3 screws vs 36000 invoiced (0.75% short)",
+      "id": "HX-0059",
+      "date": "2025-10-14",
+      "supplierId": "S-VIR",
+      "partId": "P04",
+      "kind": "price_variance_vs_contract",
+      "diffKind": "price_over_tolerance",
+      "impactUSDCents": 6700000,
+      "attrs": {},
+      "summary": "Invoice price above contract for P04",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
-        "decision": "rejected",
-        "reason": "Over the new weight-count tolerance in my memo of 2025-09-15. Hold for a recount.",
-        "date": "2025-10-01"
+        "decision": "debit_memo",
+        "reason": "Contract price governs. Debit memo for the difference.",
+        "date": "2025-10-25"
       }
     },
     {
-      "id": "HX-0040",
-      "date": "2025-10-09",
+      "id": "HX-0051",
+      "date": "2025-10-19",
       "supplierId": "S-NW",
       "kind": "source_disagreement",
       "diffKind": "unmatched_line",
-      "impactUSDCents": 35400,
+      "impactUSDCents": 63600,
       "attrs": {},
       "summary": "Northwind added a freight line not on the PO",
       "raisedBy": "ap_clerk",
@@ -637,22 +833,22 @@
         "decidedBy": "controller",
         "decision": "rejected",
         "reason": "Our terms are delivered. Short-pay the freight line.",
-        "date": "2025-10-27"
+        "date": "2025-10-26"
       }
     },
     {
       "id": "HX-0019",
-      "date": "2025-10-18",
+      "date": "2025-10-20",
       "supplierId": "S-HOS",
-      "partId": "P11",
+      "partId": "P10",
       "kind": "source_disagreement",
       "diffKind": "line_amount_mismatch",
-      "impactUSDCents": 47,
+      "impactUSDCents": 45,
       "attrs": {
-        "lineDiffMinor": 70,
+        "lineDiffMinor": 67,
         "currency": "JPY"
       },
-      "summary": "Hoshi line total is ¥70 below qty × unit price",
+      "summary": "Hoshi line total is ¥67 below qty × unit price",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
@@ -662,45 +858,7 @@
       }
     },
     {
-      "id": "HX-0045",
-      "date": "2025-10-21",
-      "supplierId": "S-VIR",
-      "partId": "P04",
-      "kind": "price_variance_vs_contract",
-      "diffKind": "price_over_tolerance",
-      "impactUSDCents": 11400000,
-      "attrs": {},
-      "summary": "Invoice price above contract for P04",
-      "raisedBy": "ap_clerk",
-      "resolution": {
-        "decidedBy": "controller",
-        "decision": "debit_memo",
-        "reason": "Contract price governs. Debit memo for the difference.",
-        "date": "2025-10-26"
-      }
-    },
-    {
-      "id": "HX-0029",
-      "date": "2025-11-04",
-      "supplierId": "S-CAS",
-      "partId": "P01",
-      "kind": "qty_mismatch",
-      "diffKind": "qty_mismatch",
-      "impactUSDCents": 80000,
-      "attrs": {
-        "qtyVarianceBp": 743
-      },
-      "summary": "Receipt quantity for P01 disagrees with Cascade's packing slip",
-      "raisedBy": "ap_clerk",
-      "resolution": {
-        "decidedBy": "receiving",
-        "decision": "recount_corrected",
-        "reason": "Luis recounted — matched the packing slip. Dock entry error, receipt corrected.",
-        "date": "2025-11-05"
-      }
-    },
-    {
-      "id": "HX-0041",
+      "id": "HX-0055",
       "date": "2025-11-10",
       "supplierId": "S-HOS",
       "kind": "remittance_change_unverified",
@@ -716,28 +874,68 @@
       }
     },
     {
+      "id": "HX-0034",
+      "date": "2025-11-14",
+      "department": "Production",
+      "employeeId": "E-0126",
+      "kind": "hours_mismatch",
+      "diffKind": "hours_mismatch",
+      "impactUSDCents": 450,
+      "attrs": {
+        "hoursDiffE2": 15
+      },
+      "summary": "Provider register shows 0.15 h more than the approved timesheet",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Shift supervisor fixed a late punch after the timesheet was approved. A few minutes — pay the corrected hours.",
+        "date": "2025-11-27"
+      }
+    },
+    {
+      "id": "HX-0029",
+      "date": "2025-11-20",
+      "supplierId": "S-CAS",
+      "partId": "P01",
+      "kind": "qty_mismatch",
+      "diffKind": "qty_mismatch",
+      "impactUSDCents": 50000,
+      "attrs": {
+        "qtyVarianceBp": 1029
+      },
+      "summary": "Receipt quantity for P01 disagrees with Cascade's packing slip",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "receiving",
+        "decision": "recount_corrected",
+        "reason": "Luis recounted — matched the packing slip. Dock entry error, receipt corrected.",
+        "date": "2025-11-21"
+      }
+    },
+    {
       "id": "HX-0020",
-      "date": "2025-11-17",
+      "date": "2025-11-24",
       "supplierId": "S-HOS",
       "partId": "P11",
       "kind": "source_disagreement",
       "diffKind": "line_amount_mismatch",
-      "impactUSDCents": 13,
+      "impactUSDCents": 44,
       "attrs": {
-        "lineDiffMinor": 19,
+        "lineDiffMinor": 66,
         "currency": "JPY"
       },
-      "summary": "Hoshi line total is ¥19 below qty × unit price",
+      "summary": "Hoshi line total is ¥66 below qty × unit price",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
-        "date": "2025-11-28"
+        "date": "2025-11-26"
       }
     },
     {
-      "id": "HX-0034",
+      "id": "HX-0045",
       "date": "2025-12-04",
       "supplierId": "S-RDG",
       "partId": "P06",
@@ -755,8 +953,8 @@
       }
     },
     {
-      "id": "HX-0033",
-      "date": "2025-12-07",
+      "id": "HX-0044",
+      "date": "2025-12-06",
       "supplierId": "S-VIR",
       "kind": "source_disagreement",
       "diffKind": "unmatched_line",
@@ -768,52 +966,69 @@
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "We paid late that month. Waive the fight this once — pay the fee.",
-        "date": "2025-12-25"
+        "date": "2025-12-27"
+      }
+    },
+    {
+      "id": "HX-0037",
+      "date": "2025-12-10",
+      "department": "Production",
+      "employeeId": "E-0110",
+      "kind": "hours_mismatch",
+      "diffKind": "hours_mismatch",
+      "impactUSDCents": 450,
+      "attrs": {
+        "hoursDiffE2": 15
+      },
+      "summary": "Provider register shows 0.15 h more than the approved timesheet",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Shift supervisor fixed a late punch after the timesheet was approved. A few minutes — pay the corrected hours.",
+        "date": "2025-12-27"
       }
     },
     {
       "id": "HX-0008",
-      "date": "2025-12-08",
+      "date": "2025-12-13",
       "supplierId": "S-ATL",
       "partId": "P14",
       "kind": "qty_mismatch",
       "diffKind": "qty_mismatch",
-      "impactUSDCents": 203,
+      "impactUSDCents": 238,
       "attrs": {
-        "qtyVarianceBp": 16
+        "qtyVarianceBp": 19
       },
-      "summary": "Dock weighed 35942 M3 screws vs 36000 invoiced (0.16% short)",
+      "summary": "Dock weighed 35932 M3 screws vs 36000 invoiced (0.19% short)",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "Within the weight-count tolerance — accept.",
-        "date": "2025-12-10"
+        "date": "2025-12-17"
       }
     },
     {
-      "id": "HX-0021",
-      "date": "2025-12-18",
-      "supplierId": "S-HOS",
-      "partId": "P11",
+      "id": "HX-0053",
+      "date": "2025-12-13",
+      "department": "Sales",
+      "employeeId": "E-0398",
       "kind": "source_disagreement",
-      "diffKind": "line_amount_mismatch",
-      "impactUSDCents": 25,
-      "attrs": {
-        "lineDiffMinor": 38,
-        "currency": "JPY"
-      },
-      "summary": "Hoshi line total is ¥38 below qty × unit price",
+      "diffKind": "manual_adjustment",
+      "impactUSDCents": 620000,
+      "attrs": {},
+      "summary": "Manual commission adjustment added to the register",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
         "decision": "accepted",
-        "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
-        "date": "2025-12-25"
+        "reason": "Quarter-end commission true-up — Raj sent the calc. Fine.",
+        "date": "2025-12-27"
       }
     },
     {
-      "id": "HX-0035",
+      "id": "HX-0046",
       "date": "2025-12-18",
       "supplierId": "S-RDG",
       "partId": "P06",
@@ -831,29 +1046,49 @@
       }
     },
     {
-      "id": "HX-0022",
-      "date": "2026-01-05",
+      "id": "HX-0021",
+      "date": "2025-12-22",
       "supplierId": "S-HOS",
-      "partId": "P11",
+      "partId": "P10",
       "kind": "source_disagreement",
       "diffKind": "line_amount_mismatch",
-      "impactUSDCents": 31,
+      "impactUSDCents": 45,
       "attrs": {
-        "lineDiffMinor": 46,
+        "lineDiffMinor": 67,
         "currency": "JPY"
       },
-      "summary": "Hoshi line total is ¥46 below qty × unit price",
+      "summary": "Hoshi line total is ¥67 below qty × unit price",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
-        "date": "2026-01-26"
+        "date": "2025-12-26"
+      }
+    },
+    {
+      "id": "HX-0040",
+      "date": "2026-01-06",
+      "department": "Production",
+      "employeeId": "E-0186",
+      "kind": "hours_mismatch",
+      "diffKind": "hours_mismatch",
+      "impactUSDCents": 360,
+      "attrs": {
+        "hoursDiffE2": 12
+      },
+      "summary": "Provider register shows 0.12 h more than the approved timesheet",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Shift supervisor fixed a late punch after the timesheet was approved. A few minutes — pay the corrected hours.",
+        "date": "2026-01-25"
       }
     },
     {
       "id": "HX-0009",
-      "date": "2026-01-21",
+      "date": "2026-01-14",
       "supplierId": "S-ATL",
       "partId": "P14",
       "kind": "qty_mismatch",
@@ -868,19 +1103,40 @@
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "Right at the weight-count limit — accept.",
-        "date": "2026-01-24"
+        "date": "2026-01-15"
+      }
+    },
+    {
+      "id": "HX-0022",
+      "date": "2026-01-15",
+      "supplierId": "S-HOS",
+      "partId": "P10",
+      "kind": "source_disagreement",
+      "diffKind": "line_amount_mismatch",
+      "impactUSDCents": 6,
+      "attrs": {
+        "lineDiffMinor": 9,
+        "currency": "JPY"
+      },
+      "summary": "Hoshi line total is ¥9 below qty × unit price",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
+        "date": "2026-01-27"
       }
     },
     {
       "id": "HX-0030",
-      "date": "2026-01-21",
+      "date": "2026-01-16",
       "supplierId": "S-CAS",
       "partId": "P03",
       "kind": "qty_mismatch",
       "diffKind": "qty_mismatch",
-      "impactUSDCents": 60000,
+      "impactUSDCents": 90000,
       "attrs": {
-        "qtyVarianceBp": 1144
+        "qtyVarianceBp": 836
       },
       "summary": "Receipt quantity for P03 disagrees with Cascade's packing slip",
       "raisedBy": "ap_clerk",
@@ -888,27 +1144,45 @@
         "decidedBy": "receiving",
         "decision": "recount_corrected",
         "reason": "Luis recounted — matched the packing slip. Dock entry error, receipt corrected.",
-        "date": "2026-01-22"
+        "date": "2026-01-17"
       }
     },
     {
       "id": "HX-0023",
-      "date": "2026-02-18",
+      "date": "2026-02-14",
       "supplierId": "S-HOS",
       "partId": "P11",
       "kind": "source_disagreement",
       "diffKind": "line_amount_mismatch",
-      "impactUSDCents": 47,
+      "impactUSDCents": 45,
       "attrs": {
-        "lineDiffMinor": 70,
+        "lineDiffMinor": 67,
         "currency": "JPY"
       },
-      "summary": "Hoshi line total is ¥70 below qty × unit price",
+      "summary": "Hoshi line total is ¥67 below qty × unit price",
       "raisedBy": "ap_clerk",
       "resolution": {
         "decidedBy": "controller",
         "decision": "accepted",
         "reason": "Hoshi rounds line totals down to the nearest ¥100. Immaterial — accept.",
+        "date": "2026-02-27"
+      }
+    },
+    {
+      "id": "HX-0054",
+      "date": "2026-02-15",
+      "department": "Sales",
+      "employeeId": "E-0395",
+      "kind": "source_disagreement",
+      "diffKind": "manual_adjustment",
+      "impactUSDCents": 420000,
+      "attrs": {},
+      "summary": "Manual commission adjustment added to the register",
+      "raisedBy": "ap_clerk",
+      "resolution": {
+        "decidedBy": "controller",
+        "decision": "accepted",
+        "reason": "Quarter-end commission true-up — Raj sent the calc. Fine.",
         "date": "2026-02-27"
       }
     }

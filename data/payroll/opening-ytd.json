@@ -1,0 +1,2947 @@
+{
+  "generatedBy": "scripts/generate.ts",
+  "seed": 42,
+  "simulated": true,
+  "items": {
+    "E-0001": {
+      "grossCents": 816000,
+      "fitWagesCents": 716720,
+      "ssWagesCents": 782000,
+      "medicareWagesCents": 782000,
+      "k401Cents": 65280
+    },
+    "E-0002": {
+      "grossCents": 878075,
+      "fitWagesCents": 844075,
+      "ssWagesCents": 844075,
+      "medicareWagesCents": 844075,
+      "k401Cents": 0
+    },
+    "E-0003": {
+      "grossCents": 1049338,
+      "fitWagesCents": 1007364,
+      "ssWagesCents": 1049338,
+      "medicareWagesCents": 1049338,
+      "k401Cents": 41974
+    },
+    "E-0004": {
+      "grossCents": 862626,
+      "fitWagesCents": 759616,
+      "ssWagesCents": 828626,
+      "medicareWagesCents": 828626,
+      "k401Cents": 69010
+    },
+    "E-0005": {
+      "grossCents": 957275,
+      "fitWagesCents": 851838,
+      "ssWagesCents": 909275,
+      "medicareWagesCents": 909275,
+      "k401Cents": 57437
+    },
+    "E-0006": {
+      "grossCents": 1164125,
+      "fitWagesCents": 999712,
+      "ssWagesCents": 1116125,
+      "medicareWagesCents": 1116125,
+      "k401Cents": 116413
+    },
+    "E-0007": {
+      "grossCents": 1112000,
+      "fitWagesCents": 1008400,
+      "ssWagesCents": 1064000,
+      "medicareWagesCents": 1064000,
+      "k401Cents": 55600
+    },
+    "E-0008": {
+      "grossCents": 1016000,
+      "fitWagesCents": 871040,
+      "ssWagesCents": 932000,
+      "medicareWagesCents": 932000,
+      "k401Cents": 60960
+    },
+    "E-0009": {
+      "grossCents": 912000,
+      "fitWagesCents": 841520,
+      "ssWagesCents": 878000,
+      "medicareWagesCents": 878000,
+      "k401Cents": 36480
+    },
+    "E-0010": {
+      "grossCents": 904700,
+      "fitWagesCents": 816418,
+      "ssWagesCents": 870700,
+      "medicareWagesCents": 870700,
+      "k401Cents": 54282
+    },
+    "E-0011": {
+      "grossCents": 1056000,
+      "fitWagesCents": 1022000,
+      "ssWagesCents": 1022000,
+      "medicareWagesCents": 1022000,
+      "k401Cents": 0
+    },
+    "E-0012": {
+      "grossCents": 1152000,
+      "fitWagesCents": 1104000,
+      "ssWagesCents": 1104000,
+      "medicareWagesCents": 1104000,
+      "k401Cents": 0
+    },
+    "E-0013": {
+      "grossCents": 1131963,
+      "fitWagesCents": 1052684,
+      "ssWagesCents": 1097963,
+      "medicareWagesCents": 1097963,
+      "k401Cents": 45279
+    },
+    "E-0014": {
+      "grossCents": 984550,
+      "fitWagesCents": 852095,
+      "ssWagesCents": 950550,
+      "medicareWagesCents": 950550,
+      "k401Cents": 98455
+    },
+    "E-0015": {
+      "grossCents": 1041676,
+      "fitWagesCents": 945176,
+      "ssWagesCents": 1007676,
+      "medicareWagesCents": 1007676,
+      "k401Cents": 62500
+    },
+    "E-0016": {
+      "grossCents": 997600,
+      "fitWagesCents": 849840,
+      "ssWagesCents": 949600,
+      "medicareWagesCents": 949600,
+      "k401Cents": 99760
+    },
+    "E-0017": {
+      "grossCents": 823650,
+      "fitWagesCents": 657285,
+      "ssWagesCents": 739650,
+      "medicareWagesCents": 739650,
+      "k401Cents": 82365
+    },
+    "E-0018": {
+      "grossCents": 904000,
+      "fitWagesCents": 876880,
+      "ssWagesCents": 904000,
+      "medicareWagesCents": 904000,
+      "k401Cents": 27120
+    },
+    "E-0019": {
+      "grossCents": 944775,
+      "fitWagesCents": 916432,
+      "ssWagesCents": 944775,
+      "medicareWagesCents": 944775,
+      "k401Cents": 28343
+    },
+    "E-0020": {
+      "grossCents": 958450,
+      "fitWagesCents": 910527,
+      "ssWagesCents": 958450,
+      "medicareWagesCents": 958450,
+      "k401Cents": 47923
+    },
+    "E-0021": {
+      "grossCents": 797825,
+      "fitWagesCents": 681912,
+      "ssWagesCents": 713825,
+      "medicareWagesCents": 713825,
+      "k401Cents": 31913
+    },
+    "E-0022": {
+      "grossCents": 1024000,
+      "fitWagesCents": 924800,
+      "ssWagesCents": 976000,
+      "medicareWagesCents": 976000,
+      "k401Cents": 51200
+    },
+    "E-0023": {
+      "grossCents": 888101,
+      "fitWagesCents": 804101,
+      "ssWagesCents": 804101,
+      "medicareWagesCents": 804101,
+      "k401Cents": 0
+    },
+    "E-0024": {
+      "grossCents": 1194575,
+      "fitWagesCents": 1112792,
+      "ssWagesCents": 1160575,
+      "medicareWagesCents": 1160575,
+      "k401Cents": 47783
+    },
+    "E-0025": {
+      "grossCents": 750975,
+      "fitWagesCents": 686936,
+      "ssWagesCents": 716975,
+      "medicareWagesCents": 716975,
+      "k401Cents": 30039
+    },
+    "E-0026": {
+      "grossCents": 1059975,
+      "fitWagesCents": 948376,
+      "ssWagesCents": 1011975,
+      "medicareWagesCents": 1011975,
+      "k401Cents": 63599
+    },
+    "E-0027": {
+      "grossCents": 958450,
+      "fitWagesCents": 797774,
+      "ssWagesCents": 874450,
+      "medicareWagesCents": 874450,
+      "k401Cents": 76676
+    },
+    "E-0028": {
+      "grossCents": 863750,
+      "fitWagesCents": 727925,
+      "ssWagesCents": 779750,
+      "medicareWagesCents": 779750,
+      "k401Cents": 51825
+    },
+    "E-0029": {
+      "grossCents": 920550,
+      "fitWagesCents": 883728,
+      "ssWagesCents": 920550,
+      "medicareWagesCents": 920550,
+      "k401Cents": 36822
+    },
+    "E-0030": {
+      "grossCents": 840000,
+      "fitWagesCents": 688800,
+      "ssWagesCents": 756000,
+      "medicareWagesCents": 756000,
+      "k401Cents": 67200
+    },
+    "E-0031": {
+      "grossCents": 759050,
+      "fitWagesCents": 673097,
+      "ssWagesCents": 711050,
+      "medicareWagesCents": 711050,
+      "k401Cents": 37953
+    },
+    "E-0032": {
+      "grossCents": 1052800,
+      "fitWagesCents": 1052800,
+      "ssWagesCents": 1052800,
+      "medicareWagesCents": 1052800,
+      "k401Cents": 0
+    },
+    "E-0033": {
+      "grossCents": 1012725,
+      "fitWagesCents": 917961,
+      "ssWagesCents": 978725,
+      "medicareWagesCents": 978725,
+      "k401Cents": 60764
+    },
+    "E-0034": {
+      "grossCents": 1075800,
+      "fitWagesCents": 984768,
+      "ssWagesCents": 1027800,
+      "medicareWagesCents": 1027800,
+      "k401Cents": 43032
+    },
+    "E-0035": {
+      "grossCents": 824000,
+      "fitWagesCents": 693600,
+      "ssWagesCents": 776000,
+      "medicareWagesCents": 776000,
+      "k401Cents": 82400
+    },
+    "E-0036": {
+      "grossCents": 1048000,
+      "fitWagesCents": 895200,
+      "ssWagesCents": 1000000,
+      "medicareWagesCents": 1000000,
+      "k401Cents": 104800
+    },
+    "E-0037": {
+      "grossCents": 1005950,
+      "fitWagesCents": 907652,
+      "ssWagesCents": 957950,
+      "medicareWagesCents": 957950,
+      "k401Cents": 50298
+    },
+    "E-0038": {
+      "grossCents": 970750,
+      "fitWagesCents": 886750,
+      "ssWagesCents": 886750,
+      "medicareWagesCents": 886750,
+      "k401Cents": 0
+    },
+    "E-0039": {
+      "grossCents": 851813,
+      "fitWagesCents": 783668,
+      "ssWagesCents": 851813,
+      "medicareWagesCents": 851813,
+      "k401Cents": 68145
+    },
+    "E-0040": {
+      "grossCents": 808000,
+      "fitWagesCents": 735760,
+      "ssWagesCents": 760000,
+      "medicareWagesCents": 760000,
+      "k401Cents": 24240
+    },
+    "E-0041": {
+      "grossCents": 1048000,
+      "fitWagesCents": 947600,
+      "ssWagesCents": 1000000,
+      "medicareWagesCents": 1000000,
+      "k401Cents": 52400
+    },
+    "E-0042": {
+      "grossCents": 805100,
+      "fitWagesCents": 724896,
+      "ssWagesCents": 757100,
+      "medicareWagesCents": 757100,
+      "k401Cents": 32204
+    },
+    "E-0043": {
+      "grossCents": 1097125,
+      "fitWagesCents": 903412,
+      "ssWagesCents": 1013125,
+      "medicareWagesCents": 1013125,
+      "k401Cents": 109713
+    },
+    "E-0044": {
+      "grossCents": 1070850,
+      "fitWagesCents": 972599,
+      "ssWagesCents": 1036850,
+      "medicareWagesCents": 1036850,
+      "k401Cents": 64251
+    },
+    "E-0045": {
+      "grossCents": 792000,
+      "fitWagesCents": 710480,
+      "ssWagesCents": 758000,
+      "medicareWagesCents": 758000,
+      "k401Cents": 47520
+    },
+    "E-0046": {
+      "grossCents": 816000,
+      "fitWagesCents": 650400,
+      "ssWagesCents": 732000,
+      "medicareWagesCents": 732000,
+      "k401Cents": 81600
+    },
+    "E-0047": {
+      "grossCents": 968000,
+      "fitWagesCents": 890560,
+      "ssWagesCents": 968000,
+      "medicareWagesCents": 968000,
+      "k401Cents": 77440
+    },
+    "E-0048": {
+      "grossCents": 1121688,
+      "fitWagesCents": 947953,
+      "ssWagesCents": 1037688,
+      "medicareWagesCents": 1037688,
+      "k401Cents": 89735
+    },
+    "E-0049": {
+      "grossCents": 900450,
+      "fitWagesCents": 846423,
+      "ssWagesCents": 900450,
+      "medicareWagesCents": 900450,
+      "k401Cents": 54027
+    },
+    "E-0050": {
+      "grossCents": 856000,
+      "fitWagesCents": 765200,
+      "ssWagesCents": 808000,
+      "medicareWagesCents": 808000,
+      "k401Cents": 42800
+    },
+    "E-0051": {
+      "grossCents": 1000000,
+      "fitWagesCents": 926000,
+      "ssWagesCents": 966000,
+      "medicareWagesCents": 966000,
+      "k401Cents": 40000
+    },
+    "E-0052": {
+      "grossCents": 954850,
+      "fitWagesCents": 832656,
+      "ssWagesCents": 870850,
+      "medicareWagesCents": 870850,
+      "k401Cents": 38194
+    },
+    "E-0053": {
+      "grossCents": 1059975,
+      "fitWagesCents": 972976,
+      "ssWagesCents": 1025975,
+      "medicareWagesCents": 1025975,
+      "k401Cents": 52999
+    },
+    "E-0054": {
+      "grossCents": 928000,
+      "fitWagesCents": 797600,
+      "ssWagesCents": 844000,
+      "medicareWagesCents": 844000,
+      "k401Cents": 46400
+    },
+    "E-0055": {
+      "grossCents": 1049338,
+      "fitWagesCents": 996871,
+      "ssWagesCents": 1049338,
+      "medicareWagesCents": 1049338,
+      "k401Cents": 52467
+    },
+    "E-0056": {
+      "grossCents": 1143863,
+      "fitWagesCents": 991231,
+      "ssWagesCents": 1059863,
+      "medicareWagesCents": 1059863,
+      "k401Cents": 68632
+    },
+    "E-0057": {
+      "grossCents": 967088,
+      "fitWagesCents": 919088,
+      "ssWagesCents": 919088,
+      "medicareWagesCents": 919088,
+      "k401Cents": 0
+    },
+    "E-0058": {
+      "grossCents": 1112000,
+      "fitWagesCents": 994640,
+      "ssWagesCents": 1028000,
+      "medicareWagesCents": 1028000,
+      "k401Cents": 33360
+    },
+    "E-0059": {
+      "grossCents": 952000,
+      "fitWagesCents": 870400,
+      "ssWagesCents": 918000,
+      "medicareWagesCents": 918000,
+      "k401Cents": 47600
+    },
+    "E-0060": {
+      "grossCents": 1065863,
+      "fitWagesCents": 1065863,
+      "ssWagesCents": 1065863,
+      "medicareWagesCents": 1065863,
+      "k401Cents": 0
+    },
+    "E-0061": {
+      "grossCents": 980575,
+      "fitWagesCents": 921740,
+      "ssWagesCents": 980575,
+      "medicareWagesCents": 980575,
+      "k401Cents": 58835
+    },
+    "E-0062": {
+      "grossCents": 1167926,
+      "fitWagesCents": 1167926,
+      "ssWagesCents": 1167926,
+      "medicareWagesCents": 1167926,
+      "k401Cents": 0
+    },
+    "E-0063": {
+      "grossCents": 1068988,
+      "fitWagesCents": 967539,
+      "ssWagesCents": 1020988,
+      "medicareWagesCents": 1020988,
+      "k401Cents": 53449
+    },
+    "E-0064": {
+      "grossCents": 786000,
+      "fitWagesCents": 654840,
+      "ssWagesCents": 702000,
+      "medicareWagesCents": 702000,
+      "k401Cents": 47160
+    },
+    "E-0065": {
+      "grossCents": 964500,
+      "fitWagesCents": 834050,
+      "ssWagesCents": 930500,
+      "medicareWagesCents": 930500,
+      "k401Cents": 96450
+    },
+    "E-0066": {
+      "grossCents": 819825,
+      "fitWagesCents": 795230,
+      "ssWagesCents": 819825,
+      "medicareWagesCents": 819825,
+      "k401Cents": 24595
+    },
+    "E-0067": {
+      "grossCents": 1096000,
+      "fitWagesCents": 979120,
+      "ssWagesCents": 1012000,
+      "medicareWagesCents": 1012000,
+      "k401Cents": 32880
+    },
+    "E-0068": {
+      "grossCents": 752000,
+      "fitWagesCents": 657840,
+      "ssWagesCents": 718000,
+      "medicareWagesCents": 718000,
+      "k401Cents": 60160
+    },
+    "E-0069": {
+      "grossCents": 752000,
+      "fitWagesCents": 672880,
+      "ssWagesCents": 718000,
+      "medicareWagesCents": 718000,
+      "k401Cents": 45120
+    },
+    "E-0070": {
+      "grossCents": 884250,
+      "fitWagesCents": 761825,
+      "ssWagesCents": 850250,
+      "medicareWagesCents": 850250,
+      "k401Cents": 88425
+    },
+    "E-0071": {
+      "grossCents": 859300,
+      "fitWagesCents": 782335,
+      "ssWagesCents": 825300,
+      "medicareWagesCents": 825300,
+      "k401Cents": 42965
+    },
+    "E-0072": {
+      "grossCents": 771600,
+      "fitWagesCents": 748452,
+      "ssWagesCents": 771600,
+      "medicareWagesCents": 771600,
+      "k401Cents": 23148
+    },
+    "E-0073": {
+      "grossCents": 993250,
+      "fitWagesCents": 959250,
+      "ssWagesCents": 959250,
+      "medicareWagesCents": 959250,
+      "k401Cents": 0
+    },
+    "E-0074": {
+      "grossCents": 912175,
+      "fitWagesCents": 805201,
+      "ssWagesCents": 878175,
+      "medicareWagesCents": 878175,
+      "k401Cents": 72974
+    },
+    "E-0075": {
+      "grossCents": 963126,
+      "fitWagesCents": 850232,
+      "ssWagesCents": 879126,
+      "medicareWagesCents": 879126,
+      "k401Cents": 28894
+    },
+    "E-0076": {
+      "grossCents": 1008838,
+      "fitWagesCents": 864308,
+      "ssWagesCents": 924838,
+      "medicareWagesCents": 924838,
+      "k401Cents": 60530
+    },
+    "E-0077": {
+      "grossCents": 836550,
+      "fitWagesCents": 803088,
+      "ssWagesCents": 836550,
+      "medicareWagesCents": 836550,
+      "k401Cents": 33462
+    },
+    "E-0078": {
+      "grossCents": 800000,
+      "fitWagesCents": 752000,
+      "ssWagesCents": 752000,
+      "medicareWagesCents": 752000,
+      "k401Cents": 0
+    },
+    "E-0079": {
+      "grossCents": 1073151,
+      "fitWagesCents": 956957,
+      "ssWagesCents": 989151,
+      "medicareWagesCents": 989151,
+      "k401Cents": 32194
+    },
+    "E-0080": {
+      "grossCents": 825600,
+      "fitWagesCents": 725552,
+      "ssWagesCents": 791600,
+      "medicareWagesCents": 791600,
+      "k401Cents": 66048
+    },
+    "E-0081": {
+      "grossCents": 1060938,
+      "fitWagesCents": 954844,
+      "ssWagesCents": 1060938,
+      "medicareWagesCents": 1060938,
+      "k401Cents": 106094
+    },
+    "E-0082": {
+      "grossCents": 917000,
+      "fitWagesCents": 871150,
+      "ssWagesCents": 917000,
+      "medicareWagesCents": 917000,
+      "k401Cents": 45850
+    },
+    "E-0083": {
+      "grossCents": 1087438,
+      "fitWagesCents": 1009940,
+      "ssWagesCents": 1053438,
+      "medicareWagesCents": 1053438,
+      "k401Cents": 43498
+    },
+    "E-0084": {
+      "grossCents": 1243800,
+      "fitWagesCents": 1159800,
+      "ssWagesCents": 1159800,
+      "medicareWagesCents": 1159800,
+      "k401Cents": 0
+    },
+    "E-0085": {
+      "grossCents": 945875,
+      "fitWagesCents": 803287,
+      "ssWagesCents": 897875,
+      "medicareWagesCents": 897875,
+      "k401Cents": 94588
+    },
+    "E-0086": {
+      "grossCents": 1096000,
+      "fitWagesCents": 1048000,
+      "ssWagesCents": 1048000,
+      "medicareWagesCents": 1048000,
+      "k401Cents": 0
+    },
+    "E-0087": {
+      "grossCents": 788500,
+      "fitWagesCents": 680845,
+      "ssWagesCents": 704500,
+      "medicareWagesCents": 704500,
+      "k401Cents": 23655
+    },
+    "E-0088": {
+      "grossCents": 1104000,
+      "fitWagesCents": 1056000,
+      "ssWagesCents": 1056000,
+      "medicareWagesCents": 1056000,
+      "k401Cents": 0
+    },
+    "E-0089": {
+      "grossCents": 849663,
+      "fitWagesCents": 773180,
+      "ssWagesCents": 815663,
+      "medicareWagesCents": 815663,
+      "k401Cents": 42483
+    },
+    "E-0090": {
+      "grossCents": 963126,
+      "fitWagesCents": 929126,
+      "ssWagesCents": 929126,
+      "medicareWagesCents": 929126,
+      "k401Cents": 0
+    },
+    "E-0091": {
+      "grossCents": 1144000,
+      "fitWagesCents": 1075680,
+      "ssWagesCents": 1110000,
+      "medicareWagesCents": 1110000,
+      "k401Cents": 34320
+    },
+    "E-0092": {
+      "grossCents": 960925,
+      "fitWagesCents": 816832,
+      "ssWagesCents": 912925,
+      "medicareWagesCents": 912925,
+      "k401Cents": 96093
+    },
+    "E-0093": {
+      "grossCents": 1136000,
+      "fitWagesCents": 997120,
+      "ssWagesCents": 1088000,
+      "medicareWagesCents": 1088000,
+      "k401Cents": 90880
+    },
+    "E-0094": {
+      "grossCents": 1079689,
+      "fitWagesCents": 1031689,
+      "ssWagesCents": 1031689,
+      "medicareWagesCents": 1031689,
+      "k401Cents": 0
+    },
+    "E-0095": {
+      "grossCents": 864000,
+      "fitWagesCents": 838080,
+      "ssWagesCents": 864000,
+      "medicareWagesCents": 864000,
+      "k401Cents": 25920
+    },
+    "E-0096": {
+      "grossCents": 929425,
+      "fitWagesCents": 839659,
+      "ssWagesCents": 895425,
+      "medicareWagesCents": 895425,
+      "k401Cents": 55766
+    },
+    "E-0097": {
+      "grossCents": 1054100,
+      "fitWagesCents": 927936,
+      "ssWagesCents": 970100,
+      "medicareWagesCents": 970100,
+      "k401Cents": 42164
+    },
+    "E-0098": {
+      "grossCents": 1123700,
+      "fitWagesCents": 1019515,
+      "ssWagesCents": 1075700,
+      "medicareWagesCents": 1075700,
+      "k401Cents": 56185
+    },
+    "E-0099": {
+      "grossCents": 946200,
+      "fitWagesCents": 767580,
+      "ssWagesCents": 862200,
+      "medicareWagesCents": 862200,
+      "k401Cents": 94620
+    },
+    "E-0100": {
+      "grossCents": 863200,
+      "fitWagesCents": 789304,
+      "ssWagesCents": 815200,
+      "medicareWagesCents": 815200,
+      "k401Cents": 25896
+    },
+    "E-0101": {
+      "grossCents": 920950,
+      "fitWagesCents": 865693,
+      "ssWagesCents": 920950,
+      "medicareWagesCents": 920950,
+      "k401Cents": 55257
+    },
+    "E-0102": {
+      "grossCents": 1012600,
+      "fitWagesCents": 938096,
+      "ssWagesCents": 978600,
+      "medicareWagesCents": 978600,
+      "k401Cents": 40504
+    },
+    "E-0103": {
+      "grossCents": 984000,
+      "fitWagesCents": 871280,
+      "ssWagesCents": 950000,
+      "medicareWagesCents": 950000,
+      "k401Cents": 78720
+    },
+    "E-0104": {
+      "grossCents": 1026988,
+      "fitWagesCents": 840289,
+      "ssWagesCents": 942988,
+      "medicareWagesCents": 942988,
+      "k401Cents": 102699
+    },
+    "E-0105": {
+      "grossCents": 784000,
+      "fitWagesCents": 726480,
+      "ssWagesCents": 750000,
+      "medicareWagesCents": 750000,
+      "k401Cents": 23520
+    },
+    "E-0106": {
+      "grossCents": 1090125,
+      "fitWagesCents": 940717,
+      "ssWagesCents": 1006125,
+      "medicareWagesCents": 1006125,
+      "k401Cents": 65408
+    },
+    "E-0107": {
+      "grossCents": 1202988,
+      "fitWagesCents": 1202988,
+      "ssWagesCents": 1202988,
+      "medicareWagesCents": 1202988,
+      "k401Cents": 0
+    },
+    "E-0108": {
+      "grossCents": 1026325,
+      "fitWagesCents": 896219,
+      "ssWagesCents": 978325,
+      "medicareWagesCents": 978325,
+      "k401Cents": 82106
+    },
+    "E-0109": {
+      "grossCents": 917125,
+      "fitWagesCents": 843755,
+      "ssWagesCents": 917125,
+      "medicareWagesCents": 917125,
+      "k401Cents": 73370
+    },
+    "E-0110": {
+      "grossCents": 867875,
+      "fitWagesCents": 714445,
+      "ssWagesCents": 783875,
+      "medicareWagesCents": 783875,
+      "k401Cents": 69430
+    },
+    "E-0111": {
+      "grossCents": 905113,
+      "fitWagesCents": 780602,
+      "ssWagesCents": 871113,
+      "medicareWagesCents": 871113,
+      "k401Cents": 90511
+    },
+    "E-0112": {
+      "grossCents": 1108400,
+      "fitWagesCents": 949560,
+      "ssWagesCents": 1060400,
+      "medicareWagesCents": 1060400,
+      "k401Cents": 110840
+    },
+    "E-0113": {
+      "grossCents": 984000,
+      "fitWagesCents": 950000,
+      "ssWagesCents": 950000,
+      "medicareWagesCents": 950000,
+      "k401Cents": 0
+    },
+    "E-0114": {
+      "grossCents": 1087301,
+      "fitWagesCents": 978571,
+      "ssWagesCents": 1087301,
+      "medicareWagesCents": 1087301,
+      "k401Cents": 108730
+    },
+    "E-0115": {
+      "grossCents": 1104000,
+      "fitWagesCents": 993600,
+      "ssWagesCents": 1104000,
+      "medicareWagesCents": 1104000,
+      "k401Cents": 110400
+    },
+    "E-0116": {
+      "grossCents": 1007063,
+      "fitWagesCents": 922710,
+      "ssWagesCents": 973063,
+      "medicareWagesCents": 973063,
+      "k401Cents": 50353
+    },
+    "E-0117": {
+      "grossCents": 1048000,
+      "fitWagesCents": 1014000,
+      "ssWagesCents": 1014000,
+      "medicareWagesCents": 1014000,
+      "k401Cents": 0
+    },
+    "E-0118": {
+      "grossCents": 776000,
+      "fitWagesCents": 744960,
+      "ssWagesCents": 776000,
+      "medicareWagesCents": 776000,
+      "k401Cents": 31040
+    },
+    "E-0119": {
+      "grossCents": 1152400,
+      "fitWagesCents": 1012208,
+      "ssWagesCents": 1104400,
+      "medicareWagesCents": 1104400,
+      "k401Cents": 92192
+    },
+    "E-0120": {
+      "grossCents": 850150,
+      "fitWagesCents": 790645,
+      "ssWagesCents": 816150,
+      "medicareWagesCents": 816150,
+      "k401Cents": 25505
+    },
+    "E-0121": {
+      "grossCents": 974313,
+      "fitWagesCents": 897084,
+      "ssWagesCents": 926313,
+      "medicareWagesCents": 926313,
+      "k401Cents": 29229
+    },
+    "E-0122": {
+      "grossCents": 1104000,
+      "fitWagesCents": 909600,
+      "ssWagesCents": 1020000,
+      "medicareWagesCents": 1020000,
+      "k401Cents": 110400
+    },
+    "E-0123": {
+      "grossCents": 1089650,
+      "fitWagesCents": 1035167,
+      "ssWagesCents": 1089650,
+      "medicareWagesCents": 1089650,
+      "k401Cents": 54483
+    },
+    "E-0124": {
+      "grossCents": 904000,
+      "fitWagesCents": 904000,
+      "ssWagesCents": 904000,
+      "medicareWagesCents": 904000,
+      "k401Cents": 0
+    },
+    "E-0125": {
+      "grossCents": 855750,
+      "fitWagesCents": 782077,
+      "ssWagesCents": 807750,
+      "medicareWagesCents": 807750,
+      "k401Cents": 25673
+    },
+    "E-0126": {
+      "grossCents": 1085063,
+      "fitWagesCents": 985959,
+      "ssWagesCents": 1051063,
+      "medicareWagesCents": 1051063,
+      "k401Cents": 65104
+    },
+    "E-0127": {
+      "grossCents": 1166100,
+      "fitWagesCents": 1035456,
+      "ssWagesCents": 1082100,
+      "medicareWagesCents": 1082100,
+      "k401Cents": 46644
+    },
+    "E-0128": {
+      "grossCents": 1072363,
+      "fitWagesCents": 995468,
+      "ssWagesCents": 1038363,
+      "medicareWagesCents": 1038363,
+      "k401Cents": 42895
+    },
+    "E-0129": {
+      "grossCents": 1008025,
+      "fitWagesCents": 893784,
+      "ssWagesCents": 924025,
+      "medicareWagesCents": 924025,
+      "k401Cents": 30241
+    },
+    "E-0130": {
+      "grossCents": 1162450,
+      "fitWagesCents": 1079576,
+      "ssWagesCents": 1114450,
+      "medicareWagesCents": 1114450,
+      "k401Cents": 34874
+    },
+    "E-0131": {
+      "grossCents": 1140750,
+      "fitWagesCents": 1049490,
+      "ssWagesCents": 1140750,
+      "medicareWagesCents": 1140750,
+      "k401Cents": 91260
+    },
+    "E-0132": {
+      "grossCents": 880075,
+      "fitWagesCents": 832075,
+      "ssWagesCents": 832075,
+      "medicareWagesCents": 832075,
+      "k401Cents": 0
+    },
+    "E-0133": {
+      "grossCents": 1239038,
+      "fitWagesCents": 1201867,
+      "ssWagesCents": 1239038,
+      "medicareWagesCents": 1239038,
+      "k401Cents": 37171
+    },
+    "E-0134": {
+      "grossCents": 1079000,
+      "fitWagesCents": 941050,
+      "ssWagesCents": 995000,
+      "medicareWagesCents": 995000,
+      "k401Cents": 53950
+    },
+    "E-0135": {
+      "grossCents": 1170813,
+      "fitWagesCents": 1051688,
+      "ssWagesCents": 1086813,
+      "medicareWagesCents": 1086813,
+      "k401Cents": 35125
+    },
+    "E-0136": {
+      "grossCents": 1120350,
+      "fitWagesCents": 1030722,
+      "ssWagesCents": 1120350,
+      "medicareWagesCents": 1120350,
+      "k401Cents": 89628
+    },
+    "E-0137": {
+      "grossCents": 1184400,
+      "fitWagesCents": 1100868,
+      "ssWagesCents": 1136400,
+      "medicareWagesCents": 1136400,
+      "k401Cents": 35532
+    },
+    "E-0138": {
+      "grossCents": 842775,
+      "fitWagesCents": 775353,
+      "ssWagesCents": 842775,
+      "medicareWagesCents": 842775,
+      "k401Cents": 67422
+    },
+    "E-0139": {
+      "grossCents": 824000,
+      "fitWagesCents": 693600,
+      "ssWagesCents": 776000,
+      "medicareWagesCents": 776000,
+      "k401Cents": 82400
+    },
+    "E-0140": {
+      "grossCents": 1095600,
+      "fitWagesCents": 1061600,
+      "ssWagesCents": 1061600,
+      "medicareWagesCents": 1061600,
+      "k401Cents": 0
+    },
+    "E-0141": {
+      "grossCents": 885801,
+      "fitWagesCents": 802368,
+      "ssWagesCents": 837801,
+      "medicareWagesCents": 837801,
+      "k401Cents": 35433
+    },
+    "E-0142": {
+      "grossCents": 933663,
+      "fitWagesCents": 877643,
+      "ssWagesCents": 933663,
+      "medicareWagesCents": 933663,
+      "k401Cents": 56020
+    },
+    "E-0143": {
+      "grossCents": 963125,
+      "fitWagesCents": 886075,
+      "ssWagesCents": 963125,
+      "medicareWagesCents": 963125,
+      "k401Cents": 77050
+    },
+    "E-0144": {
+      "grossCents": 962325,
+      "fitWagesCents": 923832,
+      "ssWagesCents": 962325,
+      "medicareWagesCents": 962325,
+      "k401Cents": 38493
+    },
+    "E-0145": {
+      "grossCents": 830563,
+      "fitWagesCents": 696729,
+      "ssWagesCents": 746563,
+      "medicareWagesCents": 746563,
+      "k401Cents": 49834
+    },
+    "E-0146": {
+      "grossCents": 825413,
+      "fitWagesCents": 766651,
+      "ssWagesCents": 791413,
+      "medicareWagesCents": 791413,
+      "k401Cents": 24762
+    },
+    "E-0147": {
+      "grossCents": 1114350,
+      "fitWagesCents": 918915,
+      "ssWagesCents": 1030350,
+      "medicareWagesCents": 1030350,
+      "k401Cents": 111435
+    },
+    "E-0148": {
+      "grossCents": 1141339,
+      "fitWagesCents": 1011684,
+      "ssWagesCents": 1057339,
+      "medicareWagesCents": 1057339,
+      "k401Cents": 45655
+    },
+    "E-0149": {
+      "grossCents": 816000,
+      "fitWagesCents": 732000,
+      "ssWagesCents": 732000,
+      "medicareWagesCents": 732000,
+      "k401Cents": 0
+    },
+    "E-0150": {
+      "grossCents": 1092213,
+      "fitWagesCents": 989602,
+      "ssWagesCents": 1044213,
+      "medicareWagesCents": 1044213,
+      "k401Cents": 54611
+    },
+    "E-0151": {
+      "grossCents": 834513,
+      "fitWagesCents": 683752,
+      "ssWagesCents": 750513,
+      "medicareWagesCents": 750513,
+      "k401Cents": 66761
+    },
+    "E-0152": {
+      "grossCents": 1162000,
+      "fitWagesCents": 1093140,
+      "ssWagesCents": 1128000,
+      "medicareWagesCents": 1128000,
+      "k401Cents": 34860
+    },
+    "E-0153": {
+      "grossCents": 992163,
+      "fitWagesCents": 904476,
+      "ssWagesCents": 944163,
+      "medicareWagesCents": 944163,
+      "k401Cents": 39687
+    },
+    "E-0154": {
+      "grossCents": 936000,
+      "fitWagesCents": 808400,
+      "ssWagesCents": 902000,
+      "medicareWagesCents": 902000,
+      "k401Cents": 93600
+    },
+    "E-0155": {
+      "grossCents": 827475,
+      "fitWagesCents": 677277,
+      "ssWagesCents": 743475,
+      "medicareWagesCents": 743475,
+      "k401Cents": 66198
+    },
+    "E-0156": {
+      "grossCents": 1080000,
+      "fitWagesCents": 931200,
+      "ssWagesCents": 996000,
+      "medicareWagesCents": 996000,
+      "k401Cents": 64800
+    },
+    "E-0157": {
+      "grossCents": 788500,
+      "fitWagesCents": 677420,
+      "ssWagesCents": 740500,
+      "medicareWagesCents": 740500,
+      "k401Cents": 63080
+    },
+    "E-0158": {
+      "grossCents": 1049750,
+      "fitWagesCents": 913262,
+      "ssWagesCents": 965750,
+      "medicareWagesCents": 965750,
+      "k401Cents": 52488
+    },
+    "E-0159": {
+      "grossCents": 1107175,
+      "fitWagesCents": 996457,
+      "ssWagesCents": 1107175,
+      "medicareWagesCents": 1107175,
+      "k401Cents": 110718
+    },
+    "E-0160": {
+      "grossCents": 1002450,
+      "fitWagesCents": 928352,
+      "ssWagesCents": 968450,
+      "medicareWagesCents": 968450,
+      "k401Cents": 40098
+    },
+    "E-0161": {
+      "grossCents": 816000,
+      "fitWagesCents": 749360,
+      "ssWagesCents": 782000,
+      "medicareWagesCents": 782000,
+      "k401Cents": 32640
+    },
+    "E-0162": {
+      "grossCents": 1146650,
+      "fitWagesCents": 970918,
+      "ssWagesCents": 1062650,
+      "medicareWagesCents": 1062650,
+      "k401Cents": 91732
+    },
+    "E-0163": {
+      "grossCents": 1012600,
+      "fitWagesCents": 898221,
+      "ssWagesCents": 928600,
+      "medicareWagesCents": 928600,
+      "k401Cents": 30379
+    },
+    "E-0164": {
+      "grossCents": 821700,
+      "fitWagesCents": 696615,
+      "ssWagesCents": 737700,
+      "medicareWagesCents": 737700,
+      "k401Cents": 41085
+    },
+    "E-0165": {
+      "grossCents": 916275,
+      "fitWagesCents": 790647,
+      "ssWagesCents": 882275,
+      "medicareWagesCents": 882275,
+      "k401Cents": 91628
+    },
+    "E-0166": {
+      "grossCents": 933800,
+      "fitWagesCents": 887110,
+      "ssWagesCents": 933800,
+      "medicareWagesCents": 933800,
+      "k401Cents": 46690
+    },
+    "E-0167": {
+      "grossCents": 913000,
+      "fitWagesCents": 879000,
+      "ssWagesCents": 879000,
+      "medicareWagesCents": 879000,
+      "k401Cents": 0
+    },
+    "E-0168": {
+      "grossCents": 1016288,
+      "fitWagesCents": 880659,
+      "ssWagesCents": 982288,
+      "medicareWagesCents": 982288,
+      "k401Cents": 101629
+    },
+    "E-0169": {
+      "grossCents": 757951,
+      "fitWagesCents": 727632,
+      "ssWagesCents": 757951,
+      "medicareWagesCents": 757951,
+      "k401Cents": 30319
+    },
+    "E-0170": {
+      "grossCents": 1005700,
+      "fitWagesCents": 941528,
+      "ssWagesCents": 971700,
+      "medicareWagesCents": 971700,
+      "k401Cents": 30172
+    },
+    "E-0171": {
+      "grossCents": 838300,
+      "fitWagesCents": 729151,
+      "ssWagesCents": 754300,
+      "medicareWagesCents": 754300,
+      "k401Cents": 25149
+    },
+    "E-0172": {
+      "grossCents": 1048000,
+      "fitWagesCents": 968560,
+      "ssWagesCents": 1000000,
+      "medicareWagesCents": 1000000,
+      "k401Cents": 31440
+    },
+    "E-0173": {
+      "grossCents": 853450,
+      "fitWagesCents": 684104,
+      "ssWagesCents": 769450,
+      "medicareWagesCents": 769450,
+      "k401Cents": 85346
+    },
+    "E-0174": {
+      "grossCents": 1083950,
+      "fitWagesCents": 1006592,
+      "ssWagesCents": 1049950,
+      "medicareWagesCents": 1049950,
+      "k401Cents": 43358
+    },
+    "E-0175": {
+      "grossCents": 875825,
+      "fitWagesCents": 739275,
+      "ssWagesCents": 791825,
+      "medicareWagesCents": 791825,
+      "k401Cents": 52550
+    },
+    "E-0176": {
+      "grossCents": 1060950,
+      "fitWagesCents": 945121,
+      "ssWagesCents": 976950,
+      "medicareWagesCents": 976950,
+      "k401Cents": 31829
+    },
+    "E-0177": {
+      "grossCents": 1013375,
+      "fitWagesCents": 878706,
+      "ssWagesCents": 929375,
+      "medicareWagesCents": 929375,
+      "k401Cents": 50669
+    },
+    "E-0178": {
+      "grossCents": 1186800,
+      "fitWagesCents": 1043856,
+      "ssWagesCents": 1138800,
+      "medicareWagesCents": 1138800,
+      "k401Cents": 94944
+    },
+    "E-0179": {
+      "grossCents": 800000,
+      "fitWagesCents": 688000,
+      "ssWagesCents": 752000,
+      "medicareWagesCents": 752000,
+      "k401Cents": 64000
+    },
+    "E-0180": {
+      "grossCents": 879800,
+      "fitWagesCents": 796608,
+      "ssWagesCents": 831800,
+      "medicareWagesCents": 831800,
+      "k401Cents": 35192
+    },
+    "E-0181": {
+      "grossCents": 1104000,
+      "fitWagesCents": 1070880,
+      "ssWagesCents": 1104000,
+      "medicareWagesCents": 1104000,
+      "k401Cents": 33120
+    },
+    "E-0182": {
+      "grossCents": 1133288,
+      "fitWagesCents": 985959,
+      "ssWagesCents": 1099288,
+      "medicareWagesCents": 1099288,
+      "k401Cents": 113329
+    },
+    "E-0183": {
+      "grossCents": 900488,
+      "fitWagesCents": 828449,
+      "ssWagesCents": 900488,
+      "medicareWagesCents": 900488,
+      "k401Cents": 72039
+    },
+    "E-0184": {
+      "grossCents": 1020763,
+      "fitWagesCents": 906140,
+      "ssWagesCents": 936763,
+      "medicareWagesCents": 936763,
+      "k401Cents": 30623
+    },
+    "E-0185": {
+      "grossCents": 768000,
+      "fitWagesCents": 687920,
+      "ssWagesCents": 734000,
+      "medicareWagesCents": 734000,
+      "k401Cents": 46080
+    },
+    "E-0186": {
+      "grossCents": 1097125,
+      "fitWagesCents": 1009355,
+      "ssWagesCents": 1097125,
+      "medicareWagesCents": 1097125,
+      "k401Cents": 87770
+    },
+    "E-0187": {
+      "grossCents": 1167250,
+      "fitWagesCents": 1083250,
+      "ssWagesCents": 1083250,
+      "medicareWagesCents": 1083250,
+      "k401Cents": 0
+    },
+    "E-0188": {
+      "grossCents": 928000,
+      "fitWagesCents": 881600,
+      "ssWagesCents": 928000,
+      "medicareWagesCents": 928000,
+      "k401Cents": 46400
+    },
+    "E-0189": {
+      "grossCents": 1031625,
+      "fitWagesCents": 949095,
+      "ssWagesCents": 1031625,
+      "medicareWagesCents": 1031625,
+      "k401Cents": 82530
+    },
+    "E-0190": {
+      "grossCents": 960000,
+      "fitWagesCents": 780000,
+      "ssWagesCents": 876000,
+      "medicareWagesCents": 876000,
+      "k401Cents": 96000
+    },
+    "E-0191": {
+      "grossCents": 888300,
+      "fitWagesCents": 759884,
+      "ssWagesCents": 804300,
+      "medicareWagesCents": 804300,
+      "k401Cents": 44416
+    },
+    "E-0192": {
+      "grossCents": 1048000,
+      "fitWagesCents": 930160,
+      "ssWagesCents": 1014000,
+      "medicareWagesCents": 1014000,
+      "k401Cents": 83840
+    },
+    "E-0193": {
+      "grossCents": 936700,
+      "fitWagesCents": 888700,
+      "ssWagesCents": 888700,
+      "medicareWagesCents": 888700,
+      "k401Cents": 0
+    },
+    "E-0194": {
+      "grossCents": 800000,
+      "fitWagesCents": 734000,
+      "ssWagesCents": 766000,
+      "medicareWagesCents": 766000,
+      "k401Cents": 32000
+    },
+    "E-0195": {
+      "grossCents": 819825,
+      "fitWagesCents": 819825,
+      "ssWagesCents": 819825,
+      "medicareWagesCents": 819825,
+      "k401Cents": 0
+    },
+    "E-0196": {
+      "grossCents": 782400,
+      "fitWagesCents": 656160,
+      "ssWagesCents": 734400,
+      "medicareWagesCents": 734400,
+      "k401Cents": 78240
+    },
+    "E-0197": {
+      "grossCents": 929600,
+      "fitWagesCents": 881600,
+      "ssWagesCents": 881600,
+      "medicareWagesCents": 881600,
+      "k401Cents": 0
+    },
+    "E-0198": {
+      "grossCents": 797825,
+      "fitWagesCents": 739890,
+      "ssWagesCents": 763825,
+      "medicareWagesCents": 763825,
+      "k401Cents": 23935
+    },
+    "E-0199": {
+      "grossCents": 916963,
+      "fitWagesCents": 777945,
+      "ssWagesCents": 832963,
+      "medicareWagesCents": 832963,
+      "k401Cents": 55018
+    },
+    "E-0200": {
+      "grossCents": 1200600,
+      "fitWagesCents": 1068576,
+      "ssWagesCents": 1116600,
+      "medicareWagesCents": 1116600,
+      "k401Cents": 48024
+    },
+    "E-0201": {
+      "grossCents": 813400,
+      "fitWagesCents": 664328,
+      "ssWagesCents": 729400,
+      "medicareWagesCents": 729400,
+      "k401Cents": 65072
+    },
+    "E-0202": {
+      "grossCents": 1110376,
+      "fitWagesCents": 1017960,
+      "ssWagesCents": 1062376,
+      "medicareWagesCents": 1062376,
+      "k401Cents": 44416
+    },
+    "E-0203": {
+      "grossCents": 843313,
+      "fitWagesCents": 674982,
+      "ssWagesCents": 759313,
+      "medicareWagesCents": 759313,
+      "k401Cents": 84331
+    },
+    "E-0204": {
+      "grossCents": 752000,
+      "fitWagesCents": 673920,
+      "ssWagesCents": 704000,
+      "medicareWagesCents": 704000,
+      "k401Cents": 30080
+    },
+    "E-0205": {
+      "grossCents": 1041675,
+      "fitWagesCents": 1000008,
+      "ssWagesCents": 1041675,
+      "medicareWagesCents": 1041675,
+      "k401Cents": 41667
+    },
+    "E-0206": {
+      "grossCents": 1119525,
+      "fitWagesCents": 1029549,
+      "ssWagesCents": 1085525,
+      "medicareWagesCents": 1085525,
+      "k401Cents": 55976
+    },
+    "E-0207": {
+      "grossCents": 824000,
+      "fitWagesCents": 751280,
+      "ssWagesCents": 776000,
+      "medicareWagesCents": 776000,
+      "k401Cents": 24720
+    },
+    "E-0208": {
+      "grossCents": 1154726,
+      "fitWagesCents": 1060536,
+      "ssWagesCents": 1106726,
+      "medicareWagesCents": 1106726,
+      "k401Cents": 46190
+    },
+    "E-0209": {
+      "grossCents": 1162800,
+      "fitWagesCents": 1059032,
+      "ssWagesCents": 1128800,
+      "medicareWagesCents": 1128800,
+      "k401Cents": 69768
+    },
+    "E-0210": {
+      "grossCents": 1001950,
+      "fitWagesCents": 951852,
+      "ssWagesCents": 1001950,
+      "medicareWagesCents": 1001950,
+      "k401Cents": 50098
+    },
+    "E-0211": {
+      "grossCents": 1118600,
+      "fitWagesCents": 1029112,
+      "ssWagesCents": 1118600,
+      "medicareWagesCents": 1118600,
+      "k401Cents": 89488
+    },
+    "E-0212": {
+      "grossCents": 933375,
+      "fitWagesCents": 933375,
+      "ssWagesCents": 933375,
+      "medicareWagesCents": 933375,
+      "k401Cents": 0
+    },
+    "E-0213": {
+      "grossCents": 1023438,
+      "fitWagesCents": 982500,
+      "ssWagesCents": 1023438,
+      "medicareWagesCents": 1023438,
+      "k401Cents": 40938
+    },
+    "E-0214": {
+      "grossCents": 874213,
+      "fitWagesCents": 796502,
+      "ssWagesCents": 840213,
+      "medicareWagesCents": 840213,
+      "k401Cents": 43711
+    },
+    "E-0215": {
+      "grossCents": 883313,
+      "fitWagesCents": 849313,
+      "ssWagesCents": 849313,
+      "medicareWagesCents": 849313,
+      "k401Cents": 0
+    },
+    "E-0216": {
+      "grossCents": 1151500,
+      "fitWagesCents": 1045925,
+      "ssWagesCents": 1103500,
+      "medicareWagesCents": 1103500,
+      "k401Cents": 57575
+    },
+    "E-0217": {
+      "grossCents": 1104000,
+      "fitWagesCents": 967680,
+      "ssWagesCents": 1056000,
+      "medicareWagesCents": 1056000,
+      "k401Cents": 88320
+    },
+    "E-0218": {
+      "grossCents": 904650,
+      "fitWagesCents": 784278,
+      "ssWagesCents": 856650,
+      "medicareWagesCents": 856650,
+      "k401Cents": 72372
+    },
+    "E-0219": {
+      "grossCents": 826250,
+      "fitWagesCents": 767462,
+      "ssWagesCents": 792250,
+      "medicareWagesCents": 792250,
+      "k401Cents": 24788
+    },
+    "E-0220": {
+      "grossCents": 902200,
+      "fitWagesCents": 830024,
+      "ssWagesCents": 902200,
+      "medicareWagesCents": 902200,
+      "k401Cents": 72176
+    },
+    "E-0221": {
+      "grossCents": 962325,
+      "fitWagesCents": 899455,
+      "ssWagesCents": 928325,
+      "medicareWagesCents": 928325,
+      "k401Cents": 28870
+    },
+    "E-0222": {
+      "grossCents": 785850,
+      "fitWagesCents": 678274,
+      "ssWagesCents": 701850,
+      "medicareWagesCents": 701850,
+      "k401Cents": 23576
+    },
+    "E-0223": {
+      "grossCents": 771600,
+      "fitWagesCents": 649020,
+      "ssWagesCents": 687600,
+      "medicareWagesCents": 687600,
+      "k401Cents": 38580
+    },
+    "E-0224": {
+      "grossCents": 993225,
+      "fitWagesCents": 953496,
+      "ssWagesCents": 993225,
+      "medicareWagesCents": 993225,
+      "k401Cents": 39729
+    },
+    "E-0225": {
+      "grossCents": 1042188,
+      "fitWagesCents": 937969,
+      "ssWagesCents": 1042188,
+      "medicareWagesCents": 1042188,
+      "k401Cents": 104219
+    },
+    "E-0226": {
+      "grossCents": 894400,
+      "fitWagesCents": 783568,
+      "ssWagesCents": 810400,
+      "medicareWagesCents": 810400,
+      "k401Cents": 26832
+    },
+    "E-0227": {
+      "grossCents": 1024000,
+      "fitWagesCents": 924800,
+      "ssWagesCents": 976000,
+      "medicareWagesCents": 976000,
+      "k401Cents": 51200
+    },
+    "E-0228": {
+      "grossCents": 869550,
+      "fitWagesCents": 786768,
+      "ssWagesCents": 821550,
+      "medicareWagesCents": 821550,
+      "k401Cents": 34782
+    },
+    "E-0229": {
+      "grossCents": 1116551,
+      "fitWagesCents": 1068551,
+      "ssWagesCents": 1068551,
+      "medicareWagesCents": 1068551,
+      "k401Cents": 0
+    },
+    "E-0230": {
+      "grossCents": 904400,
+      "fitWagesCents": 829268,
+      "ssWagesCents": 856400,
+      "medicareWagesCents": 856400,
+      "k401Cents": 27132
+    },
+    "E-0231": {
+      "grossCents": 1370850,
+      "fitWagesCents": 1185765,
+      "ssWagesCents": 1322850,
+      "medicareWagesCents": 1322850,
+      "k401Cents": 137085
+    },
+    "E-0232": {
+      "grossCents": 1231113,
+      "fitWagesCents": 1098624,
+      "ssWagesCents": 1197113,
+      "medicareWagesCents": 1197113,
+      "k401Cents": 98489
+    },
+    "E-0233": {
+      "grossCents": 1074125,
+      "fitWagesCents": 882712,
+      "ssWagesCents": 990125,
+      "medicareWagesCents": 990125,
+      "k401Cents": 107413
+    },
+    "E-0234": {
+      "grossCents": 1264625,
+      "fitWagesCents": 1201394,
+      "ssWagesCents": 1264625,
+      "medicareWagesCents": 1264625,
+      "k401Cents": 63231
+    },
+    "E-0235": {
+      "grossCents": 1136000,
+      "fitWagesCents": 1042560,
+      "ssWagesCents": 1088000,
+      "medicareWagesCents": 1088000,
+      "k401Cents": 45440
+    },
+    "E-0236": {
+      "grossCents": 1224439,
+      "fitWagesCents": 1066972,
+      "ssWagesCents": 1140439,
+      "medicareWagesCents": 1140439,
+      "k401Cents": 73467
+    },
+    "E-0237": {
+      "grossCents": 1273000,
+      "fitWagesCents": 1111700,
+      "ssWagesCents": 1239000,
+      "medicareWagesCents": 1239000,
+      "k401Cents": 127300
+    },
+    "E-0238": {
+      "grossCents": 1216800,
+      "fitWagesCents": 1119456,
+      "ssWagesCents": 1216800,
+      "medicareWagesCents": 1216800,
+      "k401Cents": 97344
+    },
+    "E-0239": {
+      "grossCents": 1280738,
+      "fitWagesCents": 1196738,
+      "ssWagesCents": 1196738,
+      "medicareWagesCents": 1196738,
+      "k401Cents": 0
+    },
+    "E-0240": {
+      "grossCents": 1292851,
+      "fitWagesCents": 1115566,
+      "ssWagesCents": 1244851,
+      "medicareWagesCents": 1244851,
+      "k401Cents": 129285
+    },
+    "E-0241": {
+      "grossCents": 1350938,
+      "fitWagesCents": 1302938,
+      "ssWagesCents": 1302938,
+      "medicareWagesCents": 1302938,
+      "k401Cents": 0
+    },
+    "E-0242": {
+      "grossCents": 1091200,
+      "fitWagesCents": 898080,
+      "ssWagesCents": 1007200,
+      "medicareWagesCents": 1007200,
+      "k401Cents": 109120
+    },
+    "E-0243": {
+      "grossCents": 1158913,
+      "fitWagesCents": 1110913,
+      "ssWagesCents": 1110913,
+      "medicareWagesCents": 1110913,
+      "k401Cents": 0
+    },
+    "E-0244": {
+      "grossCents": 1287113,
+      "fitWagesCents": 1203113,
+      "ssWagesCents": 1203113,
+      "medicareWagesCents": 1203113,
+      "k401Cents": 0
+    },
+    "E-0245": {
+      "grossCents": 1083875,
+      "fitWagesCents": 995681,
+      "ssWagesCents": 1049875,
+      "medicareWagesCents": 1049875,
+      "k401Cents": 54194
+    },
+    "E-0246": {
+      "grossCents": 1354413,
+      "fitWagesCents": 1189148,
+      "ssWagesCents": 1270413,
+      "medicareWagesCents": 1270413,
+      "k401Cents": 81265
+    },
+    "E-0247": {
+      "grossCents": 1280688,
+      "fitWagesCents": 1168653,
+      "ssWagesCents": 1232688,
+      "medicareWagesCents": 1232688,
+      "k401Cents": 64035
+    },
+    "E-0248": {
+      "grossCents": 1280688,
+      "fitWagesCents": 1246688,
+      "ssWagesCents": 1246688,
+      "medicareWagesCents": 1246688,
+      "k401Cents": 0
+    },
+    "E-0249": {
+      "grossCents": 1301813,
+      "fitWagesCents": 1171631,
+      "ssWagesCents": 1301813,
+      "medicareWagesCents": 1301813,
+      "k401Cents": 130182
+    },
+    "E-0250": {
+      "grossCents": 1328000,
+      "fitWagesCents": 1187760,
+      "ssWagesCents": 1294000,
+      "medicareWagesCents": 1294000,
+      "k401Cents": 106240
+    },
+    "E-0251": {
+      "grossCents": 1498438,
+      "fitWagesCents": 1450438,
+      "ssWagesCents": 1450438,
+      "medicareWagesCents": 1450438,
+      "k401Cents": 0
+    },
+    "E-0252": {
+      "grossCents": 1366375,
+      "fitWagesCents": 1223065,
+      "ssWagesCents": 1332375,
+      "medicareWagesCents": 1332375,
+      "k401Cents": 109310
+    },
+    "E-0253": {
+      "grossCents": 1297213,
+      "fitWagesCents": 1083491,
+      "ssWagesCents": 1213213,
+      "medicareWagesCents": 1213213,
+      "k401Cents": 129722
+    },
+    "E-0254": {
+      "grossCents": 1079000,
+      "fitWagesCents": 998630,
+      "ssWagesCents": 1031000,
+      "medicareWagesCents": 1031000,
+      "k401Cents": 32370
+    },
+    "E-0255": {
+      "grossCents": 1307776,
+      "fitWagesCents": 1155154,
+      "ssWagesCents": 1259776,
+      "medicareWagesCents": 1259776,
+      "k401Cents": 104622
+    },
+    "E-0256": {
+      "grossCents": 1480600,
+      "fitWagesCents": 1373376,
+      "ssWagesCents": 1432600,
+      "medicareWagesCents": 1432600,
+      "k401Cents": 59224
+    },
+    "E-0257": {
+      "grossCents": 1157425,
+      "fitWagesCents": 1053978,
+      "ssWagesCents": 1123425,
+      "medicareWagesCents": 1123425,
+      "k401Cents": 69447
+    },
+    "E-0258": {
+      "grossCents": 1330263,
+      "fitWagesCents": 1149237,
+      "ssWagesCents": 1282263,
+      "medicareWagesCents": 1282263,
+      "k401Cents": 133026
+    },
+    "E-0259": {
+      "grossCents": 1452501,
+      "fitWagesCents": 1345876,
+      "ssWagesCents": 1418501,
+      "medicareWagesCents": 1418501,
+      "k401Cents": 72625
+    },
+    "E-0260": {
+      "grossCents": 1249325,
+      "fitWagesCents": 1163845,
+      "ssWagesCents": 1201325,
+      "medicareWagesCents": 1201325,
+      "k401Cents": 37480
+    },
+    "E-0261": {
+      "grossCents": 1930768,
+      "fitWagesCents": 1776308,
+      "ssWagesCents": 1930768,
+      "medicareWagesCents": 1930768,
+      "k401Cents": 154460
+    },
+    "E-0262": {
+      "grossCents": 2546152,
+      "fitWagesCents": 2334844,
+      "ssWagesCents": 2462152,
+      "medicareWagesCents": 2462152,
+      "k401Cents": 127308
+    },
+    "E-0263": {
+      "grossCents": 2807692,
+      "fitWagesCents": 2492924,
+      "ssWagesCents": 2773692,
+      "medicareWagesCents": 2773692,
+      "k401Cents": 280768
+    },
+    "E-0264": {
+      "grossCents": 2407692,
+      "fitWagesCents": 2407692,
+      "ssWagesCents": 2407692,
+      "medicareWagesCents": 2407692,
+      "k401Cents": 0
+    },
+    "E-0265": {
+      "grossCents": 2530768,
+      "fitWagesCents": 2193692,
+      "ssWagesCents": 2446768,
+      "medicareWagesCents": 2446768,
+      "k401Cents": 253076
+    },
+    "E-0266": {
+      "grossCents": 2776924,
+      "fitWagesCents": 2451232,
+      "ssWagesCents": 2728924,
+      "medicareWagesCents": 2728924,
+      "k401Cents": 277692
+    },
+    "E-0267": {
+      "grossCents": 2230768,
+      "fitWagesCents": 1973692,
+      "ssWagesCents": 2196768,
+      "medicareWagesCents": 2196768,
+      "k401Cents": 223076
+    },
+    "E-0268": {
+      "grossCents": 2323076,
+      "fitWagesCents": 2056768,
+      "ssWagesCents": 2289076,
+      "medicareWagesCents": 2289076,
+      "k401Cents": 232308
+    },
+    "E-0269": {
+      "grossCents": 1869232,
+      "fitWagesCents": 1719692,
+      "ssWagesCents": 1869232,
+      "medicareWagesCents": 1869232,
+      "k401Cents": 149540
+    },
+    "E-0270": {
+      "grossCents": 1723076,
+      "fitWagesCents": 1620152,
+      "ssWagesCents": 1689076,
+      "medicareWagesCents": 1689076,
+      "k401Cents": 68924
+    },
+    "E-0271": {
+      "grossCents": 1776924,
+      "fitWagesCents": 1742924,
+      "ssWagesCents": 1742924,
+      "medicareWagesCents": 1742924,
+      "k401Cents": 0
+    },
+    "E-0272": {
+      "grossCents": 2000000,
+      "fitWagesCents": 1816000,
+      "ssWagesCents": 1916000,
+      "medicareWagesCents": 1916000,
+      "k401Cents": 100000
+    },
+    "E-0273": {
+      "grossCents": 2415384,
+      "fitWagesCents": 2089844,
+      "ssWagesCents": 2331384,
+      "medicareWagesCents": 2331384,
+      "k401Cents": 241540
+    },
+    "E-0274": {
+      "grossCents": 2500000,
+      "fitWagesCents": 2352000,
+      "ssWagesCents": 2452000,
+      "medicareWagesCents": 2452000,
+      "k401Cents": 100000
+    },
+    "E-0275": {
+      "grossCents": 2900000,
+      "fitWagesCents": 2816000,
+      "ssWagesCents": 2816000,
+      "medicareWagesCents": 2816000,
+      "k401Cents": 0
+    },
+    "E-0276": {
+      "grossCents": 1892308,
+      "fitWagesCents": 1801540,
+      "ssWagesCents": 1858308,
+      "medicareWagesCents": 1858308,
+      "k401Cents": 56768
+    },
+    "E-0277": {
+      "grossCents": 2438460,
+      "fitWagesCents": 2256920,
+      "ssWagesCents": 2354460,
+      "medicareWagesCents": 2354460,
+      "k401Cents": 97540
+    },
+    "E-0278": {
+      "grossCents": 2461540,
+      "fitWagesCents": 2290464,
+      "ssWagesCents": 2413540,
+      "medicareWagesCents": 2413540,
+      "k401Cents": 123076
+    },
+    "E-0279": {
+      "grossCents": 2607692,
+      "fitWagesCents": 2451232,
+      "ssWagesCents": 2607692,
+      "medicareWagesCents": 2607692,
+      "k401Cents": 156460
+    },
+    "E-0280": {
+      "grossCents": 2230768,
+      "fitWagesCents": 2230768,
+      "ssWagesCents": 2230768,
+      "medicareWagesCents": 2230768,
+      "k401Cents": 0
+    },
+    "E-0281": {
+      "grossCents": 1961540,
+      "fitWagesCents": 1720616,
+      "ssWagesCents": 1877540,
+      "medicareWagesCents": 1877540,
+      "k401Cents": 156924
+    },
+    "E-0282": {
+      "grossCents": 2207692,
+      "fitWagesCents": 2173692,
+      "ssWagesCents": 2173692,
+      "medicareWagesCents": 2173692,
+      "k401Cents": 0
+    },
+    "E-0283": {
+      "grossCents": 2915384,
+      "fitWagesCents": 2623844,
+      "ssWagesCents": 2915384,
+      "medicareWagesCents": 2915384,
+      "k401Cents": 291540
+    },
+    "E-0284": {
+      "grossCents": 2500000,
+      "fitWagesCents": 2166000,
+      "ssWagesCents": 2416000,
+      "medicareWagesCents": 2416000,
+      "k401Cents": 250000
+    },
+    "E-0285": {
+      "grossCents": 2307692,
+      "fitWagesCents": 2223692,
+      "ssWagesCents": 2223692,
+      "medicareWagesCents": 2223692,
+      "k401Cents": 0
+    },
+    "E-0286": {
+      "grossCents": 2338460,
+      "fitWagesCents": 2220308,
+      "ssWagesCents": 2290460,
+      "medicareWagesCents": 2290460,
+      "k401Cents": 70152
+    },
+    "E-0287": {
+      "grossCents": 2592308,
+      "fitWagesCents": 2592308,
+      "ssWagesCents": 2592308,
+      "medicareWagesCents": 2592308,
+      "k401Cents": 0
+    },
+    "E-0288": {
+      "grossCents": 1684616,
+      "fitWagesCents": 1516156,
+      "ssWagesCents": 1684616,
+      "medicareWagesCents": 1684616,
+      "k401Cents": 168460
+    },
+    "E-0289": {
+      "grossCents": 2623076,
+      "fitWagesCents": 2457924,
+      "ssWagesCents": 2589076,
+      "medicareWagesCents": 2589076,
+      "k401Cents": 131152
+    },
+    "E-0290": {
+      "grossCents": 1615384,
+      "fitWagesCents": 1615384,
+      "ssWagesCents": 1615384,
+      "medicareWagesCents": 1615384,
+      "k401Cents": 0
+    },
+    "E-0291": {
+      "grossCents": 1730768,
+      "fitWagesCents": 1577536,
+      "ssWagesCents": 1646768,
+      "medicareWagesCents": 1646768,
+      "k401Cents": 69232
+    },
+    "E-0292": {
+      "grossCents": 1869232,
+      "fitWagesCents": 1723080,
+      "ssWagesCents": 1835232,
+      "medicareWagesCents": 1835232,
+      "k401Cents": 112152
+    },
+    "E-0293": {
+      "grossCents": 2361540,
+      "fitWagesCents": 2088616,
+      "ssWagesCents": 2277540,
+      "medicareWagesCents": 2277540,
+      "k401Cents": 188924
+    },
+    "E-0294": {
+      "grossCents": 2430768,
+      "fitWagesCents": 2250920,
+      "ssWagesCents": 2396768,
+      "medicareWagesCents": 2396768,
+      "k401Cents": 145848
+    },
+    "E-0295": {
+      "grossCents": 2892308,
+      "fitWagesCents": 2747692,
+      "ssWagesCents": 2892308,
+      "medicareWagesCents": 2892308,
+      "k401Cents": 144616
+    },
+    "E-0296": {
+      "grossCents": 2546152,
+      "fitWagesCents": 2342460,
+      "ssWagesCents": 2546152,
+      "medicareWagesCents": 2546152,
+      "k401Cents": 203692
+    },
+    "E-0297": {
+      "grossCents": 2507692,
+      "fitWagesCents": 2382308,
+      "ssWagesCents": 2507692,
+      "medicareWagesCents": 2507692,
+      "k401Cents": 125384
+    },
+    "E-0298": {
+      "grossCents": 2330768,
+      "fitWagesCents": 2144308,
+      "ssWagesCents": 2330768,
+      "medicareWagesCents": 2330768,
+      "k401Cents": 186460
+    },
+    "E-0299": {
+      "grossCents": 2692308,
+      "fitWagesCents": 2644308,
+      "ssWagesCents": 2644308,
+      "medicareWagesCents": 2644308,
+      "k401Cents": 0
+    },
+    "E-0300": {
+      "grossCents": 2592308,
+      "fitWagesCents": 2488616,
+      "ssWagesCents": 2592308,
+      "medicareWagesCents": 2592308,
+      "k401Cents": 103692
+    },
+    "E-0301": {
+      "grossCents": 2030768,
+      "fitWagesCents": 1845228,
+      "ssWagesCents": 1946768,
+      "medicareWagesCents": 1946768,
+      "k401Cents": 101540
+    },
+    "E-0302": {
+      "grossCents": 2007692,
+      "fitWagesCents": 1947460,
+      "ssWagesCents": 2007692,
+      "medicareWagesCents": 2007692,
+      "k401Cents": 60232
+    },
+    "E-0303": {
+      "grossCents": 1730768,
+      "fitWagesCents": 1508308,
+      "ssWagesCents": 1646768,
+      "medicareWagesCents": 1646768,
+      "k401Cents": 138460
+    },
+    "E-0304": {
+      "grossCents": 2184616,
+      "fitWagesCents": 1969540,
+      "ssWagesCents": 2100616,
+      "medicareWagesCents": 2100616,
+      "k401Cents": 131076
+    },
+    "E-0305": {
+      "grossCents": 2407692,
+      "fitWagesCents": 2373692,
+      "ssWagesCents": 2373692,
+      "medicareWagesCents": 2373692,
+      "k401Cents": 0
+    },
+    "E-0306": {
+      "grossCents": 1653848,
+      "fitWagesCents": 1487540,
+      "ssWagesCents": 1619848,
+      "medicareWagesCents": 1619848,
+      "k401Cents": 132308
+    },
+    "E-0307": {
+      "grossCents": 2861540,
+      "fitWagesCents": 2827540,
+      "ssWagesCents": 2827540,
+      "medicareWagesCents": 2827540,
+      "k401Cents": 0
+    },
+    "E-0308": {
+      "grossCents": 1661540,
+      "fitWagesCents": 1528616,
+      "ssWagesCents": 1661540,
+      "medicareWagesCents": 1661540,
+      "k401Cents": 132924
+    },
+    "E-0309": {
+      "grossCents": 2776924,
+      "fitWagesCents": 2610308,
+      "ssWagesCents": 2776924,
+      "medicareWagesCents": 2776924,
+      "k401Cents": 166616
+    },
+    "E-0310": {
+      "grossCents": 2492308,
+      "fitWagesCents": 2383540,
+      "ssWagesCents": 2458308,
+      "medicareWagesCents": 2458308,
+      "k401Cents": 74768
+    },
+    "E-0311": {
+      "grossCents": 2669232,
+      "fitWagesCents": 2421692,
+      "ssWagesCents": 2635232,
+      "medicareWagesCents": 2635232,
+      "k401Cents": 213540
+    },
+    "E-0312": {
+      "grossCents": 2061540,
+      "fitWagesCents": 1903848,
+      "ssWagesCents": 2027540,
+      "medicareWagesCents": 2027540,
+      "k401Cents": 123692
+    },
+    "E-0313": {
+      "grossCents": 2869232,
+      "fitWagesCents": 2534308,
+      "ssWagesCents": 2821232,
+      "medicareWagesCents": 2821232,
+      "k401Cents": 286924
+    },
+    "E-0314": {
+      "grossCents": 2315384,
+      "fitWagesCents": 1999844,
+      "ssWagesCents": 2231384,
+      "medicareWagesCents": 2231384,
+      "k401Cents": 231540
+    },
+    "E-0315": {
+      "grossCents": 2507692,
+      "fitWagesCents": 2323384,
+      "ssWagesCents": 2423692,
+      "medicareWagesCents": 2423692,
+      "k401Cents": 100308
+    },
+    "E-0316": {
+      "grossCents": 2346152,
+      "fitWagesCents": 2228844,
+      "ssWagesCents": 2346152,
+      "medicareWagesCents": 2346152,
+      "k401Cents": 117308
+    },
+    "E-0317": {
+      "grossCents": 1876924,
+      "fitWagesCents": 1605232,
+      "ssWagesCents": 1792924,
+      "medicareWagesCents": 1792924,
+      "k401Cents": 187692
+    },
+    "E-0318": {
+      "grossCents": 2500000,
+      "fitWagesCents": 2391000,
+      "ssWagesCents": 2466000,
+      "medicareWagesCents": 2466000,
+      "k401Cents": 75000
+    },
+    "E-0319": {
+      "grossCents": 2084616,
+      "fitWagesCents": 1883848,
+      "ssWagesCents": 2050616,
+      "medicareWagesCents": 2050616,
+      "k401Cents": 166768
+    },
+    "E-0320": {
+      "grossCents": 2600000,
+      "fitWagesCents": 2392000,
+      "ssWagesCents": 2600000,
+      "medicareWagesCents": 2600000,
+      "k401Cents": 208000
+    },
+    "E-0321": {
+      "grossCents": 2184616,
+      "fitWagesCents": 2027384,
+      "ssWagesCents": 2136616,
+      "medicareWagesCents": 2136616,
+      "k401Cents": 109232
+    },
+    "E-0322": {
+      "grossCents": 2576924,
+      "fitWagesCents": 2528924,
+      "ssWagesCents": 2528924,
+      "medicareWagesCents": 2528924,
+      "k401Cents": 0
+    },
+    "E-0323": {
+      "grossCents": 1792308,
+      "fitWagesCents": 1636768,
+      "ssWagesCents": 1744308,
+      "medicareWagesCents": 1744308,
+      "k401Cents": 107540
+    },
+    "E-0324": {
+      "grossCents": 1900000,
+      "fitWagesCents": 1900000,
+      "ssWagesCents": 1900000,
+      "medicareWagesCents": 1900000,
+      "k401Cents": 0
+    },
+    "E-0325": {
+      "grossCents": 2207692,
+      "fitWagesCents": 2013308,
+      "ssWagesCents": 2123692,
+      "medicareWagesCents": 2123692,
+      "k401Cents": 110384
+    },
+    "E-0326": {
+      "grossCents": 2353848,
+      "fitWagesCents": 2236156,
+      "ssWagesCents": 2353848,
+      "medicareWagesCents": 2353848,
+      "k401Cents": 117692
+    },
+    "E-0327": {
+      "grossCents": 1830768,
+      "fitWagesCents": 1723536,
+      "ssWagesCents": 1796768,
+      "medicareWagesCents": 1796768,
+      "k401Cents": 73232
+    },
+    "E-0328": {
+      "grossCents": 1900000,
+      "fitWagesCents": 1752000,
+      "ssWagesCents": 1866000,
+      "medicareWagesCents": 1866000,
+      "k401Cents": 114000
+    },
+    "E-0329": {
+      "grossCents": 1646152,
+      "fitWagesCents": 1433536,
+      "ssWagesCents": 1598152,
+      "medicareWagesCents": 1598152,
+      "k401Cents": 164616
+    },
+    "E-0330": {
+      "grossCents": 1623076,
+      "fitWagesCents": 1460768,
+      "ssWagesCents": 1623076,
+      "medicareWagesCents": 1623076,
+      "k401Cents": 162308
+    },
+    "E-0331": {
+      "grossCents": 2823076,
+      "fitWagesCents": 2540768,
+      "ssWagesCents": 2823076,
+      "medicareWagesCents": 2823076,
+      "k401Cents": 282308
+    },
+    "E-0332": {
+      "grossCents": 2684616,
+      "fitWagesCents": 2520076,
+      "ssWagesCents": 2600616,
+      "medicareWagesCents": 2600616,
+      "k401Cents": 80540
+    },
+    "E-0333": {
+      "grossCents": 2853848,
+      "fitWagesCents": 2520464,
+      "ssWagesCents": 2805848,
+      "medicareWagesCents": 2805848,
+      "k401Cents": 285384
+    },
+    "E-0334": {
+      "grossCents": 2907692,
+      "fitWagesCents": 2627076,
+      "ssWagesCents": 2859692,
+      "medicareWagesCents": 2859692,
+      "k401Cents": 232616
+    },
+    "E-0335": {
+      "grossCents": 1700000,
+      "fitWagesCents": 1632000,
+      "ssWagesCents": 1700000,
+      "medicareWagesCents": 1700000,
+      "k401Cents": 68000
+    },
+    "E-0336": {
+      "grossCents": 1969232,
+      "fitWagesCents": 1767080,
+      "ssWagesCents": 1885232,
+      "medicareWagesCents": 1885232,
+      "k401Cents": 118152
+    },
+    "E-0337": {
+      "grossCents": 1853848,
+      "fitWagesCents": 1671540,
+      "ssWagesCents": 1819848,
+      "medicareWagesCents": 1819848,
+      "k401Cents": 148308
+    },
+    "E-0338": {
+      "grossCents": 2469232,
+      "fitWagesCents": 2223692,
+      "ssWagesCents": 2421232,
+      "medicareWagesCents": 2421232,
+      "k401Cents": 197540
+    },
+    "E-0339": {
+      "grossCents": 1623076,
+      "fitWagesCents": 1510152,
+      "ssWagesCents": 1575076,
+      "medicareWagesCents": 1575076,
+      "k401Cents": 64924
+    },
+    "E-0340": {
+      "grossCents": 2500000,
+      "fitWagesCents": 2425000,
+      "ssWagesCents": 2500000,
+      "medicareWagesCents": 2500000,
+      "k401Cents": 75000
+    },
+    "E-0341": {
+      "grossCents": 1546152,
+      "fitWagesCents": 1405384,
+      "ssWagesCents": 1498152,
+      "medicareWagesCents": 1498152,
+      "k401Cents": 92768
+    },
+    "E-0342": {
+      "grossCents": 1407692,
+      "fitWagesCents": 1211076,
+      "ssWagesCents": 1323692,
+      "medicareWagesCents": 1323692,
+      "k401Cents": 112616
+    },
+    "E-0343": {
+      "grossCents": 1346152,
+      "fitWagesCents": 1346152,
+      "ssWagesCents": 1346152,
+      "medicareWagesCents": 1346152,
+      "k401Cents": 0
+    },
+    "E-0344": {
+      "grossCents": 1569232,
+      "fitWagesCents": 1441080,
+      "ssWagesCents": 1535232,
+      "medicareWagesCents": 1535232,
+      "k401Cents": 94152
+    },
+    "E-0345": {
+      "grossCents": 1315384,
+      "fitWagesCents": 1275924,
+      "ssWagesCents": 1315384,
+      "medicareWagesCents": 1315384,
+      "k401Cents": 39460
+    },
+    "E-0346": {
+      "grossCents": 1300000,
+      "fitWagesCents": 1187000,
+      "ssWagesCents": 1252000,
+      "medicareWagesCents": 1252000,
+      "k401Cents": 65000
+    },
+    "E-0347": {
+      "grossCents": 1169232,
+      "fitWagesCents": 1099080,
+      "ssWagesCents": 1169232,
+      "medicareWagesCents": 1169232,
+      "k401Cents": 70152
+    },
+    "E-0348": {
+      "grossCents": 1276924,
+      "fitWagesCents": 1152308,
+      "ssWagesCents": 1228924,
+      "medicareWagesCents": 1228924,
+      "k401Cents": 76616
+    },
+    "E-0349": {
+      "grossCents": 1600000,
+      "fitWagesCents": 1502000,
+      "ssWagesCents": 1566000,
+      "medicareWagesCents": 1566000,
+      "k401Cents": 64000
+    },
+    "E-0350": {
+      "grossCents": 1392308,
+      "fitWagesCents": 1280924,
+      "ssWagesCents": 1392308,
+      "medicareWagesCents": 1392308,
+      "k401Cents": 111384
+    },
+    "E-0351": {
+      "grossCents": 1215384,
+      "fitWagesCents": 1132768,
+      "ssWagesCents": 1181384,
+      "medicareWagesCents": 1181384,
+      "k401Cents": 48616
+    },
+    "E-0352": {
+      "grossCents": 1200000,
+      "fitWagesCents": 1080000,
+      "ssWagesCents": 1116000,
+      "medicareWagesCents": 1116000,
+      "k401Cents": 36000
+    },
+    "E-0353": {
+      "grossCents": 1469232,
+      "fitWagesCents": 1425156,
+      "ssWagesCents": 1469232,
+      "medicareWagesCents": 1469232,
+      "k401Cents": 44076
+    },
+    "E-0354": {
+      "grossCents": 1692308,
+      "fitWagesCents": 1556768,
+      "ssWagesCents": 1658308,
+      "medicareWagesCents": 1658308,
+      "k401Cents": 101540
+    },
+    "E-0355": {
+      "grossCents": 1384616,
+      "fitWagesCents": 1162156,
+      "ssWagesCents": 1300616,
+      "medicareWagesCents": 1300616,
+      "k401Cents": 138460
+    },
+    "E-0356": {
+      "grossCents": 1169232,
+      "fitWagesCents": 1065080,
+      "ssWagesCents": 1135232,
+      "medicareWagesCents": 1135232,
+      "k401Cents": 70152
+    },
+    "E-0357": {
+      "grossCents": 1461540,
+      "fitWagesCents": 1417692,
+      "ssWagesCents": 1461540,
+      "medicareWagesCents": 1461540,
+      "k401Cents": 43848
+    },
+    "E-0358": {
+      "grossCents": 1730768,
+      "fitWagesCents": 1557692,
+      "ssWagesCents": 1730768,
+      "medicareWagesCents": 1730768,
+      "k401Cents": 173076
+    },
+    "E-0359": {
+      "grossCents": 1638460,
+      "fitWagesCents": 1426612,
+      "ssWagesCents": 1590460,
+      "medicareWagesCents": 1590460,
+      "k401Cents": 163848
+    },
+    "E-0360": {
+      "grossCents": 1553848,
+      "fitWagesCents": 1381540,
+      "ssWagesCents": 1505848,
+      "medicareWagesCents": 1505848,
+      "k401Cents": 124308
+    },
+    "E-0361": {
+      "grossCents": 1800000,
+      "fitWagesCents": 1608000,
+      "ssWagesCents": 1716000,
+      "medicareWagesCents": 1716000,
+      "k401Cents": 108000
+    },
+    "E-0362": {
+      "grossCents": 1538460,
+      "fitWagesCents": 1492308,
+      "ssWagesCents": 1538460,
+      "medicareWagesCents": 1538460,
+      "k401Cents": 46152
+    },
+    "E-0363": {
+      "grossCents": 1092308,
+      "fitWagesCents": 1026768,
+      "ssWagesCents": 1092308,
+      "medicareWagesCents": 1092308,
+      "k401Cents": 65540
+    },
+    "E-0364": {
+      "grossCents": 1400000,
+      "fitWagesCents": 1204000,
+      "ssWagesCents": 1316000,
+      "medicareWagesCents": 1316000,
+      "k401Cents": 112000
+    },
+    "E-0365": {
+      "grossCents": 1084616,
+      "fitWagesCents": 1041232,
+      "ssWagesCents": 1084616,
+      "medicareWagesCents": 1084616,
+      "k401Cents": 43384
+    },
+    "E-0366": {
+      "grossCents": 1784616,
+      "fitWagesCents": 1641848,
+      "ssWagesCents": 1784616,
+      "medicareWagesCents": 1784616,
+      "k401Cents": 142768
+    },
+    "E-0367": {
+      "grossCents": 1446152,
+      "fitWagesCents": 1311384,
+      "ssWagesCents": 1398152,
+      "medicareWagesCents": 1398152,
+      "k401Cents": 86768
+    },
+    "E-0368": {
+      "grossCents": 1530768,
+      "fitWagesCents": 1484844,
+      "ssWagesCents": 1530768,
+      "medicareWagesCents": 1530768,
+      "k401Cents": 45924
+    },
+    "E-0369": {
+      "grossCents": 1715384,
+      "fitWagesCents": 1715384,
+      "ssWagesCents": 1715384,
+      "medicareWagesCents": 1715384,
+      "k401Cents": 0
+    },
+    "E-0370": {
+      "grossCents": 1100000,
+      "fitWagesCents": 1067000,
+      "ssWagesCents": 1100000,
+      "medicareWagesCents": 1100000,
+      "k401Cents": 33000
+    },
+    "E-0371": {
+      "grossCents": 1846152,
+      "fitWagesCents": 1688304,
+      "ssWagesCents": 1762152,
+      "medicareWagesCents": 1762152,
+      "k401Cents": 73848
+    },
+    "E-0372": {
+      "grossCents": 1669232,
+      "fitWagesCents": 1487692,
+      "ssWagesCents": 1621232,
+      "medicareWagesCents": 1621232,
+      "k401Cents": 133540
+    },
+    "E-0373": {
+      "grossCents": 1407692,
+      "fitWagesCents": 1303308,
+      "ssWagesCents": 1373692,
+      "medicareWagesCents": 1373692,
+      "k401Cents": 70384
+    },
+    "E-0374": {
+      "grossCents": 1315384,
+      "fitWagesCents": 1215616,
+      "ssWagesCents": 1281384,
+      "medicareWagesCents": 1281384,
+      "k401Cents": 65768
+    },
+    "E-0375": {
+      "grossCents": 1100000,
+      "fitWagesCents": 1034000,
+      "ssWagesCents": 1100000,
+      "medicareWagesCents": 1100000,
+      "k401Cents": 66000
+    },
+    "E-0376": {
+      "grossCents": 1084616,
+      "fitWagesCents": 997848,
+      "ssWagesCents": 1084616,
+      "medicareWagesCents": 1084616,
+      "k401Cents": 86768
+    },
+    "E-0377": {
+      "grossCents": 1169232,
+      "fitWagesCents": 1038464,
+      "ssWagesCents": 1085232,
+      "medicareWagesCents": 1085232,
+      "k401Cents": 46768
+    },
+    "E-0378": {
+      "grossCents": 1361540,
+      "fitWagesCents": 1177384,
+      "ssWagesCents": 1313540,
+      "medicareWagesCents": 1313540,
+      "k401Cents": 136156
+    },
+    "E-0379": {
+      "grossCents": 1500000,
+      "fitWagesCents": 1356000,
+      "ssWagesCents": 1416000,
+      "medicareWagesCents": 1416000,
+      "k401Cents": 60000
+    },
+    "E-0380": {
+      "grossCents": 1576924,
+      "fitWagesCents": 1464076,
+      "ssWagesCents": 1542924,
+      "medicareWagesCents": 1542924,
+      "k401Cents": 78848
+    },
+    "E-0381": {
+      "grossCents": 1361540,
+      "fitWagesCents": 1293464,
+      "ssWagesCents": 1361540,
+      "medicareWagesCents": 1361540,
+      "k401Cents": 68076
+    },
+    "E-0382": {
+      "grossCents": 1400000,
+      "fitWagesCents": 1268000,
+      "ssWagesCents": 1352000,
+      "medicareWagesCents": 1352000,
+      "k401Cents": 84000
+    },
+    "E-0383": {
+      "grossCents": 1707692,
+      "fitWagesCents": 1623692,
+      "ssWagesCents": 1623692,
+      "medicareWagesCents": 1623692,
+      "k401Cents": 0
+    },
+    "E-0384": {
+      "grossCents": 1592308,
+      "fitWagesCents": 1349076,
+      "ssWagesCents": 1508308,
+      "medicareWagesCents": 1508308,
+      "k401Cents": 159232
+    },
+    "E-0385": {
+      "grossCents": 1423076,
+      "fitWagesCents": 1375076,
+      "ssWagesCents": 1375076,
+      "medicareWagesCents": 1375076,
+      "k401Cents": 0
+    },
+    "E-0386": {
+      "grossCents": 1876924,
+      "fitWagesCents": 1736616,
+      "ssWagesCents": 1792924,
+      "medicareWagesCents": 1792924,
+      "k401Cents": 56308
+    },
+    "E-0387": {
+      "grossCents": 2300000,
+      "fitWagesCents": 2147000,
+      "ssWagesCents": 2216000,
+      "medicareWagesCents": 2216000,
+      "k401Cents": 69000
+    },
+    "E-0388": {
+      "grossCents": 2376924,
+      "fitWagesCents": 2055232,
+      "ssWagesCents": 2292924,
+      "medicareWagesCents": 2292924,
+      "k401Cents": 237692
+    },
+    "E-0389": {
+      "grossCents": 3692308,
+      "fitWagesCents": 2832000,
+      "ssWagesCents": 3644308,
+      "medicareWagesCents": 3644308,
+      "k401Cents": 812308
+    },
+    "E-0390": {
+      "grossCents": 3584616,
+      "fitWagesCents": 3213848,
+      "ssWagesCents": 3500616,
+      "medicareWagesCents": 3500616,
+      "k401Cents": 286768
+    },
+    "E-0391": {
+      "grossCents": 2992308,
+      "fitWagesCents": 2808692,
+      "ssWagesCents": 2958308,
+      "medicareWagesCents": 2958308,
+      "k401Cents": 149616
+    },
+    "E-0392": {
+      "grossCents": 3246152,
+      "fitWagesCents": 3064768,
+      "ssWagesCents": 3162152,
+      "medicareWagesCents": 3162152,
+      "k401Cents": 97384
+    },
+    "E-0393": {
+      "grossCents": 3015384,
+      "fitWagesCents": 2750460,
+      "ssWagesCents": 2931384,
+      "medicareWagesCents": 2931384,
+      "k401Cents": 180924
+    },
+    "E-0394": {
+      "grossCents": 2946152,
+      "fitWagesCents": 2626460,
+      "ssWagesCents": 2862152,
+      "medicareWagesCents": 2862152,
+      "k401Cents": 235692
+    },
+    "E-0395": {
+      "grossCents": 3123076,
+      "fitWagesCents": 2851692,
+      "ssWagesCents": 3039076,
+      "medicareWagesCents": 3039076,
+      "k401Cents": 187384
+    },
+    "E-0396": {
+      "grossCents": 2876924,
+      "fitWagesCents": 2612772,
+      "ssWagesCents": 2842924,
+      "medicareWagesCents": 2842924,
+      "k401Cents": 230152
+    },
+    "E-0397": {
+      "grossCents": 2938460,
+      "fitWagesCents": 2802308,
+      "ssWagesCents": 2890460,
+      "medicareWagesCents": 2890460,
+      "k401Cents": 88152
+    },
+    "E-0398": {
+      "grossCents": 3307692,
+      "fitWagesCents": 3108308,
+      "ssWagesCents": 3273692,
+      "medicareWagesCents": 3273692,
+      "k401Cents": 165384
+    },
+    "E-0399": {
+      "grossCents": 2676924,
+      "fitWagesCents": 2642924,
+      "ssWagesCents": 2642924,
+      "medicareWagesCents": 2642924,
+      "k401Cents": 0
+    },
+    "E-0400": {
+      "grossCents": 2438460,
+      "fitWagesCents": 2404460,
+      "ssWagesCents": 2404460,
+      "medicareWagesCents": 2404460,
+      "k401Cents": 0
+    },
+    "E-0401": {
+      "grossCents": 2830768,
+      "fitWagesCents": 2633536,
+      "ssWagesCents": 2746768,
+      "medicareWagesCents": 2746768,
+      "k401Cents": 113232
+    },
+    "E-0402": {
+      "grossCents": 2715384,
+      "fitWagesCents": 2558768,
+      "ssWagesCents": 2667384,
+      "medicareWagesCents": 2667384,
+      "k401Cents": 108616
+    },
+    "E-0403": {
+      "grossCents": 2246152,
+      "fitWagesCents": 2077384,
+      "ssWagesCents": 2212152,
+      "medicareWagesCents": 2212152,
+      "k401Cents": 134768
+    },
+    "E-0404": {
+      "grossCents": 3007692,
+      "fitWagesCents": 2959692,
+      "ssWagesCents": 2959692,
+      "medicareWagesCents": 2959692,
+      "k401Cents": 0
+    },
+    "E-0405": {
+      "grossCents": 1792308,
+      "fitWagesCents": 1613076,
+      "ssWagesCents": 1792308,
+      "medicareWagesCents": 1792308,
+      "k401Cents": 179232
+    },
+    "E-0406": {
+      "grossCents": 2215384,
+      "fitWagesCents": 2034460,
+      "ssWagesCents": 2167384,
+      "medicareWagesCents": 2167384,
+      "k401Cents": 132924
+    },
+    "E-0407": {
+      "grossCents": 3023076,
+      "fitWagesCents": 3023076,
+      "ssWagesCents": 3023076,
+      "medicareWagesCents": 3023076,
+      "k401Cents": 0
+    },
+    "E-0408": {
+      "grossCents": 2192308,
+      "fitWagesCents": 2158308,
+      "ssWagesCents": 2158308,
+      "medicareWagesCents": 2158308,
+      "k401Cents": 0
+    },
+    "E-0409": {
+      "grossCents": 3638460,
+      "fitWagesCents": 3313384,
+      "ssWagesCents": 3604460,
+      "medicareWagesCents": 3604460,
+      "k401Cents": 291076
+    },
+    "E-0410": {
+      "grossCents": 2630768,
+      "fitWagesCents": 2386308,
+      "ssWagesCents": 2596768,
+      "medicareWagesCents": 2596768,
+      "k401Cents": 210460
+    },
+    "E-0411": {
+      "grossCents": 7384616,
+      "fitWagesCents": 6967384,
+      "ssWagesCents": 7336616,
+      "medicareWagesCents": 7336616,
+      "k401Cents": 369232
+    },
+    "E-0412": {
+      "grossCents": 5092308,
+      "fitWagesCents": 5044308,
+      "ssWagesCents": 5044308,
+      "medicareWagesCents": 5044308,
+      "k401Cents": 0
+    },
+    "E-0413": {
+      "grossCents": 4700000,
+      "fitWagesCents": 4428000,
+      "ssWagesCents": 4616000,
+      "medicareWagesCents": 4616000,
+      "k401Cents": 188000
+    },
+    "E-0414": {
+      "grossCents": 4323076,
+      "fitWagesCents": 4072924,
+      "ssWagesCents": 4289076,
+      "medicareWagesCents": 4289076,
+      "k401Cents": 216152
+    },
+    "E-0415": {
+      "grossCents": 4153848,
+      "fitWagesCents": 4153848,
+      "ssWagesCents": 4153848,
+      "medicareWagesCents": 4153848,
+      "k401Cents": 0
+    },
+    "E-0416": {
+      "grossCents": 6084616,
+      "fitWagesCents": 6084616,
+      "ssWagesCents": 6084616,
+      "medicareWagesCents": 6084616,
+      "k401Cents": 0
+    },
+    "E-0417": {
+      "grossCents": 5761540,
+      "fitWagesCents": 5415848,
+      "ssWagesCents": 5761540,
+      "medicareWagesCents": 5761540,
+      "k401Cents": 345692
+    },
+    "E-0418": {
+      "grossCents": 4938460,
+      "fitWagesCents": 4904460,
+      "ssWagesCents": 4904460,
+      "medicareWagesCents": 4904460,
+      "k401Cents": 0
+    },
+    "E-0419": {
+      "grossCents": 4038460,
+      "fitWagesCents": 3990460,
+      "ssWagesCents": 3990460,
+      "medicareWagesCents": 3990460,
+      "k401Cents": 0
+    },
+    "E-0420": {
+      "grossCents": 4553848,
+      "fitWagesCents": 4326156,
+      "ssWagesCents": 4553848,
+      "medicareWagesCents": 4553848,
+      "k401Cents": 227692
+    }
+  }
+}

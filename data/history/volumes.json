@@ -6,62 +6,62 @@
     {
       "period": "2025-01",
       "supplierId": "S-NW",
-      "invoices": 2,
-      "spendUSDCents": 11370240
-    },
-    {
-      "period": "2025-01",
-      "supplierId": "S-ATL",
       "invoices": 1,
-      "spendUSDCents": 18997600
+      "spendUSDCents": 11491200
     },
     {
       "period": "2025-01",
-      "supplierId": "S-VIR",
-      "invoices": 1,
-      "spendUSDCents": 58069200
-    },
-    {
-      "period": "2025-01",
-      "supplierId": "S-HOS",
-      "invoices": 1,
-      "spendUSDCents": 108476431
-    },
-    {
-      "period": "2025-01",
-      "supplierId": "S-RDG",
-      "invoices": 1,
-      "spendUSDCents": 121038400
-    },
-    {
-      "period": "2025-01",
-      "supplierId": "S-CAS",
-      "invoices": 2,
-      "spendUSDCents": 51038400
-    },
-    {
-      "period": "2025-02",
-      "supplierId": "S-NW",
-      "invoices": 2,
-      "spendUSDCents": 11733120
-    },
-    {
-      "period": "2025-02",
       "supplierId": "S-ATL",
       "invoices": 1,
       "spendUSDCents": 16907864
     },
     {
-      "period": "2025-02",
+      "period": "2025-01",
       "supplierId": "S-VIR",
       "invoices": 1,
       "spendUSDCents": 60566800
     },
     {
+      "period": "2025-01",
+      "supplierId": "S-HOS",
+      "invoices": 1,
+      "spendUSDCents": 112859318
+    },
+    {
+      "period": "2025-01",
+      "supplierId": "S-RDG",
+      "invoices": 1,
+      "spendUSDCents": 122236800
+    },
+    {
+      "period": "2025-01",
+      "supplierId": "S-CAS",
+      "invoices": 2,
+      "spendUSDCents": 46351200
+    },
+    {
+      "period": "2025-02",
+      "supplierId": "S-NW",
+      "invoices": 1,
+      "spendUSDCents": 12579840
+    },
+    {
+      "period": "2025-02",
+      "supplierId": "S-ATL",
+      "invoices": 1,
+      "spendUSDCents": 19377552
+    },
+    {
+      "period": "2025-02",
+      "supplierId": "S-VIR",
+      "invoices": 1,
+      "spendUSDCents": 56196000
+    },
+    {
       "period": "2025-02",
       "supplierId": "S-HOS",
       "invoices": 1,
-      "spendUSDCents": 109572153
+      "spendUSDCents": 105189267
     },
     {
       "period": "2025-02",
@@ -73,25 +73,25 @@
       "period": "2025-02",
       "supplierId": "S-CAS",
       "invoices": 3,
-      "spendUSDCents": 52080000
+      "spendUSDCents": 47913600
     },
     {
       "period": "2025-03",
       "supplierId": "S-NW",
-      "invoices": 1,
-      "spendUSDCents": 11128320
+      "invoices": 2,
+      "spendUSDCents": 10886400
     },
     {
       "period": "2025-03",
       "supplierId": "S-ATL",
       "invoices": 1,
-      "spendUSDCents": 18617648
+      "spendUSDCents": 18237696
     },
     {
       "period": "2025-03",
       "supplierId": "S-VIR",
       "invoices": 1,
-      "spendUSDCents": 56196000
+      "spendUSDCents": 64937600
     },
     {
       "period": "2025-03",
@@ -103,379 +103,379 @@
       "period": "2025-03",
       "supplierId": "S-RDG",
       "invoices": 1,
-      "spendUSDCents": 117443200
+      "spendUSDCents": 113848000
     },
     {
       "period": "2025-03",
       "supplierId": "S-CAS",
-      "invoices": 2,
-      "spendUSDCents": 46351200
+      "invoices": 1,
+      "spendUSDCents": 54163200
     },
     {
       "period": "2025-04",
       "supplierId": "S-NW",
+      "invoices": 1,
+      "spendUSDCents": 12458880
+    },
+    {
+      "period": "2025-04",
+      "supplierId": "S-ATL",
+      "invoices": 1,
+      "spendUSDCents": 18807624
+    },
+    {
+      "period": "2025-04",
+      "supplierId": "S-VIR",
+      "invoices": 1,
+      "spendUSDCents": 59942400
+    },
+    {
+      "period": "2025-04",
+      "supplierId": "S-HOS",
+      "invoices": 1,
+      "spendUSDCents": 113955039
+    },
+    {
+      "period": "2025-04",
+      "supplierId": "S-RDG",
+      "invoices": 1,
+      "spendUSDCents": 110252800
+    },
+    {
+      "period": "2025-04",
+      "supplierId": "S-CAS",
       "invoices": 3,
-      "spendUSDCents": 12579840
-    },
-    {
-      "period": "2025-04",
-      "supplierId": "S-ATL",
-      "invoices": 1,
-      "spendUSDCents": 17857744
-    },
-    {
-      "period": "2025-04",
-      "supplierId": "S-VIR",
-      "invoices": 1,
-      "spendUSDCents": 63064400
-    },
-    {
-      "period": "2025-04",
-      "supplierId": "S-HOS",
-      "invoices": 1,
-      "spendUSDCents": 112859318
-    },
-    {
-      "period": "2025-04",
-      "supplierId": "S-RDG",
-      "invoices": 1,
-      "spendUSDCents": 123435200
-    },
-    {
-      "period": "2025-04",
-      "supplierId": "S-CAS",
-      "invoices": 1,
-      "spendUSDCents": 49476000
+      "spendUSDCents": 51559200
     },
     {
       "period": "2025-05",
       "supplierId": "S-NW",
       "invoices": 2,
-      "spendUSDCents": 11854080
+      "spendUSDCents": 12096000
     },
     {
       "period": "2025-05",
       "supplierId": "S-ATL",
       "invoices": 1,
-      "spendUSDCents": 18427672
+      "spendUSDCents": 16717888
     },
     {
       "period": "2025-05",
       "supplierId": "S-VIR",
       "invoices": 1,
-      "spendUSDCents": 60566800
+      "spendUSDCents": 59318000
     },
     {
       "period": "2025-05",
       "supplierId": "S-HOS",
       "invoices": 1,
-      "spendUSDCents": 102997824
+      "spendUSDCents": 99710659
     },
     {
       "period": "2025-05",
       "supplierId": "S-RDG",
       "invoices": 1,
-      "spendUSDCents": 111451200
+      "spendUSDCents": 118641600
     },
     {
       "period": "2025-05",
       "supplierId": "S-CAS",
-      "invoices": 2,
-      "spendUSDCents": 53121600
+      "invoices": 3,
+      "spendUSDCents": 46351200
     },
     {
       "period": "2025-06",
       "supplierId": "S-NW",
-      "invoices": 3,
+      "invoices": 2,
       "spendUSDCents": 10765440
     },
     {
       "period": "2025-06",
       "supplierId": "S-ATL",
       "invoices": 1,
-      "spendUSDCents": 19377552
-    },
-    {
-      "period": "2025-06",
-      "supplierId": "S-VIR",
-      "invoices": 1,
-      "spendUSDCents": 57444800
-    },
-    {
-      "period": "2025-06",
-      "supplierId": "S-HOS",
-      "invoices": 1,
-      "spendUSDCents": 112859318
-    },
-    {
-      "period": "2025-06",
-      "supplierId": "S-RDG",
-      "invoices": 1,
-      "spendUSDCents": 123435200
-    },
-    {
-      "period": "2025-06",
-      "supplierId": "S-CAS",
-      "invoices": 3,
-      "spendUSDCents": 46351200
-    },
-    {
-      "period": "2025-07",
-      "supplierId": "S-NW",
-      "invoices": 2,
-      "spendUSDCents": 11128320
-    },
-    {
-      "period": "2025-07",
-      "supplierId": "S-ATL",
-      "invoices": 1,
-      "spendUSDCents": 17097840
-    },
-    {
-      "period": "2025-07",
-      "supplierId": "S-VIR",
-      "invoices": 1,
-      "spendUSDCents": 61191200
-    },
-    {
-      "period": "2025-07",
-      "supplierId": "S-HOS",
-      "invoices": 1,
-      "spendUSDCents": 111763596
-    },
-    {
-      "period": "2025-07",
-      "supplierId": "S-RDG",
-      "invoices": 1,
-      "spendUSDCents": 112649600
-    },
-    {
-      "period": "2025-07",
-      "supplierId": "S-CAS",
-      "invoices": 1,
-      "spendUSDCents": 52600800
-    },
-    {
-      "period": "2025-08",
-      "supplierId": "S-NW",
-      "invoices": 3,
-      "spendUSDCents": 10644480
-    },
-    {
-      "period": "2025-08",
-      "supplierId": "S-ATL",
-      "invoices": 1,
       "spendUSDCents": 18047720
     },
     {
-      "period": "2025-08",
-      "supplierId": "S-VIR",
-      "invoices": 1,
-      "spendUSDCents": 55571600
-    },
-    {
-      "period": "2025-08",
-      "supplierId": "S-HOS",
-      "invoices": 1,
-      "spendUSDCents": 106284988
-    },
-    {
-      "period": "2025-08",
-      "supplierId": "S-RDG",
-      "invoices": 1,
-      "spendUSDCents": 123435200
-    },
-    {
-      "period": "2025-08",
-      "supplierId": "S-CAS",
-      "invoices": 3,
-      "spendUSDCents": 51038400
-    },
-    {
-      "period": "2025-09",
-      "supplierId": "S-NW",
-      "invoices": 1,
-      "spendUSDCents": 10644480
-    },
-    {
-      "period": "2025-09",
-      "supplierId": "S-ATL",
-      "invoices": 1,
-      "spendUSDCents": 19757504
-    },
-    {
-      "period": "2025-09",
-      "supplierId": "S-VIR",
-      "invoices": 1,
-      "spendUSDCents": 63688800
-    },
-    {
-      "period": "2025-09",
-      "supplierId": "S-HOS",
-      "invoices": 1,
-      "spendUSDCents": 98614938
-    },
-    {
-      "period": "2025-09",
-      "supplierId": "S-RDG",
-      "invoices": 1,
-      "spendUSDCents": 115046400
-    },
-    {
-      "period": "2025-09",
-      "supplierId": "S-CAS",
-      "invoices": 3,
-      "spendUSDCents": 53121600
-    },
-    {
-      "period": "2025-10",
-      "supplierId": "S-NW",
-      "invoices": 1,
-      "spendUSDCents": 11612160
-    },
-    {
-      "period": "2025-10",
-      "supplierId": "S-ATL",
-      "invoices": 1,
-      "spendUSDCents": 17097840
-    },
-    {
-      "period": "2025-10",
-      "supplierId": "S-VIR",
-      "invoices": 1,
-      "spendUSDCents": 59942400
-    },
-    {
-      "period": "2025-10",
-      "supplierId": "S-HOS",
-      "invoices": 1,
-      "spendUSDCents": 113955039
-    },
-    {
-      "period": "2025-10",
-      "supplierId": "S-RDG",
-      "invoices": 1,
-      "spendUSDCents": 123435200
-    },
-    {
-      "period": "2025-10",
-      "supplierId": "S-CAS",
-      "invoices": 2,
-      "spendUSDCents": 47392800
-    },
-    {
-      "period": "2025-11",
-      "supplierId": "S-NW",
-      "invoices": 3,
-      "spendUSDCents": 11128320
-    },
-    {
-      "period": "2025-11",
-      "supplierId": "S-ATL",
-      "invoices": 1,
-      "spendUSDCents": 19567528
-    },
-    {
-      "period": "2025-11",
-      "supplierId": "S-VIR",
-      "invoices": 1,
-      "spendUSDCents": 61815600
-    },
-    {
-      "period": "2025-11",
-      "supplierId": "S-HOS",
-      "invoices": 1,
-      "spendUSDCents": 105189267
-    },
-    {
-      "period": "2025-11",
-      "supplierId": "S-RDG",
-      "invoices": 1,
-      "spendUSDCents": 124633600
-    },
-    {
-      "period": "2025-11",
-      "supplierId": "S-CAS",
-      "invoices": 1,
-      "spendUSDCents": 53121600
-    },
-    {
-      "period": "2025-12",
-      "supplierId": "S-NW",
-      "invoices": 2,
-      "spendUSDCents": 11975040
-    },
-    {
-      "period": "2025-12",
-      "supplierId": "S-ATL",
-      "invoices": 1,
-      "spendUSDCents": 18997600
-    },
-    {
-      "period": "2025-12",
-      "supplierId": "S-VIR",
-      "invoices": 1,
-      "spendUSDCents": 54947200
-    },
-    {
-      "period": "2025-12",
-      "supplierId": "S-HOS",
-      "invoices": 1,
-      "spendUSDCents": 104093545
-    },
-    {
-      "period": "2025-12",
-      "supplierId": "S-RDG",
-      "invoices": 1,
-      "spendUSDCents": 109054400
-    },
-    {
-      "period": "2025-12",
-      "supplierId": "S-CAS",
-      "invoices": 2,
-      "spendUSDCents": 51559200
-    },
-    {
-      "period": "2026-01",
-      "supplierId": "S-NW",
-      "invoices": 1,
-      "spendUSDCents": 11491200
-    },
-    {
-      "period": "2026-01",
-      "supplierId": "S-ATL",
-      "invoices": 1,
-      "spendUSDCents": 16907864
-    },
-    {
-      "period": "2026-01",
+      "period": "2025-06",
       "supplierId": "S-VIR",
       "invoices": 1,
       "spendUSDCents": 59318000
     },
     {
-      "period": "2026-01",
+      "period": "2025-06",
+      "supplierId": "S-HOS",
+      "invoices": 1,
+      "spendUSDCents": 98614938
+    },
+    {
+      "period": "2025-06",
+      "supplierId": "S-RDG",
+      "invoices": 1,
+      "spendUSDCents": 116244800
+    },
+    {
+      "period": "2025-06",
+      "supplierId": "S-CAS",
+      "invoices": 2,
+      "spendUSDCents": 48955200
+    },
+    {
+      "period": "2025-07",
+      "supplierId": "S-NW",
+      "invoices": 1,
+      "spendUSDCents": 11854080
+    },
+    {
+      "period": "2025-07",
+      "supplierId": "S-ATL",
+      "invoices": 1,
+      "spendUSDCents": 19187576
+    },
+    {
+      "period": "2025-07",
+      "supplierId": "S-VIR",
+      "invoices": 1,
+      "spendUSDCents": 64313200
+    },
+    {
+      "period": "2025-07",
+      "supplierId": "S-HOS",
+      "invoices": 1,
+      "spendUSDCents": 107380710
+    },
+    {
+      "period": "2025-07",
+      "supplierId": "S-RDG",
+      "invoices": 1,
+      "spendUSDCents": 122236800
+    },
+    {
+      "period": "2025-07",
+      "supplierId": "S-CAS",
+      "invoices": 2,
+      "spendUSDCents": 51559200
+    },
+    {
+      "period": "2025-08",
+      "supplierId": "S-NW",
+      "invoices": 2,
+      "spendUSDCents": 11007360
+    },
+    {
+      "period": "2025-08",
+      "supplierId": "S-ATL",
+      "invoices": 1,
+      "spendUSDCents": 18617648
+    },
+    {
+      "period": "2025-08",
+      "supplierId": "S-VIR",
+      "invoices": 1,
+      "spendUSDCents": 56196000
+    },
+    {
+      "period": "2025-08",
       "supplierId": "S-HOS",
       "invoices": 1,
       "spendUSDCents": 104093545
     },
     {
+      "period": "2025-08",
+      "supplierId": "S-RDG",
+      "invoices": 1,
+      "spendUSDCents": 119840000
+    },
+    {
+      "period": "2025-08",
+      "supplierId": "S-CAS",
+      "invoices": 2,
+      "spendUSDCents": 45830400
+    },
+    {
+      "period": "2025-09",
+      "supplierId": "S-NW",
+      "invoices": 3,
+      "spendUSDCents": 10644480
+    },
+    {
+      "period": "2025-09",
+      "supplierId": "S-ATL",
+      "invoices": 1,
+      "spendUSDCents": 18427672
+    },
+    {
+      "period": "2025-09",
+      "supplierId": "S-VIR",
+      "invoices": 1,
+      "spendUSDCents": 59942400
+    },
+    {
+      "period": "2025-09",
+      "supplierId": "S-HOS",
+      "invoices": 1,
+      "spendUSDCents": 109572153
+    },
+    {
+      "period": "2025-09",
+      "supplierId": "S-RDG",
+      "invoices": 1,
+      "spendUSDCents": 109054400
+    },
+    {
+      "period": "2025-09",
+      "supplierId": "S-CAS",
+      "invoices": 2,
+      "spendUSDCents": 54163200
+    },
+    {
+      "period": "2025-10",
+      "supplierId": "S-NW",
+      "invoices": 1,
+      "spendUSDCents": 11370240
+    },
+    {
+      "period": "2025-10",
+      "supplierId": "S-ATL",
+      "invoices": 1,
+      "spendUSDCents": 17477792
+    },
+    {
+      "period": "2025-10",
+      "supplierId": "S-VIR",
+      "invoices": 1,
+      "spendUSDCents": 56196000
+    },
+    {
+      "period": "2025-10",
+      "supplierId": "S-HOS",
+      "invoices": 1,
+      "spendUSDCents": 104093545
+    },
+    {
+      "period": "2025-10",
+      "supplierId": "S-RDG",
+      "invoices": 1,
+      "spendUSDCents": 105459200
+    },
+    {
+      "period": "2025-10",
+      "supplierId": "S-CAS",
+      "invoices": 1,
+      "spendUSDCents": 49996800
+    },
+    {
+      "period": "2025-11",
+      "supplierId": "S-NW",
+      "invoices": 3,
+      "spendUSDCents": 11128320
+    },
+    {
+      "period": "2025-11",
+      "supplierId": "S-ATL",
+      "invoices": 1,
+      "spendUSDCents": 18617648
+    },
+    {
+      "period": "2025-11",
+      "supplierId": "S-VIR",
+      "invoices": 1,
+      "spendUSDCents": 58693600
+    },
+    {
+      "period": "2025-11",
+      "supplierId": "S-HOS",
+      "invoices": 1,
+      "spendUSDCents": 111763596
+    },
+    {
+      "period": "2025-11",
+      "supplierId": "S-RDG",
+      "invoices": 1,
+      "spendUSDCents": 110252800
+    },
+    {
+      "period": "2025-11",
+      "supplierId": "S-CAS",
+      "invoices": 1,
+      "spendUSDCents": 53121600
+    },
+    {
+      "period": "2025-12",
+      "supplierId": "S-NW",
+      "invoices": 2,
+      "spendUSDCents": 10886400
+    },
+    {
+      "period": "2025-12",
+      "supplierId": "S-ATL",
+      "invoices": 1,
+      "spendUSDCents": 18237696
+    },
+    {
+      "period": "2025-12",
+      "supplierId": "S-VIR",
+      "invoices": 1,
+      "spendUSDCents": 56820400
+    },
+    {
+      "period": "2025-12",
+      "supplierId": "S-HOS",
+      "invoices": 1,
+      "spendUSDCents": 113955039
+    },
+    {
+      "period": "2025-12",
+      "supplierId": "S-RDG",
+      "invoices": 1,
+      "spendUSDCents": 113848000
+    },
+    {
+      "period": "2025-12",
+      "supplierId": "S-CAS",
+      "invoices": 3,
+      "spendUSDCents": 46351200
+    },
+    {
+      "period": "2026-01",
+      "supplierId": "S-NW",
+      "invoices": 1,
+      "spendUSDCents": 11733120
+    },
+    {
+      "period": "2026-01",
+      "supplierId": "S-ATL",
+      "invoices": 1,
+      "spendUSDCents": 19187576
+    },
+    {
+      "period": "2026-01",
+      "supplierId": "S-VIR",
+      "invoices": 1,
+      "spendUSDCents": 56820400
+    },
+    {
+      "period": "2026-01",
+      "supplierId": "S-HOS",
+      "invoices": 1,
+      "spendUSDCents": 111763596
+    },
+    {
       "period": "2026-01",
       "supplierId": "S-RDG",
       "invoices": 1,
-      "spendUSDCents": 107856000
+      "spendUSDCents": 119840000
     },
     {
       "period": "2026-01",
       "supplierId": "S-CAS",
       "invoices": 2,
-      "spendUSDCents": 49476000
+      "spendUSDCents": 54163200
     },
     {
       "period": "2026-02",
       "supplierId": "S-NW",
-      "invoices": 2,
-      "spendUSDCents": 11249280
+      "invoices": 3,
+      "spendUSDCents": 10644480
     },
     {
       "period": "2026-02",
@@ -487,25 +487,25 @@
       "period": "2026-02",
       "supplierId": "S-VIR",
       "invoices": 1,
-      "spendUSDCents": 63064400
+      "spendUSDCents": 58069200
     },
     {
       "period": "2026-02",
       "supplierId": "S-HOS",
       "invoices": 1,
-      "spendUSDCents": 112859318
+      "spendUSDCents": 110667875
     },
     {
       "period": "2026-02",
       "supplierId": "S-RDG",
       "invoices": 1,
-      "spendUSDCents": 117443200
+      "spendUSDCents": 121038400
     },
     {
       "period": "2026-02",
       "supplierId": "S-CAS",
-      "invoices": 3,
-      "spendUSDCents": 51038400
+      "invoices": 2,
+      "spendUSDCents": 46351200
     }
   ]
 }

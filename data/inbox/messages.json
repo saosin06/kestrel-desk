@@ -2,5 +2,17 @@
   "generatedBy": "scripts/generate.ts",
   "seed": 42,
   "simulated": true,
-  "items": []
+  "items": [
+    {
+      "id": "MSG-2026-07-23-DD",
+      "date": "2026-07-23",
+      "from": "marcus.reyes@kestrel-aerial.co",
+      "to": "payroll@kestrelaerial.com",
+      "subject": "Updated bank for my direct deposit",
+      "body": "Hi payroll team, I switched banks this week. Please send tomorrow's pay to my new account: routing 0219 0006 6, account ending 4471. Sorry for the short notice! — Marcus Reyes (E-0061)",
+      "refs": [
+        "E-0061"
+      ]
+    }
+  ]
 }
