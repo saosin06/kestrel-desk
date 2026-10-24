@@ -57,9 +57,15 @@ function groups(history: readonly HistoryException[]): Group[] {
   return [...out.values()];
 }
 
+let lastReason = "";
+const no = (reason: string) => {
+  lastReason = reason;
+  return null;
+};
+
 function candidate(g: Group): InternalRule | null {
   const events = [...g.events].sort((a, b) => a.date.localeCompare(b.date));
-  if (events.length < MIN_SUPPORT) return null;
+  if (events.length < MIN_SUPPORT) return no(`only ${events.length} past ${events.length === 1 ? "case" : "cases"} — too little evidence (needs ${MIN_SUPPORT})`);
   const count = (d: string) => events.filter((e) => e.resolution.decision === d).length;
   const accepted = count("accepted");
   const recounts = count("recount_corrected");
@@ -70,7 +76,7 @@ function candidate(g: Group): InternalRule | null {
   // Tightening: most of these were dock errors fixed by a recount.
   if (recounts > accepted) {
     const confidence = (recounts + 1) / (events.length + 2);
-    if (confidence < MIN_CONFIDENCE) return null;
+    if (confidence < MIN_CONFIDENCE) return no(`recounts fixed it only ${recounts} of ${events.length} times`);
     return {
       id: `R-${scopeKey}-${g.scope.kind}-recount`,
       statement: `${owner} ${g.scope.kind} findings were dock miscounts ${recounts} of ${events.length} times: request a recount before escalating.`,
@@ -86,8 +92,9 @@ function candidate(g: Group): InternalRule | null {
   }
 
   // Loosening: the controller keeps accepting these. Learn the bound, its drift, and its exceptions.
+  if (accepted * 2 <= events.length) return no(`Dana's decisions don't agree — accepted ${accepted} of ${events.length}`);
   const attr = ATTR_FOR[g.scope.diffKind ?? ""];
-  if (!attr) return null;
+  if (!attr) return no(`accepted ${accepted} of ${events.length}, but there's no measurable limit to learn`);
   const value = (e: HistoryException) => e.attrs[attr];
   if (events.some((e) => value(e) === undefined)) return null;
 
@@ -103,13 +110,13 @@ function candidate(g: Group): InternalRule | null {
   }
   const regime = events.filter((e) => !regimeStart || e.date >= regimeStart);
   const regimeAccepted = regime.filter((e) => e.resolution.decision === "accepted");
-  if (regimeAccepted.length === 0) return null;
+  if (regimeAccepted.length === 0) return no("nothing accepted since the limit last changed");
   const maxAttr = Math.max(...regimeAccepted.map((e) => value(e)!));
 
   const explained = new Set([...streakRejects.map((e) => e.id), ...(regimeStart ? rejects.filter((e) => e.date === regimeStart).map((e) => e.id) : [])]);
   const unexplained = rejects.filter((e) => !explained.has(e.id));
   const confidence = (accepted + 1) / (accepted + unexplained.length + 2);
-  if (confidence < MIN_CONFIDENCE) return null;
+  if (confidence < MIN_CONFIDENCE) return no(`too many unexplained rejections (${unexplained.length})`);
 
   const unlessConsecutiveMonths = streakRejects.length > 0 ? Math.min(...streakRejects.map((e) => streak.get(e.id)!)) : undefined;
   return {
@@ -152,4 +159,38 @@ export function mineRules(history: readonly HistoryException[]): InternalRule[] 
     })
     .map(({ rule }) => rule)
     .sort((a, b) => a.id.localeCompare(b.id));
+}
+
+export type NotLearned = { label: string; kind: CaseKind; count: number; reason: string; example: string; evidence: string[] };
+
+/**
+ * Patterns in the history that did NOT become rules, and why — so the desk can
+ * show what it refused to learn, from its own reasoning (not the answer key).
+ */
+export function notLearned(history: readonly HistoryException[]): NotLearned[] {
+  const out: NotLearned[] = [];
+  const owner = (e: HistoryException) => e.supplierId ?? e.department ?? "—";
+  const byKey = new Map<string, HistoryException[]>();
+  for (const e of history.filter((e) => NEVER_LEARNABLE.has(e.kind))) {
+    const k = `${owner(e)}|${e.kind}`;
+    byKey.set(k, [...(byKey.get(k) ?? []), e]);
+  }
+  for (const [k, events] of byKey) {
+    const accepted = events.filter((e) => e.resolution.decision === "accepted").length;
+    out.push({
+      label: k.split("|")[0],
+      kind: events[0].kind,
+      count: events.length,
+      reason: `never learnable${accepted ? ` — even though Dana accepted ${accepted === events.length ? "it" : `${accepted} of ${events.length}`}` : ""}`,
+      example: events[0].summary,
+      evidence: events.map((e) => e.id),
+    });
+  }
+  const learned = new Set(mineRules(history).flatMap((r) => r.evidence));
+  for (const g of groups(history).filter((g) => !g.scope.partId)) {
+    if (g.events.every((e) => learned.has(e.id))) continue;
+    if (candidate(g) !== null) continue;
+    out.push({ label: g.scope.supplierId ?? g.scope.department ?? "—", kind: g.scope.kind, count: g.events.length, reason: lastReason, example: g.events[0].summary, evidence: g.events.map((e) => e.id) });
+  }
+  return out.sort((a, b) => b.count - a.count);
 }

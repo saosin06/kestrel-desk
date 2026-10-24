@@ -89,3 +89,16 @@ describe("hidden rules vary by seed", () => {
     expect(a.hoshiRoundingYen).not.toBe(b.hoshiRoundingYen);
   });
 });
+
+describe("learning over time (cold until the March close)", () => {
+  it("before the rules are approved the desk escalates routine items; after, it follows them", () => {
+    const w = generate(DEFAULT_SEED);
+    const findings = sweep(w);
+    const rules = approve(w.answerKey.hiddenRules).map((r) => ({ ...r, approvedOn: "2026-03-31" }));
+    const decided = new Map(dispose(findings, rules).map((d) => [`${d.kind} ${d.objectId}`, d.disposition]));
+    const hoshiMarch = w.answerKey.entries.find((e) => e.id === "PAT-HOS-2603")!;
+    const hoshiApril = w.answerKey.entries.find((e) => e.id === "PAT-HOS-2604")!;
+    expect(decided.get(`${hoshiMarch.kind} ${hoshiMarch.objectId}`)).toBe("escalate");
+    expect(decided.get(`${hoshiApril.kind} ${hoshiApril.objectId}`)).toBe("info");
+  });
+});

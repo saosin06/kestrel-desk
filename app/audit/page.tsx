@@ -2,44 +2,50 @@
 
 import { useQuery } from "convex/react";
 import { useState } from "react";
-import { Empty, PageHeader, Panel, Rec } from "@/components/ui";
+import { Empty, PageHeader, Panel, Summary } from "@/components/ui";
 import { api } from "@/convex/_generated/api";
-import { date, roleLabel } from "@/lib/ui/format";
+import { auditSentence, date } from "@/lib/ui/format";
+
+const IMPORTANT = /^(open_case|escalate|decision:|request:payment_hold|request:debit_memo|request:substitution|request:payroll_line_hold|rule:|ask_why|answer_why|intake:)/;
 
 export default function Audit() {
-  const rows = useQuery(api.desk.audit, { limit: 1000 });
-  const [actor, setActor] = useState("all");
+  const rows = useQuery(api.desk.audit, { limit: 2000 });
+  const [scope, setScope] = useState<"important" | "all">("important");
   const [q, setQ] = useState("");
-  const actors = [...new Set((rows ?? []).map((r) => r.actor))].sort();
-  const shown = (rows ?? []).filter((r) => (actor === "all" || r.actor === actor) && (!q || `${r.action} ${r.refs.join(" ")} ${r.detail}`.toLowerCase().includes(q.toLowerCase())));
+  const shown = (rows ?? []).filter((r) => (scope === "all" || IMPORTANT.test(r.action)) && (!q || `${r.action} ${r.refs.join(" ")} ${r.detail}`.toLowerCase().includes(q.toLowerCase())));
+  const tools = (rows ?? []).filter((r) => r.action.startsWith("tool:")).length;
   return (
     <>
       <PageHeader
         title="Audit log"
-        subtitle="Append-only. Every tool call, request, escalation and decision, in order."
         actions={
           <>
-            <input className="input w-[220px]" placeholder="Filter by id or text" value={q} onChange={(e) => setQ(e.target.value)} />
-            <select className="select" value={actor} onChange={(e) => setActor(e.target.value)}>
-              <option value="all">All actors</option>
-              {actors.map((a) => <option key={a} value={a}>{roleLabel(a)}</option>)}
+            <input className="input w-[220px]" placeholder="Search (e.g. Vireo, CASE-0003)" value={q} onChange={(e) => setQ(e.target.value)} />
+            <select className="select" value={scope} onChange={(e) => setScope(e.target.value as typeof scope)}>
+              <option value="important">Decisions, holds and escalations</option>
+              <option value="all">Everything, including each tool call</option>
             </select>
           </>
         }
       />
-      <Panel flush note={`${shown.length} of ${rows?.length ?? 0} events`}>
-        {rows === undefined ? <Empty>Loading…</Empty> : (
+      <Summary
+        text={<>Append-only: nothing here can be edited or deleted. Every agent action and every human decision is recorded in order, with the records it touched.</>}
+        figures={[
+          { label: "events", value: rows?.length ?? "—" },
+          { label: "agent tool calls", value: tools },
+          { label: "human decisions", value: (rows ?? []).filter((r) => r.action.startsWith("decision:") || r.action.startsWith("rule:")).length },
+        ]}
+      />
+      <Panel flush note={`${shown.length} shown`}>
+        {rows === undefined ? <Empty>Loading…</Empty> : shown.length === 0 ? <Empty>Nothing matches.</Empty> : (
           <table className="tbl">
-            <thead><tr><th className="num">Seq</th><th>Date</th><th>Actor</th><th>Action</th><th>References</th><th>Detail</th></tr></thead>
+            <thead><tr><th className="num">#</th><th>Date</th><th>What happened</th></tr></thead>
             <tbody>
               {shown.map((a) => (
                 <tr key={a.seq}>
-                  <td className="num id text-muted">{a.seq}</td>
-                  <td className="whitespace-nowrap text-ink-2">{date(a.at)}</td>
-                  <td className="whitespace-nowrap">{roleLabel(a.actor)}</td>
-                  <td className="id whitespace-nowrap">{a.action}</td>
-                  <td><span className="flex flex-wrap gap-x-2">{a.refs.slice(0, 3).map((r) => <Rec key={r} id={r} />)}</span></td>
-                  <td className="text-ink-2">{a.detail}</td>
+                  <td className="num id w-[52px] text-muted">{a.seq}</td>
+                  <td className="w-[110px] whitespace-nowrap text-ink-2">{date(a.at)}</td>
+                  <td>{auditSentence(a)}</td>
                 </tr>
               ))}
             </tbody>

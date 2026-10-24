@@ -8,7 +8,7 @@ import { deskView } from "../lib/agents/tools";
 import { type DeskRule, runDeterministicDesk } from "../lib/desk/coordinator";
 import { type DeskSnapshot, loadDesk } from "../lib/desk/seed";
 import { mineRules } from "../lib/rules/mine";
-import { DEFAULT_SEED, generate, SIM_WINDOW } from "../simulation/world";
+import { DEFAULT_SEED, generate, ONBOARDING_REVIEW } from "../simulation/world";
 
 function deterministic(): DeskSnapshot {
   const world = generate(DEFAULT_SEED);
@@ -17,8 +17,9 @@ function deterministic(): DeskSnapshot {
     ...r,
     status: "approved",
     decidedBy: "controller",
-    decidedAt: SIM_WINDOW.from,
-    decisionReason: "Matches how we've handled these; evidence reviewed.",
+    decidedAt: ONBOARDING_REVIEW,
+    approvedOn: ONBOARDING_REVIEW,
+    decisionReason: "Matches how we've handled these; evidence reviewed at the March close.",
   }));
   return { ...runDeterministicDesk(deskView(world), rules), source: "rules-engine" };
 }

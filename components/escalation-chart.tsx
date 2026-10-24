@@ -4,7 +4,7 @@ import { monthLabel } from "@/lib/ui/format";
 
 type Row = { period: string; cold: number; learned: number };
 
-export function EscalationChart({ data }: { data: Row[] }) {
+export function EscalationChart({ data, marker, labels = ["No learned rules", "With learned rules"] }: { data: Row[]; marker?: { after: string; label: string }; labels?: [string, string] }) {
   const W = 640;
   const H = 210;
   const m = { top: 18, right: 8, bottom: 26, left: 30 };
@@ -36,8 +36,8 @@ export function EscalationChart({ data }: { data: Row[] }) {
   return (
     <figure className="m-0">
       <div className="mb-2 flex items-center gap-4 text-[12px] text-ink-2">
-        <span className="flex items-center gap-1.5"><span className="inline-block h-2.5 w-2.5 rounded-[2px]" style={{ background: "var(--series-cold)" }} />No learned rules · {totalCold}</span>
-        <span className="flex items-center gap-1.5"><span className="inline-block h-2.5 w-2.5 rounded-[2px]" style={{ background: "var(--series-learned)" }} />With learned rules · {totalLearned}</span>
+        <span className="flex items-center gap-1.5"><span className="inline-block h-2.5 w-2.5 rounded-[2px]" style={{ background: "var(--series-cold)" }} />{labels[0]} · {totalCold}</span>
+        <span className="flex items-center gap-1.5"><span className="inline-block h-2.5 w-2.5 rounded-[2px]" style={{ background: "var(--series-learned)" }} />{labels[1]} · {totalLearned}</span>
       </div>
       <svg viewBox={`0 0 ${W} ${H}`} className="block h-auto w-full" role="img" aria-label={`Escalations to the controller per month: ${totalCold} without learned rules, ${totalLearned} with them`}>
         {ticks.map((t) => (
@@ -46,6 +46,17 @@ export function EscalationChart({ data }: { data: Row[] }) {
             <text x={m.left - 8} y={y(t)} dy="0.32em" textAnchor="end" fontSize={11} fill="var(--muted)" style={{ fontVariantNumeric: "tabular-nums" }}>{t}</text>
           </g>
         ))}
+        {marker && (() => {
+          const i = data.findIndex((d) => d.period === marker.after);
+          if (i < 0) return null;
+          const x = m.left + band * (i + 1);
+          return (
+            <g>
+              <line x1={x} x2={x} y1={m.top - 6} y2={m.top + ih} stroke="var(--ink-2)" strokeWidth={1} />
+              <text x={x + 6} y={m.top + 2} fontSize={11} fill="var(--ink-2)">{marker.label}</text>
+            </g>
+          );
+        })()}
         {data.map((d, i) => {
           const cx = m.left + band * i + band / 2;
           const x1 = cx - bw - 1;

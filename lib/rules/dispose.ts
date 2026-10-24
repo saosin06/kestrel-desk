@@ -42,6 +42,7 @@ function matches(rule: InternalRule, f: FindingFacts): boolean {
   if (s.department && s.department !== f.department) return false;
   if (s.currency && s.currency !== f.attrs.currency) return false;
   if (s.effectiveFrom && f.date < s.effectiveFrom) return false;
+  if (rule.approvedOn && f.date < rule.approvedOn) return false;
   if (s.attr) {
     const v = f.attrs[s.attr];
     if (v === undefined || (s.maxAttr !== undefined && v > s.maxAttr)) return false;

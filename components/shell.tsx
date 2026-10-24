@@ -9,11 +9,9 @@ import { api } from "@/convex/_generated/api";
 import { date, roleLabel } from "@/lib/ui/format";
 
 const NAV: { group: string; items: { href: string; label: string; badge?: "approvals" | "cases" }[] }[] = [
-  { group: "Desk", items: [{ href: "/", label: "Overview" }, { href: "/approvals", label: "Approvals", badge: "approvals" }, { href: "/cases", label: "Cases", badge: "cases" }, { href: "/intake", label: "Live intake" }] },
-  { group: "Operations", items: [{ href: "/payables", label: "Payables" }, { href: "/payroll", label: "Payroll" }] },
-  { group: "Accounting", items: [{ href: "/ledger", label: "General ledger" }] },
-  { group: "Controls", items: [{ href: "/rules", label: "Internal rules" }, { href: "/audit", label: "Audit log" }] },
-  { group: "Reference", items: [{ href: "/sources", label: "Data sources" }] },
+  { group: "Kestrel desk", items: [{ href: "/", label: "Story" }, { href: "/desk", label: "Desk overview" }, { href: "/approvals", label: "Approvals", badge: "approvals" }, { href: "/cases", label: "Cases", badge: "cases" }, { href: "/intake", label: "Try it live" }] },
+  { group: "Learning", items: [{ href: "/rules", label: "Internal rules" }] },
+  { group: "Back office", items: [{ href: "/payables", label: "Payables" }, { href: "/payroll", label: "Payroll" }, { href: "/ledger", label: "General ledger" }, { href: "/audit", label: "Audit log" }, { href: "/sources", label: "Data sources" }] },
 ];
 
 type Counts = { pendingApprovals?: number; openCases?: number } | undefined;

@@ -73,6 +73,8 @@ export type InternalRule = {
   confidence: number;
   /** history event ids behind the rule */
   evidence: string[];
+  /** first day the rule applies (the day the controller approved it); absent = always */
+  approvedOn?: ISODate;
 };
 
 // ---- company history (exception-log level) ----

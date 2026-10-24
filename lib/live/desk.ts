@@ -38,6 +38,7 @@ export async function currentRules(client: ConvexHttpClient): Promise<InternalRu
     counterexamples: r.counterexamples,
     confidence: r.confidence,
     evidence: r.evidence,
+    // Live actions happen "now": a rule's current status applies regardless of when it was approved.
   }));
 }
 

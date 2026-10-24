@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { PageHeader, Panel, Pill } from "@/components/ui";
-import { date, usd } from "@/lib/ui/format";
+import { PageHeader, Panel, Pill, Summary } from "@/components/ui";
+import { date, dispositionLabel, dispositionTone, subjectLabel, usd, usdCompact, WHAT_HAPPENED } from "@/lib/ui/format";
 import { desk, findingsFor } from "@/lib/ui/world";
 
 export const metadata = { title: "Payroll" };
@@ -9,16 +9,42 @@ export default function Payroll() {
   const { world } = desk();
   const runs = [...world.payroll.runs].sort((a, b) => b.payDate.localeCompare(a.payDate));
   const emps = world.payroll.employees;
-  const depts = [...new Set(emps.map((e) => e.department))];
+  const byId = new Map(emps.map((e) => [e.id, e]));
+  const flagged = runs.flatMap((r) => findingsFor([r.id]).filter((f) => f.disposition !== "info").map((f) => ({ r, f })));
+  const stateFlags = findingsFor(emps.map((e) => e.id)).filter((f) => f.kind === "state_registration_missing");
+  const totalNet = runs.reduce((a, r) => a + r.lines.reduce((b, l) => b + l.netCents, 0), 0);
   return (
     <>
-      <PageHeader title="Payroll" subtitle={`Biweekly payroll for ${emps.length} employees in Washington. The payroll specialist recomputes every line of the provider's preview register before Dana approves the run.`} />
-      <div className="mb-4 grid grid-cols-6 gap-3">
-        {depts.map((d) => (
-          <div key={d} className="rounded-[4px] border border-line bg-panel px-3 py-2"><div className="text-[11px] font-semibold uppercase tracking-[0.02em] text-muted">{d}</div><div className="mt-0.5 text-[16px] font-semibold">{emps.filter((e) => e.department === d).length}</div></div>
-        ))}
-      </div>
-      <Panel flush note="Federal income tax per IRS Pub 15-T (2026), FICA per Pub 15 (2026), 401(k) limit per IRS; overtime per 29 U.S.C. § 207 by workweek. WA has no state income tax; WA PFML and WA Cares not modeled.">
+      <PageHeader title="Payroll" />
+      <Summary
+        text={<>Before each payday the payroll specialist recomputes every paycheck from HR records, approved timesheets and the 2026 IRS tables, and holds anything that doesn&apos;t match the payroll provider&apos;s numbers.</>}
+        figures={[
+          { label: "employees", value: emps.length },
+          { label: "pay runs", value: runs.length },
+          { label: "paychecks held", value: flagged.length, tone: "crit" },
+          { label: "net pay, Mar–Sep", value: usdCompact(totalNet) },
+        ]}
+      />
+      <Panel title="Paychecks held and other payroll problems" flush>
+        <table className="tbl">
+          <thead><tr><th>What happened</th><th>Employee</th><th>Pay date</th><th className="num">Amount (USD)</th><th>Handled as</th></tr></thead>
+          <tbody>
+            {[...flagged, ...stateFlags.map((f) => ({ r: runs.find((x) => x.payDate === f.date)!, f }))].map(({ r, f }, i) => {
+              const e = byId.get(f.employeeId ?? f.objectId);
+              return (
+                <tr key={i}>
+                  <td><a href={`/payroll/${r.id}`} className="text-ink">{(WHAT_HAPPENED[f.kind] ?? f.kind).replace(/^./, (c) => c.toUpperCase())}</a><div className="text-[11.5px] text-muted">{f.detail}</div></td>
+                  <td className="whitespace-nowrap">{e ? e.name : <span className="text-[var(--crit)]">not in HR</span>}<div className="text-[11px] text-muted">{e?.department ?? subjectLabel(f.objectId)}</div></td>
+                  <td className="whitespace-nowrap text-ink-2">{date(r.payDate)}</td>
+                  <td className="num">{usd(f.impactUSDCents)}</td>
+                  <td><Pill tone={dispositionTone(f.disposition)}>{dispositionLabel(f.disposition)}</Pill></td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </Panel>
+      <Panel title="Pay runs" flush note="Federal income tax per IRS Pub 15-T (2026), FICA per Pub 15 (2026), 401(k) limit per IRS; overtime per 29 U.S.C. § 207 by workweek. WA has no state income tax; WA PFML and WA Cares not modeled.">
         <table className="tbl">
           <thead><tr><th>Pay date</th><th>Run</th><th>Type</th><th>Period</th><th className="num">Employees</th><th className="num">Gross</th><th className="num">Net</th><th className="num">Employer FICA</th><th>Review</th></tr></thead>
           <tbody>

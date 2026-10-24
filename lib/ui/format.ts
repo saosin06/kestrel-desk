@@ -117,3 +117,96 @@ export function recordHref(id: string): string | null {
   if (/^(HR|R-)/.test(id)) return "/rules";
   return null;
 }
+
+// ---- plain-language titles ----
+
+const TAG_SUPPLIER: Record<string, string> = { NW: "Northwind", ATL: "Atlas Motors", VIR: "Vireo", HOS: "Hoshi Optics", RDG: "Ridgeline", CAS: "Cascade", UNREG: "Unknown supplier" };
+
+export const WHAT_HAPPENED: Record<string, string> = {
+  noncompliant_substitution: "part swapped for a restricted-origin one",
+  price_variance_vs_contract: "billed above contract price",
+  qty_mismatch: "quantities don't agree",
+  duplicate_invoice: "same invoice sent twice",
+  duty_overcharge: "customs duty overcharged",
+  unknown_supplier: "invoice from a supplier not in the vendor master",
+  missing_document: "certificate of origin missing",
+  source_disagreement: "records disagree",
+  remittance_change_unverified: "bank-change request by email",
+  ghost_employee: "paycheck for someone not in HR",
+  terminated_paid: "paycheck for a terminated employee",
+  pay_rate_mismatch: "raise not applied",
+  overtime_error: "overtime underpaid",
+  payroll_tax_error: "tax withheld incorrectly",
+  deduction_limit: "401(k) over the annual limit",
+  direct_deposit_change_unverified: "direct-deposit change by email",
+  state_registration_missing: "employee moved to a state we're not registered in",
+  duplicate_payment: "same pay period paid twice",
+  hours_mismatch: "hours differ from the approved timesheet",
+};
+
+/** "Vireo · Apr 2026 invoice", "Payroll · Apr 17 · E-0018", "Email MSG-…". */
+export function subjectLabel(id: string): string {
+  const intake = id.match(/INTAKE-\d+/)?.[0];
+  if (intake) return id.startsWith("MSG") ? `Live email ${intake}` : `Live invoice ${intake}`;
+  const m = id.match(/^(?:VI|CE|PO|R|PS|COO)-(\d{2})(\d{2})-([A-Z]+)/);
+  if (m) {
+    const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][Number(m[2]) - 1];
+    const what = id.startsWith("CE-") ? "customs entry" : id.endsWith("-2") ? "invoice (re-sent)" : "invoice";
+    return `${TAG_SUPPLIER[m[3]] ?? m[3]} · ${month} ${what}`;
+  }
+  const run = id.match(/^RUN-(\d{4}-\d{2}-\d{2})(-OC)?(?:\/(E-\d+))?/);
+  if (run) return `Payroll ${date(run[1]).replace(/, \d{4}$/, "")}${run[2] ? " off-cycle" : ""}${run[3] ? ` · ${run[3]}` : ""}`;
+  if (/^E-\d+$/.test(id)) return `Employee ${id}`;
+  if (id.startsWith("MSG-")) return `Email ${id}`;
+  return id;
+}
+
+export function caseTitle(c: { kind: string; objectIds: string[] }): string {
+  const what = WHAT_HAPPENED[c.kind] ?? kindLabel(c.kind).toLowerCase();
+  const subject = c.objectIds.find((o) => /^(VI|RUN|E-|CE)/.test(o)) ?? c.objectIds[0];
+  const s = subjectLabel(subject);
+  return `${s.split(" · ")[0]} — ${what}`;
+}
+
+export function requestTitle(r: { kind: string; payload: unknown }, caseInfo?: { kind: string; objectIds: string[] }): string {
+  const p = (r.payload ?? {}) as Record<string, unknown>;
+  const subject = String(p.invoiceId ?? p.runId ?? (Array.isArray(p.objectIds) ? p.objectIds[0] : "") ?? p.employeeId ?? "");
+  const why = caseInfo ? `: ${WHAT_HAPPENED[caseInfo.kind] ?? kindLabel(caseInfo.kind).toLowerCase()}` : "";
+  switch (r.kind) {
+    case "payment":
+      return `Pay ${subjectLabel(subject)}`;
+    case "payment_hold":
+      return `Hold payment — ${subjectLabel(subject).split(" · ")[0]}${why}`;
+    case "debit_memo":
+      return `Debit memo to ${subjectLabel(subject).split(" · ")[0]}${why}`;
+    case "substitution_approval":
+      return `Approve or reject part substitution — ${subjectLabel(subject).split(" · ")[0]}`;
+    case "payroll_run_approval":
+      return `Approve ${subjectLabel(subject)} (${Array.isArray(p.excluded) && p.excluded.length ? `${p.excluded.length} line${p.excluded.length > 1 ? "s" : ""} held` : "all lines"})`;
+    case "payroll_line_hold":
+      return `Hold paycheck — ${String(p.employeeId ?? "")}${why}`;
+    case "hris_change":
+      return `HR: ${String(p.change ?? "verify a change")} (${String(p.employeeId ?? "")})`;
+    default:
+      return requestLabel(r.kind);
+  }
+}
+
+/** Audit actions as sentences. */
+export function auditSentence(a: { actor: string; action: string; refs: string[]; detail: string }): string {
+  const who = roleLabel(a.actor).replace(" (agent)", "");
+  const subj = a.refs.find((r) => !/^(CASE|REQ)-/.test(r));
+  const on = subj ? ` on ${subjectLabel(subj)}` : "";
+  if (a.action === "open_case") return `${who} opened a case${on}`;
+  if (a.action === "escalate") return `${who} escalated ${a.refs[0] ?? ""} ${a.detail.replace("to ", "to ")}`;
+  if (a.action.startsWith("request:")) return `${who} requested: ${requestLabel(a.action.slice(8)).toLowerCase()} (${a.detail})`;
+  if (a.action.startsWith("decision:")) return `${who} ${a.action.endsWith("approve") ? "approved" : "rejected"} ${a.refs[0]} — “${a.detail}”`;
+  if (a.action === "log:info") return `${who} logged a routine item${on} (no escalation)`;
+  if (a.action.startsWith("tool:")) return `${who} used ${a.action.slice(5).replaceAll("_", " ")}${a.detail !== "ok" ? ` — ${a.detail}` : ""}`;
+  if (a.action === "ask_why") return `${who} asked why on ${a.refs[0]}: “${a.detail}”`;
+  if (a.action === "answer_why") return `${who} answered on ${a.refs[0]}`;
+  if (a.action.startsWith("rule:")) return `${who} set rule ${a.refs[0]} to ${a.action.slice(5).replace("_", " ")} — “${a.detail}”`;
+  if (a.action.startsWith("intake:")) return `Live ${a.action.slice(7)} received: ${a.detail}`;
+  if (a.action === "case_seen_again") return `${who} saw an open issue again (no duplicate case)`;
+  return `${who}: ${a.action}`;
+}

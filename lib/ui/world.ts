@@ -7,14 +7,15 @@ import { loadEcbRates } from "@/lib/costing/reference";
 import { dispose } from "@/lib/rules/dispose";
 import { mineRules } from "@/lib/rules/mine";
 import { type Finding, sweep } from "@/simulation/sweep";
-import { DEFAULT_SEED, generate, MONTHS } from "@/simulation/world";
+import { DEFAULT_SEED, generate, MONTHS, ONBOARDING_REVIEW } from "@/simulation/world";
 
 let memo: ReturnType<typeof build> | undefined;
 
 function build() {
   const world = deskView(generate(DEFAULT_SEED));
   const findings = sweep(world as Parameters<typeof sweep>[0]);
-  const rules = mineRules(world.history.exceptions).map((r) => ({ ...r, status: "approved" as const }));
+  // The sim's timeline: cold until Dana approves the proposed rules at the March close.
+  const rules = mineRules(world.history.exceptions).map((r) => ({ ...r, status: "approved" as const, approvedOn: ONBOARDING_REVIEW }));
   const cold = dispose(findings);
   const learned = dispose(findings, rules);
   const key = (f: { kind: string; objectId: string }) => `${f.kind} ${f.objectId}`;

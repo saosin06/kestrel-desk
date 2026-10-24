@@ -86,3 +86,18 @@ export function Stat({ label, value, sub }: { label: string; value: ReactNode; s
 export function Empty({ children }: { children: ReactNode }) {
   return <div className="px-3 py-6 text-center text-muted">{children}</div>;
 }
+
+/** One-line explanation of a page plus its few numbers that matter. */
+export function Summary({ text, figures }: { text: ReactNode; figures: { label: string; value: ReactNode; tone?: Tone }[] }) {
+  return (
+    <section className="mb-4 flex items-stretch rounded-[4px] border border-line bg-panel">
+      <div className="flex-1 px-3 py-2.5 text-[13px] leading-relaxed text-ink-2">{text}</div>
+      {figures.map((f) => (
+        <div key={f.label} className="min-w-[112px] border-l border-line px-3 py-2.5">
+          <div className={`text-[18px] font-semibold leading-tight ${f.tone === "crit" ? "text-[var(--crit)]" : f.tone === "good" ? "text-[var(--good)]" : f.tone === "warn" ? "text-[var(--warn)]" : "text-ink"}`}>{f.value}</div>
+          <div className="mt-0.5 text-[11.5px] text-muted">{f.label}</div>
+        </div>
+      ))}
+    </section>
+  );
+}

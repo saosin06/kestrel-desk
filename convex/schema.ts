@@ -67,6 +67,7 @@ export default defineSchema({
     decidedBy: v.optional(v.string()),
     decidedAt: v.optional(v.string()),
     decisionReason: v.optional(v.string()),
+    approvedOn: v.optional(v.string()),
   }).index("by_ruleId", ["ruleId"]),
   meta: defineTable({ key: v.string(), value: v.string() }).index("by_key", ["key"]),
   intakes: defineTable({

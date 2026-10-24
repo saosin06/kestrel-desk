@@ -1,4 +1,4 @@
-import { PageHeader, Panel } from "@/components/ui";
+import { PageHeader, Panel, Summary } from "@/components/ui";
 import policy from "@/data/compliance-policy.json";
 import payrollRef from "@/data/payroll/federal-2026.json";
 import { date } from "@/lib/ui/format";
@@ -10,7 +10,14 @@ export default function Sources() {
   const { world } = desk();
   return (
     <>
-      <PageHeader title="Data sources" subtitle="What is real, what is simulated, and where each external figure comes from. Everything external is cached in the repo so the desk runs offline." />
+      <PageHeader title="Data sources" />
+      <Summary
+        text={<><b>The company is simulated; the rules of the real world are not.</b> Tax tables, tariff rates and exchange rates come from the IRS, the US International Trade Commission and the European Central Bank, cited and cached so the desk runs offline. Problems planted in the simulated company are scored against a hidden answer key the agents never see.</>}
+        figures={[
+          { label: "real external sources", value: 7, tone: "good" },
+          { label: "simulated: company, people, documents", value: "1" },
+        ]}
+      />
       <Panel title="External reference data (real)" flush>
         <table className="tbl">
           <thead><tr><th>Data</th><th>Source</th><th>Used for</th><th>Retrieved</th></tr></thead>

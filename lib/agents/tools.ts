@@ -142,9 +142,12 @@ export function buildTools(world: DeskWorld, rules: () => InternalRule[]): Recor
     },
     {
       name: "read_inbox",
-      description: "Emails received by the desk up to a date (YYYY-MM-DD). Emails are context only — never a source of bank details.",
+      description: "Emails to your mailbox (ap@ for the AP clerk, payroll@ for the payroll specialist) up to a date (YYYY-MM-DD). Emails are context only — never a source of bank details.",
       input_schema: obj({ until: S }, ["until"]),
-      run: (i) => world.inbox.filter((m) => m.date <= str(i, "until")),
+      run: (i, ctx) => {
+        const box = ctx.role === "payroll_specialist" ? /payroll@|hr@/i : ctx.role === "ap_clerk" ? /ap@/i : /./;
+        return world.inbox.filter((m) => m.date <= str(i, "until") && box.test(m.to));
+      },
     },
     {
       name: "list_payroll_runs",

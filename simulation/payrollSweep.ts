@@ -6,12 +6,15 @@
 import { addToYtd, computePay, inForce } from "@/lib/payroll/compute";
 import { loadPayrollReference } from "@/lib/payroll/reference";
 import type { PayLine, Ytd } from "@/lib/payroll/types";
+import { formatMoney } from "@/lib/money";
 import type { Evidence, FindingFacts } from "@/lib/rules/types";
 import { type PayrollWorld, REGISTERED_STATES } from "./payroll";
 
 export type PayrollFinding = FindingFacts & { source: "payroll"; detail: string; evidence?: Evidence };
 
 const hoursOf = (l: PayLine) => l.regularHoursE2 + l.overtimeHoursE2;
+
+const $ = (cents: number) => formatMoney(cents, "USD").replace("USD ", "$");
 
 export function payrollSweep(pw: PayrollWorld): PayrollFinding[] {
   const ref = loadPayrollReference();
@@ -40,7 +43,7 @@ export function payrollSweep(pw: PayrollWorld): PayrollFinding[] {
       }
       const seen = paid.get(emp.id) ?? new Set<string>();
       if (seen.has(period.id)) {
-        add({ ...at, ...dept, kind: "duplicate_payment", impactUSDCents: line.netCents, detail: `${period.id} already paid to ${emp.id} in an earlier run`, evidence: { path: [run.id, emp.id, period.id, ...pw.runs.filter((x) => x !== run && x.periodId === period.id && x.lines.some((l) => l.employeeId === emp.id)).map((x) => `${x.id} (${x.type})`)], systemOfRecord: "payroll register history" } });
+        add({ ...at, ...dept, kind: "duplicate_payment", impactUSDCents: line.netCents, detail: `the ${period.start} – ${period.end} period was already paid to ${emp.id} in an earlier run`, evidence: { path: [run.id, emp.id, period.id, ...pw.runs.filter((x) => x !== run && x.periodId === period.id && x.lines.some((l) => l.employeeId === emp.id)).map((x) => `${x.id} (${x.type})`)], systemOfRecord: "payroll register history" } });
         continue;
       }
       seen.add(period.id);
@@ -68,12 +71,17 @@ export function payrollSweep(pw: PayrollWorld): PayrollFinding[] {
       } else if (line.overtimeHoursE2 !== c.overtimeHoursE2) {
         add({ ...at, ...dept, kind: "overtime_error", impactUSDCents: c.grossCents - line.grossCents, detail: `overtime ${line.overtimeHoursE2 / 100} h paid vs ${c.overtimeHoursE2 / 100} h owed (per workweek)`, evidence: ev("timekeeping (hours by workweek); HRIS (rate, FLSA status)", ref.sources.overtime) });
       } else if (line.grossCents !== c.grossCents) {
-        add({ ...at, ...dept, kind: "pay_rate_mismatch", impactUSDCents: gap(c.grossCents, line.grossCents), detail: `gross ${line.grossCents}¢ vs ${c.grossCents}¢ at the HRIS rate in force on ${period.start}`, evidence: ev("HRIS (pay rate in force)") });
+        add({ ...at, ...dept, kind: "pay_rate_mismatch", impactUSDCents: gap(c.grossCents, line.grossCents), detail: `paid ${$(line.grossCents)} gross; HR's rate in force on ${period.start} gives ${$(c.grossCents)}`, evidence: ev("HRIS (pay rate in force)") });
       } else if (line.k401Cents !== c.k401Cents) {
-        add({ ...at, ...dept, kind: "deduction_limit", impactUSDCents: gap(line.k401Cents, c.k401Cents), detail: `401(k) ${line.k401Cents}¢ vs ${c.k401Cents}¢ (annual limit $24,500)`, evidence: ev("HRIS (deferral election); payroll YTD", ref.sources.retirement) });
+        add({ ...at, ...dept, kind: "deduction_limit", impactUSDCents: gap(line.k401Cents, c.k401Cents), detail: `deferred ${$(line.k401Cents)}; only ${$(c.k401Cents)} was left under the $24,500 annual limit`, evidence: ev("HRIS (deferral election); payroll YTD", ref.sources.retirement) });
       } else if (line.fitCents !== c.fitCents || line.ssCents !== c.ssCents || line.medicareCents !== c.medicareCents || line.addlMedicareCents !== c.addlMedicareCents) {
         const diff = gap(line.fitCents, c.fitCents) + gap(line.ssCents, c.ssCents) + gap(line.medicareCents, c.medicareCents) + gap(line.addlMedicareCents, c.addlMedicareCents);
-        add({ ...at, ...dept, kind: "payroll_tax_error", impactUSDCents: diff, detail: `withholding differs from recompute (FIT ${line.fitCents}/${c.fitCents}, SS ${line.ssCents}/${c.ssCents}, Medicare ${line.medicareCents}/${c.medicareCents})`, evidence: ev("IRS 2026 tables; payroll YTD", ref.sources.fica) });
+        add({ ...at, ...dept, kind: "payroll_tax_error", impactUSDCents: diff, detail: [
+            line.fitCents !== c.fitCents && `federal tax ${$(line.fitCents)} vs ${$(c.fitCents)}`,
+            line.ssCents !== c.ssCents && `Social Security ${$(line.ssCents)} vs ${$(c.ssCents)}${c.ssCents < line.ssCents ? " (wage base reached)" : ""}`,
+            line.medicareCents !== c.medicareCents && `Medicare ${$(line.medicareCents)} vs ${$(c.medicareCents)}`,
+            line.addlMedicareCents !== c.addlMedicareCents && `Additional Medicare ${$(line.addlMedicareCents)} vs ${$(c.addlMedicareCents)}`,
+          ].filter(Boolean).join("; ") + " (withheld vs correct)", evidence: ev("IRS 2026 tables; payroll YTD", ref.sources.fica) });
       } else if (line.netCents !== c.netCents) {
         add({ ...at, ...dept, kind: "source_disagreement", diffKind: "net_pay", impactUSDCents: gap(line.netCents, c.netCents), detail: "net pay differs from recompute" });
       }

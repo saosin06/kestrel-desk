@@ -36,6 +36,8 @@ import { type Decoy, generateHistory, type HiddenRule, type History, type Histor
 import { generatePayroll, type PayrollKeyEntry, type PayrollWorld } from "./payroll";
 
 export const DEFAULT_SEED = 42;
+/** The desk starts cold; Dana approves the rules it proposes from Kestrel's history at the March close. */
+export const ONBOARDING_REVIEW = "2026-03-31";
 export const SIM_WINDOW = { from: "2026-03-01", to: "2026-09-30" } as const;
 export const MONTHS: PeriodId[] = ["2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09"];
 

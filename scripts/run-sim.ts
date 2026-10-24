@@ -11,7 +11,7 @@ import { buildTools, deskView, seatTools } from "../lib/agents/tools";
 import type { DeskRule } from "../lib/desk/coordinator";
 import { createDeskState, type DeskState } from "../lib/desk/state";
 import { mineRules } from "../lib/rules/mine";
-import { DEFAULT_SEED, generate, MONTHS, SIM_WINDOW } from "../simulation/world";
+import { DEFAULT_SEED, generate, MONTHS, ONBOARDING_REVIEW } from "../simulation/world";
 
 const CONCURRENCY = 6;
 const OUT = `data/desk/agents-seed${DEFAULT_SEED}.json`;
@@ -25,8 +25,9 @@ const rules: DeskRule[] = mineRules(world.history.exceptions).map((r) => ({
   ...r,
   status: "approved",
   decidedBy: "controller",
-  decidedAt: SIM_WINDOW.from,
-  decisionReason: "Matches how we've handled these; evidence reviewed.",
+  decidedAt: ONBOARDING_REVIEW,
+  approvedOn: ONBOARDING_REVIEW,
+  decisionReason: "Matches how we've handled these; evidence reviewed at the March close.",
 }));
 
 const lastDay = (period: string) => new Date(Date.UTC(Number(period.slice(0, 4)), Number(period.slice(5, 7)), 0)).toISOString().slice(0, 10);
