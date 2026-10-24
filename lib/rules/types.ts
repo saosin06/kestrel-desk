@@ -34,6 +34,14 @@ export type FindingFacts = {
   attrs: FindingAttrs;
 };
 
+/** The path behind a finding: records in order, the rule applied, and the system of record. */
+export type Evidence = {
+  path: string[];
+  ruleRef?: string;
+  systemOfRecord?: string;
+  steps?: { label: string; inputs: Record<string, number | string>; result: number; ruleRef: string }[];
+};
+
 export type RuleScope = {
   kind: CaseKind;
   diffKind?: string;

@@ -12,7 +12,7 @@ import { loadBom, loadParts, loadProducts, loadSuppliers } from "@/lib/erp/maste
 import { type DiffKind, findDuplicates, threeWayMatch } from "@/lib/erp/match";
 import type { CaseKind, CompliancePolicy, Invoice } from "@/lib/erp/types";
 import { lineAmount } from "@/lib/money";
-import type { FindingFacts } from "@/lib/rules/types";
+import type { Evidence, FindingFacts } from "@/lib/rules/types";
 import { type PayrollFinding, payrollSweep } from "./payrollSweep";
 import type { World } from "./world";
 
@@ -20,6 +20,7 @@ export type Finding =
   | (FindingFacts & {
       source: "integrity" | "duplicate" | "match" | "compliance" | "customs";
       detail: string;
+      evidence?: Evidence;
     })
   | PayrollFinding;
 
@@ -69,7 +70,7 @@ export function sweep(world: World): Finding[] {
     const at = { date: inv.date, period, supplierId: inv.supplierId };
     const supplier = suppliers[inv.supplierId];
     if (!supplier) {
-      add({ ...at, kind: "unknown_supplier", objectId: inv.id, source: "integrity", detail: `"${inv.supplierName}" is not in the vendor master` });
+      add({ ...at, kind: "unknown_supplier", objectId: inv.id, source: "integrity", detail: `"${inv.supplierName}" is not in the vendor master`, evidence: { path: [inv.id, `supplier "${inv.supplierName}"`, "vendor master: no match"], systemOfRecord: "vendor master (data/vendors.json)" } });
       continue;
     }
     const po = world.pos.find((p) => p.id === inv.poId);
@@ -81,7 +82,7 @@ export function sweep(world: World): Finding[] {
     const dups = findDuplicates(inv, seen);
     seen.push(inv);
     if (dups.length > 0) {
-      add({ ...at, kind: "duplicate_invoice", objectId: inv.id, source: "duplicate", detail: `same bill as ${dups.map((d) => d.id).join(", ")}` });
+      add({ ...at, kind: "duplicate_invoice", objectId: inv.id, source: "duplicate", detail: `same bill as ${dups.map((d) => d.id).join(", ")}`, evidence: { path: [inv.id, `invoice no. ${inv.invoiceNo}`, ...dups.map((d) => `${d.id} (invoice no. ${d.invoiceNo})`)], ruleRef: "Duplicate guard: same supplier + amount + invoice number after stripping re-send suffixes", systemOfRecord: "AP subledger" } });
     }
 
     const result = threeWayMatch({
@@ -108,7 +109,12 @@ export function sweep(world: World): Finding[] {
         attrs.currency = inv.currency;
         impact = Math.abs(impact ?? 0);
       }
-      add({ ...at, kind: MATCH_HOLD_KIND[d.kind], objectId: inv.id, partId: d.partId, diffKind: d.kind, source: "match", impactUSDCents: impact, attrs, detail: `${d.kind}: ${d.note}` });
+      const evidence: Evidence = {
+        path: [inv.id, ...(d.lineIndex !== undefined ? [`line ${d.lineIndex + 1}`] : []), ...(d.partId ? [d.partId] : []), po.id, ...world.receipts.filter((r) => r.poId === po.id).map((r) => r.id), ...world.packingSlips.filter((s) => s.poId === po.id).map((s) => s.id)],
+        ruleRef: d.ruleRef,
+        systemOfRecord: d.systemOfRecord,
+      };
+      add({ ...at, kind: MATCH_HOLD_KIND[d.kind], objectId: inv.id, partId: d.partId, diffKind: d.kind, source: "match", impactUSDCents: impact, attrs, detail: `${d.kind}: ${d.note}`, evidence });
     }
     if (result.status === "match" && dups.length === 0) accepted.set(po.id, [...(accepted.get(po.id) ?? []), inv]);
 
@@ -128,10 +134,16 @@ export function sweep(world: World): Finding[] {
         },
       });
       const atRisk = usd(line.amountMinor);
+      const lineNo = inv.lines.indexOf(line) + 1;
+      const compEvidence: Evidence = {
+        path: [inv.id, `line ${lineNo}`, line.partId, ...(line.manufacturerPartNo ? [`MPN ${line.manufacturerPartNo}`] : []), cert ? `${cert.id} (origin ${cert.countryOfOrigin})` : "no certificate of origin", ...r.ruleRefs],
+        ruleRef: r.ruleRefs.join("; ") || policy.id,
+        systemOfRecord: "certificate of origin (origin); BOM (approved MPN); compliance policy " + policy.id,
+      };
       if (r.status === "fail") {
-        add({ ...at, partId: line.partId, kind: "noncompliant_substitution", objectId: inv.id, impactUSDCents: atRisk, source: "compliance", detail: r.reasons.join("; ") });
+        add({ ...at, partId: line.partId, kind: "noncompliant_substitution", objectId: inv.id, impactUSDCents: atRisk, source: "compliance", detail: r.reasons.join("; "), evidence: compEvidence });
       } else if (r.status === "unknown") {
-        add({ ...at, partId: line.partId, kind: "missing_document", objectId: inv.id, impactUSDCents: atRisk, source: "compliance", detail: r.reasons.join("; ") });
+        add({ ...at, partId: line.partId, kind: "missing_document", objectId: inv.id, impactUSDCents: atRisk, source: "compliance", detail: r.reasons.join("; "), evidence: compEvidence });
       } else if (r.substitution) {
         add({ ...at, partId: line.partId, kind: "source_disagreement", objectId: inv.id, source: "compliance", detail: `unapproved substitution: ${r.reasons.join("; ")}` });
       }
@@ -154,9 +166,9 @@ export function sweep(world: World): Finding[] {
       const ce = { date: entry.date, period: entry.date.slice(0, 7), supplierId: inv.supplierId, objectId: entry.id, source: "customs" as const };
       for (const l of check.lines) {
         if (l.kind === "duty_overcharge") {
-          add({ ...ce, kind: "duty_overcharge", partId: l.partId, diffKind: "wrong_hts", impactUSDCents: l.deltaCents, detail: l.note });
+          add({ ...ce, kind: "duty_overcharge", partId: l.partId, diffKind: "wrong_hts", impactUSDCents: l.deltaCents, detail: l.note, evidence: { path: [entry.id, inv.id, `line ${l.lineIndex + 1}`, l.partId, `entered ${l.enteredHts}`, `expected ${l.expectedHts}`], ruleRef: `USITC HTS ${l.expectedHts}`, systemOfRecord: "customs entry (duty charged); USITC HTS (rate)", steps: l.steps } });
         } else if (l.kind === "source_disagreement") {
-          add({ ...ce, kind: "source_disagreement", partId: l.partId, diffKind: "customs_gap", detail: l.note });
+          add({ ...ce, kind: "source_disagreement", partId: l.partId, diffKind: "customs_gap", detail: l.note, evidence: { path: [entry.id, inv.id, `line ${l.lineIndex + 1}`, l.partId], systemOfRecord: "customs entry (duty charged)", steps: l.steps } });
         }
       }
     }

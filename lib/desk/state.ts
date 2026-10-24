@@ -2,7 +2,7 @@
 // Agents change it only through lib/desk/controls.ts.
 
 import type { CaseKind, ISODate, Request, Role } from "@/lib/erp/types";
-import type { Disposition } from "@/lib/rules/types";
+import type { Disposition, Evidence } from "@/lib/rules/types";
 
 export type DeskCase = {
   id: string;
@@ -19,6 +19,9 @@ export type DeskCase = {
   ruleIds: string[];
   summary: string;
   systemOfRecord: string;
+  /** who wrote the case: the deterministic coordinator or an agent seat */
+  author: "rules-engine" | "agent";
+  evidence: Evidence[];
   notes: { at: ISODate; by: Role; text: string }[];
 };
 

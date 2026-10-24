@@ -3,6 +3,7 @@
 
 import controlsData from "@/data/controls.json";
 import type { CaseKind, ISODate, Request, RequestKind, Role } from "@/lib/erp/types";
+import { applyDecision, sodViolation } from "./sod";
 import { audit, type DeskState } from "./state";
 
 export class ControlViolation extends Error {
@@ -62,7 +63,6 @@ export function requiredApprovers(kind: RequestKind, amountUSDCents: number | un
   }
 }
 
-let seq = 0;
 export function createRequest(
   state: DeskState,
   at: ISODate,
@@ -81,7 +81,7 @@ export function createRequest(
   }
   const approvers = requiredApprovers(r.kind, r.amountUSDCents, caseKind);
   const request: Request = {
-    id: `REQ-${String(++seq).padStart(5, "0")}`,
+    id: `REQ-${String(state.requests.length + 1).padStart(5, "0")}`,
     kind: r.kind,
     requestedBy: r.requestedBy,
     requiredApprovers: approvers,
@@ -96,16 +96,13 @@ export function createRequest(
   return request;
 }
 
-/** Records a decision. Segregation of duties: the approver is never the requester and must be required. */
+/** Records a decision (segregation of duties enforced in lib/desk/sod.ts, shared with Convex). */
 export function decide(state: DeskState, at: ISODate, requestId: string, by: Role, decision: "approve" | "reject", reason: string): Request {
   const r = state.requests.find((x) => x.id === requestId);
   if (!r) throw new ControlViolation(`no request ${requestId}`);
-  if (r.status !== "pending") throw new ControlViolation(`${requestId} is already ${r.status}`);
-  if (by === r.requestedBy) throw new ControlViolation(`segregation of duties: ${by} requested ${requestId} and cannot decide it`);
-  if (!r.requiredApprovers.includes(by)) throw new ControlViolation(`${by} is not a required approver of ${requestId}`);
-  r.approvals.push({ by, decision, reason, at });
-  if (decision === "reject") r.status = "rejected";
-  else if (r.requiredApprovers.every((role) => r.approvals.some((a) => a.by === role && a.decision === "approve"))) r.status = "approved";
+  const problem = sodViolation(r, by);
+  if (problem) throw new ControlViolation(problem);
+  Object.assign(r, applyDecision(r, by, decision, reason, at));
   audit(state, { at, actor: by, action: `decision:${decision}`, refs: [requestId], detail: reason });
   return r;
 }

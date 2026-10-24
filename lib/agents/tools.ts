@@ -66,6 +66,9 @@ export function buildTools(world: DeskWorld, rules: () => InternalRule[]): Recor
         rule_id: x.ruleId ?? null,
         disposition_reason: x.reason,
         detail: f.detail,
+        evidence_path: f.evidence?.path ?? [],
+        rule_ref: f.evidence?.ruleRef ?? null,
+        system_of_record: f.evidence?.systemOfRecord ?? null,
       };
     });
   };
@@ -178,6 +181,7 @@ export function buildTools(world: DeskWorld, rules: () => InternalRule[]): Recor
         let impact = 0;
         let disposition: DeskCase["disposition"] = "escalate";
         let ruleIds: string[] = [];
+        let evidence: DeskCase["evidence"] = [];
         if (keys.length > 0) {
           const fs = keys.map((k) => {
             const f = findings().byKey.get(k);
@@ -190,6 +194,7 @@ export function buildTools(world: DeskWorld, rules: () => InternalRule[]): Recor
           impact = fs.reduce((a, f) => a + Math.abs(f.impactUSDCents ?? 0), 0);
           disposition = d.get(keys[0])!.disposition;
           ruleIds = fs.map((f) => d.get(fkey(f))!.ruleId).filter((x): x is string => !!x);
+          evidence = fs.map((f) => f.evidence ?? { path: [f.objectId] });
         } else {
           kind = str(i, "kind") as CaseKind;
           if (!AGENT_DETECTED.has(kind)) throw new ToolInputError(`kind ${kind} must be opened from engine findings`);
@@ -197,6 +202,7 @@ export function buildTools(world: DeskWorld, rules: () => InternalRule[]): Recor
           const emp = world.payroll.employees.find((e) => objectIds.includes(e.id));
           const next = emp && world.payroll.runs.find((r) => r.payDate >= ctx.today && r.lines.some((l) => l.employeeId === emp.id));
           impact = next ? next.lines.find((l) => l.employeeId === emp!.id)!.netCents : 0;
+          evidence = [{ path: objectIds, systemOfRecord: "HRIS / vendor master (bank details on file)", ruleRef: "MEMO-2025-11 bank-detail change policy" }];
         }
         const c: DeskCase = {
           id: `CASE-${String(ctx.state.cases.length + 1).padStart(4, "0")}`,
@@ -211,6 +217,8 @@ export function buildTools(world: DeskWorld, rules: () => InternalRule[]): Recor
           ruleIds,
           summary: str(i, "summary"),
           systemOfRecord: str(i, "system_of_record"),
+          author: "agent",
+          evidence,
           notes: [],
         };
         ctx.state.cases.push(c);
