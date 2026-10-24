@@ -38,14 +38,21 @@ if (seat === "ap_clerk") {
   task = `Today is ${today}. Review payroll run ${run} before it's approved for tomorrow's pay date, and check the inbox for anything that affects it. Then request approval of the run, excluding any lines you hold.`;
 }
 
-const run = await runAgent({ client: new Anthropic(), role: seat, system: seat === "ap_clerk" ? AP_CLERK_PROMPT : PAYROLL_SPECIALIST_PROMPT, task, tools, ctx: { state, role: seat, today } });
+async function main() {
+  const run = await runAgent({ client: new Anthropic(), role: seat, system: seat === "ap_clerk" ? AP_CLERK_PROMPT : PAYROLL_SPECIALIST_PROMPT, task, tools, ctx: { state, role: seat, today } });
 
-console.log(`\n=== ${seat} · ${run.turns} turns · ${run.toolCalls.length} tool calls · stop: ${run.stopReason}${run.budgetExceeded ? " · BUDGET EXCEEDED" : ""} · rules: ${cold ? "none (cold)" : rules.length + " learned"}`);
-for (const c of run.toolCalls) console.log(`${c.ok ? " ·" : " ✗"} ${c.name} ${JSON.stringify(c.input).slice(0, 110)}${c.ok ? "" : `\n     ${c.result.slice(0, 160)}`}`);
-console.log("\n--- cases");
-for (const c of state.cases) console.log(` ${c.id} ${c.kind} · ${formatMoney(c.impactUSDCents, "USD")} · ${c.disposition}${c.ruleIds.length ? " · rule " + c.ruleIds.join(",") : ""}\n   ${c.summary}`);
-console.log("--- requests");
-for (const r of state.requests) console.log(` ${r.id} ${r.kind} · ${r.status} · needs ${r.requiredApprovers.join(" + ") || "nobody"}${r.amountUSDCents !== undefined ? " · " + formatMoney(r.amountUSDCents, "USD") : ""}`);
-console.log("--- escalations");
-for (const m of state.messages) console.log(` → ${m.to}: ${m.text.slice(0, 300)}`);
-console.log(`\n--- agent's summary\n${run.finalText}`);
+  console.log(`\n=== ${seat} · ${run.turns} turns · ${run.toolCalls.length} tool calls · stop: ${run.stopReason}${run.budgetExceeded ? " · BUDGET EXCEEDED" : ""} · rules: ${cold ? "none (cold)" : rules.length + " learned"}`);
+  for (const c of run.toolCalls) console.log(`${c.ok ? " ·" : " ✗"} ${c.name} ${JSON.stringify(c.input).slice(0, 110)}${c.ok ? "" : `\n     ${c.result.slice(0, 160)}`}`);
+  console.log("\n--- cases");
+  for (const c of state.cases) console.log(` ${c.id} ${c.kind} · ${formatMoney(c.impactUSDCents, "USD")} · ${c.disposition}${c.ruleIds.length ? " · rule " + c.ruleIds.join(",") : ""}\n   ${c.summary}`);
+  console.log("--- requests");
+  for (const r of state.requests) console.log(` ${r.id} ${r.kind} · ${r.status} · needs ${r.requiredApprovers.join(" + ") || "nobody"}${r.amountUSDCents !== undefined ? " · " + formatMoney(r.amountUSDCents, "USD") : ""}`);
+  console.log("--- escalations");
+  for (const m of state.messages) console.log(` → ${m.to}: ${m.text.slice(0, 300)}`);
+  console.log(`\n--- agent's summary\n${run.finalText}`);
+}
+
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});
