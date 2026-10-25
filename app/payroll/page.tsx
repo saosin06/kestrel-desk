@@ -45,7 +45,7 @@ export default function Payroll() {
         </table>
       </Panel>
       <Panel title="Pay runs" flush note="Federal income tax per IRS Pub 15-T (2026), FICA per Pub 15 (2026), 401(k) limit per IRS; overtime per 29 U.S.C. § 207 by workweek. WA has no state income tax; WA PFML and WA Cares not modeled.">
-        <table className="tbl">
+        <div className="overflow-x-auto"><table className="tbl">
           <thead><tr><th>Pay date</th><th>Run</th><th>Type</th><th>Period</th><th className="num">Employees</th><th className="num">Gross</th><th className="num">Net</th><th className="num">Employer FICA</th><th>Review</th></tr></thead>
           <tbody>
             {runs.map((r) => {
@@ -65,12 +65,12 @@ export default function Payroll() {
                   <td className="num">{usd(gross)}</td>
                   <td className="num">{usd(netT)}</td>
                   <td className="num">{usd(er)}</td>
-                  <td className="whitespace-nowrap">{flags.length ? <Pill tone="crit">{flags.length} held</Pill> : <Pill tone="good">Recomputed, matches</Pill>}{info > 0 && <span className="ml-1.5 text-[11.5px] text-muted">{info} logged</span>}</td>
+                  <td className="whitespace-nowrap">{flags.length ? <Pill tone="crit">{flags.length} held</Pill> : <Pill tone="good">Matches</Pill>}{info > 0 && <span className="ml-1.5 text-[11.5px] text-muted">{info} logged</span>}</td>
                 </tr>
               );
             })}
           </tbody>
-        </table>
+        </table></div>
       </Panel>
     </>
   );
