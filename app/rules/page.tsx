@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/ui";
 import { describeRule } from "@/lib/ui/rules";
 import { desk } from "@/lib/ui/world";
 
-export const metadata = { title: "Internal rules" };
+export const metadata = { title: "Learned rules" };
 
 export default function RulesPage() {
   const { world, rules, cold, learned } = desk();
@@ -14,7 +14,7 @@ export default function RulesPage() {
   return (
     <>
       <PageHeader
-        title="Internal rules"
+        title="Learned rules"
         subtitle="How Kestrel actually handles recurring exceptions — the unwritten rules in its own history. The desk applies a rule only after the controller approves it, and a rule can only make routine items quieter; it can never hide a compliance, fraud, duplicate or bank-detail problem."
       />
       <RulesBoard

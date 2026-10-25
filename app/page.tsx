@@ -39,11 +39,11 @@ export default function Story() {
         <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[var(--accent-soft)] px-3 py-1 text-[12.5px] font-medium text-[var(--link)]">Kestrel Aerial · simulated $137M drone maker · Mar–Sep 2026</div>
         <h1 className="m-0 max-w-[920px] text-[34px] font-semibold leading-[1.15] tracking-[-0.025em] text-ink">An AI finance team that learns how the company actually works — and can&apos;t move a dollar on its own.</h1>
         <p className="m-0 mt-4 max-w-[860px] text-[15.5px] leading-relaxed text-ink-2">
-          Four Claude agents fill the seats on Kestrel&apos;s disbursements desk — buyer, AP clerk, payroll specialist and staff accountant. They check every supplier invoice and every paycheck, hold what&apos;s wrong, explain it with evidence, and learn the company&apos;s unwritten rules from its own history. They can request; only people approve.
+          Two Claude agents hold the AP clerk and payroll specialist seats on Kestrel&apos;s disbursements desk. They check every supplier invoice and every paycheck, hold what&apos;s wrong, explain it with evidence, and learn the company&apos;s unwritten rules from its own history. They can request; only people approve.
         </p>
         <div className="mt-6 flex gap-2.5">
           <Link href="/intake" className="btn btn-primary h-10 px-4 text-[14px] no-underline hover:no-underline">Try it live — hand it an invoice or email</Link>
-          <Link href="/desk" className="btn h-10 px-4 text-[14px] no-underline hover:no-underline">Open the desk</Link>
+          <Link href="/cases" className="btn h-10 px-4 text-[14px] no-underline hover:no-underline">See what it caught</Link>
         </div>
         <div className="mt-8 grid grid-cols-4 gap-3">
           <Num value={`${s.card.caught}/${s.card.expected}`} label="planted problems caught, supplier and payroll" tone="var(--good)" />

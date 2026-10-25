@@ -10,10 +10,12 @@ import { date, roleLabel } from "@/lib/ui/format";
 import { Icons, Logo } from "./icons";
 
 type NavItem = { href: string; label: string; icon: keyof typeof Icons; badge?: "approvals" | "cases" };
+// Ordered as a judge's tour: the story, the work, the proof, then the records behind it.
+// /desk and /ledger still exist but are off the nav (the story page and the records cover them).
 const NAV: { group: string; items: NavItem[] }[] = [
-  { group: "", items: [{ href: "/", label: "Story", icon: "story" }, { href: "/scorecard", label: "Scorecard", icon: "score" }, { href: "/desk", label: "Desk overview", icon: "desk" }, { href: "/approvals", label: "Approvals", icon: "approvals", badge: "approvals" }, { href: "/cases", label: "Cases", icon: "cases", badge: "cases" }, { href: "/intake", label: "Try it live", icon: "live" }] },
-  { group: "Learning", items: [{ href: "/rules", label: "Internal rules", icon: "rules" }] },
-  { group: "Back office", items: [{ href: "/payables", label: "Payables", icon: "payables" }, { href: "/payroll", label: "Payroll", icon: "payroll" }, { href: "/ledger", label: "General ledger", icon: "ledger" }, { href: "/audit", label: "Audit log", icon: "audit" }, { href: "/sources", label: "Data sources", icon: "sources" }] },
+  { group: "", items: [{ href: "/", label: "Story", icon: "story" }, { href: "/cases", label: "Cases", icon: "cases", badge: "cases" }, { href: "/approvals", label: "Approvals", icon: "approvals", badge: "approvals" }, { href: "/intake", label: "Try it live", icon: "live" }] },
+  { group: "Proof", items: [{ href: "/rules", label: "Learned rules", icon: "rules" }, { href: "/scorecard", label: "Scorecard", icon: "score" }] },
+  { group: "Records", items: [{ href: "/payables", label: "Payables", icon: "payables" }, { href: "/payroll", label: "Payroll", icon: "payroll" }, { href: "/audit", label: "Audit log", icon: "audit" }, { href: "/sources", label: "Data sources", icon: "sources" }] },
 ];
 
 type Counts = { pendingApprovals?: number; openCases?: number } | undefined;
