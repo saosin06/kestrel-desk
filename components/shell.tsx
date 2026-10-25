@@ -33,11 +33,11 @@ function NavList({ path, counts }: { path: string | null; counts: Counts }) {
               <Link
                 key={it.href}
                 href={it.href}
-                className={`mb-0.5 flex items-center gap-2.5 rounded-lg px-3 py-[7px] text-[14px] no-underline hover:no-underline ${on ? "bg-[var(--accent-soft)] font-medium text-[var(--accent)]" : "text-ink-2 hover:bg-[var(--neutral-bg)] hover:text-ink"}`}
+                className={`mb-1 flex items-center gap-3 rounded-[10px] px-3 py-[9px] text-[14px] no-underline hover:no-underline ${on ? "bg-[var(--accent)] font-medium text-white shadow-[0_6px_18px_rgba(99,89,233,0.35)]" : "text-ink-2 hover:bg-[var(--neutral-bg)] hover:text-ink"}`}
               >
-                <span className={on ? "text-[var(--accent)]" : "text-muted"}><Icon /></span>
+                <span className={on ? "text-white" : "text-muted"}><Icon /></span>
                 <span className="flex-1">{it.label}</span>
-                {n ? <span className={`num rounded-full px-1.5 text-[11.5px] ${on ? "bg-white text-[var(--accent)]" : "bg-[var(--neutral-bg)] text-ink-2"}`}>{n}</span> : null}
+                {n ? <span className={`num rounded-full px-1.5 text-[11.5px] ${on ? "bg-white/20 text-white" : "bg-[var(--neutral-bg)] text-ink-2"}`}>{n}</span> : null}
               </Link>
             );
           })}
@@ -80,7 +80,7 @@ export function Shell({ children }: { children: ReactNode }) {
 
   return (
     <div className="flex min-h-screen">
-      <aside className="sticky top-0 flex h-screen w-[240px] shrink-0 flex-col border-r border-line bg-panel">
+      <aside className="sticky top-0 flex h-screen w-[248px] shrink-0 flex-col rounded-r-[20px] bg-panel">
         <div className="flex items-center gap-2.5 px-5 pb-4 pt-5">
           <Logo />
           <div className="leading-tight">
@@ -93,14 +93,14 @@ export function Shell({ children }: { children: ReactNode }) {
             <ActiveNav counts={overview} />
           </Suspense>
         </nav>
-        <div className="m-3 rounded-lg bg-[var(--warn-bg)] px-3 py-2.5 text-[12px] leading-snug text-[var(--warn)]">
+        <div className="m-3 rounded-[14px] bg-[var(--warn-bg)] px-3 py-2.5 text-[12px] leading-snug text-[var(--warn)]">
           <div className="font-semibold">Simulated company</div>
           Kestrel Aerial is fictional. Tax tables, tariffs and FX rates are real and cited.
         </div>
       </aside>
 
       <div className="flex min-w-0 flex-1 flex-col">
-        <header className="sticky top-0 z-10 flex h-14 items-center justify-between gap-4 border-b border-line bg-[rgba(255,255,255,0.85)] px-8 backdrop-blur">
+        <header className="sticky top-0 z-10 flex h-14 items-center justify-between gap-4 bg-[rgba(20,19,50,0.82)] px-8 backdrop-blur">
           <div className="flex items-center gap-2 text-[13.5px] text-ink-2">
             <span className="font-medium text-ink">Kestrel Aerial, Inc.</span>
             <span className="text-line-strong">·</span>

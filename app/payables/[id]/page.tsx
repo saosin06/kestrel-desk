@@ -26,7 +26,7 @@ export default async function InvoicePage({ params }: PageProps<"/payables/[id]"
   return (
     <>
       <PageHeader crumbs={[{ href: "/payables", label: "Payables" }]} title={<span><span className="id mr-2 text-[15px] text-ink-2">{inv.id}</span>{vendor?.legalName ?? inv.supplierName}</span>} subtitle={`Supplier invoice ${inv.invoiceNo} · ${date(inv.date)} · ${inv.currency} ${money(inv.totalMinor, inv.currency)}`} />
-      <div className="grid grid-cols-[1fr_340px] gap-4">
+      <div className="grid grid-cols-[minmax(0,1fr)_340px] gap-4">
         <div>
           <Panel title="Lines" flush>
             <table className="tbl">

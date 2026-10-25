@@ -36,7 +36,7 @@ export default function Story() {
     <div className="max-w-[1180px]">
       {/* Hero */}
       <section className="mb-10">
-        <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[var(--accent-soft)] px-3 py-1 text-[12.5px] font-medium text-[var(--accent)]">Kestrel Aerial · simulated $137M drone maker · Mar–Sep 2026</div>
+        <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-[var(--accent-soft)] px-3 py-1 text-[12.5px] font-medium text-[var(--link)]">Kestrel Aerial · simulated $137M drone maker · Mar–Sep 2026</div>
         <h1 className="m-0 max-w-[920px] text-[34px] font-semibold leading-[1.15] tracking-[-0.025em] text-ink">An AI finance team that learns how the company actually works — and can&apos;t move a dollar on its own.</h1>
         <p className="m-0 mt-4 max-w-[860px] text-[15.5px] leading-relaxed text-ink-2">
           Four Claude agents fill the seats on Kestrel&apos;s disbursements desk — buyer, AP clerk, payroll specialist and staff accountant. They check every supplier invoice and every paycheck, hold what&apos;s wrong, explain it with evidence, and learn the company&apos;s unwritten rules from its own history. They can request; only people approve.
@@ -49,7 +49,7 @@ export default function Story() {
           <Num value={`${s.card.caught}/${s.card.expected}`} label="planted problems caught, supplier and payroll" tone="var(--good)" />
           <Num value={String(s.card.falseFindings.length)} label="false alarms" />
           <Num value={usdCompact(s.card.identifiedUSDCents)} label="held or recovered before money moved" />
-          <Num value={`${pct}% fewer`} label="escalations to the controller after it learned" tone="var(--accent)" />
+          <Num value={`${pct}% fewer`} label="escalations to the controller after it learned" tone="var(--link)" />
         </div>
       </section>
 
@@ -58,7 +58,7 @@ export default function Story() {
         <H sub={`Before it started, the desk read ${s.historyCount} decisions Kestrel's controller made over 14 months and worked out how she actually handles routine exceptions. It proposed what it found; she approved it at the March close. From April on, routine items stop reaching her — and every real problem still does.`}>
           It learned Kestrel&apos;s unwritten rules
         </H>
-        <div className="grid grid-cols-[1.1fr_1fr] items-start gap-4">
+        <div className="grid grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] items-start gap-4">
           <div className="flex flex-col gap-3">
             <div className="card p-5">
               <div className="mb-1 text-[15px] font-semibold text-ink">Escalations to the controller, per month</div>

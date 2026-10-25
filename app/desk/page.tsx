@@ -12,7 +12,7 @@ export default function Overview() {
     <>
       <PageHeader title="Desk overview" subtitle="Procure-to-pay and payroll, March–September 2026" />
       <OverviewStats />
-      <div className="grid grid-cols-[1.35fr_1fr] gap-4">
+      <div className="grid grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] gap-4">
         <div>
           <Panel
             title="Escalations to the controller"

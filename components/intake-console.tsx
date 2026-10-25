@@ -116,7 +116,7 @@ export function IntakeConsole({ options }: { options: IntakeOptions }) {
   const latest = instant && intakes?.find((x) => x.intakeId === instant.intakeId);
 
   return (
-    <div className="grid grid-cols-[1.25fr_1fr] gap-4">
+    <div className="grid grid-cols-[minmax(0,1fr)_380px] gap-4">
       <div>
         <div className="mb-3 flex gap-1.5">
           <button className={`btn ${tab === "invoice" ? "btn-primary" : ""}`} onClick={() => setTab("invoice")}>Supplier invoice</button>
@@ -155,23 +155,25 @@ export function IntakeConsole({ options }: { options: IntakeOptions }) {
                 <label className="flex flex-col gap-1 text-[11.5px] text-muted">Invoice no.<input className="input" value={form.invoiceNo} onChange={(e) => setForm((f) => ({ ...f, invoiceNo: e.target.value }))} /></label>
                 <label className="flex flex-col gap-1 text-[11.5px] text-muted">Invoice date<input className="input" type="date" min="2026-03-01" max="2026-09-30" value={form.date} onChange={(e) => setForm((f) => ({ ...f, date: e.target.value }))} /></label>
               </div>
-              <table className="tbl mb-2 border border-line">
-                <thead><tr><th>Part</th><th>Description</th><th className="num">Qty</th><th className="num">Unit price ({form.currency})</th><th>MPN</th><th>Origin on invoice</th><th>Certificate of origin</th><th /></tr></thead>
+              <div className="mb-2 overflow-x-auto rounded-[12px] border border-line">
+              <table className="tbl tbl-tight">
+                <thead><tr><th>Part</th><th>Description</th><th className="num">Qty</th><th className="num">Unit price ({form.currency})</th><th>MPN</th><th title="Country of origin printed on the invoice">Origin</th><th title="Country on the certificate of origin">Cert. origin</th><th /></tr></thead>
                 <tbody>
                   {form.lines.map((l, i) => (
                     <tr key={i}>
-                      <td><input className="input w-[56px]" value={l.partId} onChange={(e) => setLine(i, { partId: e.target.value })} /></td>
-                      <td><input className="input w-full min-w-[190px]" value={l.description} onChange={(e) => setLine(i, { description: e.target.value })} /></td>
-                      <td><input className="input w-[84px] text-right" value={l.qty} onChange={(e) => setLine(i, { qty: e.target.value })} /></td>
-                      <td><input className="input w-[96px] text-right" value={l.unitPrice} onChange={(e) => setLine(i, { unitPrice: e.target.value })} /></td>
-                      <td><input className="input w-[92px]" value={l.manufacturerPartNo} onChange={(e) => setLine(i, { manufacturerPartNo: e.target.value })} /></td>
+                      <td><input className="input w-[52px]" value={l.partId} onChange={(e) => setLine(i, { partId: e.target.value })} /></td>
+                      <td><input className="input w-full min-w-[120px]" value={l.description} onChange={(e) => setLine(i, { description: e.target.value })} /></td>
+                      <td><input className="input w-[72px] text-right" value={l.qty} onChange={(e) => setLine(i, { qty: e.target.value })} /></td>
+                      <td><input className="input w-[84px] text-right" value={l.unitPrice} onChange={(e) => setLine(i, { unitPrice: e.target.value })} /></td>
+                      <td><input className="input w-[84px]" value={l.manufacturerPartNo} onChange={(e) => setLine(i, { manufacturerPartNo: e.target.value })} /></td>
                       <td><input className="input w-[48px]" value={l.countryOfOrigin} onChange={(e) => setLine(i, { countryOfOrigin: e.target.value })} /></td>
                       <td><input className="input w-[48px]" placeholder="—" value={l.certificateOrigin} onChange={(e) => setLine(i, { certificateOrigin: e.target.value })} /></td>
-                      <td><button className="btn" onClick={() => setForm((f) => ({ ...f, lines: f.lines.filter((_, k) => k !== i) }))}>Remove</button></td>
+                      <td><button className="btn w-9 justify-center px-0" aria-label="Remove line" title="Remove line" onClick={() => setForm((f) => ({ ...f, lines: f.lines.filter((_, k) => k !== i) }))}>✕</button></td>
                     </tr>
                   ))}
                 </tbody>
               </table>
+              </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3 text-[12px] text-ink-2">
                   <button className="btn" onClick={() => setForm((f) => ({ ...f, lines: [...f.lines, { partId: "", description: "", qty: "1", unitPrice: "0.00", manufacturerPartNo: "", countryOfOrigin: "", certificateOrigin: "" }] }))}>Add line</button>
@@ -233,10 +235,12 @@ export function IntakeConsole({ options }: { options: IntakeOptions }) {
               <tbody>
                 {intakes.map((x) => (
                   <tr key={x.intakeId} id={x.intakeId}>
-                    <td className="id text-ink-2">{x.intakeId}</td>
-                    <td>{x.title}<div className="text-[11.5px] text-muted">{date(x.at)} · {roleLabel(x.seat)}</div></td>
-                    <td>{x.caseIds.map((c) => <Rec key={c} id={c} />)}</td>
-                    <td><Pill tone={x.status === "done" ? "good" : x.status === "error" ? "crit" : "warn"}>{x.status === "agent_running" ? "Working" : x.status === "done" ? "Done" : "Error"}</Pill></td>
+                    <td>
+                      {x.title}
+                      <div className="text-[11.5px] text-muted"><span className="id">{x.intakeId}</span> · {date(x.at)} · {roleLabel(x.seat)}</div>
+                      {x.caseIds.length > 0 && <div className="mt-0.5 flex flex-wrap gap-2">{x.caseIds.map((c) => <Rec key={c} id={c} />)}</div>}
+                    </td>
+                    <td className="w-[1%]"><Pill tone={x.status === "done" ? "good" : x.status === "error" ? "crit" : "warn"}>{x.status === "agent_running" ? "Working" : x.status === "done" ? "Done" : "Error"}</Pill></td>
                   </tr>
                 ))}
               </tbody>

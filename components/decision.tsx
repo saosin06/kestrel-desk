@@ -57,7 +57,7 @@ export function DecisionControls({ r }: { r: Req }) {
     );
   }
   return (
-    <div className="flex items-center gap-1.5">
+    <div className="flex flex-wrap items-center justify-end gap-1.5">
       <button className="btn btn-primary" disabled={!canDecide} title={canDecide ? "" : `${roleLabel(role)} isn't an approver of this request`} onClick={() => setMode("approve")}>Approve</button>
       <button className="btn" disabled={!canDecide} onClick={() => setMode("reject")}>Reject</button>
       <button className="btn" onClick={() => setMode("why")}>Ask why</button>

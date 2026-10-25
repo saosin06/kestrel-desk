@@ -1,28 +1,32 @@
 @import "tailwindcss";
 
-/* Kestrel — modern fintech back office. Light only. */
+/* Kestrel — dark fintech back office (palette after the "Finance Dashboard" community kit).
+   Contrast is computed, not eyeballed: body text ≥ 4.5:1 on --panel, pills on their tint ≥ 4.5:1. */
 :root {
-  --page: #f6f7f9;
-  --panel: #ffffff;
-  --subtle: #f9fafb;
-  --border: #e8eaee;
-  --border-strong: #d6dae1;
-  --ink: #0f1729;
-  --ink-2: #4b5567;
-  --muted: #8a93a3;
-  --accent: #4338ca;
-  --accent-hover: #3730a3;
-  --accent-soft: #eef0fd;
-  --link: #4338ca;
-  --focus: #6366f1;
-  --crit: #c0392b; --crit-bg: #fdf1ef;
-  --warn: #a15c07; --warn-bg: #fef6e7;
-  --good: #0f7a4a; --good-bg: #ebf8f1;
-  --info: #3b5bdb; --info-bg: #eef2ff;
-  --neutral: #4b5567; --neutral-bg: #f1f3f6;
-  --series-cold: #eb6834;
-  --series-learned: #2a78d6;
-  --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 3px rgba(16, 24, 40, 0.03);
+  --page: #141332;
+  --panel: #1d1d41;
+  --subtle: #27264e;
+  --border: #2c2b58;
+  --border-strong: #3d3c70;
+  --ink: #ffffff;
+  --ink-2: #aeabd8;        /* 7.4:1 on panel */
+  --muted: #8c89b4;        /* 4.9:1 on panel */
+  --accent: #6359e9;       /* fills only — white text on it is 5.1:1 */
+  --accent-hover: #5a51d4;
+  --accent-soft: rgba(99, 89, 233, 0.18);
+  --link: #a39dff;         /* 6.8:1 on panel; the accent itself is too dark for text */
+  --focus: #8b84ff;
+  --cyan: #64cff6;
+  --crit: #ff6b6b; --crit-bg: rgba(255, 107, 107, 0.15);
+  --warn: #f5b544; --warn-bg: rgba(245, 181, 68, 0.14);
+  --good: #2fcf7f; --good-bg: rgba(47, 207, 127, 0.15);
+  --info: #64cff6; --info-bg: rgba(100, 207, 246, 0.14);
+  --neutral: #aeabd8; --neutral-bg: rgba(174, 171, 216, 0.12);
+  /* Validated pair on #1d1d41 (dataviz validate_palette --mode dark): all checks pass. */
+  --series-cold: #2a9fd0;
+  --series-learned: #6359e9;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  --radius: 20px;
 }
 
 @theme inline {
@@ -36,12 +40,12 @@
   --color-muted: var(--muted);
   --color-accent: var(--accent);
   --color-link: var(--link);
-  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-general-sans), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
 }
 
 @layer base {
-html { color-scheme: only light; }
+html { color-scheme: only dark; background: var(--page); }
 body {
   background: var(--page);
   color: var(--ink);
@@ -49,12 +53,12 @@ body {
   font-size: 14px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.003em;
 }
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 2px; }
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
-
+::selection { background: rgba(99, 89, 233, 0.45); }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--accent); }
 }
 
 @layer components {
@@ -63,36 +67,39 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 a.id { color: var(--link); }
 
 /* Surfaces */
-.card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); }
-.card-muted { background: var(--subtle); border: 1px solid var(--border); border-radius: 12px; }
+.card { background: var(--panel); border-radius: var(--radius); }
+.card-muted { background: var(--subtle); border-radius: 14px; }
 
 /* Tables */
 .tbl { width: 100%; border-collapse: collapse; }
 .tbl th {
-  text-align: left; font-weight: 500; font-size: 12px; color: var(--muted);
-  border-bottom: 1px solid var(--border); padding: 10px 14px; white-space: nowrap;
+  text-align: left; font-weight: 400; font-size: 12px; color: var(--ink-2);
+  border-bottom: 1px solid var(--border); padding: 10px 16px; white-space: nowrap;
 }
 .tbl th.num { text-align: right; }
-.tbl td { padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.tbl td { padding: 13px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
 .tbl tbody tr:last-child td { border-bottom: 0; }
 .tbl tbody tr { transition: background 120ms; }
-.tbl tbody tr:hover td { background: #fafbfc; }
-.tbl tfoot td { border-top: 1px solid var(--border-strong); font-weight: 600; padding: 10px 14px; }
+.tbl tbody tr:hover td { background: rgba(255, 255, 255, 0.025); }
+.tbl-tight th, .tbl-tight td { padding: 8px 8px; }
+.tbl-tight th:first-child, .tbl-tight td:first-child { padding-left: 12px; }
+.tbl tfoot td { border-top: 1px solid var(--border-strong); font-weight: 600; padding: 11px 16px; }
 
 /* Controls */
 .btn {
-  display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px;
-  border: 1px solid var(--border-strong); border-radius: 8px; background: var(--panel);
+  display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 14px;
+  border: 1px solid rgba(174, 171, 216, 0.45); border-radius: 10px; background: transparent;
   color: var(--ink); font-size: 13px; font-weight: 500; cursor: pointer; white-space: nowrap;
-  box-shadow: 0 1px 1px rgba(16, 24, 40, 0.04); transition: background 120ms, border-color 120ms;
+  transition: background 120ms, border-color 120ms;
 }
-.btn:hover { background: var(--subtle); text-decoration: none; }
+.btn:hover { background: var(--subtle); border-color: rgba(174, 171, 216, 0.7); text-decoration: none; }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
-.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 1px 2px rgba(67, 56, 202, 0.25); }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; }
 .input, .select {
-  height: 32px; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: 8px;
-  background: var(--panel); color: var(--ink); font-size: 13px;
+  height: 36px; padding: 0 12px; border: 1px solid transparent; border-radius: 10px;
+  background: var(--subtle); color: var(--ink); font-size: 13px;
 }
+.input::placeholder { color: var(--muted); }
 .input:focus, .select:focus { border-color: var(--focus); outline: none; box-shadow: 0 0 0 3px var(--accent-soft); }
 }

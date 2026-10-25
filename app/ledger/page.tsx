@@ -14,7 +14,7 @@ export default function Ledger() {
   return (
     <>
       <PageHeader title="General ledger" subtitle="USD functional currency. Double-entry with locked periods; corrections post as reversals, never edits." />
-      <div className="grid grid-cols-[1fr_1fr] gap-4">
+      <div className="grid grid-cols-2 gap-4 [&>*]:min-w-0">
         <Panel title={`Trial balance · opening, ${date("2026-02-28")}`} flush note={tb.balanced ? "Balanced: debits equal credits." : "OUT OF BALANCE"}>
           <table className="tbl">
             <thead><tr><th>Account</th><th>Name</th><th className="num">Debit</th><th className="num">Credit</th></tr></thead>

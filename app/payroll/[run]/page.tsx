@@ -24,7 +24,7 @@ export default async function RunPage({ params }: PageProps<"/payroll/[run]">) {
   return (
     <>
       <PageHeader crumbs={[{ href: "/payroll", label: "Payroll" }]} title={<span><span className="id mr-2 text-[15px] text-ink-2">{run.id}</span>{run.type === "regular" ? "Regular run" : "Off-cycle run"}</span>} subtitle={`Pay date ${date(run.payDate)} · period ${date(p.start)} – ${date(p.end)}${run.note ? ` · ${run.note}` : ""}`} />
-      <div className="grid grid-cols-[1fr_320px] gap-4">
+      <div className="grid grid-cols-[minmax(0,1fr)_320px] gap-4">
         <div>
           <Panel title="Lines held for review" flush>
             {findings.length === 0 ? <div className="p-3 text-ink-2">Every line recomputed from the HRIS, approved timesheets and the IRS 2026 tables matches the provider's preview.</div> : (

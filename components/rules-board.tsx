@@ -83,7 +83,7 @@ export function RulesBoard({ views, historyCount, totalEffect }: { views: RuleVi
                 <button className="btn" onClick={() => setEditing(null)}>Cancel</button>
               </div>
             )}
-            <div className="grid grid-cols-[1.15fr_1fr]">
+            <div className="grid grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
               <div className="border-r border-line px-3 py-2.5">
                 <div className="mb-1 text-[11px] font-semibold uppercase tracking-[0.02em] text-muted">What the desk does</div>
                 <p className="m-0 text-[13px] leading-relaxed text-ink">{v.does}</p>
