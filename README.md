@@ -1,6 +1,6 @@
 # Kestrel Desk
 
-**It fills four seats on Kestrel's disbursements desk — buyer, AP clerk, payroll specialist, and staff accountant — with read-only access to the books, no approval rights, an append-only audit trail, and it escalates to the controller anything material, non-compliant, or uncertain.**
+**It fills two seats on Kestrel's disbursements desk — AP clerk and payroll specialist — on top of a staff accountant's ledger that only posts approved entries. It has read-only access to the books, no approval rights, an append-only audit trail, and it escalates to the controller anything material, non-compliant, or uncertain.**
 
 Built at Cal Hacks 13.0 for the **Hyphenate** track: *Autonomous Systems for Finance.*
 
@@ -14,31 +14,43 @@ The desk handles **everything that leaves Kestrel's bank account**: supplier inv
 
 ## Proof it works
 
-The simulated world has a planted problem in it, and an answer key. Here's one full agent run over March–September 2026, scored against that key (`npm run score`):
+The simulated company has problems planted in it, and a hidden answer key the agents never see. Here's one full agent run over March–September 2026, scored against that key (`npm run score`, or the **Scorecard** page, which grades it row by row):
 
 | | |
 |---|---|
-| Planted problems caught | **20 / 20** |
+| Planted problems that should reach the controller | **20 / 20** caught |
+| Immaterial or rule-covered items that should stay quiet | **13 / 13** stayed quiet |
 | False findings | **0** |
 | Dollars identified | **$2,794,779.53 of $2,794,779.53** |
 | Payments requested on a problem invoice | **0** |
 | Control violations | **0** |
 | Escalations to the controller, Apr–Sep | **29 → 17 (41% fewer)** after learning, with the same catch rate |
 
-Plus **171 tests** on the deterministic engines. The baseline sweep's findings must equal the answer key exactly, for two different seeds.
+Plus **173 tests**. The deterministic checks must find exactly the answer key's problems, no more and no fewer, on two different seeds.
 
 ## Learn → run → escalate → improve
 
 - **Learn.** The desk mines 14 months of Kestrel's history (past exceptions, Dana the controller's decisions and reasons, policy memos) for unwritten rules. One example: "Cascade's receipt counts are often off by a few; recount before raising it." Each rule shows its support, counterexamples and confidence. The history also contains decoys, a threshold that drifted, and a near-miss trap, and the miner has to get past all of them.
 - **Run.** Claude agents work the AP clerk and payroll specialist seats. Each seat can only use its own tools. The agents never do the math: matching, duty, FX, withholding and FICA are all computed in TypeScript.
-- **Escalate.** Anything material, non-compliant or uncertain goes to Dana with evidence. The agents can only *request*. Segregation of duties is enforced in code, so no agent can approve, pay, post, or edit bank details.
+- **Escalate.** Anything material, non-compliant or uncertain goes to Dana with evidence. The agents can only *request*. Segregation of duties is enforced in code at one gateway, so no agent can approve, pay, post, or edit bank details, and a refused attempt is written to the audit trail like everything else.
 - **Improve.** A rule only takes effect once Dana approves it. Rules can make an item routine; they never hide it. A suppressed finding is still logged with the rule that suppressed it. Compliance, bank changes and duplicate payments can never be learned away.
+
+## Hyphenate's four questions
+
+| | Kestrel Desk |
+|---|---|
+| **World:** where does it act? | One company graph: invoice → line → part → contract → PO → receipt → certificate of origin → policy, plus HRIS → timesheet → payroll register. Every case page draws the path it used. |
+| **Time:** what does it remember next quarter? | Seven simulated months with persistent cases, approvals and learned rules. Rules mined from 14 months of history, and an issue already open is never raised twice. |
+| **Team:** who does it work with? | Dana (controller) approves, Mei (engineering) signs off substitutions, Luis (receiving) recounts, Priya (HR) owns the HRIS. The agents ask; the people decide. |
+| **Limits:** what may it do, and can it prove why? | Requests only, enforced in code. Every tool call, request, decision and refusal is in the append-only audit trail, and each case shows the records, rule and approvers behind it. |
+
+Convex is the **system of work**: cases, requests, approvals, learned rules and the log. The ERP-style records, HRIS and bank are the **systems of record**, and the agents only read them.
 
 ## What it catches
 
 - **Restricted-origin substitute.** Vireo quietly ships a cheaper flight controller, and its certificate of origin shows a restricted country. The payment is held. Engineering and the controller have to sign off. Federal revenue at risk is flagged.
 - **Contract price.** Atlas invoices $132/motor against a $118 contract (C-12 §4.2). The desk holds $42,000 and cites the clause.
-- **Bank-change fraud.** An email the day before a ~$355k payment asks to change the supplier's bank. A second one, the day before payday, asks to change an employee's direct deposit. Both are held. The vendor master and the HRIS are the systems of record, so neither is ever edited from an email.
+- **Bank-change fraud.** The day before payday, an email asks to change an employee's direct deposit; the payroll specialist holds it. In **Try it live**, a fake "Atlas Motors" email asks to redirect a supplier payment; the AP clerk holds that too. The HRIS and the vendor master are the systems of record, so neither is ever edited from an email.
 - **Payroll.**
   - a ghost employee who shares a real employee's bank account
   - a terminated employee who is still being paid
@@ -72,11 +84,11 @@ The compliance policy is data, labeled *"modeled on federal drone component rest
 
   The scorecard shows the claims hold up.
 - **Anthropic.** Claude (`claude-sonnet-5-5`) runs each seat in a tool-use loop with seat-scoped tools, a turn budget and a cached system prompt. Claude also powers the live document extraction and the **Ask why** answers. It handles judgment and language. It never does arithmetic, and it never sees the answer key.
-- **Convex.** Cases, requests, approvals, the audit trail and the learned rules all update live. Approvals go through the same segregation-of-duties check (`lib/desk/sod.ts`) as the engines.
+- **Convex.** The system of work: cases, requests, approvals, the audit trail and the learned rules, all updating live. Every approval goes through one gateway (`convex/decisions.ts` calling `lib/desk/sod.ts`, the same check the engines use), and refusals are logged.
 
 ## Try it live
 
-- **Acting as → Controller** lets you make Dana's decisions yourself: approve, reject, or ask why.
+- **Acting as → Controller** lets you make Dana's decisions yourself: approve, reject, or ask why. Switch to someone who isn't an approver and try anyway: the gateway refuses and logs it.
 - **Try it live** lets you hand the desk any invoice or a suspicious email and watch it match, check, hold or escalate.
 - **Reset demo** puts everything back to the start.
 
@@ -95,6 +107,7 @@ The compliance policy is data, labeled *"modeled on federal drone component rest
 - The **AP clerk** and **payroll specialist** seats run as Claude agents.
 - The **staff accountant** seat is a ledger that only posts approved journal entries, with balanced entries, locked periods and reversals. It's tested but not yet agent-driven.
 - The **buyer** seat (scorecards, export restriction, switching suppliers) is next.
+- Learning today comes from the company's history at onboarding. Next: turning each live correction from Dana into a proposed rule she approves.
 
 ## Run it
 
@@ -108,7 +121,7 @@ npm run dev                         # http://localhost:3000
 
 | Command | What it does |
 |---|---|
-| `npm test` | 171 tests |
+| `npm test` | 173 tests |
 | `npm run score` | scores a desk run against the answer key |
 | `npm run sim` | re-runs every seat across Mar–Sep with Claude (needs the API key) |
 | `npm run generate` | rebuilds the simulated world from a seed |
