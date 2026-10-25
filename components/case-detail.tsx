@@ -4,6 +4,7 @@ import { useQuery } from "convex/react";
 import { useParams } from "next/navigation";
 import { Fragment } from "react";
 import { DecisionControls } from "@/components/decision";
+import { DecisionGraph } from "@/components/decision-graph";
 import { Empty, Kv, PageHeader, Panel, Pill, Rec } from "@/components/ui";
 import { api } from "@/convex/_generated/api";
 import { caseTitle, date, dispositionLabel, dispositionTone, kindLabel, requestTitle, roleLabel, statusLabel, statusTone, usd } from "@/lib/ui/format";
@@ -28,6 +29,13 @@ export function CaseDetail() {
         subtitle={<><span className="id text-muted">{c.caseId} · {kindLabel(c.kind)}</span><div className="mt-1">{c.summary}</div></>}
         actions={<><Pill tone={dispositionTone(c.disposition)}>{dispositionLabel(c.disposition)}</Pill><Pill tone={statusTone(c.status)}>{statusLabel(c.status)}</Pill></>}
       />
+      <Panel title="How the desk decided">
+        <div className="overflow-x-auto">
+          <div className="min-w-[760px]">
+            <DecisionGraph c={c} requests={d.requests} messages={d.messages} tools={d.tools} />
+          </div>
+        </div>
+      </Panel>
       <div className="grid grid-cols-[minmax(0,1fr)_320px] gap-5">
         <div>
           <Panel title="Why?" note={COMPLIANCE.has(c.kind) ? "Policy modeled on federal drone component restrictions — verify with counsel." : undefined}>

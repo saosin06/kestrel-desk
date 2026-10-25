@@ -40,9 +40,12 @@ export const caseDetail = query({
     if (!c) return null;
     const requests = await ctx.db.query("requests").withIndex("by_caseId", (q) => q.eq("caseId", caseId)).collect();
     const messages = (await ctx.db.query("messages").collect()).filter((m) => m.refs.includes(caseId));
-    const audit = (await ctx.db.query("audit").withIndex("by_seq").collect()).filter((a) => a.refs.includes(caseId) || requests.some((r) => a.refs.includes(r.reqId)));
+    const allAudit = await ctx.db.query("audit").withIndex("by_seq").collect();
+    const audit = allAudit.filter((a) => a.refs.includes(caseId) || requests.some((r) => a.refs.includes(r.reqId)));
+    // Tools the opening seat called on the day it opened the case (tool calls carry no case refs).
+    const tools = allAudit.filter((a) => a.actor === c.openedBy && a.at === c.openedOn && a.action.startsWith("tool:")).map((a) => a.action.slice(5));
     const rules = await Promise.all(c.ruleIds.map((id) => ctx.db.query("rules").withIndex("by_ruleId", (q) => q.eq("ruleId", id)).unique()));
-    return { case: c, requests, messages, audit, rules: rules.filter((r) => r !== null) };
+    return { case: c, requests, messages, audit, tools, rules: rules.filter((r) => r !== null) };
   },
 });
 
