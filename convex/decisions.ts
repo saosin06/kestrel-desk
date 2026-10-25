@@ -1,9 +1,10 @@
 import { v } from "convex/values";
+import { type DiffLine, diff, postingsFor } from "../lib/desk/posting";
 import { applyDecision, sodViolation } from "../lib/desk/sod";
 import type { MutationCtx } from "./_generated/server";
 import { mutation } from "./_generated/server";
 
-async function appendAudit(ctx: MutationCtx, e: { at: string; actor: string; action: string; refs: string[]; detail: string }) {
+async function appendAudit(ctx: MutationCtx, e: { at: string; actor: string; action: string; refs: string[]; detail: string; diff?: DiffLine[] }) {
   const last = await ctx.db.query("audit").withIndex("by_seq").order("desc").first();
   const seq = (last?.seq ?? 0) + 1;
   await ctx.db.insert("audit", { ...e, seq });
@@ -29,15 +30,33 @@ export const decide = mutation({
       return { ok: false as const, reason: problem, seq };
     }
     const next = applyDecision(r, by, decision, reason, at);
+    const refs = [reqId, ...(r.caseId ? [r.caseId] : [])];
+    const who = (a: { by: string; decision: string }[]) => a.map((x) => `${x.by}: ${x.decision}`).join(", ");
+    const changes = diff({ status: r.status, decisions: who(r.approvals) }, { status: next.status, decisions: who(next.approvals) });
     await ctx.db.patch(r._id, next);
-    await appendAudit(ctx, { at, actor: by, action: `decision:${decision}`, refs: [reqId, ...(r.caseId ? [r.caseId] : [])], detail: reason });
     if (r.caseId) {
       const c = await ctx.db.query("cases").withIndex("by_caseId", (q) => q.eq("caseId", r.caseId!)).unique();
       const siblings = await ctx.db.query("requests").withIndex("by_caseId", (q) => q.eq("caseId", r.caseId!)).collect();
       const allDecided = siblings.every((s) => (s._id === r._id ? next.status : s.status) !== "pending");
-      if (c && allDecided) await ctx.db.patch(c._id, { status: "resolved", notes: [...c.notes, { at, by, text: `all requests decided (${decision}: ${reason})` }] });
+      if (c && allDecided) {
+        await ctx.db.patch(c._id, { status: "resolved", notes: [...c.notes, { at, by, text: `all requests decided (${decision}: ${reason})` }] });
+        changes.push({ field: `${r.caseId} status`, before: c.status, after: "resolved" });
+      }
     }
-    return { ok: true as const, status: next.status };
+    await appendAudit(ctx, { at, actor: by, action: `decision:${decision}`, refs, detail: reason, diff: changes });
+
+    // Fully approved: the gateway, and only the gateway, writes to the systems of record.
+    const posted: string[] = [];
+    if (next.status === "approved") {
+      for (const p of postingsFor(r)) {
+        const n = (await ctx.db.query("postings").collect()).filter((x) => x.ref.startsWith(`${p.prefix}-`)).length + 1;
+        const ref = `${p.prefix}-${String(n).padStart(6, "0")}`;
+        await ctx.db.insert("postings", { ref, at, system: p.system, reqId, caseId: r.caseId, approvedBy: next.approvals.map((a) => a.by), memo: p.memo, lines: p.lines });
+        await appendAudit(ctx, { at, actor: "gateway", action: "post", refs: [ref, ...refs], detail: `${p.system}: ${p.memo}`, diff: [{ field: p.system, before: "∅", after: ref }] });
+        posted.push(ref);
+      }
+    }
+    return { ok: true as const, status: next.status, posted };
   },
 });
 

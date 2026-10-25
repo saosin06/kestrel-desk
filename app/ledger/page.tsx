@@ -1,3 +1,4 @@
+import { GatewayPostings } from "@/components/postings";
 import { PageHeader, Panel } from "@/components/ui";
 import { createLedger, loadChartOfAccounts, postOpeningBalances, trialBalance } from "@/lib/ledger";
 import { date, usd } from "@/lib/ui/format";
@@ -14,6 +15,7 @@ export default function Ledger() {
   return (
     <>
       <PageHeader title="General ledger" subtitle="USD functional currency. Double-entry with locked periods; corrections post as reversals, never edits." />
+      <GatewayPostings />
       <div className="grid grid-cols-2 gap-4 [&>*]:min-w-0">
         <Panel title={`Trial balance · opening, ${date("2026-02-28")}`} flush note={tb.balanced ? "Balanced: debits equal credits." : "OUT OF BALANCE"}>
           <table className="tbl">

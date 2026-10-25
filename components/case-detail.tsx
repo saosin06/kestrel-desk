@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { Fragment } from "react";
 import { DecisionControls } from "@/components/decision";
 import { DecisionGraph } from "@/components/decision-graph";
+import { Diff, PostingsTable } from "@/components/postings";
 import { Empty, Kv, PageHeader, Panel, Pill, Rec } from "@/components/ui";
 import { api } from "@/convex/_generated/api";
 import { caseTitle, date, dispositionLabel, dispositionTone, kindLabel, requestTitle, roleLabel, statusLabel, statusTone, usd } from "@/lib/ui/format";
@@ -93,6 +94,10 @@ export function CaseDetail() {
             )}
           </Panel>
 
+          <Panel title="Posted to systems of record" flush>
+            <PostingsTable rows={d.postings} empty="Nothing posted. The gateway writes only after every required approver signs." />
+          </Panel>
+
           <Panel title="Escalations and questions" flush>
             {d.messages.length === 0 ? <Empty>None.</Empty> : (
               <table className="tbl">
@@ -134,7 +139,7 @@ export function CaseDetail() {
             <table className="tbl">
               <tbody>
                 {d.audit.map((a) => (
-                  <tr key={a.seq}><td className="id w-[44px] text-muted">#{a.seq}</td><td><div className="text-ink-2">{date(a.at)} · {roleLabel(a.actor).split(" · ")[0]}</div><div className="id">{a.action}</div>{a.detail && <div className="text-[12px] text-ink-2">{a.detail}</div>}</td></tr>
+                  <tr key={a.seq}><td className="id w-[44px] text-muted">#{a.seq}</td><td><div className="text-ink-2">{date(a.at)} · {roleLabel(a.actor).split(" · ")[0]}</div><div className="id">{a.action}</div>{a.detail && <div className="text-[12px] text-ink-2">{a.detail}</div>}<Diff diff={a.diff} /></td></tr>
                 ))}
               </tbody>
             </table>

@@ -26,7 +26,7 @@ The simulated company has problems planted in it, and a hidden answer key the ag
 | Control violations | **0** |
 | Escalations to the controller, Apr–Sep | **29 → 17 (41% fewer)** after learning, with the same catch rate |
 
-Plus **173 tests**. The deterministic checks must find exactly the answer key's problems, no more and no fewer, on two different seeds.
+Plus **180 tests**. The deterministic checks must find exactly the answer key's problems, no more and no fewer, on two different seeds.
 
 ## Learn → run → escalate → improve
 
@@ -42,7 +42,7 @@ Plus **173 tests**. The deterministic checks must find exactly the answer key's 
 | **World:** where does it act? | One company graph: invoice → line → part → contract → PO → receipt → certificate of origin → policy, plus HRIS → timesheet → payroll register. Every case page draws the path it used. |
 | **Time:** what does it remember next quarter? | Seven simulated months with persistent cases, approvals and learned rules. Rules mined from 14 months of history, and an issue already open is never raised twice. |
 | **Team:** who does it work with? | Dana (controller) approves, Mei (engineering) signs off substitutions, Luis (receiving) recounts, Priya (HR) owns the HRIS. The agents ask; the people decide. |
-| **Limits:** what may it do, and can it prove why? | Requests only, enforced in code. Every tool call, request, decision and refusal is in the append-only audit trail, and each case shows the records, rule and approvers behind it. |
+| **Limits:** what may it do, and can it prove why? | Requests only, enforced in code. Once every required approver signs, the gateway (and nothing else) writes to the system of record: a balanced journal entry, a bank ACH, a payment block, a payroll release. Every tool call, request, decision, posting and refusal is in the append-only audit trail with a before/after diff, written in the same transaction as the change. |
 
 Convex is the **system of work**: cases, requests, approvals, learned rules and the log. The ERP-style records, HRIS and bank are the **systems of record**, and the agents only read them.
 
@@ -84,7 +84,7 @@ The compliance policy is data, labeled *"modeled on federal drone component rest
 
   The scorecard shows the claims hold up.
 - **Anthropic.** Claude (`claude-sonnet-5-5`) runs each seat in a tool-use loop with seat-scoped tools, a turn budget and a cached system prompt. Claude also powers the live document extraction and the **Ask why** answers. It handles judgment and language. It never does arithmetic, and it never sees the answer key.
-- **Convex.** The system of work: cases, requests, approvals, the audit trail and the learned rules, all updating live. Every approval goes through one gateway (`convex/decisions.ts` calling `lib/desk/sod.ts`, the same check the engines use), and refusals are logged.
+- **Convex.** The system of work: cases, requests, approvals, postings, the audit trail and the learned rules, all updating live. Every approval goes through one gateway (`convex/decisions.ts`): segregation of duties from `lib/desk/sod.ts`, then the postings from `lib/desk/posting.ts` (balanced or refused), in one transaction with the audit entry and its diff. Refusals are logged too.
 
 ## Try it live
 
@@ -121,7 +121,7 @@ npm run dev                         # http://localhost:3000
 
 | Command | What it does |
 |---|---|
-| `npm test` | 173 tests |
+| `npm test` | 180 tests |
 | `npm run score` | scores a desk run against the answer key |
 | `npm run sim` | re-runs every seat across Mar–Sep with Claude (needs the API key) |
 | `npm run generate` | rebuilds the simulated world from a seed |

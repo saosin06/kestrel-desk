@@ -45,7 +45,8 @@ export const caseDetail = query({
     // Tools the opening seat called on the day it opened the case (tool calls carry no case refs).
     const tools = allAudit.filter((a) => a.actor === c.openedBy && a.at === c.openedOn && a.action.startsWith("tool:")).map((a) => a.action.slice(5));
     const rules = await Promise.all(c.ruleIds.map((id) => ctx.db.query("rules").withIndex("by_ruleId", (q) => q.eq("ruleId", id)).unique()));
-    return { case: c, requests, messages, audit, tools, rules: rules.filter((r) => r !== null) };
+    const postings = await ctx.db.query("postings").withIndex("by_caseId", (q) => q.eq("caseId", caseId)).collect();
+    return { case: c, requests, messages, audit, tools, postings, rules: rules.filter((r) => r !== null) };
   },
 });
 
@@ -70,4 +71,9 @@ export const messages = query({
 export const rules = query({
   args: {},
   handler: async (ctx) => await ctx.db.query("rules").collect(),
+});
+
+export const postings = query({
+  args: {},
+  handler: async (ctx) => (await ctx.db.query("postings").collect()).reverse(),
 });

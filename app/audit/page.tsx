@@ -1,12 +1,13 @@
 "use client";
 
 import { useQuery } from "convex/react";
+import { Diff } from "@/components/postings";
 import { useState } from "react";
 import { Empty, PageHeader, Panel, Summary } from "@/components/ui";
 import { api } from "@/convex/_generated/api";
 import { auditSentence, date } from "@/lib/ui/format";
 
-const IMPORTANT = /^(open_case|escalate|decision:|denied:|request:payment_hold|request:debit_memo|request:substitution|request:payroll_line_hold|rule:|ask_why|answer_why|intake:)/;
+const IMPORTANT = /^(open_case|escalate|decision:|denied:|post$|request:payment_hold|request:debit_memo|request:substitution|request:payroll_line_hold|rule:|ask_why|answer_why|intake:)/;
 
 export default function Audit() {
   const rows = useQuery(api.desk.audit, { limit: 2000 });
@@ -45,7 +46,7 @@ export default function Audit() {
                 <tr key={a.seq}>
                   <td className="num id w-[52px] text-muted">{a.seq}</td>
                   <td className="w-[110px] whitespace-nowrap text-ink-2">{date(a.at)}</td>
-                  <td>{auditSentence(a)}</td>
+                  <td>{auditSentence(a)}<Diff diff={a.diff} /></td>
                 </tr>
               ))}
             </tbody>

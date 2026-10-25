@@ -45,7 +45,22 @@ export default defineSchema({
     action: v.string(),
     refs: v.array(v.string()),
     detail: v.string(),
+    // Field-level before/after, written in the same transaction as the change.
+    diff: v.optional(v.array(v.object({ field: v.string(), before: v.string(), after: v.string() }))),
   }).index("by_seq", ["seq"]),
+  // What the gateway wrote to a system of record after a request was fully approved.
+  postings: defineTable({
+    ref: v.string(),
+    at: v.string(),
+    system: v.string(),
+    reqId: v.string(),
+    caseId: v.optional(v.string()),
+    approvedBy: v.array(v.string()),
+    memo: v.string(),
+    lines: v.optional(v.array(v.object({ account: v.string(), name: v.string(), debitCents: v.number(), creditCents: v.number() }))),
+  })
+    .index("by_reqId", ["reqId"])
+    .index("by_caseId", ["caseId"]),
   messages: defineTable({
     at: v.string(),
     from: v.string(),
