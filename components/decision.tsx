@@ -33,6 +33,8 @@ export function DecisionControls({ r }: { r: Req }) {
           setError(`Refused by the gateway and logged as audit #${res.seq}: ${res.reason}`);
           return;
         }
+        // Every correction becomes precedent: the desk re-mines its rules (shown on the case and rules pages).
+        void fetch("/api/correction", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ reqId: r.reqId }) }).catch(() => {});
       }
       setMode(null);
       setText("");

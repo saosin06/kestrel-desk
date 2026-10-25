@@ -202,6 +202,9 @@ export function auditSentence(a: { actor: string; action: string; refs: string[]
   if (a.action === "escalate") return `${who} escalated ${a.refs[0] ?? ""} ${a.detail.replace("to ", "to ")}`;
   if (a.action.startsWith("request:")) return `${who} requested: ${requestLabel(a.action.slice(8)).toLowerCase()} (${a.detail})`;
   if (a.action.startsWith("decision:")) return `${who} ${a.action.endsWith("approve") ? "approved" : "rejected"} ${a.refs[0]} — “${a.detail}”`;
+  if (a.action === "learn:precedent") return `Learned from ${a.refs[2] ?? a.refs[1]}: ${a.detail}`;
+  if (a.action === "learn:rule") return a.detail;
+  if (a.action === "learn:proposed") return `Proposed rule ${a.refs[0]} from corrections: ${a.detail}`;
   if (a.action === "post") return `POSTED ${a.refs[0]} to ${a.detail}`;
   if (a.action.startsWith("denied:")) return `REFUSED: ${who} tried to ${a.action.slice(7)} ${a.refs[0]}; the gateway blocked it (${a.detail.replace(/^REFUSED by the gateway: /, "")})`;
   if (a.action === "log:info") return `${who} logged a routine item${on} (no escalation)`;

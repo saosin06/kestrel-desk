@@ -12,6 +12,7 @@ import type * as admin from "../admin.js";
 import type * as decisions from "../decisions.js";
 import type * as desk from "../desk.js";
 import type * as intake from "../intake.js";
+import type * as learning from "../learning.js";
 
 import type {
   ApiFromModules,
@@ -24,6 +25,7 @@ declare const fullApi: ApiFromModules<{
   decisions: typeof decisions;
   desk: typeof desk;
   intake: typeof intake;
+  learning: typeof learning;
 }>;
 
 /**

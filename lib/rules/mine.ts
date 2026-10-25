@@ -9,7 +9,7 @@ export const MIN_SUPPORT = 5;
 export const MIN_CONFIDENCE = 0.75;
 
 /** Never mined, whatever the history says (CLAUDE.md §7a guardrails). */
-const NEVER_LEARNABLE: ReadonlySet<CaseKind> = new Set([
+export const NEVER_LEARNABLE: ReadonlySet<CaseKind> = new Set([
   "noncompliant_substitution",
   "missing_document",
   "remittance_change_unverified",
@@ -101,7 +101,10 @@ function candidate(g: Group): InternalRule | null {
   const streak = streaks(events);
   const rejects = events.filter((e) => e.resolution.decision !== "accepted");
   // A reject explained by a streak of 3+ months is an exception to the rule, not evidence against it.
-  const streakRejects = rejects.filter((e) => streak.get(e.id)! >= 3);
+  // That needs a pattern that breaks off and restarts; one that recurs every month has no such exception.
+  const restarts = events.filter((e) => streak.get(e.id) === 1).length > 1;
+  const longestAccepted = Math.max(0, ...events.filter((e) => e.resolution.decision === "accepted").map((e) => streak.get(e.id)!));
+  const streakRejects = restarts ? rejects.filter((e) => streak.get(e.id)! >= 3 && streak.get(e.id)! > longestAccepted) : [];
   // A reject inside the range accepted before it marks a tighter regime (drift): learn from after it.
   let regimeStart: ISODate | undefined;
   for (const r of rejects.filter((e) => !streakRejects.includes(e))) {

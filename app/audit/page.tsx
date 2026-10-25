@@ -7,7 +7,7 @@ import { Empty, PageHeader, Panel, Summary } from "@/components/ui";
 import { api } from "@/convex/_generated/api";
 import { auditSentence, date } from "@/lib/ui/format";
 
-const IMPORTANT = /^(open_case|escalate|decision:|denied:|post$|request:payment_hold|request:debit_memo|request:substitution|request:payroll_line_hold|rule:|ask_why|answer_why|intake:)/;
+const IMPORTANT = /^(open_case|escalate|decision:|denied:|post$|learn:|request:payment_hold|request:debit_memo|request:substitution|request:payroll_line_hold|rule:|ask_why|answer_why|intake:)/;
 
 export default function Audit() {
   const rows = useQuery(api.desk.audit, { limit: 2000 });

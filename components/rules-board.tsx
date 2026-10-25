@@ -1,6 +1,7 @@
 "use client";
 
 import { useMutation, useQuery } from "convex/react";
+import Link from "next/link";
 import { useState } from "react";
 import { useActingAs } from "@/app/providers";
 import { Pill } from "@/components/ui";
@@ -19,6 +20,7 @@ function Step({ n, title, text }: { n: number; title: string; text: string }) {
 
 export function RulesBoard({ views, historyCount, totalEffect }: { views: RuleView[]; historyCount: number; totalEffect: number }) {
   const rows = useQuery(api.desk.rules);
+  const corrections = useQuery(api.learning.corrections);
   const setStatus = useMutation(api.decisions.setRuleStatus);
   const { role } = useActingAs();
   const [editing, setEditing] = useState<{ id: string; status: "approved" | "rejected" | "in_review" } | null>(null);
@@ -51,6 +53,53 @@ export function RulesBoard({ views, historyCount, totalEffect }: { views: RuleVi
       </section>
 
       {error && <div className="mb-3 rounded-lg border border-[var(--crit)] bg-[var(--crit-bg)] px-3 py-2 text-[var(--crit)]">{error}</div>}
+
+      <section className="mb-4 card px-4 py-3">
+        <div className="flex items-baseline justify-between gap-3">
+          <h2 className="text-[15px] font-semibold text-ink">Every correction becomes precedent</h2>
+          <span className="text-[12px] text-muted">Same thresholds and guardrails as the history</span>
+        </div>
+        {corrections === undefined || corrections.length === 0 ? (
+          <p className="m-0 mt-1 text-[13px] text-ink-2">
+            When Dana decides a hold, her decision is recorded like a past exception and the desk re-mines its rules: a matching rule gains support, a rule she overrules goes back to review, and a pattern that reaches 5 cases becomes a proposed rule. Try it: release the hold on <Link href="/cases/CASE-0001">CASE-0001</Link> (Hoshi rounding) or <Link href="/cases/CASE-0018">CASE-0018</Link> (Atlas, third month in a row).
+          </p>
+        ) : (
+          <ul className="m-0 mt-2 flex list-none flex-col gap-2 p-0">
+            {corrections.map((x) => (
+              <li key={x.corrId} className="rounded-[12px] bg-subtle px-3 py-2">
+                <div className="text-[12px] text-muted"><span className="id">{x.corrId}</span> · {date(x.at)} · {roleLabel(x.by).split(" · ")[0]} on {x.caseId ? <Link href={`/cases/${x.caseId}`} className="id">{x.caseId}</Link> : x.reqId}: “{x.reason}”</div>
+                <ul className="m-0 mt-1 list-disc space-y-0.5 pl-4 text-[13px]">{x.effects.map((e, i) => <li key={i}>{e}</li>)}</ul>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+
+      {(rows ?? []).filter((r) => r.source === "correction" && !views.some((v) => v.id === r.ruleId)).map((r) => (
+        <section key={r.ruleId} className="mb-3 card">
+          <header className="flex items-start justify-between gap-4 border-b border-line px-3 py-2.5">
+            <div className="min-w-0">
+              <div className="flex items-center gap-2"><h2 className="text-[14px] font-semibold text-ink">New rule from corrections</h2><Pill tone={statusTone(r.status)}>{statusLabel(r.status)}</Pill></div>
+              <div className="mt-0.5 truncate text-[11.5px] text-muted"><span className="id">{r.ruleId}</span></div>
+            </div>
+            <div className="flex shrink-0 gap-1.5">
+              {(["approved", "in_review", "rejected"] as const).map((st) => (
+                <button key={st} className="btn" disabled={role !== "controller" || r.status === st} title={role !== "controller" ? "Only the controller decides internal rules" : ""} onClick={() => { setEditing({ id: r.ruleId, status: st }); setReason(""); }}>
+                  {st === "approved" ? "Approve" : st === "in_review" ? "Send to review" : "Reject"}
+                </button>
+              ))}
+            </div>
+          </header>
+          {editing?.id === r.ruleId && (
+            <div className="flex items-center gap-2 border-b border-line bg-subtle px-3 py-2">
+              <input autoFocus className="input flex-1" placeholder={`Reason (${statusLabel(editing.status).toLowerCase()})`} value={reason} onChange={(e) => setReason(e.target.value)} onKeyDown={(e) => e.key === "Enter" && reason.trim() && submit()} />
+              <button className="btn btn-primary" disabled={!reason.trim()} onClick={submit}>Confirm</button>
+              <button className="btn" onClick={() => setEditing(null)}>Cancel</button>
+            </div>
+          )}
+          <div className="px-3 py-2.5 text-[13px]">{r.statement}<div className="mt-1 text-[12px] text-ink-2">Support {r.support} · confidence {r.confidence.toFixed(2)} · evidence includes {r.evidence.filter((e) => e.startsWith("LC-")).join(", ")}</div></div>
+        </section>
+      ))}
 
       {views.map((v) => {
         const r = live.get(v.id);
@@ -100,6 +149,11 @@ export function RulesBoard({ views, historyCount, totalEffect }: { views: RuleVi
                 <div className="text-[13px] text-ink">
                   Seen <b>{v.seen}</b> times ({v.period}); Dana {v.agreed === v.seen ? "decided this way every time" : <>decided this way <b>{v.agreed}</b> of {v.seen} times</>}. Confidence {v.confidence.toFixed(2)}.
                 </div>
+                {r && r.evidence.some((e) => e.startsWith("LC-")) && (
+                  <div className="mt-1.5 rounded-[10px] bg-[var(--good-bg)] px-2 py-1 text-[12.5px] text-[var(--good)]">
+                    Updated by live corrections ({r.evidence.filter((e) => e.startsWith("LC-")).join(", ")}): support now <b>{r.support}</b>, confidence {r.confidence.toFixed(2)}.
+                  </div>
+                )}
                 {v.explained.length > 0 && (
                   <div className="mt-1.5 text-[12px] text-ink-2">
                     <div className="text-muted">Other decisions, explained by the rule&apos;s exception or limit:</div>

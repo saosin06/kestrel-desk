@@ -48,6 +48,20 @@ export default defineSchema({
     // Field-level before/after, written in the same transaction as the change.
     diff: v.optional(v.array(v.object({ field: v.string(), before: v.string(), after: v.string() }))),
   }).index("by_seq", ["seq"]),
+  // The controller's live decisions on learnable cases, recorded as precedent (lib/rules/correct.ts).
+  corrections: defineTable({
+    corrId: v.string(),
+    at: v.string(),
+    reqId: v.string(),
+    caseId: v.optional(v.string()),
+    by: v.string(),
+    decision: v.string(),
+    reason: v.string(),
+    precedent: v.any(),
+    effects: v.array(v.string()),
+  })
+    .index("by_reqId", ["reqId"])
+    .index("by_caseId", ["caseId"]),
   // What the gateway wrote to a system of record after a request was fully approved.
   postings: defineTable({
     ref: v.string(),

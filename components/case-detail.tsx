@@ -1,6 +1,7 @@
 "use client";
 
 import { useQuery } from "convex/react";
+import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Fragment } from "react";
 import { DecisionControls } from "@/components/decision";
@@ -93,6 +94,18 @@ export function CaseDetail() {
               </div>
             )}
           </Panel>
+
+          {d.corrections.length > 0 && (
+            <Panel title="What the desk learned from this decision">
+              {d.corrections.map((x) => (
+                <div key={x.corrId} className="mb-2 last:mb-0">
+                  <div className="text-[12px] text-muted"><span className="id">{x.corrId}</span> · {roleLabel(x.by).split(" · ")[0]}: “{x.reason}”</div>
+                  <ul className="m-0 mt-1 list-disc space-y-0.5 pl-4 text-[13px]">{x.effects.map((e, i) => <li key={i}>{e}</li>)}</ul>
+                </div>
+              ))}
+              <div className="mt-2 text-[12px]"><Link href="/rules">See the learned rules →</Link></div>
+            </Panel>
+          )}
 
           <Panel title="Posted to systems of record" flush>
             <PostingsTable rows={d.postings} empty="Nothing posted. The gateway writes only after every required approver signs." />

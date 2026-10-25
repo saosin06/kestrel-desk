@@ -9,7 +9,7 @@ import type { DeskState } from "./state";
 
 export type DeskSnapshot = DeskState & { rules: DeskRule[]; source: string };
 
-const TABLES = ["cases", "requests", "audit", "messages", "rules", "meta", "intakes", "postings"] as const;
+const TABLES = ["cases", "requests", "audit", "messages", "rules", "meta", "intakes", "postings", "corrections"] as const;
 
 export async function loadDesk(client: ConvexHttpClient, snap: DeskSnapshot, log: (s: string) => void = () => {}) {
   for (const table of TABLES) {

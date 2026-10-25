@@ -67,7 +67,7 @@ export type InternalRule = {
   scope: RuleScope;
   action: RuleAction;
   status: RuleStatus;
-  source: "statistics" | "memo";
+  source: "statistics" | "memo" | "correction";
   support: number;
   counterexamples: string[];
   confidence: number;

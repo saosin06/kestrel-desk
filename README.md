@@ -26,14 +26,14 @@ The simulated company has problems planted in it, and a hidden answer key the ag
 | Control violations | **0** |
 | Escalations to the controller, Apr–Sep | **29 → 17 (41% fewer)** after learning, with the same catch rate |
 
-Plus **180 tests**. The deterministic checks must find exactly the answer key's problems, no more and no fewer, on two different seeds.
+Plus **187 tests**. The deterministic checks must find exactly the answer key's problems, no more and no fewer, on two different seeds.
 
 ## Learn → run → escalate → improve
 
 - **Learn.** The desk mines 14 months of Kestrel's history (past exceptions, Dana the controller's decisions and reasons, policy memos) for unwritten rules. One example: "Cascade's receipt counts are often off by a few; recount before raising it." Each rule shows its support, counterexamples and confidence. The history also contains decoys, a threshold that drifted, and a near-miss trap, and the miner has to get past all of them.
 - **Run.** Claude agents work the AP clerk and payroll specialist seats. Each seat can only use its own tools. The agents never do the math: matching, duty, FX, withholding and FICA are all computed in TypeScript.
 - **Escalate.** Anything material, non-compliant or uncertain goes to Dana with evidence. The agents can only *request*. Segregation of duties is enforced in code at one gateway, so no agent can approve, pay, post, or edit bank details, and a refused attempt is written to the audit trail like everything else.
-- **Improve.** A rule only takes effect once Dana approves it. Rules can make an item routine; they never hide it. A suppressed finding is still logged with the rule that suppressed it. Compliance, bank changes and duplicate payments can never be learned away.
+- **Improve.** Every correction becomes precedent. When Dana decides a hold, her decision is recorded like a past exception and the rules are re-mined with the same thresholds: a matching rule gains support, a rule she overrules goes back to her for review, and a pattern that reaches 5 cases becomes a proposed rule. A rule only takes effect once Dana approves it. Rules can make an item routine; they never hide it. A suppressed finding is still logged with the rule that suppressed it. Compliance, bank changes and duplicate payments can never be learned away.
 
 ## Hyphenate's four questions
 
@@ -107,7 +107,6 @@ The compliance policy is data, labeled *"modeled on federal drone component rest
 - The **AP clerk** and **payroll specialist** seats run as Claude agents.
 - The **staff accountant** seat is a ledger that only posts approved journal entries, with balanced entries, locked periods and reversals. It's tested but not yet agent-driven.
 - The **buyer** seat (scorecards, export restriction, switching suppliers) is next.
-- Learning today comes from the company's history at onboarding. Next: turning each live correction from Dana into a proposed rule she approves.
 
 ## Run it
 
@@ -121,7 +120,7 @@ npm run dev                         # http://localhost:3000
 
 | Command | What it does |
 |---|---|
-| `npm test` | 180 tests |
+| `npm test` | 187 tests |
 | `npm run score` | scores a desk run against the answer key |
 | `npm run sim` | re-runs every seat across Mar–Sep with Claude (needs the API key) |
 | `npm run generate` | rebuilds the simulated world from a seed |
