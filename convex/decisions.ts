@@ -5,23 +5,29 @@ import { mutation } from "./_generated/server";
 
 async function appendAudit(ctx: MutationCtx, e: { at: string; actor: string; action: string; refs: string[]; detail: string }) {
   const last = await ctx.db.query("audit").withIndex("by_seq").order("desc").first();
-  await ctx.db.insert("audit", { ...e, seq: (last?.seq ?? 0) + 1 });
+  const seq = (last?.seq ?? 0) + 1;
+  await ctx.db.insert("audit", { ...e, seq });
+  return seq;
 }
 
 async function simDate(ctx: MutationCtx) {
   return (await ctx.db.query("meta").withIndex("by_key", (q) => q.eq("key", "simDate")).unique())?.value ?? "2026-09-30";
 }
 
-/** Approve or reject a request. Segregation of duties is enforced here, server-side. */
+/** Approve or reject a request. Segregation of duties is enforced here, server-side: this is the
+ *  only door. A refused attempt is not an exception: it is recorded in the audit trail and returned. */
 export const decide = mutation({
   args: { reqId: v.string(), by: v.string(), decision: v.union(v.literal("approve"), v.literal("reject")), reason: v.string() },
   handler: async (ctx, { reqId, by, decision, reason }) => {
     if (reason.trim().length === 0) throw new Error("a reason is required");
     const r = await ctx.db.query("requests").withIndex("by_reqId", (q) => q.eq("reqId", reqId)).unique();
     if (!r) throw new Error(`no request ${reqId}`);
-    const problem = sodViolation(r, by);
-    if (problem) throw new Error(problem);
     const at = await simDate(ctx);
+    const problem = sodViolation(r, by);
+    if (problem) {
+      const seq = await appendAudit(ctx, { at, actor: by, action: `denied:${decision}`, refs: [reqId, ...(r.caseId ? [r.caseId] : [])], detail: `REFUSED by the gateway: ${problem}` });
+      return { ok: false as const, reason: problem, seq };
+    }
     const next = applyDecision(r, by, decision, reason, at);
     await ctx.db.patch(r._id, next);
     await appendAudit(ctx, { at, actor: by, action: `decision:${decision}`, refs: [reqId, ...(r.caseId ? [r.caseId] : [])], detail: reason });
@@ -31,7 +37,7 @@ export const decide = mutation({
       const allDecided = siblings.every((s) => (s._id === r._id ? next.status : s.status) !== "pending");
       if (c && allDecided) await ctx.db.patch(c._id, { status: "resolved", notes: [...c.notes, { at, by, text: `all requests decided (${decision}: ${reason})` }] });
     }
-    return next.status;
+    return { ok: true as const, status: next.status };
   },
 });
 

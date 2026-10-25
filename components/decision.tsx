@@ -27,7 +27,13 @@ export function DecisionControls({ r }: { r: Req }) {
         const res = await fetch("/api/ask-why", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ reqId: r.reqId, by: role, question: text }) });
         if (!res.ok) throw new Error((await res.json()).error ?? `HTTP ${res.status}`);
       }
-      else await decide({ reqId: r.reqId, by: role, decision: mode!, reason: text });
+      else {
+        const res = await decide({ reqId: r.reqId, by: role, decision: mode!, reason: text });
+        if (!res.ok) {
+          setError(`Refused by the gateway and logged as audit #${res.seq}: ${res.reason}`);
+          return;
+        }
+      }
       setMode(null);
       setText("");
     } catch (e) {
@@ -39,7 +45,7 @@ export function DecisionControls({ r }: { r: Req }) {
 
   if (mode) {
     return (
-      <div className="flex min-w-[320px] items-center gap-1.5">
+      <div className="flex min-w-[320px] flex-wrap items-center gap-1.5">
         <input
           autoFocus
           className="input flex-1"
@@ -52,14 +58,15 @@ export function DecisionControls({ r }: { r: Req }) {
           {mode === "why" ? "Send" : mode === "approve" ? "Approve" : "Reject"}
         </button>
         <button className="btn" onClick={() => setMode(null)}>Cancel</button>
-        {error && <span className="text-[11.5px] text-[var(--crit)]">{error}</span>}
+        {error && <span className="basis-full text-[11.5px] text-[var(--crit)]">{error}</span>}
       </div>
     );
   }
   return (
     <div className="flex flex-wrap items-center justify-end gap-1.5">
-      <button className="btn btn-primary" disabled={!canDecide} title={canDecide ? "" : `${roleLabel(role)} isn't an approver of this request`} onClick={() => setMode("approve")}>Approve</button>
-      <button className="btn" disabled={!canDecide} onClick={() => setMode("reject")}>Reject</button>
+      {/* Not disabled for non-approvers: the server is the gate, and it logs a refused attempt. */}
+      <button className={`btn ${canDecide ? "btn-primary" : "opacity-60"}`} title={canDecide ? "" : `${roleLabel(role)} isn't an approver of this request: the server will refuse and log it`} onClick={() => setMode("approve")}>Approve</button>
+      <button className={`btn ${canDecide ? "" : "opacity-60"}`} title={canDecide ? "" : `${roleLabel(role)} isn't an approver of this request: the server will refuse and log it`} onClick={() => setMode("reject")}>Reject</button>
       <button className="btn" onClick={() => setMode("why")}>Ask why</button>
     </div>
   );
