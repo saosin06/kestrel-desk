@@ -14,6 +14,7 @@ export const Icons = {
   desk: () => <Svg><rect x="3" y="3" width="7" height="9" rx="1.5" /><rect x="14" y="3" width="7" height="5" rx="1.5" /><rect x="14" y="12" width="7" height="9" rx="1.5" /><rect x="3" y="16" width="7" height="5" rx="1.5" /></Svg>,
   approvals: () => <Svg><circle cx="12" cy="12" r="9" /><path d="m8 12 2.5 2.5L16 9" /></Svg>,
   cases: () => <Svg><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" /></Svg>,
+  score: () => <Svg><path d="M9 11.5 11 13.5 15.5 9" /><path d="M12 2.5 14.6 4l3 .1.9 2.9 2.2 2-1 2.9 1 2.9-2.2 2-.9 2.9-3 .1L12 21.5 9.4 20l-3-.1-.9-2.9-2.2-2 1-2.9-1-2.9 2.2-2 .9-2.9 3-.1Z" /></Svg>,
   live: () => <Svg><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" /></Svg>,
   rules: () => <Svg><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1" /><circle cx="12" cy="12" r="3" /></Svg>,
   payables: () => <Svg><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z" /><path d="M14 2v6h6M8 13h8M8 17h6" /></Svg>,
